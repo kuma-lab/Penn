@@ -81,6 +81,7 @@ aside .avatarbillet {
 aside .poupContainer .billetContainer,
 .buddy .billetContainer {
   display: flex;
+  height: fit-content;
   align-items: center;
   margin: 9px;
 }

@@ -412,7 +412,7 @@ header {
   }
 
   .centralContainer {
-    width: 70%;
+    width: 80%;
   }
 
   .potentialConnection {
@@ -425,12 +425,12 @@ header {
 
   .buddy {
     height: 100vw;
-    width: 30%;
+    width: 20%;
   }
 
   .buddy .scroll {
     flex-direction: row;
-    justify-content: baseline;
+    align-content: baseline;
     height: 100%;
   }
 
