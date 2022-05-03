@@ -1,55 +1,61 @@
 /* Reset */
-*{ margin: 0; padding: 0; font-size:100%; line-height:1;}
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  line-height: 1;
+}
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 /* Tag */
-body{
+body {
   background-color: #ffff;
   font-family: 'Roboto', sans-serif;
 }
 
-p{
+p {
   font-size: 12px;
   margin-top: 3px;
 }
 
-h2{
+h2 {
   margin: 20px 0;
   font-weight: bold;
   font-size: 24px;
   line-height: 28px;
   text-align: center;
   text-decoration-line: underline;
-  color: #699BF7;
+  color: #699bf7;
   text-transform: capitalize;
-
 }
 
-h3{
+h3 {
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;
   text-decoration-line: underline;
-  color: #699BF7;
+  color: #699bf7;
   text-transform: capitalize;
 }
 
-h4{
+h4 {
   font-weight: bold;
   font-size: 15px;
   line-height: 18px;
-  color: #1561ED;
+  color: #1561ed;
   text-transform: capitalize;
 }
 
-section{
+section {
   margin: 9px 0;
 }
 
-.hide{display: none;}
+.hide {
+  display: none;
+}
 
 /* background */
-.bg{
+.bg {
   display: none;
   position: absolute;
   top: 60px;
@@ -57,10 +63,9 @@ section{
   height: 70%;
 }
 
-
 /* Header */
 
-header{
+header {
   display: flex;
   align-items: center;
   padding: 9px;
@@ -69,63 +74,63 @@ header{
   border: black 1px solid;
 }
 
-.imgContainer{
+.imgContainer {
   display: flex;
   align-items: center;
 }
 
-.imgContainer{
+.imgContainer {
   display: flex;
   align-items: center;
 }
 
-.notification{
+.notification {
   padding: 0 9px;
   height: 20px;
 }
 
-.avatarHeader{
+.avatarHeader {
   border-radius: 50px;
   height: 40px;
 }
 
-.centralContainer.people{
+.centralContainer.people {
   display: flex;
   flex-direction: column;
   align-items: center;
-} 
+}
 
-.keywordContainer{
+.keywordContainer {
   display: flex;
   flex-direction: row;
 }
 
-.billetContainer{
+.billetContainer {
   display: flex;
   position: relative;
   margin: 9px;
 }
 
-.centralContainer .billetContainer img{
+.centralContainer .billetContainer img {
   margin-right: 9px;
   width: 80px;
-  height:auto;
+  height: auto;
 }
 
-.billetContainer img{
+.billetContainer img {
   margin-right: 9px;
   border-radius: 50px;
 }
 
-.infoPersonal{
+.infoPersonal {
   width: calc(100vw - 70px);
 }
 
-.infoPersonal p{
+.infoPersonal p {
   white-space: break-spaces;
 }
 
-.articleContainer{
+.articleContainer {
   display: flex;
   flex-direction: column;
   background: linear-gradient(0deg, rgba(211, 213, 246, 0.62) -179%, #fff 100%);
@@ -134,66 +139,66 @@ header{
   border-radius: 9px;
 }
 
-.articleContainer .article{
+.articleContainer .article {
   display: flex;
   align-items: center;
   margin: 9px;
 }
 
-.articleContainer .article img{
+.articleContainer .article img {
   margin-right: 9px;
 }
 
-.peopleContainer.row{
+.peopleContainer.row {
   display: flex;
   flex-direction: column;
   margin-bottom: 0;
   background-color: #ffff;
 }
 
-.peopleContainer.row .articleContainer{
+.peopleContainer.row .articleContainer {
   margin: 9px 9px 0;
   width: 100%;
 }
 
-.peopleContainer.row .articleContainer h4{
+.peopleContainer.row .articleContainer h4 {
   margin-bottom: 9px;
 }
 
-.centralContainer a{
+.centralContainer a {
   width: 100%;
-    text-align: center;
+  text-align: center;
 }
-button{
+button {
   margin-top: 18px;
   width: 80%;
   max-width: 400px;
   height: 46px;
-  border: #699BF7 solid 2px;
-  color: #699BF7;
+  border: #699bf7 solid 2px;
+  color: #699bf7;
   border-radius: 9px;
 }
-.billetContainer{
+.billetContainer {
   display: flex;
   flex-direction: column;
   position: relative;
   margin: 9px;
 }
 
-.billetContainer .avatarbillet{
+.billetContainer .avatarbillet {
   margin-right: 9px;
   border-radius: 50px;
   width: 45px;
   height: 45px;
 }
 
-.buddy{
+.buddy {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.buddy .scroll{
+.buddy .scroll {
   overflow: auto;
   width: 100%;
   height: 400px;
@@ -201,107 +206,98 @@ button{
 
 /* tablette / desktop */
 
-@media screen and (min-width: 768px){
-
-  p{
+@media screen and (min-width: 768px) {
+  p {
     font-size: 14px;
-   margin-top: 9px;
-
+    margin-top: 9px;
   }
-  
 
-  main{
+  main {
     display: flex;
-    
   }
 
-  .buddy{
+  .buddy {
     margin-left: 9px;
     width: 300px;
     overflow: auto;
     height: 117vw;
-
   }
-  .buddy .scroll{
+  .buddy .scroll {
     overflow: auto;
     height: 100%;
     width: 100%;
   }
 
-  .buddy .billetContainer{
+  .buddy .billetContainer {
     flex-direction: row;
   }
 
-  .avatarbillet{
+  .avatarbillet {
     position: absolute;
     right: 29px;
     height: 40px;
     top: 9px;
   }
 
-  .centralContainer.people{
+  .centralContainer.people {
     width: 80%;
-  } 
+  }
 
-  .centralContainer.people   article.billetContainer{
+  .centralContainer.people article.billetContainer {
     align-items: center;
     padding-left: 20%;
-  } 
+  }
 
-  .centralContainer .newFeedArticleContainer{
+  .centralContainer .newFeedArticleContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
   }
-  
-  .infoPersonal{
+
+  .infoPersonal {
     width: auto;
   }
 
-  .billetContainer{
+  .billetContainer {
     width: auto;
   }
 
-  .avatarbillet,.docLogo {
+  .avatarbillet,
+  .docLogo {
     position: initial;
   }
 
-  .dskFlex{
-    display:flex;
+  .dskFlex {
+    display: flex;
   }
 
-
-  .peopleContainer.row{
+  .peopleContainer.row {
     display: flex;
     flex-direction: row;
     margin-bottom: 0;
   }
 
-  .peopleContainer.row .articleContainer{
+  .peopleContainer.row .articleContainer {
     margin: 9px 9px 0;
     width: 50%;
   }
 
-  .peopleContainer.row{
+  .peopleContainer.row {
     margin-left: 9px;
   }
-  
 }
 
-
-@media screen and (min-width: 965px){
-
-  p{
+@media screen and (min-width: 965px) {
+  p {
     font-size: 16px;
   }
-  
 
-  .centralContainer.people{
+  .centralContainer.people {
     width: auto;
-  } 
+  }
 
-  main{
+  main {
     background-image: url(img/bg.png);
     height: 100vw;
     background-repeat: no-repeat;

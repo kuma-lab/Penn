@@ -1,0 +1,110 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  line-height: 1;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  margin: 20px 0;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #699bf7;
+  text-transform: capitalize;
+}
+
+/* Header */
+header {
+  background-color: #fff;
+  z-index: 10;
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 9px;
+  margin-bottom: 9px;
+  justify-content: space-between;
+  border: black 1px solid;
+}
+
+.imgContainer {
+  display: flex;
+  align-items: center;
+}
+
+.imgContainer {
+  display: flex;
+  align-items: center;
+}
+
+.notification {
+  padding: 0 9px;
+  height: 20px;
+}
+
+.avatarHeader {
+  height: 40px;
+  border-radius: 50px;
+}
+
+/* login */
+
+.login {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 9px;
+}
+
+.login input {
+  margin: 0 9px 9px;
+  height: 52px;
+  border: solid 2px #699bf7;
+  padding: 0 9px;
+  width: 100%;
+  min-width: 251px;
+  max-width: 343px;
+}
+
+.login [type='submit'] {
+  background-color: #699bf7;
+  color: #fff;
+  font-weight: bold;
+}
+
+.bgLeft {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .bgLeft {
+    display: inline;
+    z-index: 1;
+    position: absolute;
+    left: -34%;
+    top: 41px;
+    height: 100vw;
+  }
+
+  main {
+    background-image: url(img/bg.png);
+    height: 100vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 214% 50%;
+  }
+}
