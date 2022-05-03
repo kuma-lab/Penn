@@ -351,10 +351,8 @@
   }
   .newsFeed_btn {
     padding: 20px 30px;
-
     font-size: 16px;
-
-    left: 15px;
+    left: 20px;
   }
 
   .js-newsFeed_arrow {
