@@ -4,18 +4,16 @@ ok    Add arrow on the right to scroll when you click; like the one on Amazon Pr
 
 Key Words
  ok   Now showing more people
-   ok  Need box around elements to make clear that objects belong to each person
+ ok Need box around elements to make clear that objects belong to each person
 
 People
-    Add boxes around sections for each category
-    For now, hide Pre-print/Working Papers and Upcoming Talks since we don’t know how to populate these yet; (if people can upload their own info, that would be ideal). However, have this ready in case we want to turn it back on later on
-    In the meantime, can do a survey of ASC faculty asking to submit all their upcoming talks (can do later on)
-    Change “Pre-print” to “Working Papers”
-    Add “s” at the end of each section to make the words plural
-    Have “Talks” (main heading) and “Upcoming Talks” (minor heading/subheading under Talks). Then, have “Publications” (main heading) and insert box at the bottom of Publications for “Working Papers” (minor heading/subheading under Publications)
-    Ex:
+  ok  Add boxes around sections for each category
+  k   For now, hide Pre-print/Working Papers and Upcoming Talks since we don’t know how to populate these yet; (if people can upload   their own info, that would be ideal). However, have this ready in case we want to turn it back on later on
+  k  In the meantime, can do a survey of ASC faculty asking to submit all their upcoming talks (can do later on)
+  k  Change “Pre-print” to “Working Papers”
+  k   Add “s” at the end of each section to make the words plural
+  k  Have “Talks” (main heading) and “Upcoming Talks” (minor heading/subheading under Talks). Then, have “Publications” (main heading) and insert box at the bottom of Publications for “Working Papers” (minor heading/subheading under Publications)
 
- 
 
 Chat Page
 
