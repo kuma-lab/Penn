@@ -322,7 +322,7 @@ button {
   }
 
   main {
-    background-image: url(img/bg.png);
+    background-image: url(../img/bg.png);
     height: 100vw;
     background-repeat: no-repeat;
     background-size: contain;
