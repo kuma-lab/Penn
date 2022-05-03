@@ -82,6 +82,11 @@ section {
   padding-left: 5px;
 }
 
+.pointer.add {
+  height: 20px;
+  transform: translateY(5px);
+}
+
 /* Header */
 
 header {
