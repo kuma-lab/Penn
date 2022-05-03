@@ -7,7 +7,7 @@
 }
 
 aside {
-  /* display: none; */
+  display: none;
   position: absolute;
   z-index: 122222;
   width: 80%;
