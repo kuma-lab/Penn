@@ -1,0 +1,311 @@
+/* Reset */
+*{ margin: 0; padding: 0; font-size:100%; line-height:1;}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Tag */
+body{
+  background-color: #ffff;
+  font-family: 'Roboto', sans-serif;
+}
+
+p{
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+h2{
+  margin: 20px 0;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #699BF7;
+  text-transform: capitalize;
+
+}
+
+h3{
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  text-decoration-line: underline;
+  color: #699BF7;
+  text-transform: capitalize;
+}
+
+h4{
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  color: #1561ED;
+  text-transform: capitalize;
+}
+
+section{
+  margin: 9px 0;
+}
+
+.hide{display: none;}
+
+/* background */
+.bg{
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: -400px;
+  height: 70%;
+}
+
+
+/* Header */
+
+header{
+  display: flex;
+  align-items: center;
+  padding: 9px;
+  margin-bottom: 9px;
+  justify-content: space-between;
+  border: black 1px solid;
+}
+
+.imgContainer{
+  display: flex;
+  align-items: center;
+}
+
+.imgContainer{
+  display: flex;
+  align-items: center;
+}
+
+.notification{
+  padding: 0 9px;
+  height: 20px;
+}
+
+.avatarHeader{
+  border-radius: 50px;
+  height: 40px;
+}
+
+.centralContainer.people{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} 
+
+.keywordContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+.billetContainer{
+  display: flex;
+  position: relative;
+  margin: 9px;
+}
+
+.centralContainer .billetContainer img{
+  margin-right: 9px;
+  width: 80px;
+  height:auto;
+}
+
+.billetContainer img{
+  margin-right: 9px;
+  border-radius: 50px;
+}
+
+.infoPersonal{
+  width: calc(100vw - 70px);
+}
+
+.infoPersonal p{
+  white-space: break-spaces;
+}
+
+.articleContainer{
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(0deg, rgba(211, 213, 246, 0.62) -179%, #fff 100%);
+  border: dashed #699bf7 1px;
+  padding: 9px;
+  border-radius: 9px;
+}
+
+.articleContainer .article{
+  display: flex;
+  align-items: center;
+  margin: 9px;
+}
+
+.articleContainer .article img{
+  margin-right: 9px;
+}
+
+.peopleContainer.row{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  background-color: #ffff;
+}
+
+.peopleContainer.row .articleContainer{
+  margin: 9px 9px 0;
+  width: 100%;
+}
+
+.peopleContainer.row .articleContainer h4{
+  margin-bottom: 9px;
+}
+
+.centralContainer a{
+  width: 100%;
+    text-align: center;
+}
+button{
+  margin-top: 18px;
+  width: 80%;
+  max-width: 400px;
+  height: 46px;
+  border: #699BF7 solid 2px;
+  color: #699BF7;
+  border-radius: 9px;
+}
+.billetContainer{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 9px;
+}
+
+.billetContainer .avatarbillet{
+  margin-right: 9px;
+  border-radius: 50px;
+  width: 45px;
+  height: 45px;
+}
+
+.buddy{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buddy .scroll{
+  overflow: auto;
+  width: 100%;
+  height: 400px;
+}
+
+/* tablette / desktop */
+
+@media screen and (min-width: 768px){
+
+  p{
+    font-size: 14px;
+   margin-top: 9px;
+
+  }
+  
+
+  main{
+    display: flex;
+    
+  }
+
+  .buddy{
+    margin-left: 9px;
+    width: 300px;
+    overflow: auto;
+    height: 117vw;
+
+  }
+  .buddy .scroll{
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+  }
+
+  .buddy .billetContainer{
+    flex-direction: row;
+  }
+
+  .avatarbillet{
+    position: absolute;
+    right: 29px;
+    height: 40px;
+    top: 9px;
+  }
+
+  .centralContainer.people{
+    width: 80%;
+  } 
+
+  .centralContainer.people   article.billetContainer{
+    align-items: center;
+    padding-left: 20%;
+  } 
+
+  .centralContainer .newFeedArticleContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  
+  .infoPersonal{
+    width: auto;
+  }
+
+  .billetContainer{
+    width: auto;
+  }
+
+  .avatarbillet,.docLogo {
+    position: initial;
+  }
+
+  .dskFlex{
+    display:flex;
+  }
+
+
+  .peopleContainer.row{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+
+  .peopleContainer.row .articleContainer{
+    margin: 9px 9px 0;
+    width: 50%;
+  }
+
+  .peopleContainer.row{
+    margin-left: 9px;
+  }
+  
+}
+
+
+@media screen and (min-width: 965px){
+
+  p{
+    font-size: 16px;
+  }
+  
+
+  .centralContainer.people{
+    width: auto;
+  } 
+
+  main{
+    background-image: url(img/bg.png);
+    height: 100vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: -113% -104;
+  }
+}
