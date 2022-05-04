@@ -666,8 +666,10 @@
         aside.classList.remove('active')
       })
     </script>
+
+
     <script>
-      ;(function ($) {
+      (function ($) {
         $(function () {
           class Vacantions {
             constructor() {
@@ -723,13 +725,13 @@
 
               // On swipe event
               $this.slider.on('swipe afterChange', function (event) {
-                var prevVacantions = $(event.target).find('.js-newsFeed_item.slick-active').first().prev().length
-                var nextVacantions = $(event.target).find('.js-newsFeed_item.slick-active').last().next().length
+                var prevFeed = $(event.target).find('.js-newsFeed_item.slick-active').first().prev().length
+                var nextFeed = $(event.target).find('.js-newsFeed_item.slick-active').last().next().length
 
-                !prevVacantions
+                !prevFeed
                   ? $('.js-newsFeed_arrow.js-newsFeed_arrow__prev').addClass('js-newsFeed_arrow__hide')
                   : $('.js-newsFeed_arrow.js-newsFeed_arrow__prev').removeClass('js-newsFeed_arrow__hide')
-                !nextVacantions
+                !nextFeed
                   ? $('.js-newsFeed_arrow.js-newsFeed_arrow__next').addClass('js-newsFeed_arrow__hide')
                   : $('.js-newsFeed_arrow.js-newsFeed_arrow__next').removeClass('js-newsFeed_arrow__hide')
               })
