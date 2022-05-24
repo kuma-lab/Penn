@@ -112,7 +112,7 @@
   flex-direction: column;
   margin-bottom: 40px;
   overflow: hidden;
-  height: 300px;
+  height: auto;
   font-size: 20px;
   color: #232c51;
 }
@@ -129,7 +129,9 @@
 .newsFeed_btn {
   display: flex;
   align-items: center;
-  padding: 25px 65px;
+  padding: 15px;    
+  width: 150px;
+  justify-content: center;
   background: #d4d6f5;
   cursor: pointer;
   font-weight: 600;
@@ -151,10 +153,6 @@
 
 .newsFeed_btn .textBtn {
   padding-left: 9px;
-}
-
-.pdr {
-  padding-right: 9px;
 }
 
 .keyword {
@@ -296,9 +294,6 @@
   .newsFeed_descr {
     margin-bottom: 30px;
   }
-  .newsFeed_btn {
-    padding: 22px 50px;
-  }
 }
 
 @media (max-width: 1500px) {
@@ -311,7 +306,10 @@
   .newsFeed_btn {
     background: #d4d6f5;
     position: absolute;
-    left: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
   }
 
   .js-newsFeed_arrow {
@@ -350,7 +348,7 @@
     padding-right: 5px;
   }
   .newsFeed_btn {
-    padding: 20px 30px;
+    padding: 20px;
     font-size: 16px;
     left: 20px;
   }
