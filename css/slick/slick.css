@@ -87,6 +87,7 @@
 
 .slick-initialized .slick-slide {
   display: block;
+  width: 220px;
 }
 
 .slick-loading .slick-slide {
