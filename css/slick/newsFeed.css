@@ -246,10 +246,11 @@
   display: block;
 }
 .slick-slide {
-  opacity: 0.5;
 
+  /* blur 
+  opacity: 0.5;
   -webkit-filter: blur(5px);
-  filter: blur(5px);
+  filter: blur(5px); */
 
   -webkit-transform: scale(0.9);
   -moz-transform: scale(0.9);
