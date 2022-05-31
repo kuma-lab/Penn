@@ -6,7 +6,7 @@
 .newsFeed-block {
   overflow: hidden;
   position: relative;
-  padding: 46px 0px;
+  padding: 10px 0px;
 }
 .newsFeed-block:before {
   content: '';
@@ -85,11 +85,15 @@
 }
 .newsFeed_img {
   width: auto;
-  height: 50px;
+  height: 40px;
 
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 0;
+}
+
+.newsFeed_content .avatarbillet{
+  height: 40px;
 }
 .newsFeed_name {
   display: flex;
