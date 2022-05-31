@@ -25,27 +25,6 @@
       <section class="centralContainer">
         <section class="newFeedContainer">
           <h2>News Feed</h2>
-          <div class="choiceContainer">
-            <div class="logoContainer">
-              <div class="imgContainer">
-                <img src="../img/pdfLogo.png" alt="pdf" />
-              </div>
-              <p>Publications</p>
-            </div>
-            <div class="logoContainer">
-              <div class="imgContainer">
-                <img src="../img/videoLogo.png" alt="pdf" />
-              </div>
-              <p>Talk & Presentations</p>
-            </div>
-            <div class="logoContainer">
-              <div class="imgContainer">
-                <img src="../img/wifiLogo.png" alt="pdf" />
-              </div>
-              <p>Press</p>
-            </div>
-          </div>
-
           <section class="newFeedArticleContainer">
             <div id="js-vacations" class="newsFeed-block">
               <div class="newsFeed_content">
@@ -845,7 +824,7 @@
 
         <section class="textContainer">
           <div class="headlineContainer">
-            <button>
+            <button class ="back" >
               Back to list
               <img src="../img/arrow-back.png" alt="back to list" />
             </button>
@@ -909,6 +888,7 @@
       const items = document.querySelectorAll('.newsFeed_btn')
       const aside = document.querySelector('aside')
       const close = document.querySelector('.close')
+      const back = document.querySelector('.back')
 
       for (let item of items) {
         item.addEventListener('click', function () {
@@ -917,6 +897,10 @@
       }
 
       close.addEventListener('click', function () {
+        aside.classList.remove('active')
+      })
+
+      back.addEventListener('click', function () {
         aside.classList.remove('active')
       })
     </script>

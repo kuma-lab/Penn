@@ -89,13 +89,12 @@ aside .headlineContainer {
   margin-bottom: 9px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   position: relative;
 }
 
 aside .headlineContainer button {
-  position: absolute;
-  left: 0;
-  top: 5px;
+  padding: 9px;
 }
 
 aside .textContainer p {

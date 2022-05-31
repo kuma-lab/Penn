@@ -96,8 +96,6 @@
   flex-direction: column;
   line-height: 35px;
   margin-bottom: 12px;
-
-  font-weight: 900;
   font-size: 30px;
   color: #191f3d;
 }
@@ -112,13 +110,14 @@
   margin-bottom: 40px;
   overflow: hidden;
   height: auto;
-  font-size: 15px;
+  font-size: 16px;
   color: #232c51;
 }
 .newsFeed_text__strong {
   padding: 0 15px 0 0;
   font-weight: 900;
   color: #699bf7;
+  line-height: 1.5;
 }
 
 .newsFeed_text_preview {
@@ -301,6 +300,7 @@
   .newsFeed_btn {
     background: #d4d6f5;
     position: absolute;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
 }
