@@ -2,10 +2,16 @@
 * {
   margin: 0;
   padding: 0;
-  font-size: 100%;
   line-height: 1;
+  font-family:'martian_mono','Arial', 'Helvetica', 'sans-serif';
 }
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@font-face {
+  font-family: "martian_mono";
+  src: url("../font/variable/MartianMonoVF.woff2") format("woff2"),
+         url("../font/variable/MartianMonoVF-webfont.ttf") format("ttf");
+ }
+
 
 /* Scroll */
 ::-webkit-scrollbar-track {
@@ -34,11 +40,10 @@
 /* Tag */
 body {
   background-color: #ffff;
-  font-family: 'Roboto', sans-serif;
 }
 
 p {
-  font-size: 12px;
+  font-size: 9px;
   margin-top: 3px;
 }
 
