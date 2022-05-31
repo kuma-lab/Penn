@@ -198,7 +198,7 @@ header {
 
 .avatarbillet {
   right: 29px;
-  height: 50px;
+  height: 40px;
   top: 9px;
   border-radius: 50px;
 }
@@ -274,6 +274,9 @@ header {
   margin-bottom: 3px;
   min-width: 100px;
   padding: 6px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .chart-horizontal .metric .metric-value {
   float: right;
@@ -373,14 +376,14 @@ header {
 
   .dskFlex {
     display: flex;
-    width: 95%;
+    width: 100%;
   }
 
   .ranking {
-    width: 66%;
+    width: 60%;
   }
   .potentialConnection {
-    width: 33%;
+    width: 40%;
   }
 
   .potentialConnection .scroll {
