@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  line-height: 1;
+  line-height: 1.5;
   font-family:'martian_mono','Arial', 'Helvetica', 'sans-serif';
 }
 
@@ -180,7 +180,7 @@ header {
 
 .billetContainer {
   position: relative;
-  width: 100%;
+  /* width: 100%; */
   margin: 0 9px;
 }
 
@@ -224,7 +224,6 @@ header {
 .potentialConnection .billetContainer,
 .buddy .billetContainer {
   display: flex;
-  align-items: center;
   margin: 9px;
 }
 
@@ -293,6 +292,7 @@ header {
 .buddy .scroll {
   overflow: auto;
   height: 300px;
+  width: 100%;
 }
 /* tablette / desktop */
 
