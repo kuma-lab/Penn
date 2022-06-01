@@ -183,10 +183,15 @@ header {
 
 .billetContainer {
   position: relative;
-  /* width: 100%; */
-  margin: 0 9px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
+.billetContainer section{
+  display: flex;
+  width: 100%;
+}
 .infoPersonal {
   width: calc(100vw - 105px);
 }
@@ -227,7 +232,6 @@ header {
 .potentialConnection .billetContainer,
 .buddy .billetContainer {
   display: flex;
-  margin: 9px;
 }
 
 .potentialConnection .avatarbillet,
@@ -424,7 +428,7 @@ header {
   }
 
   .centralContainer {
-    width: 80%;
+    width: 70%;
   }
 
   .potentialConnection {
@@ -437,7 +441,7 @@ header {
 
   .buddy {
     height: 100vw;
-    width: 20%;
+    width: 29%;
   }
 
   .buddy .scroll {
