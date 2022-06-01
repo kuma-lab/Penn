@@ -138,6 +138,7 @@ header {
   background: linear-gradient(0deg, rgba(211, 213, 246, 0.62) -179%, #fff 100%);
   border: dashed #699bf7 1px;
   padding: 9px;
+  margin: 9px;
   border-radius: 9px;
 }
 
