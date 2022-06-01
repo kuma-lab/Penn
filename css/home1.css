@@ -400,7 +400,6 @@ header {
 
   .buddy {
     overflow: auto;
-    height: 100vw;
     width: 100%;
     align-items: center;
     box-sizing: border-box;
@@ -441,7 +440,6 @@ header {
   }
 
   .buddy {
-    height: 100vw;
     width: 29%;
   }
 
