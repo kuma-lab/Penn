@@ -396,7 +396,6 @@ header {
   .buddy {
     overflow: auto;
     height: 100vw;
-    padding-left: 9px;
     width: 100%;
     align-items: center;
     box-sizing: border-box;

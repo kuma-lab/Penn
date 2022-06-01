@@ -70,20 +70,6 @@ aside .avatarbillet {
   top: 9px;
 }
 
-aside .poupContainer .billetContainer,
-.buddy .billetContainer {
-  display: flex;
-  height: fit-content;
-  align-items: center;
-  margin: 9px;
-}
-
-aside .poupContainer .avatarbillet,
-.buddy .avatarbillet {
-  position: initial;
-  margin-right: 9px;
-}
-
 aside .headlineContainer {
   padding: 9px 0;
   margin-bottom: 9px;

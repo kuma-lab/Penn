@@ -185,8 +185,14 @@ header {
 
 .billetContainer {
   position: relative;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  margin: 0 9px;
+}
+
+.billetContainer section{
+  display: flex;
+  width: 100%;
 }
 
 .infoPersonal {
@@ -231,7 +237,6 @@ header {
 .buddy .billetContainer {
   display: flex;
   align-items: center;
-  margin: 9px;
 }
 
 .potentialConnection .avatarbillet,
@@ -396,7 +401,6 @@ header {
   .buddy {
     overflow: auto;
     height: 100vw;
-    padding-left: 9px;
     width: 100%;
     align-items: center;
     box-sizing: border-box;
