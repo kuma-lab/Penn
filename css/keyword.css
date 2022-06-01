@@ -3,9 +3,15 @@
   margin: 0;
   padding: 0;
   font-size: 100%;
+  font-family:'martian_mono','Arial', 'Helvetica', 'sans-serif';
   line-height: 1;
 }
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@font-face {
+  font-family: "martian_mono";
+  src: url("../font/variable/MartianMonoVF.woff2") format("woff2"),
+         url("../font/variable/MartianMonoVF-webfont.ttf") format("ttf");
+ }
 
 /* Scroll */
 ::-webkit-scrollbar-track {
@@ -140,10 +146,15 @@ header {
   width: auto;
 }
 .billetContainer {
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
-  margin: 9px;
+  width: 100%;
+}
+
+.billetContainer section{
+  display: flex;
+  width: 100%;
 }
 
 .billetContainer .avatarbillet {
@@ -216,21 +227,16 @@ header {
   }
 
   .centralContainer.keyword {
-    width: 80%;
+    width: 70%;
   }
 
   .centralContainer.keyword h2 {
-    padding-left: 20%;
+    padding-left: 29%;
   }
 
   .keywordContainer {
     flex-direction: column;
     background: #fff;
-  }
-
-  .billetContainer {
-    display: flex;
-    flex-direction: row;
   }
 
   .keywordContainer .billetContainer div {
