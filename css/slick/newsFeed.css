@@ -116,6 +116,11 @@
   font-size: 20px;
   color: #232c51;
 }
+
+.newsFeed_descr iframe{
+  margin-top: 9px;
+}
+
 .newsFeed_text__strong {
   padding: 0 15px 0 0;
   font-weight: 900;
