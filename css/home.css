@@ -126,6 +126,19 @@ header {
   margin: 9px;
 }
 
+.logoContainer.active p{
+  justify-content: center;
+  align-items: center;
+  min-width: 90px;
+  height: 40px;
+  margin: 0 9px;
+  padding: 0 22px;
+  background-color: #73a1f8;
+  color: white;
+  font-weight: initial;
+  border-radius: 9px;
+}
+
 .choiceContainer,
 .logoContainer {
   display: flex;
