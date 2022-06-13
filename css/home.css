@@ -1,4 +1,5 @@
 /* Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -126,10 +127,9 @@ header {
   margin: 9px;
 }
 
+
 .logoContainer.active p{
-  justify-content: center;
-  align-items: center;
-  min-width: 90px;
+  min-width: 60px;
   height: 40px;
   margin: 0 9px;
   padding: 0 22px;
@@ -343,9 +343,13 @@ header {
 
   .choiceContainer p {
     display: inline-flex;
-    padding: 0 9px;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
     font-weight: 600;
     color: #73a1f8;
+    margin: 0 9px;
+    padding: 0 22px;
   }
 
   .scrollContainer {
