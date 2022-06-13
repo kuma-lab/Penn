@@ -158,6 +158,18 @@
   padding-left: 9px;
 }
 
+.talk .newsFeed_btn .textBtn {
+ display: none;
+}
+
+.newsFeed_btn .textBtn.video {
+  display: none;
+ }
+ 
+.talk .newsFeed_btn .textBtn.video {
+ display: inline-block;
+}
+
 .pdr {
   padding-right: 9px;
 }
@@ -314,6 +326,10 @@
     padding: 25px 30px;
   }
   .newsFeed_btn {
+    display: flex;
+    align-items: flex-start;
+    width: 240px;
+    justify-content: center;
     background: #d4d6f5;
     position: absolute;
     left: 25px;
