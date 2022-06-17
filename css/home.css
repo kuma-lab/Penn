@@ -129,6 +129,7 @@ header {
 
 
 .logoContainer.active p{
+  position: relative;
   min-width: 60px;
   height: 40px;
   margin: 0 9px;
@@ -154,6 +155,10 @@ header {
 
 .choiceContainer .imgContainer {
   height: 40px;
+}
+
+.choiceContainer .all .imgContainer{
+  height: 33px;
 }
 
 .choiceContainer img {

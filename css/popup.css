@@ -29,6 +29,7 @@ aside {
 button {
   border: none;
   background: none;
+  cursor: pointer;
 }
 
 aside h3 {

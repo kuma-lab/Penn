@@ -28,7 +28,7 @@
           <div class="choiceContainer ">
             <div class="logoContainer all active">
               <div class="imgContainer">
-                <img src="../img/pdfLogo.png" alt="pdf" />
+                <img src="../img/all.png" alt="pdf" />
               </div>
               <p>All</p>
             </div>
@@ -75,7 +75,7 @@
                         </div>
                         <div class="newsFeed_descr">
                           <span class="newsFeed_text__strong">The Fourth Data Release of the Sloan igital Sky Survey</span>
-                          <iframe src="https://www.codeur.com/tuto/wp-content/uploads/2022/02/pdf-test.pdf" height="80%" width="100%" type="application/pdf"> </iframe>
+                          <iframe src="https://sil.asc.upenn.edu/exchange/files/0/2.pdf" height="80%" width="100%" type="application/pdf"> </iframe>
                         </div>
 
                         <a href="#" class="newsFeed_btn">
@@ -143,7 +143,7 @@
                           <span class="newsFeed_text__strong"
                             >The Fourth Data Release of the Sloan Digital Sky Survey</span
                           >
-                           <iframe src="https://www.codeur.com/tuto/wp-content/uploads/2022/02/pdf-test.pdf" height="80%" width="100%" type="application/pdf"> </iframe>
+                           <iframe src="https://sil.asc.upenn.edu/exchange/files/0/2.pdf" height="80%" width="100%" type="application/pdf"> </iframe>
                         </div>
 
                         <a href="#" class="newsFeed_btn">
@@ -175,7 +175,7 @@
                         </div>
                         <div class="newsFeed_descr">
                           <span class="newsFeed_text__strong">Cooperation in astronomy under strains of war </span>
-                           <iframe src="https://www.codeur.com/tuto/wp-content/uploads/2022/02/pdf-test.pdf" height="80%" width="100%" type="application/pdf"> </iframe>
+                           <iframe src="https://sil.asc.upenn.edu/exchange/files/0/2.pdf" height="80%" width="100%" type="application/pdf"> </iframe>
                         </div>
 
                         <a href="#" class="newsFeed_btn">
@@ -206,7 +206,7 @@
                         </div>
                         <div class="newsFeed_descr">
                           <span class="newsFeed_text__strong">Sloan Digital Sky Survey: Early Data Release</span>
-                           <iframe src="https://www.codeur.com/tuto/wp-content/uploads/2022/02/pdf-test.pdf" height="80%" width="100%" type="application/pdf"> </iframe>
+                           <iframe src="https://sil.asc.upenn.edu/exchange/files/0/2.pdf" height="80%" width="100%" type="application/pdf"> </iframe>
                         </div>
 
                         <a href="#" class="newsFeed_btn">
@@ -516,32 +516,27 @@
               <h4>Docteur bidulle</h4>
               <p><b>Main field:</b>Physic</p>
               <p><b>Affiliation:</b>PennMedicine</p>
-              <p><b>Keywords:</b>molecule, optics, lasers, energy lifetime</p>
             </div>
           </article>
         </section>
 
         <section class="textContainer">
           <div class="headlineContainer">
-            <button>
-              Back to list
-              <img src="../img/arrow-back.png" alt="back to list" />
-            </button>
-            <h5>Title Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
+            <h5>The Spread of Behavior in an Online Social Network </h5>
           </div>
           <div class="iframeContainer">
-            <iframe src="https://sil.asc.upenn.edu/exchange/files/0/1.pdf " type="application/pdf"></iframe>
+            <iframe src="https://sil.asc.upenn.edu/exchange/files/0/2.pdf" height="580px" width="100%" type="application/pdf"></iframe>
           </div>
         </section>
 
         <section class="btnContainer">
-          <button>
+          <button  class="download">
             Download
-            <img class="Download" src="../img/download.png" alt="" />
+            <img src="../img/download.png" alt="" />
           </button>
-          <button>
+          <button class="back">
             Back
-            <img class="Download" src="../img/arrow-back.png" alt="" />
+            <img  src="../img/arrow-back.png" alt="" />
           </button>
         </section>
       </aside>
@@ -552,6 +547,8 @@
       const items = document.querySelectorAll('.newsFeed_btn')
       const aside = document.querySelector('aside')
       const close = document.querySelector('.close')
+      const back = document.querySelector('.back')
+
 
       for (let item of items) {
         item.addEventListener('click', function () {
@@ -560,6 +557,11 @@
       }
 
       close.addEventListener('click', function () {
+        aside.classList.remove('active')
+      })
+
+      
+      back.addEventListener('click', function () {
         aside.classList.remove('active')
       })
     </script>
