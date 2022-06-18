@@ -148,6 +148,10 @@ header {
   align-items: center;
 }
 
+.logoContainer{
+  cursor: pointer;
+}
+
 .choiceContainer p {
   display: none;
   padding: 0 9px;

@@ -108,7 +108,7 @@
                         </div>
                         <div class="newsFeed_descr">
                           <span class="newsFeed_text__strong">Cooperation in astronomy under strains of war </span>
-                          <iframe width="320" height="80%" src="https://www.youtube.com/embed/Ge7c7otG2mk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <iframe width="100%" height="80%" src="https://www.youtube.com/embed/Ge7c7otG2mk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
 
                         <a href="#" class="newsFeed_btn">
@@ -548,11 +548,21 @@
       const aside = document.querySelector('aside')
       const close = document.querySelector('.close')
       const back = document.querySelector('.back')
+      const logoContainers = document.querySelectorAll('.logoContainer');
 
 
       for (let item of items) {
         item.addEventListener('click', function () {
           aside.classList.add('active')
+        })
+      }
+
+      for (let logoContainer of logoContainers) {
+        logoContainer.addEventListener('click', function () {
+          for (let logoContainer of logoContainers){
+          logoContainer.classList.remove('active')
+          }
+          logoContainer.classList.add('active')
         })
       }
 
