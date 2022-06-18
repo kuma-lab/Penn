@@ -10,9 +10,11 @@ aside {
   display: none;
   position: absolute;
   z-index: 122222;
-  width: 80%;
+  overflow: auto;
+  width: 90%;
+  max-width: 90%;
   height: auto;
-  max-height: 80%;
+  resize: both;
   left: 50%;
   top: 50%;
   background: white;
@@ -121,9 +123,6 @@ aside.active {
   display: inline;
   position: absolute;
   overflow: auto;
-  width: 80%;
-  max-width: 80%;
-  max-height: 80%;
   height: auto;
   padding: 20px;
   left: 50%;
@@ -141,4 +140,8 @@ aside.active {
   padding: 12px;
   border-radius: 9px;
   text-decoration: none;
+}
+
+.iframeContainer, .iframeContainer iframe{
+  min-height: 600px;
 }
