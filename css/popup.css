@@ -97,8 +97,9 @@ aside .headlineContainer {
   padding: 9px 0;
   margin-bottom: 9px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   position: relative;
+  align-items: center;
 }
 
 aside .headlineContainer button {
@@ -131,4 +132,13 @@ aside.active {
   border: solid 3px #699bf7;
   background: #ffff;
   border-radius: 8px;
+}
+
+.newTab{
+  font-weight: bold;
+  background-color: #699bf7;
+  color: #fff;
+  padding: 12px;
+  border-radius: 9px;
+  text-decoration: none;
 }
