@@ -271,6 +271,9 @@ header {
   margin: 9px;
 }
 .chart .metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: lightblue;
   background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
   background: -webkit-linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%); /* For Safari 5.1 to 6.0 */

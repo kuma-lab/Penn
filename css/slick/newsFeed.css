@@ -300,26 +300,6 @@
 }
 /* /slick */
 
-@media (max-width: 1600px) {
-  .newsFeed_box {
-    width: calc(100% - 120px);
-  }
-  .newsFeed_item {
-    min-height: 390px;
-  }
-  .newsFeed_name {
-    line-height: 30px;
-
-    font-size: 25px;
-  }
-  .newsFeed_descr {
-    margin-bottom: 30px;
-  }
-  .newsFeed_btn {
-    width: 250px;
-  }
-}
-
 @media only screen and (max-width: 767px) {
   .format-container {
     width: 96%;
