@@ -283,21 +283,6 @@
   display: flex;
   justify-content: space-between;
 }
-/* /slick hide section after selection all talks press papers */
-
-/* if papers choosen */
-.newFeedArticleContainer.papers .newsFeed_item.press, .newFeedArticleContainer.papers .newsFeed_item.talks{
-    display: none;
-  }
-
-/* if talks choosen */
-.newFeedArticleContainer.talks .newsFeed_item.press, .newFeedArticleContainer.talks .newsFeed_item.papers{
-  display: none;
-}
-/* if press choosen */
-.newFeedArticleContainer.press .newsFeed_item.talks, .newFeedArticleContainer.press .newsFeed_item.papers{
-  display: none;
-}
 
 @media only screen and (max-width: 767px) {
   .format-container {
