@@ -211,10 +211,6 @@
   z-index: 30;
   position: absolute;
   top: 50%;
-
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
-
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   border-radius: 100px;
@@ -226,9 +222,6 @@
 }
 .js-newsFeed_arrow:hover {
   background: rgba(105, 130, 255, 0.2);
-
-  -webkit-backdrop-filter: blur(6px);
-  backdrop-filter: blur(6px);
 }
 .newsFeed_box:hover .js-newsFeed_arrow {
   opacity: 1;
@@ -270,10 +263,6 @@
 }
 .slick-slide {
   opacity: 0.5;
-
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
-
   -webkit-transform: scale(0.9);
   -moz-transform: scale(0.9);
   -ms-transform: scale(0.9);
@@ -281,11 +270,7 @@
   transform: scale(0.9);
 }
 .slick-active {
-  -webkit-filter: blur(0);
-  filter: blur(0);
-
   opacity: 1;
-
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -298,7 +283,21 @@
   display: flex;
   justify-content: space-between;
 }
-/* /slick */
+/* /slick hide section after selection all talks press papers */
+
+/* if papers choosen */
+.newFeedArticleContainer.papers .newsFeed_item.press, .newFeedArticleContainer.papers .newsFeed_item.talks{
+    display: none;
+  }
+
+/* if talks choosen */
+.newFeedArticleContainer.talks .newsFeed_item.press, .newFeedArticleContainer.talks .newsFeed_item.papers{
+  display: none;
+}
+/* if press choosen */
+.newFeedArticleContainer.press .newsFeed_item.talks, .newFeedArticleContainer.press .newsFeed_item.papers{
+  display: none;
+}
 
 @media only screen and (max-width: 767px) {
   .format-container {

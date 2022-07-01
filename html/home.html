@@ -32,19 +32,19 @@
               </div>
               <p>All</p>
             </div>
-            <div class="logoContainer">
+            <div class="logoContainer papers">
               <div class="imgContainer">
                 <img src="../img/pdfLogo.png" alt="pdf" />
               </div>
               <p>Papers</p>
             </div>
-            <div class="logoContainer">
+            <div class="logoContainer talks">
               <div class="imgContainer">
                 <img src="../img/videoLogo.png" alt="pdf" />
               </div>
               <p>Talks</p>
             </div>
-            <div class="logoContainer">
+            <div class="logoContainer press">
               <div class="imgContainer">
                 <img src="../img/wifiLogo.png" alt="pdf" />
               </div>
@@ -86,7 +86,7 @@
 
                       </div>
 
-                      <div class="js-newsFeed_item newsFeed_item talk">
+                      <div class="js-newsFeed_item newsFeed_item talks">
                         <div class="newsFeed_icon">
                           <img src="../img/videoLogo.png" class="newsFeed_img" width="50" height="50" alt="" />
                           <img class="avatarbillet" class="newsFeed_img" src="../img/avatar4.png" alt="" />
@@ -113,7 +113,7 @@
 
                       </div>
 
-                      <div class="js-newsFeed_item newsFeed_item publication ">
+                      <div class="js-newsFeed_item newsFeed_item papers ">
                         <div class="newsFeed_icon">
                           <img src="../img/pdfLogo.png" class="newsFeed_img" width="50" height="50" alt="" />
                           <img class="avatarbillet" class="newsFeed_img" src="../img/avatar3.png" alt="" />
@@ -140,7 +140,7 @@
 
                       </div>
 
-                      <div class="js-newsFeed_item newsFeed_item">
+                      <div class="js-newsFeed_item newsFeed_item press">
                         <div class="newsFeed_icon">
                           <img src="../img/wifiLogo.png" class="newsFeed_img" width="50" height="50" alt="" />
                           <img class="avatarbillet" class="newsFeed_img" src="../img/avatar11.png" alt="" />
@@ -167,9 +167,9 @@
 
                       </div>
 
-                      <div class="js-newsFeed_item newsFeed_item">
+                      <div class="js-newsFeed_item newsFeed_item talks">
                         <div class="newsFeed_icon">
-                          <img src="../img/wifiLogo.png" class="newsFeed_img" width="50" height="50" alt="" />
+                          <img src="../img/videoLogo.png" class="newsFeed_img" width="50" height="50" alt="" />
                           <img class="avatarbillet" class="newsFeed_img" src="../img/avatar10.jpg" alt="" />
                         </div>
                         <div class="newsFeed_name">
@@ -191,6 +191,34 @@
                         </a>
 
                       </div>
+
+                      <div class="js-newsFeed_item newsFeed_item papers ">
+                        <div class="newsFeed_icon">
+                          <img src="../img/pdfLogo.png" class="newsFeed_img" width="50" height="50" alt="" />
+                          <img class="avatarbillet" class="newsFeed_img" src="../img/avatar3.png" alt="" />
+                        </div>
+                        <div class="newsFeed_name">
+                          <div class="newsFeed_nameContainer">
+                            <h4>
+                              Malorie Hiribarne<img class="pointer" src="../img/MessageLogo.png" alt="send a message" />
+                            </h4>
+                          </div>
+                          <p><b>Main field:</b>Physic</p>
+                          <p><b>Affiliation:</b>PennMedicine</p>
+                        </div>
+                        <div class="newsFeed_descr">
+                          <span class="newsFeed_text__strong">The Spread of Behavior in an Online Social Network Experiment</span>
+                          <iframe src="https://sil.asc.upenn.edu/exchange/files/0/2.pdf" height="80%" width="100%" type="application/pdf"> </iframe>
+
+                        </div>
+
+                        <a href="#" class="newsFeed_btn">
+                          <img class="pointer" src="../img/pdfLogo.png" alt="read the pdf" />
+                          <p class="textBtn"> Open the document</p>
+                        </a>
+
+                      </div>
+
                     </div>
                     <div class="arrowContainer">
                       <div class="js-newsFeed_arrow js-newsFeed_arrow__prev">
@@ -497,7 +525,6 @@
           </div>
           <div class="iframeContainer">
             <iframe width="100%" height="80%" src="https://www.youtube.com/embed/0aSlkkifeFI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <!-- <iframe src="https://thehill.com/opinion/healthcare/565241-how-to-turn-the-tide-on-vaccine-hesitancy-apply-an-algorithm-that-actually/" height="100%" width="100%" type="application/pdf"></iframe> -->
           </div>
         </section>
 
@@ -514,6 +541,32 @@
       </aside>
     </main>
     <footer></footer>
+
+    <script>
+      const feedContainer= document.querySelector('.newFeedArticleContainer');
+      const ctaFeeds = document.querySelectorAll('.logoContainer');
+      const allFeeds = document.querySelector('.logoContainer.all');
+
+      for (let ctaFeed of ctaFeeds) {
+        ctaFeed.addEventListener('click', function () {
+          feedContainer.classList.remove('papers')
+          feedContainer.classList.remove('talks')
+          feedContainer.classList.remove('press')
+
+          if (ctaFeed.classList.contains('papers') == true) {
+            feedContainer.classList.add('papers');
+          }
+          if (ctaFeed.classList.contains('talks') == true) {
+            feedContainer.classList.add('talks');
+          }
+          if (ctaFeed.classList.contains('press') == true) {
+            feedContainer.classList.add('press');
+          }
+
+        })
+      }
+      
+    </script>
 
     <script>
       const items = document.querySelectorAll('.newsFeed_btn')
@@ -547,8 +600,6 @@
         aside.classList.remove('active')
       })
     </script>
-
-
     <script>
       (function ($) {
         $(function () {
