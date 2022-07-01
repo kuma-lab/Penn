@@ -124,7 +124,7 @@ aside.active {
   display: inline;
   position: absolute;
   overflow: auto;
-  height: auto;
+  height: 80%;
   padding: 20px;
   left: 50%;
   top: 50%;
