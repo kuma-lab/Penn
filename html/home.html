@@ -549,18 +549,17 @@
 
       for (let ctaFeed of ctaFeeds) {
         ctaFeed.addEventListener('click', function () {
-          feedContainer.classList.remove('papers')
-          feedContainer.classList.remove('talks')
-          feedContainer.classList.remove('press')
+
+          $('.js-newsFeed_list').slick('slickUnfilter');
 
           if (ctaFeed.classList.contains('papers') == true) {
-            feedContainer.classList.add('papers');
+            $('.js-newsFeed_list').slick('slickFilter','.papers');
           }
           if (ctaFeed.classList.contains('talks') == true) {
-            feedContainer.classList.add('talks');
+            $('.js-newsFeed_list').slick('slickFilter','.talks');
           }
           if (ctaFeed.classList.contains('press') == true) {
-            feedContainer.classList.add('press');
+            $('.js-newsFeed_list').slick('slickFilter','.press');
           }
 
         })
