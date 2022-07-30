@@ -269,6 +269,10 @@ header {
 }
 .chart {
   margin: 9px;
+  display: none;
+}
+.chart.active {
+  display: block;
 }
 .chart .metric {
   display: flex;
