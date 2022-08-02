@@ -3158,6 +3158,7 @@
               }
           }
 
+          $('.js-newsFeed_list').slick('slickGoTo', 0, true);
           updateTimeline();
 
         })
@@ -3252,8 +3253,11 @@
 
       function updateTimeline() {
           if (shouldUpdateTimelineYear) {
-              let year = document.querySelector('.newsFeed_item.slick-current').getAttribute('data-content-year');
-              updateTimelineYear(year);
+              let yearEl = document.querySelector('.newsFeed_item.slick-current');
+              if (yearEl) {
+                  let year = yearEl.getAttribute('data-content-year');
+                  updateTimelineYear(year);
+              }
           }
 //          shouldUpdateTimelineYear = true;
       }
