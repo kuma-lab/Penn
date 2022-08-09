@@ -93,10 +93,15 @@ section {
 header {
   display: flex;
   align-items: center;
-  padding: 9px;
-  margin-bottom: 9px;
+  padding: 0;
+  margin-bottom: 0;
   justify-content: space-between;
   border: black 1px solid;
+}
+
+header .imgContainer{
+  position: absolute;
+  top: 28px;
 }
 
 .imgContainer {
@@ -140,11 +145,15 @@ header {
   border-radius: 9px;
 }
 
+.newFeedContainer .choiceContainer{
+  justify-content: center;
+}
+
 .choiceContainer,
 .logoContainer {
   display: flex;
   justify-content: space-around;
-  padding-left: 9px;
+  padding: 9px;
   align-items: center;
 }
 
