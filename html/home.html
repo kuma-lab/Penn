@@ -46,40 +46,41 @@
           </div>
 
           <div class="contentTimelineContainer">
-                        <div class="contentTimeline  active" data-content-category="pub">
-                                <div class="contentYear" data-content-year="2021">2021</div>
-                                <div class="contentYear" data-content-year="2020">2020</div>
-                                <div class="contentYear" data-content-year="2019">2019</div>
-                                <div class="contentYear" data-content-year="2018">2018</div>
-                                <div class="contentYear" data-content-year="2017">2017</div>
-                                <div class="contentYear" data-content-year="2016">2016</div>
-                                <div class="contentYear" data-content-year="2015">2015</div>
-                                <div class="contentYear" data-content-year="2014">2014</div>
-                                <div class="contentYear" data-content-year="2013">2013</div>
-                                <div class="contentYear" data-content-year="2011">2011</div>
-                                <div class="contentYear" data-content-year="2007">2007</div>
-                                <div class="contentYear" data-content-year="1999">1999</div>
-                                <div class="contentYear" data-content-year="1998">1998</div>
-                            </div>
-                        <div class="contentTimeline " data-content-category="talk">
-                                <div class="contentYear" data-content-year="2021">2021</div>
-                                <div class="contentYear" data-content-year="2020">2020</div>
-                                <div class="contentYear" data-content-year="2019">2019</div>
-                                <div class="contentYear" data-content-year="2018">2018</div>
-                                <div class="contentYear" data-content-year="2017">2017</div>
-                                <div class="contentYear" data-content-year="2016">2016</div>
-                                <div class="contentYear" data-content-year="2015">2015</div>
-                                <div class="contentYear" data-content-year="2014">2014</div>
-                                <div class="contentYear" data-content-year="2013">2013</div>
-                                <div class="contentYear" data-content-year="2012">2012</div>
-                                <div class="contentYear" data-content-year="2011">2011</div>
-                            </div>
-                        <div class="contentTimeline " data-content-category="press">
-                                <div class="contentYear" data-content-year="2022">2022</div>
-                                <div class="contentYear" data-content-year="2021">2021</div>
-                                <div class="contentYear" data-content-year="2020">2020</div>
-                            </div>
-                    </div>
+              <div id="contentTimeline__prev">prev</div>
+              <div id="contentTimeline" class="contentTimeline">
+                      <div class="contentYear pub" data-content-year="2021">2021</div>
+                      <div class="contentYear pub" data-content-year="2020">2020</div>
+                      <div class="contentYear pub" data-content-year="2019">2019</div>
+                      <div class="contentYear pub" data-content-year="2018">2018</div>
+                      <div class="contentYear pub" data-content-year="2017">2017</div>
+                      <div class="contentYear pub" data-content-year="2016">2016</div>
+                      <div class="contentYear pub" data-content-year="2015">2015</div>
+                      <div class="contentYear pub" data-content-year="2014">2014</div>
+                      <div class="contentYear pub" data-content-year="2013">2013</div>
+                      <div class="contentYear pub" data-content-year="2011">2011</div>
+                      <div class="contentYear pub" data-content-year="2007">2007</div>
+                      <div class="contentYear pub" data-content-year="1999">1999</div>
+                      <div class="contentYear pub" data-content-year="1998">1998</div>
+                      
+                      <div class="contentYear talk" data-content-year="2021">2021</div>
+                      <div class="contentYear talk" data-content-year="2020">2020</div>
+                      <div class="contentYear talk" data-content-year="2019">2019</div>
+                      <div class="contentYear talk" data-content-year="2018">2018</div>
+                      <div class="contentYear talk" data-content-year="2017">2017</div>
+                      <div class="contentYear talk" data-content-year="2016">2016</div>
+                      <div class="contentYear talk" data-content-year="2015">2015</div>
+                      <div class="contentYear talk" data-content-year="2014">2014</div>
+                      <div class="contentYear talk" data-content-year="2013">2013</div>
+                      <div class="contentYear talk" data-content-year="2012">2012</div>
+                      <div class="contentYear talk" data-content-year="2011">2011</div>
+                      
+                      <div class="contentYear press" data-content-year="2022">2022</div>
+                      <div class="contentYear press" data-content-year="2021">2021</div>
+                      <div class="contentYear press" data-content-year="2020">2020</div>
+              </div>
+              
+              <div id="contentTimeline__next">next</div>
+          </div>
 
           <section class="newFeedArticleContainer">
             <div id="js-vacations" class="newsFeed-block">
@@ -3126,27 +3127,29 @@
       const ctaFeeds = document.querySelectorAll('.logoContainer');
       const allFeeds = document.querySelector('.logoContainer.all');
 
+      const timelineSlider = $('#contentTimeline');
+      
       var shouldUpdateTimelineYear = true;
 
       for (let ctaFeed of ctaFeeds) {
         ctaFeed.addEventListener('click', function () {
 
-          $('.js-newsFeed_list').slick('slickUnfilter');
-          let selectedCategory = '';
+            $('.js-newsFeed_list').slick('slickUnfilter');
+            timelineSlider.slick('slickUnfilter');
 
           if (ctaFeed.classList.contains('papers') == true) {
-            $('.js-newsFeed_list').slick('slickFilter','.papers');
-            selectedCategory = 'pub';
+              $('.js-newsFeed_list').slick('slickFilter','.papers');
+              timelineSlider.slick('slickFilter','.pub');
           }
           if (ctaFeed.classList.contains('talks') == true) {
             $('.js-newsFeed_list').slick('slickFilter','.talks');
-            selectedCategory = 'talk';
+            timelineSlider.slick('slickFilter','.talk');
           }
           if (ctaFeed.classList.contains('press') == true) {
             $('.js-newsFeed_list').slick('slickFilter','.press');
-            selectedCategory = 'press';
+            timelineSlider.slick('slickFilter','.press');
           }
-
+/*
           let timelines = document.querySelectorAll('.contentTimeline');
           for (timeline of timelines) {
               if (timeline.getAttribute('data-content-category') === selectedCategory) {
@@ -3155,12 +3158,28 @@
                   timeline.classList.remove('active');
               }
           }
-
+*/
           $('.js-newsFeed_list').slick('slickGoTo', 0, true);
+          timelineSlider.slick('slickGoTo', 0, true);
+          
           updateTimeline();
 
         })
+        
       }
+      
+
+      timelineSlider.slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true,
+        rows: false,
+        arrows: true,
+        adaptiveHeight: true,
+        prevArrow: $('#contentTimeline__prev'),
+        nextArrow: $('#contentTimeline__next')
+      });
 
     </script>
 
@@ -3361,6 +3380,7 @@
               });
 
               this.slider.slick('slickFilter','.papers');
+              timelineSlider.slick('slickFilter','.pub');
 
               // On swipe event
               /*

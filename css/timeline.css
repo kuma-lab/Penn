@@ -1,13 +1,30 @@
 
 .contentTimelineContainer{
-  margin: 10px 0;
+    margin: 10px 0;
+  
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    margin: 0 auto;
 }
 
 
 .contentTimeline {
     justify-content: center;
-    width: 100%;
-  }
+    width: 140px;
+    height: 4em;
+    padding: 0 2em;
+    overflow: hidden;
+}
+
+#contentTimeline__prev {
+    padding-right: 1.5em;
+    cursor: pointer;
+}
+#contentTimeline__next {
+    padding-left: 1.5em;
+    cursor: pointer;
+}
   
   .contentYear {
     position: relative;
