@@ -485,6 +485,7 @@ header .imgContainer{
 
   main {
     flex-direction: row;
+    align-items: baseline;
   }
 
   .centralContainer {
