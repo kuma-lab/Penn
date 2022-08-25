@@ -441,6 +441,7 @@ header {
 @media screen and (min-width: 1024px) {
   main{
     flex-direction: row;
+    align-items: baseline;
   }
 
   .main{
