@@ -134,7 +134,7 @@ aside.active {
   border-radius: 8px;
 }
 
-.headlineContainer .newTab{
+.aside .headlineContainer .newTab{
   font-weight: bold;
   background-color: #699bf7;
   color: #fff;
@@ -144,17 +144,17 @@ aside.active {
   margin: 9px 0;
 }
 
-.headlineContainer h5{
+.aside .headlineContainer h5{
   color: #699bf7;
   font-weight: bold;
 }
 
-.iframeContainer, .iframeContainer iframe{
+.aside .iframeContainer,.aside .iframeContainer iframe{
   min-height: 600px;
 }
 
 @media screen and (min-width: 1024px) {
-  aside .headlineContainer {
+  .aside .headlineContainer {
     flex-direction: row;
   }
 

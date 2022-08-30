@@ -237,11 +237,27 @@ header {
 }
 
 .backgroundIframe{
+  position: relative;
   height: 300px;
   padding: 18px;
   background-image: url(../img/Rectangle\ 154.png);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.Cta{
+  padding: 3px 0;
+  text-align: center;
+  background: #3a65ff;
+  width: 110px;
+  margin: 5px auto 0;
+  color: white;
+  font-weight: bold;
+  border-radius: 9px;
+}
+
+.Cta:hover{
+  cursor: pointer;
 }
 
 .infoContainer{

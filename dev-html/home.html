@@ -4,14 +4,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../dev-css/home.css">
-
+    <link rel="stylesheet" href="../dev-css/popup.css" />
     <title>Home</title>
 </head>
 <body>
     <header>
         <div class="searchContainer">
             <img src="../img/Search.png" alt="search">
-            <label class="hide" for="gsearch"></label>
+            <label class="hide for="gsearch"></label>
             <input type="search" id="gsearch" placeholder="search" name="gsearch">
         </div>
         <div class="imgContainer notification">
@@ -60,6 +60,7 @@
                       <div class="backgroundIframe">
                         <div class="iframeContainer">
                           <iframe src="https://thehill.com/opinion/healthcare/565241-how-to-turn-the-tide-on-vaccine-hesitancy-apply-an-algorithm-that-actually/" height="95%" width="100%" type="application/pdf"> </iframe>
+                          <p class="Cta">open the link</p>
                         </div>
                       </div>
 
@@ -80,6 +81,7 @@
                       <div class="backgroundIframe">
                         <div class="iframeContainer">
                           <iframe src="https://sil.asc.upenn.edu/exchange/files/0/2.pdf" height="95%" width="100%" type="application/pdf"> </iframe>
+                          <p class="Cta">open the link</p>
                         </div>
                       </div>
 
@@ -100,6 +102,7 @@
                       <div class="backgroundIframe">
                         <div class="iframeContainer">
                           <iframe src="https://thehill.com/opinion/healthcare/565241-how-to-turn-the-tide-on-vaccine-hesitancy-apply-an-algorithm-that-actually/" height="95%" width="100%" type="application/pdf"> </iframe>
+                          <p class="Cta">open the link</p>
                         </div>
                       </div>
 
@@ -285,5 +288,79 @@
       </section>
         </article>
     </main>
+    <aside>
+      <section class="poupContainer">
+        <div class="titleContainer">
+          <img class="newsFeedLogo" src="../img/pdfLogo.png" alt="PublicationLogo" />
+          <h3>Publication</h3>
+          <img class="close pointer" src="../img/close.png" alt="send a message" />
+        </div>
+
+        <article class="billetContainer">
+          <img class="avatarbillet" src="../img/avatar1.png" alt="" />
+          <div class="infoPersonal">
+            <h4>Docteur bidulle</h4>
+            <p><b>Main field:</b>Physic</p>
+            <p><b>Affiliation:</b>PennMedicine</p>
+
+          </div>
+        </article>
+      </section>
+
+      <section class="textContainer">
+        <div class="headlineContainer">
+          <a class="newTab" target="_blank" href="https://sil.asc.upenn.edu/exchange/files/0/2.pdf"> Open in new tab</a>
+          <h5>The Spread of Behavior in an Online Social Network </h5>
+        </div>
+        <div class="iframeContainer">
+          <iframe width="100%" height="80%" src="https://www.youtube.com/embed/0aSlkkifeFI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </section>
+
+      <section class="btnContainer">
+        <button  class="download">
+          Download
+          <img src="../img/download.png" alt="" />
+        </button>
+        <button class="back">
+          Back
+          <img  src="../img/arrow-back.png" alt="" />
+        </button>
+      </section>
+    </aside>
+
+    <script>
+      const items = document.querySelectorAll('.Cta')
+      const aside = document.querySelector('aside')
+      const close = document.querySelector('.close')
+      const back = document.querySelector('.back')
+      const logoContainers = document.querySelectorAll('.logoContainer');
+
+
+      for (let item of items) {
+        item.addEventListener('click', function () {
+          console.log('o')
+          aside.classList.add('active')
+        })
+      }
+
+      for (let logoContainer of logoContainers) {
+        logoContainer.addEventListener('click', function () {
+          for (let logoContainer of logoContainers){
+          logoContainer.classList.remove('active')
+          }
+          logoContainer.classList.add('active')
+        })
+      }
+
+      close.addEventListener('click', function () {
+        aside.classList.remove('active')
+      })
+
+      
+      back.addEventListener('click', function () {
+        aside.classList.remove('active')
+      })
+    </script>
 </body>
 </html>
