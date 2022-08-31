@@ -329,16 +329,28 @@
     </aside>
 
     <script>
+      // active news feed
+      const choices = document.querySelectorAll('.BubbleContainer')
+      for (let choice of choices) {
+        choice.addEventListener('click', function () {
+          for (let choice of choices) {
+            choice.classList.remove('active')
+          }
+          choice.classList.add('active')
+        })
+      }
+    </script>
+
+    <script>
+      // popup
       const items = document.querySelectorAll('.Cta')
       const aside = document.querySelector('aside')
       const close = document.querySelector('.close')
       const back = document.querySelector('.back')
       const logoContainers = document.querySelectorAll('.logoContainer');
 
-
       for (let item of items) {
         item.addEventListener('click', function () {
-          console.log('o')
           aside.classList.add('active')
         })
       }
