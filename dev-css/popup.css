@@ -23,11 +23,6 @@ aside {
   border-radius: 9px;
 }
 
-.poupContainer,
-.textContainer,
-.btnContainer {
-  padding: 9px;
-}
 button {
   border: none;
   background: none;
@@ -100,9 +95,19 @@ aside .headlineContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
   padding: 9px 0;
   margin-bottom: 9px;
+}
+
+aside h5{
+  margin-top: 18px;
+}
+
+aside .Cta{
+  width: auto;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: initial;
 }
 
 aside .headlineContainer button {

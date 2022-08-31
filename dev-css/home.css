@@ -166,6 +166,7 @@ header {
 .choiceContainer{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .firstLine{
@@ -180,7 +181,7 @@ header {
   justify-content: center;
   font-weight: bold;
   padding: 4px 0;
-  margin: 0 9px;
+  margin: 9px;
   border-radius: 49px;
   background-color: #ffff;
   width: 100px;
@@ -210,6 +211,7 @@ header {
   align-items: baseline;
   position: relative;
   padding: 0 10px;
+  margin: 0;
 }
 
 .slider .arrow{
@@ -256,6 +258,7 @@ header {
   color: white;
   font-weight: bold;
   border-radius: 9px;
+  text-transform: capitalize;
 }
 
 .Cta:hover{
