@@ -281,6 +281,12 @@ header {
 .infos p{
   color: #8E8C99;
   font-weight: bold;
+  line-height: 15px;
+}
+
+.infos p span{
+  color: #070721;
+  font-weight: bold;
 }
 
 .avatarContainer .avatar{
@@ -496,7 +502,7 @@ header {
   }
 
   .timeline{
-    width: 100%;
+    width: 97%;
   }
 
   .timeline .arrow.right {
