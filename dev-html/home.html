@@ -28,7 +28,7 @@
                 <div class="headerNewsFeed">
                   <div class="firstLine">
                     <h2>Your Media</h2>
-                    <span class="all">see all</span>
+                    <span id="allFeed" class="all">see all</span>
                   </div>
                   <div class="choiceContainer">
                     <div class="BubbleContainer trending active">
@@ -331,6 +331,14 @@
     <script>
       // active news feed
       const choices = document.querySelectorAll('.BubbleContainer')
+      const allFeed = document.querySelector('#allFeed')
+
+      allFeed.addEventListener('click', function () {
+          for (let choice of choices) {
+            choice.classList.add('active')
+          }
+        });
+
       for (let choice of choices) {
         choice.addEventListener('click', function () {
           for (let choice of choices) {
