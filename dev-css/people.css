@@ -1,4 +1,5 @@
 /* Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -33,7 +34,7 @@
 
 /* Tag */
 body {
-  background-color: #ffff;
+  background-image: url("../img/fond.png");
   font-family: 'Roboto', sans-serif;
 }
 
@@ -42,23 +43,25 @@ p {
   margin-top: 3px;
 }
 
+select {
+  border: none;
+}
 h2 {
-  margin: 20px 0;
+  padding: 18px 0;
   font-weight: bold;
   font-size: 24px;
   line-height: 28px;
-  text-align: center;
-  text-decoration-line: underline;
-  color: #699bf7;
+  color: #070721;
   text-transform: capitalize;
 }
 
 h3 {
+  padding-top: 9px;
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;
   text-decoration-line: underline;
-  color: #699bf7;
+  color: #070721;
   text-transform: capitalize;
 }
 
@@ -66,36 +69,42 @@ h4 {
   font-weight: bold;
   font-size: 15px;
   line-height: 18px;
-  color: #1561ed;
+  color: #070721;
   text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+main{
+  display: flex;
+  flex-direction: column;    
+  align-items: center;
 }
 
 section {
   margin: 9px 0;
 }
 
-.hide {
+.hide{
   display: none;
 }
 
-/* background */
-.bg {
-  display: none;
-  position: absolute;
-  top: 60px;
-  left: -400px;
-  height: 70%;
+.pointer {
+  cursor: pointer;
+  padding-left: 5px;
+}
+
+.pointer.add {
+  height: 20px;
+  transform: translateY(5px);
 }
 
 /* Header */
 
 header {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  padding: 9px;
-  margin-bottom: 9px;
-  justify-content: space-between;
-  border: black 1px solid;
+  padding: 18px;
 }
 
 .imgContainer {
@@ -103,229 +112,99 @@ header {
   align-items: center;
 }
 
-.imgContainer {
-  display: flex;
+.notification,.searchContainer{
+  display: flex;    
   align-items: center;
+  padding: 10px;
+  background-color: #ffff;
+  border-radius: 20px;
+  margin-right: 9px;
+
 }
 
-.notification {
-  padding: 0 9px;
-  height: 20px;
+.searchContainer input{
+  margin-left: 9px;
+  width: 85px;
+  padding: 5px;
+}
+
+.searchContainer img{
+  height: 24px;
+  width: 24px;
+}
+
+.avatar img {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 40px;
 }
 
 .avatarHeader {
-  border-radius: 50px;
   height: 40px;
-}
-
-.centralContainer.people {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.keywordContainer {
-  display: flex;
-  flex-direction: row;
-}
-
-.billetContainer {
-  display: flex;
-  position: relative;
-  margin: 9px;
-}
-
-.centralContainer .billetContainer img {
-  margin-right: 9px;
-  width: 80px;
-  height: auto;
-}
-
-.billetContainer img {
-  margin-right: 9px;
   border-radius: 50px;
 }
 
-.infoPersonal {
-  width: calc(100vw - 70px);
+.main{
+  width:90%;
+  padding: 0 9px;
 }
 
-.infoPersonal p {
-  white-space: break-spaces;
+.side{
+  width: 90%;
+  padding: 0 9px;
 }
 
-.articleContainer {
+.all{
+  font-weight: bold;
+  color:#3162FF;
+  text-transform: capitalize  ;
+}
+
+
+/* background */
+
+/* CHat */
+
+.left article{
   display: flex;
-  flex-direction: column;
-  background: linear-gradient(0deg, rgba(211, 213, 246, 0.62) -179%, #fff 100%);
-  border: dashed #699bf7 1px;
-  padding: 9px;
-  border-radius: 9px;
+  padding: 0 18px;
 }
 
-.articleContainer .article {
+.right .chatContainer{
+  width: 100%;
+}
+
+.chatContainer{
+  padding-left: 18px;
+  padding-bottom: 18px;
+}
+
+.messageContainer{
   display: flex;
   align-items: center;
-  margin: 9px;
+  position: relative;
+  padding-right: 33px;
 }
 
-.articleContainer .article img {
-  margin-right: 9px;
+.txtInfos{
+  margin: 0 9px;
 }
 
-.peopleContainer.row {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 0;
-  background-color: #ffff;
+.chatContainer, .ranking{
+  width: 90%;
+  margin-right: 18px;    
+  background: white;
+  border-radius: 20px;
 }
 
-.peopleContainer.row .articleContainer {
-  margin: 9px 9px 0;
-  width: 100%;
-}
-
-.peopleContainer.row .articleContainer h4 {
-  margin-bottom: 9px;
-}
-
-.centralContainer a {
-  width: 100%;
+.left article h2{
   text-align: center;
 }
-button {
-  margin-top: 18px;
-  width: 80%;
-  max-width: 400px;
-  height: 46px;
-  border: #699bf7 solid 2px;
-  color: #699bf7;
-  border-radius: 9px;
-}
-.billetContainer {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  margin: 9px;
-}
 
-.billetContainer .avatarbillet {
-  margin-right: 9px;
-  border-radius: 50px;
-  width: 45px;
-  height: 45px;
-}
-
-.buddy {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.buddy .scroll {
-  overflow: auto;
-  width: 100%;
-  height: 400px;
-}
-
-/* tablette / desktop */
-
-@media screen and (min-width: 768px) {
-  p {
-    font-size: 14px;
-    margin-top: 9px;
-  }
-
-  main {
-    display: flex;
-  }
-
-  .buddy {
-    margin-left: 9px;
-    width: 300px;
-    overflow: auto;
-    height: 117vw;
-  }
-  .buddy .scroll {
-    overflow: auto;
-    height: 100%;
-    width: 100%;
-  }
-
-  .buddy .billetContainer {
-    flex-direction: row;
-  }
-
-  .avatarbillet {
-    position: absolute;
-    right: 29px;
-    height: 40px;
-    top: 9px;
-  }
-
-  .centralContainer.people {
-    width: 80%;
-  }
-
-  .centralContainer.people article.billetContainer {
-    align-items: center;
-    padding-left: 20%;
-  }
-
-  .centralContainer .newFeedArticleContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-  }
-
-  .infoPersonal {
-    width: auto;
-  }
-
-  .billetContainer {
-    width: auto;
-  }
-
-  .avatarbillet,
-  .docLogo {
-    position: initial;
-  }
-
-  .dskFlex {
-    display: flex;
-  }
-
-  .peopleContainer.row {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 0;
-  }
-
-  .peopleContainer.row .articleContainer {
-    margin: 9px 9px 0;
-    width: 50%;
-  }
-
-  .peopleContainer.row {
-    margin-left: 9px;
-  }
-}
-
-@media screen and (min-width: 965px) {
-  p {
-    font-size: 16px;
-  }
-
-  .centralContainer.people {
-    width: auto;
-  }
-
-  main {
-    background-image: url(../img/bg.png);
-    height: 100vw;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: -113% -104;
-  }
+.messages{
+  width: 25px;  
+  position: absolute;
+  right: 5px;
 }
