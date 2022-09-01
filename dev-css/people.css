@@ -172,7 +172,6 @@ header {
 
 /* who */
 .infos1,.infos2{
-  width: 90%;
   margin-right: 18px;
   background: white;
   border-radius: 20px;
@@ -235,7 +234,6 @@ header {
   overflow: hidden;
   align-items: center;
   justify-content: space-between;
-  width: 90%;
   height: 67px;
   background-color: #ffff;
   border-radius: 18px;
@@ -268,7 +266,6 @@ header {
 /* mediaContainer */
 
 .mediaContainer{
-  width: 90%;
   margin-right: 18px;    
   background: white;
   border-radius: 20px;
@@ -333,7 +330,6 @@ header {
 }
 
 .chatContainer, .ranking{
-  width: 90%;
   margin-right: 18px;    
   background: white;
   border-radius: 20px;
@@ -347,4 +343,23 @@ header {
   width: 25px;  
   position: absolute;
   right: 5px;
+}
+
+@media screen and (min-width: 1024px) {
+
+  main{
+    flex-direction: row;
+    align-items: flex-start;
+  }  
+
+  header{
+    justify-content: flex-end;
+  }
+  .main{
+    width: 80%;
+  }
+  .side{
+    width: 20%;
+  }
+
 }
