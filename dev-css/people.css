@@ -38,13 +38,21 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-p {
+p,li {
   font-size: 12px;
   margin-top: 3px;
 }
 
 select {
   border: none;
+}
+
+h1{
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-decoration-line: underline;
+  color: #3162FF;
 }
 h2 {
   padding: 18px 0;
@@ -162,11 +170,143 @@ header {
   text-transform: capitalize  ;
 }
 
+/* who */
+.infos1,.infos2{
+  width: 90%;
+  margin-right: 18px;
+  background: white;
+  border-radius: 20px;
+}
 
-/* background */
+.whoIAm{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 0;
+}
+
+.whoIAm div{
+  margin-right: 9px;
+}
+
+.whoIAm div img{
+  display: flex;
+  align-items: center;
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+}
+
+.me p, .infos2 p{
+  color: #8E8C99;
+  font-weight: bold;
+  line-height: 15px;
+}
+
+.me p span, .infos2 p span{
+  color: #070721;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.keyword{
+  padding: 9px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.infos2 .keyword li{
+  list-style: none;
+}
+
+/* Timeline */
+.arrow img{
+  width: 40px;
+}
+
+.timeline .arrow.right{
+  transform: rotate(180deg);
+}
+
+
+.timeline{
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  height: 67px;
+  background-color: #ffff;
+  border-radius: 18px;
+}
+
+.timeContainer{
+  display: flex;
+}
+
+.timeContainer span + span{
+  margin-left: 9px;;
+}
+.timeContainer .active {
+  position: relative;
+  color: #3a65ff;
+  font-weight: bold;
+}
+
+.timeContainer .active::before {
+  content: "";
+  position: absolute;
+  top:-26px;
+  width: 0; 
+  height: 0; 
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+  border-top: 17px solid #3a65ff;
+}
+
+/* mediaContainer */
+
+.mediaContainer{
+  width: 90%;
+  margin-right: 18px;    
+  background: white;
+  border-radius: 20px;
+}
+
+.mediaContainer div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mediaConntainer{
+  margin-right: 18px;
+  background: white;
+  border-radius: 20px;
+}
+
+.mediaContainer .BubbleContainer,.mediaContainer .all{
+  padding: 9px 18px;
+}
+
+.mediaContainer ul{
+  padding:9px 18px 18px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mediaContainer li{
+  list-style: none;
+  margin: 0 18px;
+  text-transform: capitalize;
+}
 
 /* CHat */
-
+.avatarContainer .avatar {
+  height: 60px;
+  border-radius: 9px;
+}
 .left article{
   display: flex;
   padding: 0 18px;
