@@ -231,6 +231,7 @@ header {
 .timeline{
   position: relative;
   display: flex;
+  width: 98%;
   overflow: hidden;
   align-items: center;
   justify-content: space-between;
