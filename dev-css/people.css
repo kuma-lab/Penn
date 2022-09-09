@@ -284,20 +284,32 @@ header {
   border-radius: 20px;
 }
 
+.mediaContainer > div{
+  padding: 9px;
+}
+
 .mediaContainer .BubbleContainer,.mediaContainer .all{
   padding: 9px 18px;
 }
 
+.mediaContainer .BubbleContainer span{
+  padding: 0 9px;
+  font-weight: bolder;
+}
+
 .mediaContainer ul{
-  padding:9px 18px 18px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;    
+  flex-direction: column;
+  padding:9px 18px 18px;
+  margin-left: 40px;
 }
 
 .mediaContainer li{
-  list-style: none;
   margin: 0 18px;
   text-transform: capitalize;
+  padding: 5px 0;
+  font-weight: 700;
 }
 
 /* CHat */
@@ -357,10 +369,10 @@ header {
     justify-content: flex-end;
   }
   .main{
-    width: 80%;
+    width: 60%;
   }
   .side{
-    width: 20%;
+    width: 38%;
   }
 
 }
