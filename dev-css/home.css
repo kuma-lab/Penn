@@ -207,12 +207,14 @@ header {
 }
 
 .slider{
+/*
   display: flex;
   align-items: baseline;
+*/
   position: relative;
   padding: 0 10px;
   margin: 0;
-  overflow: hidden;
+/*  overflow: hidden;  */
 }
 
 .slider .arrow{
@@ -232,11 +234,7 @@ header {
   width: 100%;
   position: relative;
   margin: 18px 9px;
-}
-
-.cardContainer+.cardContainer{
-  display: none;
-  /* supprimer avec ajout sliders slick */
+  height: 530px;
 }
 
 .backgroundIframe{
@@ -500,13 +498,8 @@ header {
   .arrow img{
     width: 50px;
   }
-  .cardContainer+.cardContainer{
-    display: block;
-    /* supprimer avec ajout sliders slick */
-  }
   .cardContainer{
-    width: 31.2%;
-	min-width: 31.2%;
+    height: auto;
   }
   .slider .arrow.right{
     right: 0px;
