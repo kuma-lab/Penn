@@ -27,32 +27,37 @@
     </header>
     <main>
         <article class="main">
-            <section class="newfeed">
-                <div class="headerNewsFeed">
-                  <div class="firstLine">
-                    <h2>Your Media</h2>
-                    <span id="allFeed" class="all">see all</span>
-                  </div>
-                  <div class="choiceContainer">
-                    <div class="BubbleContainer trending active">
-                      <img src="../img/Fire.png" alt="trending">
-                      <span>Trending</span>
-                    </div>
-                    <div class="BubbleContainer papers">
-                        <img src="../img/book.png" alt="papers">
-                        <span>Papers</span>
-                    </div>
-                    <div class="BubbleContainer talks">
-                        <img src="../img/youtube.png" alt="talks">
-                        <span>Talks</span>
-                    </div>                    
-                    <div class="BubbleContainer press">
-                        <img src="../img/press.png" alt="press">
-                        <span>Press
-                    </div>
-                  </div>
-                </div>
-                <section class="Slider">
+			<div class="headerNewsFeed">
+			  <div class="firstLine">
+				<h2>Your Media</h2>
+				<span id="allFeed" class="all">see all</span>
+			  </div>
+			  <div class="choiceContainer">
+			    <!--
+				<div class="BubbleContainer trending">
+				  <img src="../img/Fire.png" alt="trending">
+				  <span>Trending</span>
+				</div>
+				-->
+				<div class="BubbleContainer pub active" data-category="pub">
+					<img src="../img/book.png" alt="papers">
+					<span>Papers</span>
+				</div>
+				<div class="BubbleContainer talk" data-category="talk">
+					<img src="../img/youtube.png" alt="talks">
+					<span>Talks</span>
+				</div>                    
+				<div class="BubbleContainer press" data-category="press">
+					<img src="../img/press.png" alt="press">
+					<span>Press
+				</div>
+			  </div>
+			</div>
+
+
+
+            <section class="newsfeed pub active">
+                <section class="slider">
                   <div class="arrow left">
                     <img src="../img/arrow-L.png" alt="arrow">
                   </div>
@@ -60,51 +65,9 @@
                       <img src="../img/arrow-L.png" alt="arrow">
                   </div>
 				  <div class="slickContainer">
-                    <div class="cardContainer talk">
-                      <div class="backgroundIframe">
-                        <div class="iframeContainer">
-                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/11/1187.jpg);"/></div>
-                          <p class="Cta">open the link</p>
-                        </div>
-                      </div>
-
-                        <div class="infoContainer">
-                          <div class="avatarContainer">
-                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
-                            <h3>Name</h3>
-                          </div>  
-                            <div class="infos">
-                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
-                                <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
-                            </div>
-                        </div>
-                        <img src="../img/Fire.png" alt="" class="bubble trending">
-                        <img src="../img/youtube.png" alt="" class="bubble talk" style="width: 22px;">
-                    </div>
-                    <div class="cardContainer press">
-                      <div class="backgroundIframe">
-                        <div class="iframeContainer">
-                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/6/681.png);"/></div>
-                          <p class="Cta">open the link</p>
-                        </div>
-                      </div>
-
-                        <div class="infoContainer">
-                          <div class="avatarContainer">
-                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
-                            <h3>Name</h3>
-                          </div>  
-                            <div class="infos">
-                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
-                                <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
-                            </div>
-                        </div>
-                        <img src="../img/Fire.png" alt="" class="bubble trending">
-                        <img src="../img/press.png" alt="" class="bubble press">
-                    </div>
                     <div class="cardContainer pub">
                       <div class="backgroundIframe">
-                        <div class="iframeContainer">
+                        <div class="iframeContainer openModal">
                           <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/10/1026.png);"/></div>
                           <p class="Cta">open the link</p>
                         </div>
@@ -123,10 +86,10 @@
                         <img src="../img/Fire.png" alt="" class="bubble trending">
                         <img src="../img/book.png" alt="" class="bubble pub">
                     </div>
-                    <div class="cardContainer talk">
+                    <div class="cardContainer pub">
                       <div class="backgroundIframe">
-                        <div class="iframeContainer">
-                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/11/1187.jpg);"/></div>
+                        <div class="iframeContainer openModal">
+                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/10/1026.png);"/></div>
                           <p class="Cta">open the link</p>
                         </div>
                       </div>
@@ -142,32 +105,74 @@
                             </div>
                         </div>
                         <img src="../img/Fire.png" alt="" class="bubble trending">
-                        <img src="../img/youtube.png" alt="" class="bubble talk" style="width: 22px;">
-                    </div>
-                    <div class="cardContainer press">
-                      <div class="backgroundIframe">
-                        <div class="iframeContainer">
-                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/6/681.png);"/></div>
-                          <p class="Cta">open the link</p>
-                        </div>
-                      </div>
-
-                        <div class="infoContainer">
-                          <div class="avatarContainer">
-                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
-                            <h3>Name</h3>
-                          </div>  
-                            <div class="infos">
-                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
-                                <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
-                            </div>
-                        </div>
-                        <img src="../img/Fire.png" alt="" class="bubble trending">
-                        <img src="../img/press.png" alt="" class="bubble press">
+                        <img src="../img/book.png" alt="" class="bubble pub">
                     </div>
                     <div class="cardContainer pub">
                       <div class="backgroundIframe">
-                        <div class="iframeContainer">
+                        <div class="iframeContainer openModal">
+                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/10/1026.png);"/></div>
+                          <p class="Cta">open the link</p>
+                        </div>
+                      </div>
+
+                        <div class="infoContainer">
+                          <div class="avatarContainer">
+                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
+                            <h3>Name</h3>
+                          </div>  
+                            <div class="infos">
+                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
+                                <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
+                            </div>
+                        </div>
+                        <img src="../img/Fire.png" alt="" class="bubble trending">
+                        <img src="../img/book.png" alt="" class="bubble pub">
+                    </div>
+                    <div class="cardContainer pub">
+                      <div class="backgroundIframe">
+                        <div class="iframeContainer openModal">
+                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/10/1026.png);"/></div>
+                          <p class="Cta">open the link</p>
+                        </div>
+                      </div>
+
+                        <div class="infoContainer">
+                          <div class="avatarContainer">
+                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
+                            <h3>Name</h3>
+                          </div>  
+                            <div class="infos">
+                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
+                                <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
+                            </div>
+                        </div>
+                        <img src="../img/Fire.png" alt="" class="bubble trending">
+                        <img src="../img/book.png" alt="" class="bubble pub">
+                    </div>
+                    <div class="cardContainer pub">
+                      <div class="backgroundIframe">
+                        <div class="iframeContainer openModal">
+                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/10/1026.png);"/></div>
+                          <p class="Cta">open the link</p>
+                        </div>
+                      </div>
+
+                        <div class="infoContainer">
+                          <div class="avatarContainer">
+                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
+                            <h3>Name</h3>
+                          </div>  
+                            <div class="infos">
+                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
+                                <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
+                            </div>
+                        </div>
+                        <img src="../img/Fire.png" alt="" class="bubble trending">
+                        <img src="../img/book.png" alt="" class="bubble pub">
+                    </div>
+                    <div class="cardContainer pub">
+                      <div class="backgroundIframe">
+                        <div class="iframeContainer openModal">
                           <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/10/1026.png);"/></div>
                           <p class="Cta">open the link</p>
                         </div>
@@ -209,6 +214,495 @@
                     </div>
                 </section>
             </section>
+
+
+
+
+            <section class="newsfeed talk">
+                <section class="slider">
+                  <div class="arrow left">
+                    <img src="../img/arrow-L.png" alt="arrow">
+                  </div>
+                  <div class="arrow right">
+                      <img src="../img/arrow-L.png" alt="arrow">
+                  </div>
+				  <div class="slickContainer">
+                    <div class="cardContainer talk">
+                      <div class="backgroundIframe">
+                        <div class="iframeContainer">
+                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/11/1187.jpg);"/></div>
+                          <p class="Cta openModal">open the link</p>
+                        </div>
+                      </div>
+
+                        <div class="infoContainer">
+                          <div class="avatarContainer">
+                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
+                            <h3>Name</h3>
+                          </div>  
+                            <div class="infos">
+                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
+                                <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
+                            </div>
+                        </div>
+                        <img src="../img/Fire.png" alt="" class="bubble trending">
+                        <img src="../img/youtube.png" alt="" class="bubble talk" style="width: 22px;">
+                    </div>
+                    <div class="cardContainer talk">
+                      <div class="backgroundIframe">
+                        <div class="iframeContainer">
+                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/11/1187.jpg);"/></div>
+                          <p class="Cta openModal">open the link</p>
+                        </div>
+                      </div>
+
+                        <div class="infoContainer">
+                          <div class="avatarContainer">
+                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
+                            <h3>Name</h3>
+                          </div>  
+                            <div class="infos">
+                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
+                                <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
+                            </div>
+                        </div>
+                        <img src="../img/Fire.png" alt="" class="bubble trending">
+                        <img src="../img/youtube.png" alt="" class="bubble talk" style="width: 22px;">
+                    </div>
+                    <div class="cardContainer talk">
+                      <div class="backgroundIframe">
+                        <div class="iframeContainer">
+                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/11/1187.jpg);"/></div>
+                          <p class="Cta openModal">open the link</p>
+                        </div>
+                      </div>
+
+                        <div class="infoContainer">
+                          <div class="avatarContainer">
+                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
+                            <h3>Name</h3>
+                          </div>  
+                            <div class="infos">
+                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
+                                <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
+                            </div>
+                        </div>
+                        <img src="../img/Fire.png" alt="" class="bubble trending">
+                        <img src="../img/youtube.png" alt="" class="bubble talk" style="width: 22px;">
+                    </div>
+                    <div class="cardContainer talk">
+                      <div class="backgroundIframe">
+                        <div class="iframeContainer">
+                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/11/1187.jpg);"/></div>
+                          <p class="Cta openModal">open the link</p>
+                        </div>
+                      </div>
+
+                        <div class="infoContainer">
+                          <div class="avatarContainer">
+                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
+                            <h3>Name</h3>
+                          </div>  
+                            <div class="infos">
+                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
+                                <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
+                            </div>
+                        </div>
+                        <img src="../img/Fire.png" alt="" class="bubble trending">
+                        <img src="../img/youtube.png" alt="" class="bubble talk" style="width: 22px;">
+                    </div>
+                    <div class="cardContainer talk">
+                      <div class="backgroundIframe">
+                        <div class="iframeContainer">
+                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/11/1187.jpg);"/></div>
+                          <p class="Cta openModal">open the link</p>
+                        </div>
+                      </div>
+
+                        <div class="infoContainer">
+                          <div class="avatarContainer">
+                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
+                            <h3>Name</h3>
+                          </div>  
+                            <div class="infos">
+                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
+                                <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
+                            </div>
+                        </div>
+                        <img src="../img/Fire.png" alt="" class="bubble trending">
+                        <img src="../img/youtube.png" alt="" class="bubble talk" style="width: 22px;">
+                    </div>
+                    <div class="cardContainer talk">
+                      <div class="backgroundIframe">
+                        <div class="iframeContainer">
+                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/11/1187.jpg);"/></div>
+                          <p class="Cta openModal">open the link</p>
+                        </div>
+                      </div>
+
+                        <div class="infoContainer">
+                          <div class="avatarContainer">
+                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
+                            <h3>Name</h3>
+                          </div>  
+                            <div class="infos">
+                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
+                                <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
+                            </div>
+                        </div>
+                        <img src="../img/Fire.png" alt="" class="bubble trending">
+                        <img src="../img/youtube.png" alt="" class="bubble talk" style="width: 22px;">
+                    </div>
+				  </div>
+                </section>
+                <section class="timeline">
+                    <div class="arrow left">
+                        <img src="../img/arrow-time.png" alt="arrow">
+                    </div>
+                    <div class="timeContainer"> 
+                        <span>1991</span>
+                        <span>1991</span>
+                        <span class="active">1991</span>
+                        <span>1991</span>
+                        <span>1991</span>
+                        <span>1991</span>
+                        <span>1991</span>
+                        <span>1991</span>
+                        <span>1991</span>
+                        <span>1991</span>
+                    </div>
+                    <div class="arrow right"> 
+                        <img src="../img/arrow-time.png" alt="arrow">
+                    </div>
+                </section>
+            </section>
+
+
+
+            <section class="newsfeed press">
+                <section class="slider">
+                  <div class="arrow left">
+                    <img src="../img/arrow-L.png" alt="arrow">
+                  </div>
+                  <div class="arrow right">
+                      <img src="../img/arrow-L.png" alt="arrow">
+                  </div>
+				  <div class="slickContainer">
+                    <div class="cardContainer press">
+                      <div class="backgroundIframe">
+                        <div class="iframeContainer openModal">
+                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/6/681.png);"/></div>
+                          <p class="Cta">open the link</p>
+                        </div>
+                      </div>
+
+                        <div class="infoContainer">
+                          <div class="avatarContainer">
+                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
+                            <h3>Name</h3>
+                          </div>  
+                            <div class="infos">
+                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
+                                <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
+                            </div>
+                        </div>
+                        <img src="../img/Fire.png" alt="" class="bubble trending">
+                        <img src="../img/press.png" alt="" class="bubble press">
+                    </div>
+                    <div class="cardContainer press">
+                      <div class="backgroundIframe">
+                        <div class="iframeContainer openModal">
+                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/6/681.png);"/></div>
+                          <p class="Cta">open the link</p>
+                        </div>
+                      </div>
+
+                        <div class="infoContainer">
+                          <div class="avatarContainer">
+                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
+                            <h3>Name</h3>
+                          </div>  
+                            <div class="infos">
+                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
+                                <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
+                            </div>
+                        </div>
+                        <img src="../img/Fire.png" alt="" class="bubble trending">
+                        <img src="../img/press.png" alt="" class="bubble press">
+                    </div>
+                    <div class="cardContainer press">
+                      <div class="backgroundIframe">
+                        <div class="iframeContainer openModal">
+                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/6/681.png);"/></div>
+                          <p class="Cta">open the link</p>
+                        </div>
+                      </div>
+
+                        <div class="infoContainer">
+                          <div class="avatarContainer">
+                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
+                            <h3>Name</h3>
+                          </div>  
+                            <div class="infos">
+                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
+                                <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
+                            </div>
+                        </div>
+                        <img src="../img/Fire.png" alt="" class="bubble trending">
+                        <img src="../img/press.png" alt="" class="bubble press">
+                    </div>
+                    <div class="cardContainer press">
+                      <div class="backgroundIframe">
+                        <div class="iframeContainer openModal">
+                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/6/681.png);"/></div>
+                          <p class="Cta">open the link</p>
+                        </div>
+                      </div>
+
+                        <div class="infoContainer">
+                          <div class="avatarContainer">
+                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
+                            <h3>Name</h3>
+                          </div>  
+                            <div class="infos">
+                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
+                                <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
+                            </div>
+                        </div>
+                        <img src="../img/Fire.png" alt="" class="bubble trending">
+                        <img src="../img/press.png" alt="" class="bubble press">
+                    </div>
+                    <div class="cardContainer press">
+                      <div class="backgroundIframe">
+                        <div class="iframeContainer openModal">
+                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/6/681.png);"/></div>
+                          <p class="Cta">open the link</p>
+                        </div>
+                      </div>
+
+                        <div class="infoContainer">
+                          <div class="avatarContainer">
+                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
+                            <h3>Name</h3>
+                          </div>  
+                            <div class="infos">
+                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
+                                <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
+                            </div>
+                        </div>
+                        <img src="../img/Fire.png" alt="" class="bubble trending">
+                        <img src="../img/press.png" alt="" class="bubble press">
+                    </div>
+                    <div class="cardContainer press">
+                      <div class="backgroundIframe">
+                        <div class="iframeContainer openModal">
+                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/6/681.png);"/></div>
+                          <p class="Cta">open the link</p>
+                        </div>
+                      </div>
+
+                        <div class="infoContainer">
+                          <div class="avatarContainer">
+                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
+                            <h3>Name</h3>
+                          </div>  
+                            <div class="infos">
+                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
+                                <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
+                            </div>
+                        </div>
+                        <img src="../img/Fire.png" alt="" class="bubble trending">
+                        <img src="../img/press.png" alt="" class="bubble press">
+                    </div>
+				  </div>
+                </section>
+                <section class="timeline">
+                    <div class="arrow left">
+                        <img src="../img/arrow-time.png" alt="arrow">
+                    </div>
+                    <div class="timeContainer"> 
+                        <span>1991</span>
+                        <span>1991</span>
+                        <span class="active">1991</span>
+                        <span>1991</span>
+                        <span>1991</span>
+                        <span>1991</span>
+                        <span>1991</span>
+                        <span>1991</span>
+                        <span>1991</span>
+                        <span>1991</span>
+                    </div>
+                    <div class="arrow right"> 
+                        <img src="../img/arrow-time.png" alt="arrow">
+                    </div>
+                </section>
+            </section>
+
+
+
+
+            <section class="newsfeed all">
+                <section class="slider">
+                  <div class="arrow left">
+                    <img src="../img/arrow-L.png" alt="arrow">
+                  </div>
+                  <div class="arrow right">
+                      <img src="../img/arrow-L.png" alt="arrow">
+                  </div>
+				  <div class="slickContainer">
+                    <div class="cardContainer pub">
+                      <div class="backgroundIframe">
+                        <div class="iframeContainer openModal">
+                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/10/1026.png);"/></div>
+                          <p class="Cta">open the link</p>
+                        </div>
+                      </div>
+
+                        <div class="infoContainer">
+                          <div class="avatarContainer">
+                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
+                            <h3>Name</h3>
+                          </div>  
+                            <div class="infos">
+                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
+                                <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
+                            </div>
+                        </div>
+                        <img src="../img/Fire.png" alt="" class="bubble trending">
+                        <img src="../img/book.png" alt="" class="bubble pub">
+                    </div>
+                    <div class="cardContainer talk">
+                      <div class="backgroundIframe">
+                        <div class="iframeContainer">
+                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/11/1187.jpg);"/></div>
+                          <p class="Cta openModal">open the link</p>
+                        </div>
+                      </div>
+
+                        <div class="infoContainer">
+                          <div class="avatarContainer">
+                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
+                            <h3>Name</h3>
+                          </div>  
+                            <div class="infos">
+                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
+                                <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
+                            </div>
+                        </div>
+                        <img src="../img/Fire.png" alt="" class="bubble trending">
+                        <img src="../img/youtube.png" alt="" class="bubble talk" style="width: 22px;">
+                    </div>
+                    <div class="cardContainer press">
+                      <div class="backgroundIframe">
+                        <div class="iframeContainer openModal">
+                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/6/681.png);"/></div>
+                          <p class="Cta">open the link</p>
+                        </div>
+                      </div>
+
+                        <div class="infoContainer">
+                          <div class="avatarContainer">
+                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
+                            <h3>Name</h3>
+                          </div>  
+                            <div class="infos">
+                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
+                                <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
+                            </div>
+                        </div>
+                        <img src="../img/Fire.png" alt="" class="bubble trending">
+                        <img src="../img/press.png" alt="" class="bubble press">
+                    </div>
+                    <div class="cardContainer pub">
+                      <div class="backgroundIframe">
+                        <div class="iframeContainer openModal">
+                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/10/1026.png);"/></div>
+                          <p class="Cta">open the link</p>
+                        </div>
+                      </div>
+
+                        <div class="infoContainer">
+                          <div class="avatarContainer">
+                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
+                            <h3>Name</h3>
+                          </div>  
+                            <div class="infos">
+                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
+                                <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
+                            </div>
+                        </div>
+                        <img src="../img/Fire.png" alt="" class="bubble trending">
+                        <img src="../img/book.png" alt="" class="bubble pub">
+                    </div>
+                    <div class="cardContainer talk">
+                      <div class="backgroundIframe">
+                        <div class="iframeContainer">
+                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/11/1187.jpg);"/></div>
+                          <p class="Cta openModal">open the link</p>
+                        </div>
+                      </div>
+
+                        <div class="infoContainer">
+                          <div class="avatarContainer">
+                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
+                            <h3>Name</h3>
+                          </div>  
+                            <div class="infos">
+                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
+                                <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
+                            </div>
+                        </div>
+                        <img src="../img/Fire.png" alt="" class="bubble trending">
+                        <img src="../img/youtube.png" alt="" class="bubble talk" style="width: 22px;">
+                    </div>
+                    <div class="cardContainer press">
+                      <div class="backgroundIframe">
+                        <div class="iframeContainer openModal">
+                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/6/681.png);"/></div>
+                          <p class="Cta">open the link</p>
+                        </div>
+                      </div>
+
+                        <div class="infoContainer">
+                          <div class="avatarContainer">
+                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
+                            <h3>Name</h3>
+                          </div>  
+                            <div class="infos">
+                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
+                                <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
+                            </div>
+                        </div>
+                        <img src="../img/Fire.png" alt="" class="bubble trending">
+                        <img src="../img/press.png" alt="" class="bubble press">
+                    </div>
+				  </div>
+                </section>
+                <section class="timeline">
+                    <div class="arrow left">
+                        <img src="../img/arrow-time.png" alt="arrow">
+                    </div>
+                    <div class="timeContainer"> 
+                        <span>1991</span>
+                        <span>1991</span>
+                        <span class="active">1991</span>
+                        <span>1991</span>
+                        <span>1991</span>
+                        <span>1991</span>
+                        <span>1991</span>
+                        <span>1991</span>
+                        <span>1991</span>
+                        <span>1991</span>
+                    </div>
+                    <div class="arrow right"> 
+                        <img src="../img/arrow-time.png" alt="arrow">
+                    </div>
+                </section>
+            </section>
+
+
+
+
             <article>
               <section class="chatContainer">
                 <h2>Chat room</h2>
@@ -398,18 +892,36 @@
 
 	<script type="text/javascript" src="../slick/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../slick/jquery-migrate-1.2.1.min.js"></script>
-	<script type="text/javascript" src="../slick/slick.min.js"></script>
+	<script type="text/javascript" src="../slick/slick.js"></script>
 	
     <script type="text/javascript">
-      $(document).ready(function(){
+	
+      const newsFeeds = document.querySelectorAll('.newsfeed')
 	  
-        $('.slickContainer').slick({
+	  function activateNewsFeed(category) {
+		  for (let newsFeed of newsFeeds) {
+		    newsFeed.classList.remove('active')
+		  }
+		  document.querySelector('.newsfeed.' + category).classList.add('active')
+		  
+		  let slickContainer = document.querySelector('.newsfeed.' + category + ' .slickContainer')
+		  if (!slickContainer.classList.contains('slick-slider')) {
+            initSlick(category)
+		  } else {
+		    //  Make sure slider is adjusted to any resize since it was last displayed
+		    $('.newsfeed.' + category + ' .slickContainer').slick('setPosition')
+		  }
+	  }
+	  
+	  function initSlick(category) {
+
+	      $('.newsfeed.' + category + ' .slickContainer').slick({
 		  dots: false,
 		  infinite: false,
 		  slidesToShow: 3,
 		  slidesToScroll: 3,
-		  prevArrow: '.slider .arrow.left',
-		  nextArrow: '.slider .arrow.right',
+		  prevArrow: '.newsfeed.' + category + ' .slider .arrow.left',
+		  nextArrow: '.newsfeed.' + category + ' .slider .arrow.right',
 		  
 		  responsive: [
 			{
@@ -421,7 +933,11 @@
 			}
 		  ]
         });
-		
+	  }
+	  
+      $(document).ready(function(){
+
+        initSlick('pub');
       });
     </script>
   
@@ -434,6 +950,8 @@
           for (let choice of choices) {
             choice.classList.add('active')
           }
+		  
+		  activateNewsFeed('all')
         });
 
       for (let choice of choices) {
@@ -442,30 +960,23 @@
             choice.classList.remove('active')
           }
           choice.classList.add('active')
+		  
+		  let category = choice.getAttribute('data-category')
+		  activateNewsFeed(category)
         })
       }
     </script>
 
     <script>
       // popup
-      const items = document.querySelectorAll('.Cta')
+      const items = document.querySelectorAll('.openModal')
       const aside = document.querySelector('aside')
       const close = document.querySelector('.close')
       const back = document.querySelector('.back')
-      const logoContainers = document.querySelectorAll('.logoContainer');
 
       for (let item of items) {
         item.addEventListener('click', function () {
           aside.classList.add('active')
-        })
-      }
-
-      for (let logoContainer of logoContainers) {
-        logoContainer.addEventListener('click', function () {
-          for (let logoContainer of logoContainers){
-          logoContainer.classList.remove('active')
-          }
-          logoContainer.classList.add('active')
         })
       }
 

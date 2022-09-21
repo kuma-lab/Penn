@@ -206,6 +206,17 @@ header {
   padding: 0 6px;
 }
 
+.newsfeed {
+  display: none;
+}
+
+.newsfeed.active {
+  display: block;
+}
+
+
+
+
 .slider{
 /*
   display: flex;
@@ -273,7 +284,8 @@ header {
   text-transform: capitalize;
 }
 
-.Cta:hover{
+.Cta:hover,
+.openModal:hover {
   cursor: pointer;
 }
 
