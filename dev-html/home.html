@@ -67,7 +67,7 @@
 				  <div class="slickContainer">
                     <div class="cardContainer pub">
                       <div class="backgroundIframe">
-                        <div class="iframeContainer openModal">
+                        <div class="iframeContainer openModal disabledModal">
                           <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/10/1026.png);"/></div>
                           <p class="Cta">open the link</p>
                         </div>
@@ -914,25 +914,39 @@
 	  }
 	  
 	  function initSlick(category) {
+      const buttonsOpanModal = document.querySelectorAll('.openModal');
 
-	      $('.newsfeed.' + category + ' .slickContainer').slick({
-		  dots: false,
-		  infinite: false,
-		  slidesToShow: 3,
-		  slidesToScroll: 3,
-		  prevArrow: '.newsfeed.' + category + ' .slider .arrow.left',
-		  nextArrow: '.newsfeed.' + category + ' .slider .arrow.right',
-		  
-		  responsive: [
-			{
-			  breakpoint: 1025,
-			  settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1
-			  }
-			}
-		  ]
-        });
+	    $('.newsfeed.' + category + ' .slickContainer').slick({
+        dots: false,
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        prevArrow: '.newsfeed.' + category + ' .slider .arrow.left',
+        nextArrow: '.newsfeed.' + category + ' .slider .arrow.right',
+        
+        responsive: [
+          {
+            breakpoint: 1025,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+
+      // Disabled Click on modal when user swipe
+      $('.newsfeed.' + category + ' .slickContainer').on('swipe', function(event, slick, direction){
+        for (let buttonOpanModal of buttonsOpanModal) {
+          buttonOpanModal.classList.add('disabledModal')
+        }
+
+        setTimeout(function() {
+            for (let buttonOpanModal of buttonsOpanModal) {
+              buttonOpanModal.classList.remove('disabledModal')
+            }
+        }, 0.5)
+      });
 	  }
 	  
       $(document).ready(function(){
@@ -975,8 +989,10 @@
       const back = document.querySelector('.back')
 
       for (let item of items) {
-        item.addEventListener('click', function () {
-          aside.classList.add('active')
+        item.addEventListener('click', function (e) {
+          if (item.classList.contains("disabledModal") === false) {
+            aside.classList.add('active');
+          }
         })
       }
 
