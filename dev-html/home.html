@@ -64,28 +64,38 @@
                   <div class="arrow right">
                       <img src="../img/arrow-L.png" alt="arrow">
                   </div>
-				  <div class="slickContainer">
+				          <div class="slickContainer">
+                    <!-- Card example (url absolute for demo but you can remove domain) -->
                     <div class="cardContainer pub">
                       <div class="backgroundIframe">
-                        <div class="iframeContainer openModal disabledModal">
-                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/10/1026.png);"/></div>
+                        <div class="iframeContainer openModal"
+                          data-author-name="Sandra González-Bailón" 
+                          data-author-avatar="https://sil.asc.upenn.edu/img/exchange/avatar/sandra-gonzalez-bailon.jpg" 
+                          data-author-field="Sociology" 
+                          data-author-affiliation="Annenberg School for Communication" 
+                          data-content-title="Bots are Less Central than Verified Accounts during Contentious Political Events" 
+                          data-content-source="https://sil.asc.upenn.edu/exchange/files/0/36.pdf" 
+                          data-content-url="https://www.pnas.org/doi/10.1073/pnas.2013443118" 
+                          data-content-media-type="pdf" 
+                          data-content-category="pub">
+                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/0/36.png);"></div>
                           <p class="Cta">open the link</p>
                         </div>
                       </div>
-
-                        <div class="infoContainer">
-                          <div class="avatarContainer">
-                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
-                            <h3>Name</h3>
-                          </div>  
-                            <div class="infos">
-                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
-                                <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
-                            </div>
-                        </div>
-                        <img src="../img/Fire.png" alt="" class="bubble trending">
-                        <img src="../img/book.png" alt="" class="bubble pub">
+                      <div class="infoContainer">
+                        <div class="avatarContainer">
+                          <img class="avatar" src="https://sil.asc.upenn.edu/img/exchange/avatar/sandra-gonzalez-bailon.jpg" alt="avatar">
+                          <h3>Sandra González-Bailón</h3>
+                        </div>  
+                          <div class="infos">
+                              <p><span> Title:</span> Bots are Less Central than Verified Accounts during Contentious Political Events</p>
+                              <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
+                          </div>
+                      </div>
+                      <img src="../img/Fire.png" alt="" class="bubble trending">
+                      <img src="../img/book.png" alt="" class="bubble pub">
                     </div>
+                    <!-- End of the card -->
                     <div class="cardContainer pub">
                       <div class="backgroundIframe">
                         <div class="iframeContainer openModal">
@@ -850,30 +860,36 @@
       </section>
         </article>
     </main>
+    <!-- Popin -->
     <aside>
       <section class="poupContainer">
         <div class="titleContainer">
-          <h3>Publication</h3>
+          <h3 id="contentPopin_categoryLabel">Publication</h3>
           <img class="close pointer" src="../img/close.png" alt="send a message" />
         </div>
 
         <article class="billetContainer">
-          <img class="avatarbillet" src="../img/avatar1.png" alt="" />
+          <img id="contentPopin_authorAvatar" class="avatarbillet" src="../img/avatar1.png" alt="Author Picture" />
           <div class="infoPersonal">
-            <h4>Docteur bidulle</h4>
-            <p><b>Main field:</b>Physic</p>
-            <p><b>Affiliation:</b>PennMedicine</p>
-
+            <h4 id="contentPopin_authorName">Sandra González-Bailón</h4>
+            <p>
+              <b>Main field: </b>
+              <span id="contentPopin_authorField">Sociology</span>
+            </p>
+            <p>
+              <b>Affiliation: </b>
+              <span id="contentPopin_authorAffiliation">Annenberg School for Communication</span>
+            </p>
           </div>
         </article>
       </section>
 
       <section class="textContainer">
         <div class="headlineContainer">
-          <a class="Cta" target="_blank" href="https://sil.asc.upenn.edu/exchange/files/0/2.pdf"> Open in new tab</a>
-          <h5>The Spread of Behavior in an Online Social Network </h5>
+          <a id="contentPopin_link" class="Cta" target="_blank" href="https://sil.asc.upenn.edu/exchange/files/0/2.pdf"> Open in new tab</a>
+          <h5 id="contentPopin_title">Title</h5>
         </div>
-        <div class="iframeContainer">
+        <div id="contentPopin_iframe" class="iframeContainer">
           <iframe width="100%" height="80%" src="https://www.youtube.com/embed/0aSlkkifeFI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </section>
@@ -891,12 +907,12 @@
     </aside>
 
 	<script type="text/javascript" src="../slick/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../slick/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="../slick/jquery-migrate-1.2.1.min.js"></script>
 	<script type="text/javascript" src="../slick/slick.js"></script>
 	
     <script type="text/javascript">
 	
-      const newsFeeds = document.querySelectorAll('.newsfeed')
+    const newsFeeds = document.querySelectorAll('.newsfeed')
 	  
 	  function activateNewsFeed(category) {
 		  for (let newsFeed of newsFeeds) {
@@ -983,14 +999,51 @@
 
     <script>
       // popup
-      const items = document.querySelectorAll('.openModal')
+      const itemsOpenModal = document.querySelectorAll('.openModal')
       const aside = document.querySelector('aside')
       const close = document.querySelector('.close')
       const back = document.querySelector('.back')
 
-      for (let item of items) {
-        item.addEventListener('click', function (e) {
+      for (let item of itemsOpenModal) {
+        item.addEventListener('click', function () {
           if (item.classList.contains("disabledModal") === false) {
+            let authorName = this.getAttribute('data-author-name') ?? "Name";
+            let authorAvatar = this.getAttribute('data-author-avatar') ?? "Avatar-url-placeholder";
+            let authorField = this.getAttribute('data-author-field') ?? "Field";
+            let authorAffiliation = this.getAttribute('data-author-affiliation') ?? "Affiliation";
+            let popinTitle = this.getAttribute('data-content-title') ?? "Title";
+            let popinLink = this.getAttribute('data-content-url') ?? "Url-placeholder";
+            let source = this.getAttribute('data-content-source') ?? "www.youtube.com";
+            let category = this.getAttribute('data-content-category') ?? "pub";
+
+            document.querySelector('#contentPopin_authorName').innerHTML = authorName;
+            document.querySelector('#contentPopin_authorAvatar').src = authorAvatar;
+            document.querySelector('#contentPopin_authorField').innerHTML = authorField;
+            document.querySelector('#contentPopin_authorAffiliation').innerHTML = authorAffiliation;
+            document.querySelector('#contentPopin_title').innerHTML = popinTitle;
+            document.querySelector('#contentPopin_link').href = popinLink;
+
+            if (source.indexOf('www.youtube.com') === 8) {
+                document.querySelector('#contentPopin_iframe').innerHTML = '<iframe width="100%" height="80%" src="' + source + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            } else {
+                document.querySelector('#contentPopin_iframe').innerHTML = '<iframe src="' + source + '" height="80%" width="100%" type="application/pdf"></iframe>';
+            }
+
+            switch (category) {
+                case 'pub' :
+                    document.querySelector('#contentPopin_categoryLabel').innerHTML = 'Publication';
+                    //document.querySelector('#contentPopin_categoryIcon').src = '/kuma-lab/Penn/img/pdfLogo.png';
+                    break;
+                case 'talk' :
+                    document.querySelector('#contentPopin_categoryLabel').innerHTML = 'Talk';
+                    //document.querySelector('#contentPopin_categoryIcon').src = '/kuma-lab/Penn/img/videoLogo.png';
+                    break;
+                case 'press' :
+                    document.querySelector('#contentPopin_categoryLabel').innerHTML = 'Press';
+                    //document.querySelector('#contentPopin_categoryIcon').src = '/kuma-lab/Penn/img/wifiLogo.png';
+                    break;
+            }
+
             aside.classList.add('active');
           }
         })
