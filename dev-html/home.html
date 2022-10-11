@@ -236,12 +236,26 @@
                   <div class="arrow right">
                       <img src="../img/arrow-L.png" alt="arrow">
                   </div>
-				  <div class="slickContainer">
+				          <div class="slickContainer">
+                    <!-- Card example video -->
                     <div class="cardContainer talk">
                       <div class="backgroundIframe">
                         <div class="iframeContainer">
-                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/11/1187.jpg);"/></div>
-                          <p class="Cta openModal">open the link</p>
+                          <div class="newsFeedVideo" data-content-source="https://www.youtube.com/embed/K5uBJtSW0rs">
+                              <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/3/391.jpg);"></div>
+                          </div>
+                          <p class="Cta openModal"                           
+                            data-author-name="Sandra González-Bailón" 
+                            data-author-avatar="/img/exchange/avatar/sandra-gonzalez-bailon.jpg" 
+                            data-author-field="Sociology" 
+                            data-author-affiliation="Annenberg School for Communication" 
+                            data-content-title="Rediet Abebe, Sandra González-Bailón, and Joseph H. Tien: Collaborating Across Disciplines" 
+                            data-content-source="https://www.youtube.com/embed/K5uBJtSW0rs" 
+                            data-content-url="https://www.youtube.com/watch?v=K5uBJtSW0rs" 
+                            data-content-media-type="video" 
+                            data-content-category="talk">
+                              open the link
+                            </p>
                         </div>
                       </div>
 
@@ -258,6 +272,7 @@
                         <img src="../img/Fire.png" alt="" class="bubble trending">
                         <img src="../img/youtube.png" alt="" class="bubble talk" style="width: 22px;">
                     </div>
+                    <!-- End of card -->
                     <div class="cardContainer talk">
                       <div class="backgroundIframe">
                         <div class="iframeContainer">
@@ -965,10 +980,21 @@
       });
 	  }
 	  
-      $(document).ready(function(){
-
+      $(document).ready(function() {
         initSlick('pub');
       });
+    </script>
+
+    <script>
+      // system launch videos
+      const videoPlayers = document.querySelectorAll('.newsFeedVideo')
+
+      for (let player of videoPlayers) {
+        player.addEventListener('click', function () {
+            let source = this.getAttribute('data-content-source');
+            this.innerHTML = '<iframe width="100%" height="285px" src="' + source + '?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+        })
+      }
     </script>
   
     <script>
