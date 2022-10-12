@@ -65,7 +65,7 @@
                       <img src="../img/arrow-L.png" alt="arrow">
                   </div>
 				          <div class="slickContainer">
-                    <!-- Card example (url absolute for demo but you can remove domain) -->
+                    <!-- Card example for Pub and Press (url absolute for demo but you can remove domain) : datas on iframeContainer -->
                     <div class="cardContainer pub">
                       <div class="backgroundIframe">
                         <div class="iframeContainer openModal"
@@ -237,7 +237,7 @@
                       <img src="../img/arrow-L.png" alt="arrow">
                   </div>
 				          <div class="slickContainer">
-                    <!-- Card example video -->
+                    <!-- Card example video (url's images absolute for demo but you can remove domain) : datas on CTA -->
                     <div class="cardContainer talk">
                       <div class="backgroundIframe">
                         <div class="iframeContainer">
@@ -245,8 +245,8 @@
                               <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/3/391.jpg);"></div>
                           </div>
                           <p class="Cta openModal"                           
-                            data-author-name="Sandra González-Bailón" 
-                            data-author-avatar="/img/exchange/avatar/sandra-gonzalez-bailon.jpg" 
+                            data-author-name="Sandra González-Bailón"
+                            data-author-avatar="https://sil.asc.upenn.edu/img/exchange/avatar/sandra-gonzalez-bailon.jpg" 
                             data-author-field="Sociology" 
                             data-author-affiliation="Annenberg School for Communication" 
                             data-content-title="Rediet Abebe, Sandra González-Bailón, and Joseph H. Tien: Collaborating Across Disciplines" 
@@ -255,17 +255,17 @@
                             data-content-media-type="video" 
                             data-content-category="talk">
                               open the link
-                            </p>
+                          </p>
                         </div>
                       </div>
 
                         <div class="infoContainer">
                           <div class="avatarContainer">
-                            <img class="avatar" src="../img/avatar1.png" alt="avatar">
-                            <h3>Name</h3>
+                            <img class="avatar" src="https://sil.asc.upenn.edu/img/exchange/avatar/sandra-gonzalez-bailon.jpg" alt="avatar">
+                            <h3>Sandra González-Bailón</h3>
                           </div>  
                             <div class="infos">
-                                <p><span> Title:</span> qfdfd q qfsq fq sfq fq fq</p>
+                                <p><span> Title:</span> Rediet Abebe, Sandra González-Bailón, and Joseph H. Tien: Collaborating Across Disciplines</p>
                                 <p><span> Keyword:</span> Keyword#1 Keyword#2 Keyword#3 Keyword#4</p>
                             </div>
                         </div>
@@ -959,6 +959,13 @@
           {
             breakpoint: 1025,
             settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 601,
+            settings: {
               slidesToShow: 1,
               slidesToScroll: 1
             }
@@ -1058,15 +1065,12 @@
             switch (category) {
                 case 'pub' :
                     document.querySelector('#contentPopin_categoryLabel').innerHTML = 'Publication';
-                    //document.querySelector('#contentPopin_categoryIcon').src = '/kuma-lab/Penn/img/pdfLogo.png';
                     break;
                 case 'talk' :
                     document.querySelector('#contentPopin_categoryLabel').innerHTML = 'Talk';
-                    //document.querySelector('#contentPopin_categoryIcon').src = '/kuma-lab/Penn/img/videoLogo.png';
                     break;
                 case 'press' :
                     document.querySelector('#contentPopin_categoryLabel').innerHTML = 'Press';
-                    //document.querySelector('#contentPopin_categoryIcon').src = '/kuma-lab/Penn/img/wifiLogo.png';
                     break;
             }
 
