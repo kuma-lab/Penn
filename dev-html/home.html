@@ -944,7 +944,7 @@
 
       // Sliders TimeLine
       $('.newsfeed.' + category + ' .timeContainer').slick({
-          infinite: true,
+          infinite: false,
           slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: true,
@@ -962,6 +962,8 @@
         for (let year of timeLineSlides) {
           year.addEventListener('click', function () {
             $('.newsfeed.' + category + ' .timeContainer').slick('slickGoTo', year.getAttribute('data-slick-index'));
+            console.log('test',document.querySelector('.newsfeed.' + category + ' .slickContainer .cardContainer[data-content-year="' + year.innerHTML + '"]').closest(".slick-slide").getAttribute('data-slick-index'));
+            $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', document.querySelector('.newsfeed.' + category + ' .slickContainer .cardContainer[data-content-year="' + year.innerHTML + '"]').closest(".slick-slide").getAttribute('data-slick-index'));
           })
         }
 	  }

@@ -386,13 +386,13 @@ header {
   cursor: pointer;
 }
 
-.timeline .timeContainer .slick-active {
+.timeline .timeContainer .slick-current {
   position: relative;
   color: #3a65ff;
   font-weight: bold;
 }
 
-.timeline .timeContainer .slick-active::before {
+.timeline .timeContainer .slick-current::before {
   content: "";
   position: absolute;
   top: 0;
