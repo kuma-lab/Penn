@@ -149,7 +149,7 @@
                         <img src="../img/Fire.png" alt="" class="bubble trending">
                         <img src="../img/book.png" alt="" class="bubble pub">
                     </div>
-                    <div class="cardContainer pub" data-content-year="2023">
+                    <div class="cardContainer pub" data-content-year="2020">
                       <div class="backgroundIframe">
                         <div class="iframeContainer openModal">
                           <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/10/1026.png);"/></div>
@@ -957,12 +957,21 @@
           nextArrow: $('#timeContainerArrowNext')
       });
 
+      // On before slide change
+    $('.newsfeed.' + category + ' .timeContainer').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+      console.log(nextSlide);
+      console.log('currentSlide',currentSlide)
+      console.log('date :',document.querySelectorAll('.newsfeed.' + category + ' .timeContainer .slick-slide')[currentSlide+1])
+      let year = document.querySelectorAll('.newsfeed.' + category + ' .timeContainer .slick-slide')[nextSlide];
+      $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', document.querySelector('.newsfeed.' + category + ' .slickContainer .cardContainer[data-content-year="' + year.innerHTML + '"]').closest(".slick-slide").getAttribute('data-slick-index'));
+    });
+
       // Change index when user clic on a date
       const timeLineSlides = document.querySelectorAll('.slick-slide[data-slick-index]')
         for (let year of timeLineSlides) {
           year.addEventListener('click', function () {
             $('.newsfeed.' + category + ' .timeContainer').slick('slickGoTo', year.getAttribute('data-slick-index'));
-            console.log('test',document.querySelector('.newsfeed.' + category + ' .slickContainer .cardContainer[data-content-year="' + year.innerHTML + '"]').closest(".slick-slide").getAttribute('data-slick-index'));
+            //console.log('test',document.querySelector('.newsfeed.' + category + ' .slickContainer .cardContainer[data-content-year="' + year.innerHTML + '"]').closest(".slick-slide").getAttribute('data-slick-index'));
             $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', document.querySelector('.newsfeed.' + category + ' .slickContainer .cardContainer[data-content-year="' + year.innerHTML + '"]').closest(".slick-slide").getAttribute('data-slick-index'));
           })
         }
