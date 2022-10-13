@@ -345,35 +345,43 @@ header {
 
 /* Timeline */
 
-.timeline .arrow.right{
-  position: absolute;
-  right: 8px;
-  top: 12px;
-}
-
 .timeline {
   position: relative;
-  /*display: flex;*/
   overflow: hidden;
-  /*align-items: center;
-  justify-content: space-between;*/
-  width: 90%;
+  height: 67px;
+  width: calc(100% - 40px);
   max-width: 100%;
   padding: 0 9px;
-  height: 67px;
+  margin: auto;
   background-color: #ffff;
   border-radius: 18px;
 }
 
+.timeline .arrow {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  margin-top: -20px;
+}
+
+.timeline .arrow.right{
+  right: 8px;
+  left: inherit;
+  transform: rotate(180deg);
+}
+
 .timeline .timeContainer {
-  display: block;
-  max-width: 100vw;
-  width: 100%;
-  overflow: hidden; 
+  width: calc(100% - 120px);
+  margin: auto; 
 }
 
 .timeline .timeContainer span + span {
   margin-left: 9px;
+}
+
+.timeline .timeContainer .slick-slide {
+  display: flex;
+  align-items: center;
 }
 
 .timeline .timeContainer .slick-active {
@@ -385,7 +393,7 @@ header {
 .timeline .timeContainer .slick-active::before {
   content: "";
   position: absolute;
-  top: -26px;
+  top: 0;
   width: 0; 
   height: 0;
   border-left: 17px solid transparent;
@@ -514,9 +522,9 @@ header {
     justify-content: flex-end;
   }
 
-  .arrow img{
+  /*.arrow img{
     width: 50px;
-  }
+  }*/
   .cardContainer{
     height: auto;
   }
@@ -528,13 +536,13 @@ header {
     font-size: 16px;
   }
 
-  .timeline{
+  /*.timeline{
     width: 97%;
   }
 
   .timeline .arrow.right {
     position: initial;
-  }
+  }*/
 
   .main article{
     display: flex;

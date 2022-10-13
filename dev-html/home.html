@@ -198,16 +198,16 @@
                         <img src="../img/arrow-time.png" alt="arrow">
                     </div>
                     <div class="timeContainer"> 
-                        <span>1991</span>
-                        <span>1991</span>
-                        <span class="active">1991</span>
-                        <span>1991</span>
-                        <span>1991</span>
-                        <span>1991</span>
-                        <span>1991</span>
-                        <span>1991</span>
-                        <span>1991</span>
-                        <span>1991</span>
+                        <div>1991</div>
+                        <div>1991</div>
+                        <div>1991</div>
+                        <div>1991</div>
+                        <div>1991</div>
+                        <div>1991</div>
+                        <div>1991</div>
+                        <div>1991</div>
+                        <div>1991</div>
+                        <div>1991</div>
                     </div>
                     <div class="arrow right" id="timeContainerArrowNext">  
                         <img src="../img/arrow-time.png" alt="arrow">
@@ -936,10 +936,10 @@
 
         // Sliders TimeLine
         $('.newsfeed.' + category + ' .timeContainer').slick({
-          infinite: false,
+          infinite: true,
           slidesToShow: 1,
           slidesToScroll: 1,
-          //centerMode: true,
+          centerMode: true,
           //centerPadding: '60px',
           variableWidth: true,
           rows: false,
