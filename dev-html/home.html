@@ -149,7 +149,7 @@
                         <img src="../img/Fire.png" alt="" class="bubble trending">
                         <img src="../img/book.png" alt="" class="bubble pub">
                     </div>
-                    <div class="cardContainer pub" data-content-year="2020">
+                    <div class="cardContainer pub" data-content-year="2023">
                       <div class="backgroundIframe">
                         <div class="iframeContainer openModal">
                           <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/10/1026.png);"/></div>
@@ -197,17 +197,8 @@
                     <div class="arrow left" id="timeContainerArrowPrev">
                         <img src="../img/arrow-time.png" alt="arrow">
                     </div>
-                    <div class="timeContainer"> 
-                        <div>1991</div>
-                        <div>1991</div>
-                        <div>1991</div>
-                        <div>1991</div>
-                        <div>1991</div>
-                        <div>1991</div>
-                        <div>1991</div>
-                        <div>1991</div>
-                        <div>1991</div>
-                        <div>1991</div>
+                    <div class="timeContainer">
+                      <!-- Completed by JS -->
                     </div>
                     <div class="arrow right" id="timeContainerArrowNext">  
                         <img src="../img/arrow-time.png" alt="arrow">
@@ -920,7 +911,6 @@
           infinite: false,
           slidesToShow: 3,
           slidesToScroll: 3,
-          //asNavFor: '.newsfeed.' + category + ' .timeContainer',
           prevArrow: '.newsfeed.' + category + ' .slider .arrow.left',
           nextArrow: '.newsfeed.' + category + ' .slider .arrow.right',
           
@@ -935,8 +925,25 @@
           ]
         });
 
-        // Sliders TimeLine
-        $('.newsfeed.' + category + ' .timeContainer').slick({
+      // Create one date by article and all dates by slider
+      let timeLineDates = [];
+      let slidesDates = document.querySelectorAll('.newsfeed.' + category + ' .cardContainer[data-content-year]')
+      for (let date of slidesDates) {
+        timeLineDates.push(date.getAttribute('data-content-year'))
+      }
+      // Keep unique dates
+      let timeLineUniqueDates = [...new Set(timeLineDates)]
+      // Sort desc value
+      timeLineUniqueDates.sort((a, b) => b - a)
+
+      // Insert dates on timeline
+      const listDates = document.querySelector('.newsfeed.' + category + ' .timeContainer');
+      for (let date of timeLineUniqueDates) { console.log("timeLineDates",timeLineDates, timeLineUniqueDates)
+        listDates.innerHTML += `<div>${date}</div>`
+      }
+
+      // Sliders TimeLine
+      $('.newsfeed.' + category + ' .timeContainer').slick({
           infinite: true,
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -946,11 +953,11 @@
           rows: false,
           arrows: true,
           adaptiveHeight: true,
-          //asNavFor: '.newsfeed.' + category + ' .slickContainer',
           prevArrow: $('#timeContainerArrowPrev'),
           nextArrow: $('#timeContainerArrowNext')
       });
 
+      // Change index when user clic on a date
       const timeLineSlides = document.querySelectorAll('.slick-slide[data-slick-index]')
         for (let year of timeLineSlides) {
           year.addEventListener('click', function () {
@@ -958,19 +965,6 @@
           })
         }
 	  }
-
-    // Initialise TimeLine slider
-    /*timelineSlider.slick({
-        infinite: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        variableWidth: true,
-        rows: false,
-        arrows: true,
-        adaptiveHeight: true,
-        prevArrow: $('#timeContainerArrowPrev'),
-        nextArrow: $('#timeContainerArrowNext')
-      });*/
 	  
       $(document).ready(function(){
         initSlick('pub');
