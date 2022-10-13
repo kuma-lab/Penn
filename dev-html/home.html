@@ -920,6 +920,7 @@
           infinite: false,
           slidesToShow: 3,
           slidesToScroll: 3,
+          //asNavFor: '.newsfeed.' + category + ' .timeContainer',
           prevArrow: '.newsfeed.' + category + ' .slider .arrow.left',
           nextArrow: '.newsfeed.' + category + ' .slider .arrow.right',
           
@@ -945,9 +946,17 @@
           rows: false,
           arrows: true,
           adaptiveHeight: true,
+          //asNavFor: '.newsfeed.' + category + ' .slickContainer',
           prevArrow: $('#timeContainerArrowPrev'),
           nextArrow: $('#timeContainerArrowNext')
       });
+
+      const timeLineSlides = document.querySelectorAll('.slick-slide[data-slick-index]')
+        for (let year of timeLineSlides) {
+          year.addEventListener('click', function () {
+            $('.newsfeed.' + category + ' .timeContainer').slick('slickGoTo', year.getAttribute('data-slick-index'));
+          })
+        }
 	  }
 
     // Initialise TimeLine slider
@@ -964,7 +973,6 @@
       });*/
 	  
       $(document).ready(function(){
-
         initSlick('pub');
       });
     </script>

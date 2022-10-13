@@ -362,6 +362,7 @@ header {
   left: 10px;
   top: 50%;
   margin-top: -20px;
+  cursor: pointer;
 }
 
 .timeline .arrow.right{
@@ -382,6 +383,7 @@ header {
 .timeline .timeContainer .slick-slide {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .timeline .timeContainer .slick-active {
