@@ -81,7 +81,7 @@ main{
 }
 
 section {
-  margin: 9px 0;
+  margin: 16px 0 0;
 }
 
 .hide{
@@ -352,7 +352,7 @@ header {
   width: calc(100% - 40px);
   max-width: 100%;
   padding: 0 9px;
-  margin: auto;
+  margin: 16px auto 0;
   background-color: #ffff;
   border-radius: 18px;
 }
@@ -431,10 +431,11 @@ header {
 }
 
 .chatContainer, .ranking{
-  width: 90%;
-  margin-right: 18px;    
+  width: calc(100% - 20px);
+  margin: 16px 8px 0;
   background: white;
   border-radius: 20px;
+  box-sizing: border-box;
 }
 
 .left article h2{

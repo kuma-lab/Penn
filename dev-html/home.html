@@ -882,12 +882,12 @@
     </aside>
 
 	<script type="text/javascript" src="../slick/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../slick/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="../slick/jquery-migrate-1.2.1.min.js"></script>
 	<script type="text/javascript" src="../slick/slick.js"></script>
 	
-    <script type="text/javascript">
+  <script type="text/javascript">
 	
-      const newsFeeds = document.querySelectorAll('.newsfeed')
+    const newsFeeds = document.querySelectorAll('.newsfeed')
 	  
 	  function activateNewsFeed(category) {
 		  for (let newsFeed of newsFeeds) {
@@ -904,6 +904,9 @@
 		  }
 	  }
 	  
+    /**************************
+    /* Create Sliders NewsFeed
+    ***************************/
 	  function initSlick(category) {
         // Sliders feed
 	      $('.newsfeed.' + category + ' .slickContainer').slick({
@@ -925,6 +928,9 @@
           ]
         });
 
+      /**************************
+      /* Create Sliders TimeLine
+      ***************************/
       // Create one date by article and all dates by slider
       let timeLineDates = [];
       let slidesDates = document.querySelectorAll('.newsfeed.' + category + ' .cardContainer[data-content-year]')
@@ -948,7 +954,6 @@
           slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: true,
-          //centerPadding: '60px',
           variableWidth: true,
           rows: false,
           arrows: true,
@@ -957,46 +962,54 @@
           nextArrow: $('#timeContainerArrowNext')
       });
 
-      // Change index when user change currend slide
-    $('.newsfeed.' + category + ' .slickContainer').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-      // RECUPERER LA SLIDE SUIVANTE
-      let nextSlideDom = document.querySelectorAll('.newsfeed.' + category + ' .slickContainer .slick-slide')[nextSlide];
-      
-      // TROUVER L'ANNEE AVEC .cardContainer[data-content-year] À L'INTERIEUR DE LA SLIDE
-      //console.log('year', year) // BON ICI
-      let dateSlide = [].slice.call(document.querySelectorAll('.newsfeed.' + category + ' .timeContainer .slick-slide')).filter(function (item){
-        let year = nextSlideDom.querySelector('.cardContainer').getAttribute('data-content-year')
-        console.log('item', item, 'year', year);
-    return item.innerText.includes(year);
-})[0];
-//
-console.log('dateSlide : ',dateSlide,dateSlide.getAttribute('data-slick-index'));
-      $('.newsfeed.' + category + ' .timeContainer').slick('slickGoTo', dateSlide.getAttribute('data-slick-index'));
-    });
+      /**********************************************
+      /* Change index when user change currend slide
+      ***********************************************/
+      $('.newsfeed.' + category + ' .slickContainer').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        // Get next slide
+        let nextSlideDom = document.querySelectorAll('.newsfeed.' + category + ' .slickContainer .slick-slide')[nextSlide];
+        
+        // Find timeline slide with the right year
+        let dateSlide = [].slice.call(document.querySelectorAll('.newsfeed.' + category + ' .timeContainer .slick-slide')).filter(function (item){
+          let year = nextSlideDom.querySelector('.cardContainer').getAttribute('data-content-year')
+          return item.innerText.includes(year)
+        })[0]
 
-      // Change index when user clic on an arrow timeline
-    $('.newsfeed.' + category + ' .timeContainer').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-      console.log(nextSlide);
-      console.log('currentSlide',currentSlide)
-      let year = document.querySelectorAll('.newsfeed.' + category + ' .timeContainer .slick-slide')[nextSlide];
-      $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', document.querySelector('.newsfeed.' + category + ' .slickContainer .cardContainer[data-content-year="' + year.innerHTML + '"]').closest(".slick-slide").getAttribute('data-slick-index'));
-    });
+        // Slide to the good one
+        $('.newsfeed.' + category + ' .timeContainer').slick('slickGoTo', dateSlide.getAttribute('data-slick-index'))
+      });
 
-      // Change index when user clic on a date
+      /****************************************************
+       *  Change index when user clic on an arrow timeline
+       ****************************************************/
+      $('.newsfeed.' + category + ' .timeContainer').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        let year = document.querySelectorAll('.newsfeed.' + category + ' .timeContainer .slick-slide')[nextSlide]
+
+        // Find index to the slide with right year
+        let indexNextSlide = document.querySelector('.newsfeed.' + category + ' .slickContainer .cardContainer[data-content-year="' + year.innerHTML + '"]').closest(".slick-slide").getAttribute('data-slick-index')
+        // Slide to the good one
+        $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', indexNextSlide)
+      });
+
+      /****************************************
+      /* Change index when user clic on a date
+      *****************************************/
       const timeLineSlides = document.querySelectorAll('.slick-slide[data-slick-index]')
-        for (let year of timeLineSlides) {
-          year.addEventListener('click', function () {
-            $('.newsfeed.' + category + ' .timeContainer').slick('slickGoTo', year.getAttribute('data-slick-index'));
-            //console.log('test',document.querySelector('.newsfeed.' + category + ' .slickContainer .cardContainer[data-content-year="' + year.innerHTML + '"]').closest(".slick-slide").getAttribute('data-slick-index'));
-            $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', document.querySelector('.newsfeed.' + category + ' .slickContainer .cardContainer[data-content-year="' + year.innerHTML + '"]').closest(".slick-slide").getAttribute('data-slick-index'));
-          })
-        }
+      for (let year of timeLineSlides) {
+        year.addEventListener('click', function () {
+          // Find index to the right slide
+          let indexRightSlide = document.querySelector('.newsfeed.' + category + ' .slickContainer .cardContainer[data-content-year="' + year.innerHTML + '"]').closest(".slick-slide").getAttribute('data-slick-index')
+          // Slide to the right two
+          $('.newsfeed.' + category + ' .timeContainer').slick('slickGoTo', year.getAttribute('data-slick-index'));
+          $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', indexRightSlide);
+        })
+      }
 	  }
 	  
-      $(document).ready(function(){
-        initSlick('pub');
-      });
-    </script>
+    $(document).ready(function(){
+      initSlick('pub');
+    });
+  </script>
   
     <script>
       // active news feed
