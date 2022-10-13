@@ -347,43 +347,47 @@ header {
 
 .timeline .arrow.right{
   position: absolute;
-  left: 410px;
+  right: 8px;
   top: 12px;
 }
 
-
-.timeline{
+.timeline {
   position: relative;
-  display: flex;
+  /*display: flex;*/
   overflow: hidden;
-  align-items: center;
-  justify-content: space-between;
+  /*align-items: center;
+  justify-content: space-between;*/
   width: 90%;
+  max-width: 100%;
   padding: 0 9px;
   height: 67px;
   background-color: #ffff;
   border-radius: 18px;
 }
 
-.timeContainer{
-  display: flex;
+.timeline .timeContainer {
+  display: block;
+  max-width: 100vw;
+  width: 100%;
+  overflow: hidden; 
 }
 
-.timeContainer span + span{
-  margin-left: 9px;;
+.timeline .timeContainer span + span {
+  margin-left: 9px;
 }
-.timeContainer .active {
+
+.timeline .timeContainer .slick-active {
   position: relative;
   color: #3a65ff;
   font-weight: bold;
 }
 
-.timeContainer .active::before {
+.timeline .timeContainer .slick-active::before {
   content: "";
   position: absolute;
-  top:-26px;
+  top: -26px;
   width: 0; 
-  height: 0; 
+  height: 0;
   border-left: 17px solid transparent;
   border-right: 17px solid transparent;
   border-top: 17px solid #3a65ff;
