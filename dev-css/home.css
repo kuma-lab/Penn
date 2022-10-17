@@ -293,7 +293,6 @@ header {
   color: white;
   font-weight: bold;
   border-radius: 9px;
-  text-transform: capitalize;
 }
 
 .Cta:hover,
