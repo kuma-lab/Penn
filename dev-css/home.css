@@ -218,30 +218,39 @@ header {
 
 
 .slider{
-/*
-  display: flex;
-  align-items: baseline;
-*/
   position: relative;
   padding: 0 10px;
   margin: 0;
-/*  overflow: hidden;  */
 }
 
-.slider .arrow{
+.slider .arrow {
   position: absolute;
   left: 0;
   top: 325px;
   z-index: 1;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/slider-arrow.png");
+  background-size: contain;
+  cursor: pointer;
 }
+
+.slider .arrow.slick-disabled {
+  background-image: url("../img/slider-arrow-disabled.png");
+  cursor: default;
+}
+
 .slider .arrow.right{
   position: absolute;
   left: inherit;
-  right: 0px;
-  z-index: 1;
+  right: 0;
 }
 
-.cardContainer{
+.slider .arrow.right.slick-disabled {
+  background-image: url("../img/slider-arrow-disabled.png");
+}
+
+.cardContainer {
   position: relative;
   margin: 18px 0;
   height: 530px;
