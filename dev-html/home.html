@@ -366,16 +366,7 @@
                         <img src="../img/arrow-time.png" alt="arrow">
                     </div>
                     <div class="timeContainer"> 
-                        <span>1991</span>
-                        <span>1991</span>
-                        <span class="active">1991</span>
-                        <span>1991</span>
-                        <span>1991</span>
-                        <span>1991</span>
-                        <span>1991</span>
-                        <span>1991</span>
-                        <span>1991</span>
-                        <span>1991</span>
+                      <!-- Completed by JS -->
                     </div>
                     <div class="arrow right timeContainerArrowNext">  
                         <img src="../img/arrow-time.png" alt="arrow">
@@ -523,16 +514,7 @@
                         <img src="../img/arrow-time.png" alt="arrow">
                     </div>
                     <div class="timeContainer"> 
-                        <span>1991</span>
-                        <span>1991</span>
-                        <span class="active">1991</span>
-                        <span>1991</span>
-                        <span>1991</span>
-                        <span>1991</span>
-                        <span>1991</span>
-                        <span>1991</span>
-                        <span>1991</span>
-                        <span>1991</span>
+                      <!-- Completed by JS -->
                     </div>
                     <div class="arrow right timeContainerArrowNext"> 
                         <img src="../img/arrow-time.png" alt="arrow">
@@ -681,16 +663,7 @@
                         <img src="../img/arrow-time.png" alt="arrow">
                     </div>
                     <div class="timeContainer"> 
-                        <span>1991</span>
-                        <span>1991</span>
-                        <span class="active">1991</span>
-                        <span>1991</span>
-                        <span>1991</span>
-                        <span>1991</span>
-                        <span>1991</span>
-                        <span>1991</span>
-                        <span>1991</span>
-                        <span>1991</span>
+                      <!-- Completed by JS -->
                     </div>
                     <div class="arrow right timeContainerArrowNext"> 
                         <img src="../img/arrow-time.png" alt="arrow">
@@ -1022,11 +995,11 @@
       let timeLineUniqueDates = [...new Set(timeLineDates)]
       // Sort desc value
       timeLineUniqueDates.sort((a, b) => b - a);
+	  console.log("timeLineDates",timeLineDates, timeLineUniqueDates);
 
       // Insert dates on timeline
       const listDates = document.querySelector('.newsfeed.' + category + ' .timeContainer');
       for (let date of timeLineUniqueDates) {
-	    console.log("timeLineDates",timeLineDates, timeLineUniqueDates)
         listDates.innerHTML += '<div>' +  date + '</div>'
       }
 
