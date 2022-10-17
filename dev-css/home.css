@@ -81,7 +81,7 @@ main{
 }
 
 section {
-  margin: 9px 0;
+  margin: 16px 0 0;
 }
 
 .hide{
@@ -354,45 +354,59 @@ header {
 
 /* Timeline */
 
-.timeline .arrow.right{
-  position: absolute;
-  left: 410px;
-  top: 12px;
-}
-
-
-.timeline{
+.timeline {
   position: relative;
-  display: flex;
   overflow: hidden;
-  align-items: center;
-  justify-content: space-between;
-  width: 90%;
-  padding: 0 9px;
   height: 67px;
+  width: calc(100% - 40px);
+  max-width: 100%;
+  padding: 0 9px;
+  margin: 16px auto 0;
   background-color: #ffff;
   border-radius: 18px;
 }
 
-.timeContainer{
-  display: flex;
+.timeline .arrow {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  margin-top: -20px;
+  cursor: pointer;
 }
 
-.timeContainer span + span{
-  margin-left: 9px;;
+.timeline .arrow.right{
+  right: 8px;
+  left: inherit;
+  transform: rotate(180deg);
 }
-.timeContainer .active {
+
+.timeline .timeContainer {
+  width: calc(100% - 120px);
+  margin: auto; 
+}
+
+.timeline .timeContainer span + span {
+  margin-left: 9px;
+}
+
+.timeline .timeContainer .slick-slide {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.timeline .timeContainer .slick-current {
   position: relative;
   color: #3a65ff;
   font-weight: bold;
 }
 
-.timeContainer .active::before {
+.timeline .timeContainer .slick-current::before {
   content: "";
   position: absolute;
-  top:-26px;
+  top: 0;
   width: 0; 
-  height: 0; 
+  height: 0;
   border-left: 17px solid transparent;
   border-right: 17px solid transparent;
   border-top: 17px solid #3a65ff;
@@ -426,10 +440,11 @@ header {
 }
 
 .chatContainer, .ranking{
-  width: 90%;
-  margin-right: 18px;    
+  width: calc(100% - 20px);
+  margin: 16px 8px 0;
   background: white;
   border-radius: 20px;
+  box-sizing: border-box;
 }
 
 .left article h2{
@@ -523,9 +538,9 @@ header {
     justify-content: flex-end;
   }
 
-  .arrow img{
+  /*.arrow img{
     width: 50px;
-  }
+  }*/
   .cardContainer{
     height: auto;
   }
@@ -537,13 +552,13 @@ header {
     font-size: 16px;
   }
 
-  .timeline{
+  /*.timeline{
     width: 97%;
   }
 
   .timeline .arrow.right {
     position: initial;
-  }
+  }*/
 
   .main article{
     display: flex;
