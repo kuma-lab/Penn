@@ -199,13 +199,13 @@
 				  </div>
                 </section>
                 <section class="timeline">
-                    <div class="arrow left" id="timeContainerArrowPrev">
+                    <div class="arrow left timeContainerArrowPrev">
                         <img src="../img/arrow-time.png" alt="arrow">
                     </div>
                     <div class="timeContainer">
                       <!-- Completed by JS -->
                     </div>
-                    <div class="arrow right" id="timeContainerArrowNext">  
+                    <div class="arrow right timeContainerArrowNext">  
                         <img src="../img/arrow-time.png" alt="arrow">
                     </div>
                 </section>
@@ -362,7 +362,7 @@
 				  </div>
                 </section>
                 <section class="timeline">
-                    <div class="arrow left" id="timeContainerArrowPrev">
+                    <div class="arrow left timeContainerArrowPrev">
                         <img src="../img/arrow-time.png" alt="arrow">
                     </div>
                     <div class="timeContainer"> 
@@ -377,7 +377,7 @@
                         <span>1991</span>
                         <span>1991</span>
                     </div>
-                    <div class="arrow right" id="timeContainerArrowNext">  
+                    <div class="arrow right timeContainerArrowNext">  
                         <img src="../img/arrow-time.png" alt="arrow">
                     </div>
                 </section>
@@ -519,7 +519,7 @@
 				  </div>
                 </section>
                 <section class="timeline">
-                    <div class="arrow left" id="timeContainerArrowPrev">
+                    <div class="arrow left timeContainerArrowPrev">
                         <img src="../img/arrow-time.png" alt="arrow">
                     </div>
                     <div class="timeContainer"> 
@@ -534,7 +534,7 @@
                         <span>1991</span>
                         <span>1991</span>
                     </div>
-                    <div class="arrow right" id="timeContainerArrowNext"> 
+                    <div class="arrow right timeContainerArrowNext"> 
                         <img src="../img/arrow-time.png" alt="arrow">
                     </div>
                 </section>
@@ -677,7 +677,7 @@
 				  </div>
                 </section>
                 <section class="timeline">
-                    <div class="arrow left" id="timeContainerArrowPrev">
+                    <div class="arrow left timeContainerArrowPrev">
                         <img src="../img/arrow-time.png" alt="arrow">
                     </div>
                     <div class="timeContainer"> 
@@ -692,7 +692,7 @@
                         <span>1991</span>
                         <span>1991</span>
                     </div>
-                    <div class="arrow right" id="timeContainerArrowNext"> 
+                    <div class="arrow right timeContainerArrowNext"> 
                         <img src="../img/arrow-time.png" alt="arrow">
                     </div>
                 </section>
@@ -1027,7 +1027,7 @@
       const listDates = document.querySelector('.newsfeed.' + category + ' .timeContainer');
       for (let date of timeLineUniqueDates) {
 	    console.log("timeLineDates",timeLineDates, timeLineUniqueDates)
-        listDates.innerHTML += '<div>${date}</div>'
+        listDates.innerHTML += '<div>' +  date + '</div>'
       }
 
       // Sliders TimeLine
@@ -1040,8 +1040,8 @@
           rows: false,
           arrows: true,
           adaptiveHeight: true,
-          prevArrow: $('#timeContainerArrowPrev'),
-          nextArrow: $('#timeContainerArrowNext')
+          prevArrow: $('.newsfeed.' + category + ' .timeline .timeContainerArrowPrev'),
+          nextArrow: $('.newsfeed.' + category + ' .timeline .timeContainerArrowNext')
       });
 
       /**********************************************
