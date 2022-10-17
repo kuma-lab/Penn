@@ -742,23 +742,24 @@
                 <h2>Ranking</h2>
                 <div class="selectContainer">
                   <div class="select doc">
-                    <select>
-                      <option value="1">Press</option>
-                      <option value="2">Talks</option>
-                      <option value="3">Papers</option>
+                    <select name="rankingFiles" id="rankingFiles">
+                      <option value="pub">Papers</option>
+                      <option value="talk">Talks</option>
+                      <option value="press">Press</option>
                     </select>
                   </div>
-    
+                <!-- disable order time 
                   <div class="select time">
-                    <select>
+                    <select name="rankingTimes" id="rankingTimes" class="rankingTimes">
                       <option value="1">Last Week</option>
                       <option value="2">Last Month</option>
                       <option value="3">Last 3 Months</option>
                     </select>
                   </div>
+                -->
                 </div>
     
-                <div class="chart chart-bar chart-horizontal ">
+                <div class="chart chart-bar chart-horizontal press">
                   <div class="metric theOne" style="width: 85%">
                     Damon Centola
                     <span class="metric-value">85</span>
@@ -804,6 +805,50 @@
                   <div class="metric" style="width: 38%">
                     Nicole Cooper
                     <span class="metric-value">38</span>
+                  </div>
+                </div>
+
+                <div class="chart chart-bar chart-horizontal talk">
+                  <div class="metric theOne" style="width: 75%">
+                    Damon Centola
+                    <span class="metric-value">75</span>
+                  </div>
+                  <div class="metric" style="width: 69%">
+                    Sandra González-Bailón
+                    <span class="metric-value">69</span>
+                  </div>
+                  <div class="metric" style="width: 68%">Amy Gutmann <span class="metric-value">68</span></div>
+                  <div class="metric" style="width: 67%">
+                    Marta R. Durantini
+                    <span class="metric-value">67</span>
+                  </div>
+                  <div class="metric" style="width: 42%">
+                    CJ Calabrese
+                    <span class="metric-value">42</span>
+                  </div>
+                  <div class="metric" style="width: 41%">
+                    Juan Castrillon
+                    <span class="metric-value">41</span>
+                  </div>
+                  <div class="metric" style="width: 33%">
+                    Nicole Cooper
+                    <span class="metric-value">33</span>
+                  </div>
+                </div>
+
+                <div class="chart chart-bar chart-horizontal pub active">
+                  <div class="metric theOne" style="width: 86%">
+                    Damon Centola
+                    <span class="metric-value">86</span>
+                  </div>
+                  <div class="metric" style="width: 78%">Amy Gutmann <span class="metric-value">78</span></div>
+                  <div class="metric" style="width: 62%">
+                    CJ Calabrese
+                    <span class="metric-value">62</span>
+                  </div>
+                  <div class="metric" style="width: 46%">
+                    Juan Castrillon
+                    <span class="metric-value">46</span>
                   </div>
                 </div>
             </section>
@@ -929,7 +974,7 @@
 	  }
 	  
 	  function initSlick(category) {
-      const buttonsOpanModal = document.querySelectorAll('.openModal');
+        const buttonsOpanModal = document.querySelectorAll('.openModal');
 
 	    $('.newsfeed.' + category + ' .slickContainer').slick({
         dots: false,
@@ -973,6 +1018,7 @@
 	  
       $(document).ready(function() {
         initSlick('pub');
+        
       });
     </script>
 
@@ -1070,6 +1116,19 @@
       
       back.addEventListener('click', function () {
         aside.classList.remove('active')
+      })
+    </script>
+
+    <script>
+      // Ranking
+      const charts = document.querySelectorAll('.ranking .chart')
+      const chartSelect = document.getElementById('rankingFiles')
+
+      chartSelect.addEventListener('change', function () {
+          for (let chart of charts){
+              chart.classList.remove('active')
+          }
+          document.querySelector('.ranking .chart.' + this.value).classList.add('active')
       })
     </script>
 </body>

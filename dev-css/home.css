@@ -455,10 +455,14 @@ header {
   justify-content: space-around;
   margin: 9px 0;
 }
-.chart {
+.ranking .chart {
+  display: none;
   margin: 9px;
 }
-.chart .metric {
+.ranking .chart.active {
+  display: block;
+}
+.ranking .chart .metric {
   display: flex;
   justify-content: space-between;
   align-items: center;
