@@ -156,7 +156,7 @@ header {
   padding: 0 9px;
 }
 
-.all{
+#allFeed{
   font-weight: bold;
   color:#3162FF;
   text-transform: capitalize  ;
