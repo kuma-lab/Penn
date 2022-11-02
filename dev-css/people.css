@@ -43,16 +43,20 @@ p,li {
   margin-top: 3px;
 }
 
+p+p{
+  margin-top: 9px;
+}
+
 select {
   border: none;
 }
 
 h1{
   font-weight: 700;
-  font-size: 36px;
-  line-height: 42px;
+  font-size: 16px;
   text-decoration-line: underline;
   color: #3162FF;
+  margin-bottom: 9px;
 }
 h2 {
   padding: 18px 0;
@@ -90,6 +94,10 @@ main{
 
 section {
   margin: 9px 0;
+}
+
+.bold{
+  font-weight: bold;
 }
 
 .hide{
@@ -184,38 +192,44 @@ header {
   margin-right: 18px;
   background: white;
   border-radius: 20px;
+  padding: 9px;
+
 }
 
 .whoIAm{
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 18px 0;
+  justify-content: flex-start;
 }
 
-.whoIAm div{
-  margin-right: 9px;
+.mainInfo{
+  display:flex;
+  width: 100%;
+  align-items: end;
+  margin-bottom: 9px;
 }
 
-.whoIAm div img{
+.mainInfo .affiliation{
+  width: 300px;
+  margin-left: 9px;
+  margin-bottom: 9px;
+}
+
+.whoIAm .mainInfo img{
   display: flex;
   align-items: center;
-  height: 80px;
-  width: 80px;
+  height: 60px;
+  width: 60px;
   border-radius: 40px;
 }
 
-.me p, .infos2 p{
-  color: #8E8C99;
-  font-weight: bold;
-  line-height: 15px;
-}
-
-.me p span, .infos2 p span{
-  color: #070721;
-  font-weight: bold;
+.whoIAm .bold{
   margin-right: 5px;
 }
+
+
+
 
 .keyword{
   padding: 9px 0;
