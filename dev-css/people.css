@@ -41,6 +41,7 @@ body {
 p,li {
   font-size: 12px;
   margin-top: 3px;
+  line-height: 16px;
 }
 
 p+p{
@@ -229,16 +230,15 @@ header {
 }
 
 
-
-
 .keyword{
   padding: 9px 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
-.infos2 .keyword li{
-  list-style: none;
+.infos2 .keyword ul{
+  margin-left: 10px;
+  width: 30%;
 }
 
 /* Timeline */
@@ -311,11 +311,11 @@ header {
   padding: 9px;
 }
 
-.mediaContainer .BubbleContainer,.mediaContainer .all{
+.mediaContainer .bubbleContainer,.mediaContainer .all{
   padding: 9px 18px;
 }
 
-.mediaContainer .BubbleContainer span{
+.mediaContainer .bubbleContainer span{
   padding: 0 9px;
   font-weight: bolder;
 }
@@ -328,11 +328,28 @@ header {
   margin-left: 40px;
 }
 
+.mediaContainer .year{
+  margin: 0;
+  color: #3162FF;
+  font-size: 16px;
+  font-weight: bold;
+  list-style: none;
+}
+
 .mediaContainer li{
   margin: 0 18px;
   text-transform: capitalize;
   padding: 5px 0;
-  font-weight: 700;
+}
+
+.bubbleContainer img{
+  width: 30px;
+}
+
+.mediaContainer .bubbleContainer{
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 /* CHat */
