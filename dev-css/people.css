@@ -29,12 +29,9 @@ select {
 }
 
 h1{
-  font-weight: 700;
-  font-size: 16px;
-  text-decoration-line: underline;
-  color: #3162FF;
-  margin-bottom: 9px;
+  display: none;
 }
+
 h2 {
   padding: 9px 0;
   width: 100%;
@@ -132,7 +129,7 @@ header {
 }
 
 .searchContainer img{
-  height: 24px;
+  height: 20px;
   width: 24px;
 }
 
@@ -166,6 +163,16 @@ header {
 }
 
 /* who */
+
+.people{
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration-line: underline;
+  color: #3162FF;
+  margin-bottom: 9px;
+}
 .infos1,.infos2{
   margin-right: 18px;
   background: white;
@@ -278,7 +285,7 @@ header {
   justify-content: space-between;
 }
 
-.mediaConntainer{
+.mediaContainer{
   margin-right: 18px;
   background: white;
   border-radius: 20px;
@@ -422,6 +429,13 @@ header {
 
 @media screen and (min-width: 1024px) {
 
+  h1{
+    display: inline-block;
+    position: absolute;
+    left: 9px;
+    top: 18px;
+  }
+
   main{
     flex-direction: row;
     align-items: flex-start;
@@ -429,12 +443,27 @@ header {
 
   header{
     justify-content: flex-end;
+    align-items: center;
   }
+  .searchContainer{ 
+    width: 150px;
+  } 
+
+  .notification, .searchContainer{
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+  .notification{
+    width: 30px;
+    height: 30px;
+  }
+
   .main{
-    width: 60%;
+    width: 76%;
   }
   .side{
-    width: 38%;
+    width: 24%;
   }
 
   .chatContainer, .ranking{
@@ -447,5 +476,12 @@ header {
     text-align: center;
   }
   
+  .flexContainer{
+    display: flex;
+  }
+
+  .mediaContainer {
+    width: 32%;
+  }
 
 }
