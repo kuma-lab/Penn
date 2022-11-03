@@ -36,7 +36,7 @@ h1{
   margin-bottom: 9px;
 }
 h2 {
-  padding: 18px 0;
+  padding: 9px 0;
   width: 100%;
   font-weight: bold;
   font-size: 18px;
@@ -360,6 +360,8 @@ header {
 .chatContainer{
   padding-left: 18px;
   padding-bottom: 18px;
+  background: white;
+  border-radius: 20px;
 }
 
 .messageContainer{
@@ -392,21 +394,26 @@ header {
   display:inline-block;
 }
 
-.chatContainer, .ranking{
-  margin-right: 18px;    
-  background: white;
-  border-radius: 20px;
+.potentialConnection h4{
+  margin-left: 9px;
+  width: calc(100% - 149px);
 }
 
-.left article h2{
-  text-align: center;
-}
-
-.messages{
-  width: 25px;  
+.follow{
   position: absolute;
-  right: 5px;
+  right: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 95px;
+  height: 14px;
+  background-color: #3162FF;
+  color: white;
+  text-decoration: none;
+  padding: 9px;
+  border-radius: 9px;
 }
+
 
 @media screen and (min-width: 1024px) {
 
@@ -424,5 +431,16 @@ header {
   .side{
     width: 38%;
   }
+
+  .chatContainer, .ranking{
+    margin-right: 18px;    
+    background: white;
+    border-radius: 20px;
+  }
+  
+  .left article h2{
+    text-align: center;
+  }
+  
 
 }
