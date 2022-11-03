@@ -325,7 +325,6 @@ header {
   flex-wrap: wrap;    
   flex-direction: column;
   padding:9px 18px 18px;
-  margin-left: 40px;
 }
 
 .mediaContainer .year{
