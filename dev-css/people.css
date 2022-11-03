@@ -489,9 +489,6 @@ header {
   }
 
   .mediaContainer {
-    width: 32%;
+    width: 100%;
   }
-
-
-
 }
