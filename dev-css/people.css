@@ -405,13 +405,18 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding: 9px;
   width: 95px;
   height: 14px;
+  border-radius: 9px;
   background-color: #3162FF;
   color: white;
+  font-size: 14px;
   text-decoration: none;
-  padding: 9px;
-  border-radius: 9px;
+}
+
+.follow img{
+  width: 20px;
 }
 
 
