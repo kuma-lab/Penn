@@ -466,6 +466,14 @@ header {
     width: 24%;
   }
 
+  .infos1{
+    width: 50%;
+  }
+
+  .infos2{
+    width: 48%;
+  }
+
   .chatContainer, .ranking{
     margin-right: 18px;    
     background: white;
@@ -483,5 +491,7 @@ header {
   .mediaContainer {
     width: 32%;
   }
+
+
 
 }
