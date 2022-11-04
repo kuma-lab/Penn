@@ -460,10 +460,10 @@ header {
   }
 
   .main{
-    width: 76%;
+    width: calc(100% - 336px);
   }
   .side{
-    width: 24%;
+    width: 336px;
   }
 
   .infos1{
