@@ -249,6 +249,7 @@
   <script type="text/javascript" src="../slick/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="../slick/jquery-migrate-1.2.1.min.js"></script>
 	<script type="text/javascript" src="../slick/slick.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 	
   <script type="text/javascript">
 
@@ -321,7 +322,7 @@
       *****************************************/
       const timeLineSlides = document.querySelectorAll('.slick-slide')
       for (let year of timeLineSlides) {
-        year.addEventListener('click', function (e) { console.log("this", e.target.innerHTML);
+        year.addEventListener('click', function (e) {
           // Find year clicked on the timeline
           let indexRightYear = e.target.innerHTML;
           // Find element to scroll and get it top position to scroll with this container
@@ -335,6 +336,9 @@
 
     $(document).ready(function(){
       initSlick();
+
+      // Masonry Grid to list blocks with varying heights
+      $('.flexContainer').masonry({});
     });
   </script>
   </body>
