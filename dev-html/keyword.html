@@ -4,7 +4,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../dev-css/keyword.css" />
-    <script src="chart.js"></script>
     <title>People Page</title>
   </head>
   <body>
@@ -27,8 +26,8 @@
 
     <article  class="main">
       <h2 class="pageTitle">Keyword : Social Cognition</h2>
-      <section class="timeline">
-        <div class="arrow left">
+      <section class="timeline keywordsTimeLine">
+        <div class="arrow left timeContainerArrowPrev">
             <img src="../img/arrow-time.png" alt="arrow">
         </div>
         <div class="timeContainer"> 
@@ -43,14 +42,14 @@
             <span>2013</span>
             <span>2012</span>
         </div>
-        <div class="arrow right"> 
+        <div class="arrow right timeContainerArrowNext"> 
             <img src="../img/arrow-time.png" alt="arrow">
         </div>
       </section>
 
     <div class="flexContainer">
-      <section class="mediaContainer">
-          <p class="year">2011</p>
+      <section class="mediaContainer" data-content-year="2021">
+          <p class="year">2021</p>
           <ul>
             <li>first publications</li>
             <li>second publications</li>
@@ -59,8 +58,50 @@
             <li>fifth publications</li>
           </ul>
       </section>
-      <section class="mediaContainer">
-        <p class="year">2011</p>
+      <section class="mediaContainer" data-content-year="2020">
+        <p class="year">2020</p>
+        <ul>
+          <li>first publications</li>
+          <li>second publications</li>
+          <li>third publications</li>
+        </ul>
+      </section>
+      <section class="mediaContainer" data-content-year="2019">
+        <p class="year">2019</p>
+        <ul>
+          <li>first publications</li>
+          <li>second publications</li>
+          <li>third publications</li>
+          <li>fourth publications</li>
+          <li>fifth publications</li>
+          <li>sixth publications</li>
+          <li>seventh publications</li>
+          <li>eighth publications</li>
+        </ul>
+      </section>
+      <section class="mediaContainer" data-content-year="2018">
+        <p class="year">2018</p>
+        <ul>
+          <li>first publications</li>
+          <li>second publications</li>
+          <li>third publications</li>
+          <li>fourth publications</li>
+          <li>fifth publications</li>
+          <li>sixth publications</li>
+          <li>seventh publications</li>
+        </ul>
+      </section>
+      <section class="mediaContainer" data-content-year="2017">
+        <p class="year">2017</p>
+        <ul>
+          <li>first publications</li>
+          <li>second publications</li>
+          <li>third publications</li>
+          <li>fourth publications</li>
+        </ul>
+      </section>
+      <section class="mediaContainer" data-content-year="2016">
+        <p class="year">2016</p>
         <ul>
           <li>first publications</li>
           <li>second publications</li>
@@ -68,18 +109,58 @@
           <li>fourth publications</li>
           <li>fifth publications</li>
         </ul>
-    </section>
-    <section class="mediaContainer">
-      <p class="year">2011</p>
-      <ul>
-        <li>first publications</li>
-        <li>second publications</li>
-        <li>third publications</li>
-        <li>fourth publications</li>
-        <li>fifth publications</li>
-      </ul>
-  </section>
-
+      </section>
+      <section class="mediaContainer" data-content-year="2015">
+        <p class="year">2015</p>
+        <ul>
+          <li>first publications</li>
+          <li>second publications</li>
+          <li>third publications</li>
+        </ul>
+      </section>
+      <section class="mediaContainer" data-content-year="2014">
+        <p class="year">2014</p>
+        <ul>
+          <li>first publications</li>
+          <li>second publications</li>
+          <li>third publications</li>
+          <li>fourth publications</li>
+          <li>fifth publications</li>
+          <li>sixth publications</li>
+          <li>seventh publications</li>
+          <li>eighth publications</li>
+        </ul>
+      </section>
+      <section class="mediaContainer" data-content-year="2013">
+        <p class="year">2013</p>
+        <ul>
+          <li>first publications</li>
+          <li>second publications</li>
+          <li>third publications</li>
+          <li>fourth publications</li>
+          <li>fifth publications</li>
+          <li>sixth publications</li>
+          <li>seventh publications</li>
+        </ul>
+      </section>
+      <section class="mediaContainer" data-content-year="2012">
+        <p class="year">2012</p>
+        <ul>
+          <li>first publications</li>
+          <li>second publications</li>
+          <li>third publications</li>
+          <li>fourth publications</li>
+        </ul>
+      </section>
+      <section class="mediaContainer" data-content-year="2011">
+        <p class="year">2011</p>
+        <ul>
+          <li>first publications</li>
+          <li>second publications</li>
+          <li>third publications</li>
+          <li>fourth publications</li>
+        </ul>
+      </section>
     </div>
     </article>
 
@@ -164,5 +245,97 @@
   </section>
     </article>
   </main>
+
+  <script type="text/javascript" src="../slick/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="../slick/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="../slick/slick.js"></script>
+	
+  <script type="text/javascript">
+
+    /*********************************************************
+    /* Create All animation to Scroll to the right year block
+    **********************************************************/
+    function scrollToElm(container, elm, duration){
+      var pos = getRelativePos(elm);
+      scrollTo( container, pos.top , duration);  // duration in seconds
+    }
+
+    function getRelativePos(elm){
+      var pPos = elm.parentNode.getBoundingClientRect(), // parent pos
+          cPos = elm.getBoundingClientRect(), // target pos
+          pos = {};
+
+      pos.top    = cPos.top    - pPos.top + elm.parentNode.scrollTop,
+      pos.right  = cPos.right  - pPos.right,
+      pos.bottom = cPos.bottom - pPos.bottom,
+      pos.left   = cPos.left   - pPos.left;
+
+      return pos;
+    }
+        
+    function scrollTo(element, to, duration, onDone) {
+        var start = element.scrollTop,
+            change = to - start,
+            startTime = performance.now(),
+            val, now, elapsed, t;
+
+        function animateScroll(){
+            now = performance.now();
+            elapsed = (now - startTime)/1000;
+            t = (elapsed/duration);
+
+            element.scrollTop = start + change * easeInOutQuad(t);
+
+            if( t < 1 )
+                window.requestAnimationFrame(animateScroll);
+            else
+                onDone && onDone();
+        };
+
+        animateScroll();
+    }
+
+    function easeInOutQuad(t){ return t<.5 ? 2*t*t : -1+(4-2*t)*t };
+
+    /**************************
+    /* Create Sliders NewsFeed
+    ***************************/
+    function initSlick() {
+      // Sliders TimeLine
+      $('.keywordsTimeLine .timeContainer').slick({
+          infinite: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          variableWidth: true,
+          rows: false,
+          arrows: true,
+          adaptiveHeight: true,
+          focusOnSelect: true,
+          prevArrow: $('.keywordsTimeLine .timeContainerArrowPrev'),
+          nextArrow: $('.keywordsTimeLine .timeContainerArrowNext')
+      });
+
+      /****************************************
+      /* Change index when user clic on a date
+      *****************************************/
+      const timeLineSlides = document.querySelectorAll('.slick-slide')
+      for (let year of timeLineSlides) {
+        year.addEventListener('click', function (e) { console.log("this", e.target.innerHTML);
+          // Find year clicked on the timeline
+          let indexRightYear = e.target.innerHTML;
+          // Find element to scroll and get it top position to scroll with this container
+          const element = document.querySelector('.mediaContainer[data-content-year="' + indexRightYear + '"]');
+          const containerBlocksYears = document.getElementsByClassName('flexContainer')[0];
+          scrollToElm( containerBlocksYears, element , .2 );
+        })
+      }
+
+    }
+
+    $(document).ready(function(){
+      initSlick();
+    });
+  </script>
   </body>
 </html>

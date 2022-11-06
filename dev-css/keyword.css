@@ -201,13 +201,13 @@ header {
 .timeContainer span + span{
   margin-left: 9px;;
 }
-.timeContainer .active {
+.timeContainer .slick-current {
   position: relative;
   color: #3a65ff;
   font-weight: bold;
 }
 
-.timeContainer .active::before {
+.timeContainer .slick-current::before {
   content: "";
   position: absolute;
   top:-26px;
@@ -216,6 +216,11 @@ header {
   border-left: 17px solid transparent;
   border-right: 17px solid transparent;
   border-top: 17px solid #3a65ff;
+}
+
+.slick-track {
+  width: 100% !important;
+  transform: translate(0px, 0px) !important;
 }
 
 /* mediaContainer */
@@ -392,6 +397,9 @@ header {
   .flexContainer{
     display: flex;
     flex-wrap: wrap;
+    height: auto;
+    max-height: 600px;
+    overflow: auto;
   }
 
   .mediaContainer {
