@@ -173,16 +173,15 @@ header {
 }
 
 /* Timeline */
-.arrow img{
+.arrow img {
   width: 40px;
 }
 
-.timeline .arrow.right{
+.timeline .arrow.right {
   transform: rotate(180deg);
 }
 
-
-.timeline{
+.timeline {
   position: relative;
   display: flex;
   width: 98%;
@@ -194,13 +193,24 @@ header {
   border-radius: 18px;
 }
 
-.timeContainer{
+.timeContainer {
   display: flex;
 }
 
-.timeContainer span + span{
-  margin-left: 9px;;
+.timeContainer .slick-list {
+  height: 67px !important; /* to overwrite plugin slick slider */
 }
+
+.timeContainer div + div {
+  margin-left: 9px;
+}
+
+.timeContainer .slick-slide {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
 .timeContainer .slick-current {
   position: relative;
   color: #3a65ff;
@@ -210,7 +220,7 @@ header {
 .timeContainer .slick-current::before {
   content: "";
   position: absolute;
-  top:-26px;
+  top: 0;
   width: 0; 
   height: 0; 
   border-left: 17px solid transparent;
@@ -225,8 +235,16 @@ header {
 
 /* mediaContainer */
 
+.flexContainer{
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  max-height: 600px;
+  overflow: auto;
+}
+
 .mediaContainer{
-  margin-right: 18px;    
+  width: 100%;   
   background: white;
   border-radius: 20px;
 }
@@ -340,7 +358,7 @@ header {
   text-decoration: none;
 }
 
-.follow img{
+.follow img {
   width: 20px;
 }
 
@@ -390,19 +408,12 @@ header {
     border-radius: 20px;
   }
   
-  .left article h2{
+  .left article h2 {
     text-align: center;
-  }
-  
-  .flexContainer{
-    display: flex;
-    flex-wrap: wrap;
-    height: auto;
-    max-height: 600px;
-    overflow: auto;
   }
 
   .mediaContainer {
     width: 47%;
+    margin-right: 18px; 
   }
 }
