@@ -173,12 +173,19 @@ header {
 }
 
 /* Timeline */
-.arrow img {
-  width: 40px;
+.timeline .arrow.left {
+  margin-left: 12px;
+  cursor: pointer;
 }
 
 .timeline .arrow.right {
+  margin-right: 12px;
+  cursor: pointer;
   transform: rotate(180deg);
+}
+
+.timeline .arrow img {
+  width: 40px;
 }
 
 .timeline {
@@ -235,7 +242,7 @@ header {
 
 /* mediaContainer */
 
-.flexContainer{
+.flexContainer {
   display: flex;
   flex-wrap: wrap;
   height: auto;

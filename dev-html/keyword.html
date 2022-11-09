@@ -29,7 +29,7 @@
       <h2 class="pageTitle">Keyword : Social Cognition</h2>
       <section class="timeline keywordsTimeLine">
         <div class="arrow left timeContainerArrowPrev">
-            <img src="../img/arrow-time.png" alt="arrow">
+            <img src="../img/slider-arrow.png" alt="arrow">
         </div>
         <div class="timeContainer"> 
             <div>2021</div>
@@ -44,7 +44,7 @@
             <div>2012</div>
         </div>
         <div class="arrow right timeContainerArrowNext"> 
-            <img src="../img/arrow-time.png" alt="arrow">
+            <img src="../img/slider-arrow.png" alt="arrow">
         </div>
       </section>
 
@@ -316,6 +316,17 @@
           focusOnSelect: true,
           prevArrow: $('.keywordsTimeLine .timeContainerArrowPrev'),
           nextArrow: $('.keywordsTimeLine .timeContainerArrowNext')
+      });
+
+      /****************************************************
+      /*  Change index when user clic on an arrow timeline
+      /****************************************************/
+      $('.keywordsTimeLine .timeContainer').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        let year = document.querySelectorAll('.keywordsTimeLine .timeContainer .slick-slide')[nextSlide].innerHTML
+        // Find element to scroll and get it top position to scroll with this container
+        const element = document.querySelector('.mediaContainer[data-content-year="' + year + '"]');
+        const containerBlocksYears = document.getElementsByClassName('flexContainer')[0];
+        scrollToElm( containerBlocksYears, element , .2 );
       });
 
       /****************************************
