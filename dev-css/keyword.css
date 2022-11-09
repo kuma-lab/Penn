@@ -202,6 +202,7 @@ header {
 
 .timeContainer {
   display: flex;
+  width: calc(100% - 134px);
 }
 
 .timeContainer .slick-list {
@@ -236,8 +237,7 @@ header {
 }
 
 .slick-track {
-  width: 100% !important;
-  transform: translate(0px, 0px) !important;
+  width: max-content !important;
 }
 
 /* mediaContainer */
