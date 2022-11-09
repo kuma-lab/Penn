@@ -995,7 +995,6 @@
       let timeLineUniqueDates = [...new Set(timeLineDates)]
       // Sort desc value
       timeLineUniqueDates.sort((a, b) => b - a);
-	  console.log("timeLineDates",timeLineDates, timeLineUniqueDates);
 
       // Insert dates on timeline
       const listDates = document.querySelector('.newsfeed.' + category + ' .timeContainer');

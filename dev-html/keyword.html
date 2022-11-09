@@ -32,23 +32,14 @@
             <img src="../img/slider-arrow.png" alt="arrow">
         </div>
         <div class="timeContainer"> 
-            <div>2021</div>
-            <div>2020</div>
-            <div class="active">2019</div>
-            <div>2018</div>
-            <div>2017</div>
-            <div>2016</div>
-            <div>2015</div>
-            <div>2014</div>
-            <div>2013</div>
-            <div>2012</div>
+            <!-- Completed by JS -->
         </div>
         <div class="arrow right timeContainerArrowNext"> 
             <img src="../img/slider-arrow.png" alt="arrow">
         </div>
       </section>
 
-    <div class="flexContainer">
+    <div class="listArticlesByYears flexContainer">
       <section class="mediaContainer" data-content-year="2021">
           <p class="year">2021</p>
           <ul>
@@ -300,10 +291,27 @@
     function easeInOutQuad(t){ return t<.5 ? 2*t*t : -1+(4-2*t)*t };
 
     /**************************
-    /* Create Sliders NewsFeed
+    /* Create Sliders TimeLine
     ***************************/
     function initSlick() {
-      // Sliders TimeLine
+      // Create one date by block year with articles
+      let timeLineDates = [];
+      let allDates = document.querySelectorAll('.listArticlesByYears .year')
+      for (let date of allDates) {
+        timeLineDates.push(date.innerHTML)
+      }
+      // Keep unique dates
+      let timeLineUniqueDates = [...new Set(timeLineDates)]
+      // Sort desc value
+      timeLineUniqueDates.sort((a, b) => b - a);
+
+      // Insert dates on timeline
+      const listDates = document.querySelector('.keywordsTimeLine .timeContainer');
+      for (let date of timeLineUniqueDates) {
+        listDates.innerHTML += '<div>' +  date + '</div>'
+      }
+
+      // Slider TimeLine
       $('.keywordsTimeLine .timeContainer').slick({
           infinite: false,
           slidesToShow: 1,
