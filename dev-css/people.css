@@ -272,7 +272,6 @@ header {
 }
 
 /* mediaContainer */
-
 .mediaContainer{
   margin-right: 18px;    
   background: white;
@@ -285,7 +284,11 @@ header {
   justify-content: space-between;
 }
 
-.mediaContainer{
+.mediaContainer .listYears {
+  flex-direction: column;
+}
+
+.mediaContainer {
   margin-right: 18px;
   background: white;
   border-radius: 20px;
