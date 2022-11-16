@@ -226,16 +226,22 @@ header {
 }
 
 /* Timeline */
-.arrow img{
+.timeline .arrow img{
   width: 40px;
 }
 
-.timeline .arrow.right{
+.timeline .arrow.left {
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+.timeline .arrow.right {
+  margin-right: 12px;
+  cursor: pointer;
   transform: rotate(180deg);
 }
 
-
-.timeline{
+.timeline {
   position: relative;
   display: flex;
   width: 98%;
@@ -249,29 +255,52 @@ header {
 
 .timeContainer{
   display: flex;
+  width: calc(100% - 134px);
 }
 
-.timeContainer span + span{
-  margin-left: 9px;;
+.timeContainer .slick-list {
+  height: 67px !important;
 }
-.timeContainer .active {
+
+.timeContainer .slick-track {
+  width: max-content !important;
+}
+
+.timeContainer div + div {
+  margin-left: 9px;
+}
+
+.timeContainer .slick-slide {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.timeContainer .slick-current {
   position: relative;
-  color: #3a65ff;
-  font-weight: bold;
+    color: #3a65ff;
+    font-weight: bold;
 }
 
-.timeContainer .active::before {
+.timeContainer .slick-current::before {
   content: "";
   position: absolute;
-  top:-26px;
-  width: 0; 
-  height: 0; 
+  top: 0;
+  width: 0;
+  height: 0;
   border-left: 17px solid transparent;
   border-right: 17px solid transparent;
   border-top: 17px solid #3a65ff;
 }
 
 /* mediaContainer */
+.containerListsArticles .papers, 
+.containerListsArticles .talks,
+.containerListsArticles .press {
+  height: 600px;
+  overflow: hidden;
+}
+
 .mediaContainer{
   margin-right: 18px;    
   background: white;
@@ -284,8 +313,11 @@ header {
   justify-content: space-between;
 }
 
-.mediaContainer .listYears {
+.mediaContainer .listArticlesByYears {
   flex-direction: column;
+  overflow: hidden;
+  height: 600px;
+  justify-content: start;
 }
 
 .mediaContainer {
