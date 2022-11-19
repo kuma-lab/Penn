@@ -190,6 +190,33 @@
           </div>
         </div>
         <div class="listArticlesByYears">
+          <ul class="listArticlesByYear" data-content-year="2020">
+            <li class="year">2020</li>
+          </ul>
+          <ul class="listArticlesByYear" data-content-year="2019">
+            <li class="year">2019</li>
+          </ul>
+          <ul class="listArticlesByYear" data-content-year="2018">
+            <li class="year">2018</li>
+          </ul>
+          <ul class="listArticlesByYear" data-content-year="2017">
+            <li class="year">2017</li>
+          </ul>
+          <ul class="listArticlesByYear" data-content-year="2016">
+            <li class="year">2016</li>
+          </ul>
+          <ul class="listArticlesByYear" data-content-year="2015">
+            <li class="year">2015</li>
+          </ul>
+          <ul class="listArticlesByYear" data-content-year="2014">
+            <li class="year">2014</li>
+          </ul>
+          <ul class="listArticlesByYear" data-content-year="2013">
+            <li class="year">2013</li>
+          </ul>
+          <ul class="listArticlesByYear" data-content-year="2012">
+            <li class="year">2012</li>
+          </ul>
           <ul class="listArticlesByYear" data-content-year="2011">
             <li class="year">2011</li>
             <li>first publications</li>
@@ -197,6 +224,9 @@
             <li>third publications</li>
             <li>fourth publications</li>
             <li>fifth publications</li>
+          </ul>
+          <ul class="listArticlesByYear" data-content-year="2010">
+            <li class="year">2010</li>
           </ul>
           <ul class="listArticlesByYear" data-content-year="2009">
             <li class="year">2009</li>
@@ -385,12 +415,17 @@
       /****************************************************
       /*  Change index when user clic on an arrow timeline
       /****************************************************/
+      function nearElement(containerBlocksYears, year) {
+        return containerBlocksYears.querySelector('.listArticlesByYear[data-content-year="2011"]');
+      }
+
       $('.PeopleTimeLine .timeContainer').on('beforeChange', function(event, slick, currentSlide, nextSlide){
         let year = document.querySelectorAll('.PeopleTimeLine .timeContainer .slick-slide')[nextSlide].innerHTML
         // Find element to scroll and get it top position to scroll with this container
-        const element = document.querySelector('.listArticlesByYear[data-content-year="' + year + '"]');
         const containersBlocksYears = document.getElementsByClassName('listArticlesByYears');
-        for (let containerBlocksYears of containersBlocksYears) { console.log("containerBlocksYears",containerBlocksYears);
+        for (let containerBlocksYears of containersBlocksYears) {
+          const element = containerBlocksYears.querySelector('.listArticlesByYear[data-content-year="' + year + '"]') ?? nearElement(containerBlocksYears, year);
+          console.log("containerBlocksYears : ",containerBlocksYears, ",element : ", element);
           scrollToElm( containerBlocksYears, element , .2 );
         }
       });
@@ -404,9 +439,17 @@
           // Find year clicked on the timeline
           let indexRightYear = e.target.innerHTML;
           // Find element to scroll and get it top position to scroll with this container
-          const element = document.querySelector('.listArticlesByYear[data-content-year="' + indexRightYear + '"]');
+          /*const element = document.querySelector('.listArticlesByYear[data-content-year="' + indexRightYear + '"]');
           const containerBlocksYears = document.getElementsByClassName('flexContainer')[0];
-          scrollToElm( containerBlocksYears, element , .2 );
+          scrollToElm( containerBlocksYears, element , .2 );*/
+          
+          const containersBlocksYears = document.getElementsByClassName('listArticlesByYears'); let i = 0
+          for (let containerBlocksYears of containersBlocksYears) { i = i++;
+            const element = containerBlocksYears.querySelector('.listArticlesByYear[data-content-year="' + year + '"]') ?? nearElement(containerBlocksYears, year);
+            console.log(i, " : containerBlocksYears : ",containerBlocksYears, ",element : ", element);
+            //scrollToElm( containerBlocksYears, element , .2 );
+          }
+          
         })
       }
 
