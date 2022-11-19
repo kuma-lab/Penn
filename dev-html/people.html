@@ -416,7 +416,14 @@
       /*  Change index when user clic on an arrow timeline
       /****************************************************/
       function nearElement(containerBlocksYears, year) {
-        return containerBlocksYears.querySelector('.listArticlesByYear[data-content-year="2011"]');
+        // Find closest year under year in params or if it undefined the closest next year
+        const closestYear = [...containerBlocksYears.querySelectorAll('.listArticlesByYear')].find(
+                              yearBlock => yearBlock.getAttribute('data-content-year') < year
+                            ) ?? [...containerBlocksYears.querySelectorAll('.listArticlesByYear')].reverse().find(
+                              yearBlock => yearBlock.getAttribute('data-content-year') > year
+                            )
+        // Return right node with the right year
+        return containerBlocksYears.querySelector('.listArticlesByYear[data-content-year="' + closestYear.getAttribute('data-content-year') + '"]')
       }
 
       $('.PeopleTimeLine .timeContainer').on('beforeChange', function(event, slick, currentSlide, nextSlide){
@@ -442,11 +449,11 @@
           /*const element = document.querySelector('.listArticlesByYear[data-content-year="' + indexRightYear + '"]');
           const containerBlocksYears = document.getElementsByClassName('flexContainer')[0];
           scrollToElm( containerBlocksYears, element , .2 );*/
-          
+
           const containersBlocksYears = document.getElementsByClassName('listArticlesByYears'); let i = 0
           for (let containerBlocksYears of containersBlocksYears) { i = i++;
-            const element = containerBlocksYears.querySelector('.listArticlesByYear[data-content-year="' + year + '"]') ?? nearElement(containerBlocksYears, year);
-            console.log(i, " : containerBlocksYears : ",containerBlocksYears, ",element : ", element);
+            //const element = containerBlocksYears.querySelector('.listArticlesByYear[data-content-year="' + year + '"]') ?? nearElement(containerBlocksYears, year);
+            //console.log(i, " : containerBlocksYears : ",containerBlocksYears, ",element : ", element);
             //scrollToElm( containerBlocksYears, element , .2 );
           }
           

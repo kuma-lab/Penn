@@ -297,8 +297,7 @@ header {
 .containerListsArticles .papers, 
 .containerListsArticles .talks,
 .containerListsArticles .press {
-  height: 600px;
-  overflow: scroll;
+  height: 660px;
 }
 
 .mediaContainer{
