@@ -204,12 +204,12 @@ header {
   border-radius: 40px 0px 0px 40px;
 }
 
-.bubbleContainer.active{
+.bubbleContainer.active, .bubbleContainer.active img{
   background-color: #3162FF;
   color: #ffff;
 }
 
-.bubbleContainer.time.active{
+.bubbleContainer.time.active,{
   background-color: #fff;
   color: #3162FF;
 }
