@@ -220,7 +220,7 @@ header {
   border-radius: 40px 0px 0px 40px;
 }
 
-.choiceContainer .bubbleContainer.active {
+.choiceContainer .bubbleContainer.active, .choiceContainer .bubbleContainer.active img {
   background-color: #3162FF;
   color: #ffff;
 }
