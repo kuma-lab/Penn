@@ -156,10 +156,11 @@ header {
   padding: 0 9px;
 }
 
-#allFeed{
+.all {
   font-weight: bold;
+  text-transform: capitalize;
   color:#3162FF;
-  text-transform: capitalize  ;
+  cursor: pointer;
 }
 
 
@@ -220,6 +221,13 @@ header {
   border-radius: 40px 0px 0px 40px;
 }
 
+.choiceContainer .bubbleContainer.all {
+  width: 0;
+  height: 0;
+  font-size: 0;
+  border: 0;
+}
+
 .choiceContainer .bubbleContainer.active {
   background-color: #3162FF;
   color: #ffff;
@@ -268,7 +276,7 @@ header {
 .choiceContainer .time ul {
   display: none;
   background-color: #fff;
-  color: #3162FF;
+  color: #000000;
   list-style: none;
   position: absolute;
   left: -3px;
@@ -287,6 +295,10 @@ header {
 
 .choiceContainer .time li:last-of-type {
   margin-bottom: 9px;
+}
+
+.choiceContainer .time li:hover {
+  color: #3162FF;
 }
 
 .choiceContainer .bubbleContainer img {
