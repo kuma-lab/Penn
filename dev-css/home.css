@@ -38,7 +38,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-p {
+p, span {
   font-size: 12px;
   margin-top: 3px;
 }
@@ -413,7 +413,7 @@ header {
   line-height: 15px;
 }
 
-.infos p span{
+.infos .bold{
   color: #070721;
   font-weight: bold;
 }
@@ -443,66 +443,6 @@ header {
 
 .arrow.right{
   transform: rotate(180deg);
-}
-
-/* Timeline */
-
-.timeline {
-  position: relative;
-  overflow: hidden;
-  height: 67px;
-  width: calc(100% - 40px);
-  max-width: 100%;
-  padding: 0 9px;
-  margin: 16px auto 0;
-  background-color: #ffff;
-  border-radius: 18px;
-}
-
-.timeline .arrow {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  margin-top: -20px;
-  cursor: pointer;
-}
-
-.timeline .arrow.right{
-  right: 8px;
-  left: inherit;
-  transform: rotate(180deg);
-}
-
-.timeline .timeContainer {
-  width: calc(100% - 120px);
-  margin: auto; 
-}
-
-.timeline .timeContainer span + span {
-  margin-left: 9px;
-}
-
-.timeline .timeContainer .slick-slide {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.timeline .timeContainer .slick-current {
-  position: relative;
-  color: #3a65ff;
-  font-weight: bold;
-}
-
-.timeline .timeContainer .slick-current::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 0; 
-  height: 0;
-  border-left: 17px solid transparent;
-  border-right: 17px solid transparent;
-  border-top: 17px solid #3a65ff;
 }
 
 /* CHat */
@@ -614,6 +554,11 @@ header {
 
 
 @media screen and (min-width: 1024px) {
+  p, span {
+    font-size: 14px;
+  }
+  
+
   main{
     flex-direction: row;
     align-items: baseline;
