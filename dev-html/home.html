@@ -1081,12 +1081,12 @@
       const allFeed = document.querySelector('#allFeed')
 
       allFeed.addEventListener('click', function () {
-          for (let choice of choices) {
-            choice.classList.add('active')
-          }
+        for (let choice of choices) {
+          choice.classList.add('active')
+        }
 		  
-		  activateNewsFeed('all')
-        });
+		    activateNewsFeed('all')
+      });
 
       for (let choice of choices) {
         choice.addEventListener('click', function (e) {
@@ -1101,6 +1101,32 @@
           choice.classList.add('active')
 		      let category = choice.getAttribute('data-category')
 		      activateNewsFeed(category)
+        })
+      }
+    </script>
+
+    <script>
+      // Select Date feature
+      const selectsDate = document.querySelectorAll('.time')
+      for (let selectDate of selectsDate) {
+        selectDate.addEventListener('click', function (e) {
+          // Show the right carousel
+          for (let selectDate of selectsDate) { console.log("e.target", e.target, "selectDate", selectDate)
+            //if(e.target !== selectDate)
+              //selectDate.classList.remove('active')
+          }
+          selectDate.classList.toggle('active');
+		      //let category = choice.getAttribute('data-category')
+		      //activateNewsFeed(category)
+
+          // Configure each options of selectDate
+          const optionsDate = selectDate.querySelectorAll('.listDates li')
+          const selectedDate = selectDate.querySelector('.selectedDate');
+          for (let optionDate of optionsDate) {
+            optionDate.addEventListener('click', function(e) {
+              selectedDate.innerHTML = e.currentTarget.textContent;
+            })
+          }
         })
       }
     </script>

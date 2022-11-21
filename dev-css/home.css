@@ -261,6 +261,10 @@ header {
   border-radius: 40px;
 }
 
+.choiceContainer .time.active ul {
+  display: block;
+}
+
 .choiceContainer .time li {
   margin-top: 9px;
 }
@@ -610,9 +614,6 @@ header {
     justify-content: flex-end;
   }
 
-  /*.arrow img{
-    width: 50px;
-  }*/
   .cardContainer{
     height: auto;
   }
@@ -623,14 +624,6 @@ header {
     width: 140px;
     font-size: 16px;
   }
-
-  /*.timeline{
-    width: 97%;
-  }
-
-  .timeline .arrow.right {
-    position: initial;
-  }*/
 
   .main article{
     display: flex;
