@@ -1041,6 +1041,7 @@
     </script>
   
     <script>
+      // To Simulate Click on another element 
       const simulateClick = function (elem) {
         let evt = new MouseEvent('click', {
           bubbles: true,
@@ -1049,7 +1050,7 @@
         });
       };
 
-      // active news feed
+      // Active news feed
       const choices = document.querySelectorAll('.bubbleContainer')
       const allFeed = document.querySelector('#allFeed')
       const selectsDateAll = document.querySelectorAll('.all .time')
@@ -1065,10 +1066,15 @@
 
       for (let choice of choices) {
         choice.addEventListener('click', function (e) {
-          // remove regenerated carousel when user click on Select Years Button
+          // Remove regenerated carousel when user click on Select Years Button
           const classNamesTime = ['time', 'selectDate', 'list', 'selectedDate', 'dateOption']
           if (classNamesTime.some(classNameTime => e.target.classList.contains(classNameTime)))
             return;
+          // Hide all select Button Open
+          const selectsDate = document.querySelectorAll('.time')
+          for (let selectDate of selectsDate) {
+            selectDate.classList.remove('active')
+          }
           // Show the right carousel
           for (let choice of choices) {
             choice.classList.remove('active')
