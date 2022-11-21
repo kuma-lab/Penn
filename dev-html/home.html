@@ -26,47 +26,55 @@
         
     </header>
     <main>
-        <article class="main">
-			<div class="headerNewsFeed">
-			  <div class="firstLine">
-				<h2>Your Media</h2>
-				<span id="allFeed" class="all">see all</span>
-
-
-        <div class="time">
-					<img src="../img/time.png" alt="press">
-          <div class="list">
-            <ul>
-              <li>2022</li>
-              <li>2021</li>
-              <li>2020</li>
-              <li>2019</li>
-              <li>2018</li>
-              <li>2017</li>
-              <li>2016</li>
-              <li>2015</li>
-              <li>2014</li>
-            </ul>
+      <article class="main">
+			  <div class="headerNewsFeed">
+			    <div class="firstLine">
+				    <h2>Your Media</h2>
+				    <span id="allFeed" class="all">see all</span>
+			    </div>
+          <div class="secondLine">
+            <div class="choiceContainer">
+              <div class="bubbleContainer pub active" data-category="pub">
+                <img src="../img/book.png" alt="papers">
+                <span>Papers</span>
+                <div class="time">
+                  <img src="../img/time.png" class="selectDate" alt="select date picto">
+                  <div class="list">
+                    <ul class="listDates">
+                      <!-- Completed by JS -->
+                    </ul>
+                  </div>
+                  <span class="selectedDate">2020</span>
+                </div>
+              </div>
+              <div class="bubbleContainer talk" data-category="talk">
+                <img src="../img/youtube.png" alt="talks">
+                <span>Talks</span>
+                <div class="time">
+                  <img src="../img/time.png" class="selectDate" alt="select date picto">
+                  <div class="list">
+                    <ul class="listDates">
+                      <!-- Completed by JS -->
+                    </ul>
+                  </div>
+                  <span class="selectedDate">2021</span>
+                </div>
+              </div>                    
+              <div class="bubbleContainer press" data-category="press">
+                <img src="../img/press.png" alt="press">
+                <span>Press</span>
+                <div class="time">
+                  <img src="../img/time.png" class="selectDate" alt="select date picto">
+                  <div class="list">
+                    <ul class="listDates">
+                      <!-- Completed by JS -->
+                    </ul>
+                  </div>
+                  <span class="selectedDate">2022</span>
+                </div>
+              </div>
+            </div>
           </div>
-					<span>2022</span>
-				</div>
-
-			  </div>
-			  <div class="choiceContainer">
-          <div class="bubbleContainer pub" data-category="pub">
-            <img src="../img/book.png" alt="papers">
-            <span>Papers</span>
-          </div>
-          <div class="bubbleContainer talk" data-category="talk">
-            <img src="../img/youtube.png" alt="talks">
-            <span>Talks</span>
-          </div>                    
-          <div class="bubbleContainer press" data-category="press">
-            <img src="../img/press.png" alt="press">
-            <span>Press
-          </div>
-			  </div>
-
 			</div>
 
 
@@ -205,18 +213,7 @@
                         </div>
                         <img src="../img/book.png" alt="" class="bubble pub">
                     </div>
-				  </div>
-                </section>
-                <section class="timeline">
-                    <div class="arrow left timeContainerArrowPrev">
-                        <img src="../img/arrow-time.png" alt="arrow">
-                    </div>
-                    <div class="timeContainer">
-                      <!-- Completed by JS -->
-                    </div>
-                    <div class="arrow right timeContainerArrowNext">  
-                        <img src="../img/arrow-time.png" alt="arrow">
-                    </div>
+				          </div>
                 </section>
             </section>
 
@@ -359,18 +356,7 @@
                         </div>
                         <img src="../img/youtube.png" alt="" class="bubble talk" style="width: 22px;">
                     </div>
-				  </div>
-                </section>
-                <section class="timeline">
-                    <div class="arrow left timeContainerArrowPrev">
-                        <img src="../img/arrow-time.png" alt="arrow">
-                    </div>
-                    <div class="timeContainer"> 
-                      <!-- Completed by JS -->
-                    </div>
-                    <div class="arrow right timeContainerArrowNext">  
-                        <img src="../img/arrow-time.png" alt="arrow">
-                    </div>
+				          </div>
                 </section>
             </section>
 
@@ -499,18 +485,7 @@
                         </div>
                         <img src="../img/press.png" alt="" class="bubble press">
                     </div>
-				  </div>
-                </section>
-                <section class="timeline">
-                    <div class="arrow left timeContainerArrowPrev">
-                        <img src="../img/arrow-time.png" alt="arrow">
-                    </div>
-                    <div class="timeContainer"> 
-                      <!-- Completed by JS -->
-                    </div>
-                    <div class="arrow right timeContainerArrowNext"> 
-                        <img src="../img/arrow-time.png" alt="arrow">
-                    </div>
+				          </div>
                 </section>
             </section>
 
@@ -639,18 +614,7 @@
                         </div>
                         <img src="../img/press.png" alt="" class="bubble press">
                     </div>
-				  </div>
-                </section>
-                <section class="timeline">
-                    <div class="arrow left timeContainerArrowPrev">
-                        <img src="../img/arrow-time.png" alt="arrow">
-                    </div>
-                    <div class="timeContainer"> 
-                      <!-- Completed by JS -->
-                    </div>
-                    <div class="arrow right timeContainerArrowNext"> 
-                        <img src="../img/arrow-time.png" alt="arrow">
-                    </div>
+				          </div>
                 </section>
             </section>
 
@@ -963,7 +927,7 @@
       });
 
       /**************************
-      /* Create Sliders TimeLine
+      /* Create Select Button
       ***************************/
       // Create one date by article and all dates by slider
       let timeLineDates = [];
@@ -976,68 +940,14 @@
       // Sort desc value
       timeLineUniqueDates.sort((a, b) => b - a);
 
-      // Insert dates on timeline
-      const listDates = document.querySelector('.newsfeed.' + category + ' .timeContainer');
+      // Insert dates on select Date
+      const listDates = document.querySelector('.bubbleContainer.' + category + ' .time .listDates')
       for (let date of timeLineUniqueDates) {
-        listDates.innerHTML += '<div>' +  date + '</div>'
+        listDates.innerHTML += '<li>' +  date + '</li>'
       }
-
-      // Sliders TimeLine
-      $('.newsfeed.' + category + ' .timeContainer').slick({
-          infinite: false,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: true,
-          variableWidth: true,
-          rows: false,
-          arrows: true,
-          adaptiveHeight: true,
-          prevArrow: $('.newsfeed.' + category + ' .timeline .timeContainerArrowPrev'),
-          nextArrow: $('.newsfeed.' + category + ' .timeline .timeContainerArrowNext')
-      });
-
-      /**********************************************
-      /* Change index when user change currend slide
-      ***********************************************/
-      $('.newsfeed.' + category + ' .slickContainer').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-        // Get next slide
-        let nextSlideDom = document.querySelectorAll('.newsfeed.' + category + ' .slickContainer .slick-slide')[nextSlide];
-        
-        // Find timeline slide with the right year
-        let dateSlide = [].slice.call(document.querySelectorAll('.newsfeed.' + category + ' .timeContainer .slick-slide')).filter(function (item){
-          let year = nextSlideDom.querySelector('.cardContainer').getAttribute('data-content-year')
-          return item.innerText.includes(year)
-        })[0]
-
-        // Slide to the good one
-        $('.newsfeed.' + category + ' .timeContainer').slick('slickGoTo', dateSlide.getAttribute('data-slick-index'))
-      });
-
-      /****************************************************
-       *  Change index when user clic on an arrow timeline
-       ****************************************************/
-      $('.newsfeed.' + category + ' .timeContainer').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-        let year = document.querySelectorAll('.newsfeed.' + category + ' .timeContainer .slick-slide')[nextSlide]
-
-        // Find index to the slide with right year
-        let indexNextSlide = document.querySelector('.newsfeed.' + category + ' .slickContainer .cardContainer[data-content-year="' + year.innerHTML + '"]').closest(".slick-slide").getAttribute('data-slick-index')
-        // Slide to the good one
-        $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', indexNextSlide)
-      });
-
-      /****************************************
-      /* Change index when user clic on a date
-      *****************************************/
-      const timeLineSlides = document.querySelectorAll('.slick-slide[data-slick-index]')
-      for (let year of timeLineSlides) {
-        year.addEventListener('click', function () {
-          // Find index to the right slide
-          let indexRightSlide = document.querySelector('.newsfeed.' + category + ' .slickContainer .cardContainer[data-content-year="' + year.innerHTML + '"]').closest(".slick-slide").getAttribute('data-slick-index')
-          // Slide to the right two
-          $('.newsfeed.' + category + ' .timeContainer').slick('slickGoTo', year.getAttribute('data-slick-index'));
-          $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', indexRightSlide);
-        })
-      }
+      // Add the date by default (first of the list)
+      const firstDate = document.querySelector('.bubbleContainer.' + category + ' .time .selectedDate')
+      firstDate.innerHTML = timeLineUniqueDates[0]
 	}
 	  
     $(document).ready(function(){
@@ -1063,22 +973,54 @@
       const allFeed = document.querySelector('#allFeed')
 
       allFeed.addEventListener('click', function () {
-          for (let choice of choices) {
-            choice.classList.add('active')
-          }
+        for (let choice of choices) {
+          choice.classList.add('active')
+        }
 		  
-		  activateNewsFeed('all')
-        });
+		    activateNewsFeed('all')
+      });
 
       for (let choice of choices) {
-        choice.addEventListener('click', function () {
+        choice.addEventListener('click', function (e) {
+          // remove regenerated carousel when user click on Select Years Button
+          const classNamesTime = ['time', 'selectDate', 'list', 'selectedDate']
+          if (classNamesTime.some(classNameTime => e.target.classList.contains(classNameTime)))
+            return;
+          // Show the right carousel
           for (let choice of choices) {
             choice.classList.remove('active')
           }
           choice.classList.add('active')
-		  
-		  let category = choice.getAttribute('data-category')
-		  activateNewsFeed(category)
+		      let category = choice.getAttribute('data-category')
+		      activateNewsFeed(category)
+        })
+      }
+    </script>
+
+    <script>
+      // Select Date feature
+      const selectsDate = document.querySelectorAll('.time')
+      for (let selectDate of selectsDate) {
+        selectDate.addEventListener('click', function (e) {
+          // Show the right carousel
+          for (let selectDate of selectsDate) {
+            //if(e.target !== selectDate)
+              //selectDate.classList.remove('active')
+          }
+          selectDate.classList.toggle('active')
+
+          // Configure each options of selectDate
+          const optionsDate = selectDate.querySelectorAll('.listDates li')
+          const selectedDate = selectDate.querySelector('.selectedDate')
+          for (let optionDate of optionsDate) {
+            optionDate.addEventListener('click', function(e) {
+              selectedDate.innerHTML = e.currentTarget.textContent
+              // Find index to the right slide
+              const category = selectedDate.closest('.bubbleContainer').getAttribute('data-category')
+              let indexRightSlide = document.querySelector('.newsfeed.' + category + ' .slickContainer .cardContainer[data-content-year="' + e.currentTarget.textContent + '"]').closest(".slick-slide").getAttribute('data-slick-index')
+              $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', indexRightSlide)
+            })
+          }
         })
       }
     </script>
