@@ -256,6 +256,7 @@ header {
 .timeContainer{
   display: flex;
   width: calc(100% - 134px);
+  justify-content: center;
 }
 
 .timeContainer .slick-list {
