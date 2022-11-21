@@ -402,7 +402,6 @@
         const containersBlocksYears = document.getElementsByClassName('listArticlesByYears');
         for (let containerBlocksYears of containersBlocksYears) {
           const element = containerBlocksYears.querySelector('.listArticlesByYear[data-content-year="' + year + '"]') ?? nearElement(containerBlocksYears, year);
-          console.log("containerBlocksYears : ",containerBlocksYears, ",element : ", element);
           scrollToElm( containerBlocksYears, element , .2 );
         }
       });
