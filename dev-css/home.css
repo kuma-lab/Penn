@@ -407,15 +407,18 @@ header {
   padding: 18px;
 }
 
-.infos p{
-  color: #8E8C99;
-  font-weight: bold;
-  line-height: 15px;
+.infoContainer .infos p{
+  margin-bottom: 9px ;
 }
 
-.infos .bold{
+.infoContainer .infos .bold{
   color: #070721;
   font-weight: bold;
+}
+
+.infoContainer .infos li{
+  list-style: none;
+  margin: 4.5px 9px;
 }
 
 .avatarContainer .avatar{
