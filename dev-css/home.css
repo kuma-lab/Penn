@@ -180,6 +180,12 @@ header {
   position: relative;
 }
 
+@media(max-width: 600px) {
+  .secondLine {
+    height: 96px;
+  }
+}
+
 /* Choice Container */
 .choiceContainer {
   position: relative;
@@ -235,9 +241,19 @@ header {
   right: 0;
   top: 0;
   width: 100px;
+  height: 28px;
   border-right: none;
   border-radius: 40px;
   background-color: #ffff;
+}
+
+@media(max-width: 600px) {
+  .choiceContainer .time {
+    top: 64px;
+    right: 50%;
+    width: 300px;
+    margin-right: -150px;
+  }
 }
 
 .choiceContainer .time .selectDate {

@@ -213,18 +213,7 @@
                         </div>
                         <img src="../img/book.png" alt="" class="bubble pub">
                     </div>
-				  </div>
-                </section>
-                <section class="timeline">
-                    <div class="arrow left timeContainerArrowPrev">
-                        <img src="../img/arrow-time.png" alt="arrow">
-                    </div>
-                    <div class="timeContainer">
-                      <!-- Completed by JS -->
-                    </div>
-                    <div class="arrow right timeContainerArrowNext">  
-                        <img src="../img/arrow-time.png" alt="arrow">
-                    </div>
+				          </div>
                 </section>
             </section>
 
@@ -367,18 +356,7 @@
                         </div>
                         <img src="../img/youtube.png" alt="" class="bubble talk" style="width: 22px;">
                     </div>
-				  </div>
-                </section>
-                <section class="timeline">
-                    <div class="arrow left timeContainerArrowPrev">
-                        <img src="../img/arrow-time.png" alt="arrow">
-                    </div>
-                    <div class="timeContainer"> 
-                      <!-- Completed by JS -->
-                    </div>
-                    <div class="arrow right timeContainerArrowNext">  
-                        <img src="../img/arrow-time.png" alt="arrow">
-                    </div>
+				          </div>
                 </section>
             </section>
 
@@ -507,18 +485,7 @@
                         </div>
                         <img src="../img/press.png" alt="" class="bubble press">
                     </div>
-				  </div>
-                </section>
-                <section class="timeline">
-                    <div class="arrow left timeContainerArrowPrev">
-                        <img src="../img/arrow-time.png" alt="arrow">
-                    </div>
-                    <div class="timeContainer"> 
-                      <!-- Completed by JS -->
-                    </div>
-                    <div class="arrow right timeContainerArrowNext"> 
-                        <img src="../img/arrow-time.png" alt="arrow">
-                    </div>
+				          </div>
                 </section>
             </section>
 
@@ -647,18 +614,7 @@
                         </div>
                         <img src="../img/press.png" alt="" class="bubble press">
                     </div>
-				  </div>
-                </section>
-                <section class="timeline">
-                    <div class="arrow left timeContainerArrowPrev">
-                        <img src="../img/arrow-time.png" alt="arrow">
-                    </div>
-                    <div class="timeContainer"> 
-                      <!-- Completed by JS -->
-                    </div>
-                    <div class="arrow right timeContainerArrowNext"> 
-                        <img src="../img/arrow-time.png" alt="arrow">
-                    </div>
+				          </div>
                 </section>
             </section>
 
@@ -971,7 +927,7 @@
       });
 
       /**************************
-      /* Create Sliders TimeLine
+      /* Create Select Button
       ***************************/
       // Create one date by article and all dates by slider
       let timeLineDates = [];
@@ -992,70 +948,6 @@
       // Add the date by default (first of the list)
       const firstDate = document.querySelector('.bubbleContainer.' + category + ' .time .selectedDate')
       firstDate.innerHTML = timeLineUniqueDates[0]
-
-      /* REMOVE */ 
-      const listDatesOld = document.querySelector('.newsfeed.' + category + ' .timeContainer');
-      for (let date of timeLineUniqueDates) {
-        listDatesOld.innerHTML += '<div>' +  date + '</div>'
-      }
-      /* END TO REMOVE */
-
-      // Sliders TimeLine
-      $('.newsfeed.' + category + ' .timeContainer').slick({
-          infinite: false,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: true,
-          variableWidth: true,
-          rows: false,
-          arrows: true,
-          adaptiveHeight: true,
-          prevArrow: $('.newsfeed.' + category + ' .timeline .timeContainerArrowPrev'),
-          nextArrow: $('.newsfeed.' + category + ' .timeline .timeContainerArrowNext')
-      });
-
-      /**********************************************
-      /* Change index when user change currend slide
-      ***********************************************/
-      $('.newsfeed.' + category + ' .slickContainer').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-        // Get next slide
-        let nextSlideDom = document.querySelectorAll('.newsfeed.' + category + ' .slickContainer .slick-slide')[nextSlide];
-        
-        // Find timeline slide with the right year
-        let dateSlide = [].slice.call(document.querySelectorAll('.newsfeed.' + category + ' .timeContainer .slick-slide')).filter(function (item){
-          let year = nextSlideDom.querySelector('.cardContainer').getAttribute('data-content-year')
-          return item.innerText.includes(year)
-        })[0]
-
-        // Slide to the good one
-        $('.newsfeed.' + category + ' .timeContainer').slick('slickGoTo', dateSlide.getAttribute('data-slick-index'))
-      });
-
-      /****************************************************
-       *  Change index when user clic on an arrow timeline
-       ****************************************************/
-      $('.newsfeed.' + category + ' .timeContainer').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-        let year = document.querySelectorAll('.newsfeed.' + category + ' .timeContainer .slick-slide')[nextSlide]
-
-        // Find index to the slide with right year
-        let indexNextSlide = document.querySelector('.newsfeed.' + category + ' .slickContainer .cardContainer[data-content-year="' + year.innerHTML + '"]').closest(".slick-slide").getAttribute('data-slick-index')
-        // Slide to the good one
-        $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', indexNextSlide)
-      });
-
-      /****************************************
-      /* Change index when user clic on a date
-      *****************************************/
-      const timeLineSlides = document.querySelectorAll('.slick-slide[data-slick-index]')
-      for (let year of timeLineSlides) {
-        year.addEventListener('click', function () {
-          // Find index to the right slide
-          let indexRightSlide = document.querySelector('.newsfeed.' + category + ' .slickContainer .cardContainer[data-content-year="' + year.innerHTML + '"]').closest(".slick-slide").getAttribute('data-slick-index')
-          // Slide to the right two
-          $('.newsfeed.' + category + ' .timeContainer').slick('slickGoTo', year.getAttribute('data-slick-index'));
-          $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', indexRightSlide);
-        })
-      }
 	}
 	  
     $(document).ready(function(){
@@ -1111,25 +1003,22 @@
       for (let selectDate of selectsDate) {
         selectDate.addEventListener('click', function (e) {
           // Show the right carousel
-          for (let selectDate of selectsDate) { console.log("e.target", e.target, "selectDate", selectDate)
+          for (let selectDate of selectsDate) {
             //if(e.target !== selectDate)
               //selectDate.classList.remove('active')
           }
-          selectDate.classList.toggle('active');
-		      //let category = choice.getAttribute('data-category')
-		      //activateNewsFeed(category)
+          selectDate.classList.toggle('active')
 
           // Configure each options of selectDate
           const optionsDate = selectDate.querySelectorAll('.listDates li')
-          const selectedDate = selectDate.querySelector('.selectedDate');
+          const selectedDate = selectDate.querySelector('.selectedDate')
           for (let optionDate of optionsDate) {
             optionDate.addEventListener('click', function(e) {
-              selectedDate.innerHTML = e.currentTarget.textContent;
-              console.log("youpi",selectedDate.closest('.bubbleContainer').getAttribute('data-category'))
+              selectedDate.innerHTML = e.currentTarget.textContent
               // Find index to the right slide
               const category = selectedDate.closest('.bubbleContainer').getAttribute('data-category')
               let indexRightSlide = document.querySelector('.newsfeed.' + category + ' .slickContainer .cardContainer[data-content-year="' + e.currentTarget.textContent + '"]').closest(".slick-slide").getAttribute('data-slick-index')
-              $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', indexRightSlide);
+              $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', indexRightSlide)
             })
           }
         })
