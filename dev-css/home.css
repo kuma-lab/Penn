@@ -162,11 +162,21 @@ header {
   text-transform: capitalize  ;
 }
 
+
 /* News Feed */
+.headerNewsFeed{
+  position: relative;
+}
+
 .choiceContainer{
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  width: max-content;
+  border-radius: 40px;
+  background-color: #ffff;
+  margin: 0 auto;
 }
 
 .firstLine{
@@ -175,34 +185,80 @@ header {
   justify-content: space-between;
 }
 
-.BubbleContainer{
+.bubbleContainer,.time{
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  padding: 4px 0;
-  margin: 9px;
-  border-radius: 49px;
-  background-color: #ffff;
+  padding: 9px 0;
   width: 100px;
   font-size: 14px;
+  border-right: #070721 solid 1px;
 }
 
-.BubbleContainer.active{
+.bubbleContainer.press{
+  border-right: none;
+  border-radius: 0px 40px 40px 0px;
+}
+.bubbleContainer.pub{
+  border-radius: 40px 0px 0px 40px;
+}
+
+.bubbleContainer.active{
   background-color: #3162FF;
   color: #ffff;
 }
 
-.BubbleContainer img{
-  height: 14px;
+.bubbleContainer.time.active{
+  background-color: #fff;
+  color: #3162FF;
+}
+
+.time{
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  top: 65px;
+  width: 100px;
+  border-right: none;
+  border-radius: 40px;
+  background-color: #ffff;
+}
+
+/* Dropdown */
+
+.time .list{
+  position: relative;
+}
+
+.time ul{
+  display: none;
+  background-color: #fff;
+  color: #3162FF;
+  list-style: none;
+  position: absolute;
+  left: -3px;
+  top: 12px;
+  padding: 10px;
+  border-radius: 40px;
+}
+
+.time li{
+  margin-top: 9px;
+}
+.time li:last-of-type{
+  margin-bottom: 9px;
+}
+
+.bubbleContainer img{
+  height: 20px;
   width: auto;
   background: #ffff;
   margin: 2px;
   padding: 2px;
-  border-radius: 30px;
 }
 
-.BubbleContainer span{
+.bubbleContainer span, .time span{
   padding: 0 6px;
 }
 
@@ -213,9 +269,6 @@ header {
 .newsfeed.active {
   display: block;
 }
-
-
-
 
 .slider{
   position: relative;
@@ -546,7 +599,7 @@ header {
   .slider .arrow.right{
     right: 0px;
   }
-  .BubbleContainer{
+  .bubbleContainer{
     width: 140px;
     font-size: 16px;
   }
