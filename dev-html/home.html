@@ -1125,6 +1125,11 @@
           for (let optionDate of optionsDate) {
             optionDate.addEventListener('click', function(e) {
               selectedDate.innerHTML = e.currentTarget.textContent;
+              console.log("youpi",selectedDate.closest('.bubbleContainer').getAttribute('data-category'))
+              // Find index to the right slide
+              const category = selectedDate.closest('.bubbleContainer').getAttribute('data-category')
+              let indexRightSlide = document.querySelector('.newsfeed.' + category + ' .slickContainer .cardContainer[data-content-year="' + e.currentTarget.textContent + '"]').closest(".slick-slide").getAttribute('data-slick-index')
+              $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', indexRightSlide);
             })
           }
         })
