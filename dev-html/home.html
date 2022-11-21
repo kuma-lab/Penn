@@ -26,47 +26,55 @@
         
     </header>
     <main>
-        <article class="main">
-			<div class="headerNewsFeed">
-			  <div class="firstLine">
-				<h2>Your Media</h2>
-				<span id="allFeed" class="all">see all</span>
-
-
-        <div class="time">
-					<img src="../img/time.png" alt="press">
-          <div class="list">
-            <ul>
-              <li>2022</li>
-              <li>2021</li>
-              <li>2020</li>
-              <li>2019</li>
-              <li>2018</li>
-              <li>2017</li>
-              <li>2016</li>
-              <li>2015</li>
-              <li>2014</li>
-            </ul>
+      <article class="main">
+			  <div class="headerNewsFeed">
+			    <div class="firstLine">
+				    <h2>Your Media</h2>
+				    <span id="allFeed" class="all">see all</span>
+			    </div>
+          <div class="secondLine">
+            <div class="choiceContainer">
+              <div class="bubbleContainer pub active" data-category="pub">
+                <img src="../img/book.png" alt="papers">
+                <span>Papers</span>
+                <div class="time">
+                  <img src="../img/time.png" class="selectDate" alt="select date picto">
+                  <div class="list">
+                    <ul class="listDates">
+                      <!-- Completed by JS -->
+                    </ul>
+                  </div>
+                  <span class="selectedDate">2020</span>
+                </div>
+              </div>
+              <div class="bubbleContainer talk" data-category="talk">
+                <img src="../img/youtube.png" alt="talks">
+                <span>Talks</span>
+                <div class="time">
+                  <img src="../img/time.png" class="selectDate" alt="select date picto">
+                  <div class="list">
+                    <ul class="listDates">
+                      <!-- Completed by JS -->
+                    </ul>
+                  </div>
+                  <span class="selectedDate">2021</span>
+                </div>
+              </div>                    
+              <div class="bubbleContainer press" data-category="press">
+                <img src="../img/press.png" alt="press">
+                <span>Press</span>
+                <div class="time">
+                  <img src="../img/time.png" class="selectDate" alt="select date picto">
+                  <div class="list">
+                    <ul class="listDates">
+                      <!-- Completed by JS -->
+                    </ul>
+                  </div>
+                  <span class="selectedDate">2022</span>
+                </div>
+              </div>
+            </div>
           </div>
-					<span>2022</span>
-				</div>
-
-			  </div>
-			  <div class="choiceContainer">
-          <div class="bubbleContainer pub" data-category="pub">
-            <img src="../img/book.png" alt="papers">
-            <span>Papers</span>
-          </div>
-          <div class="bubbleContainer talk" data-category="talk">
-            <img src="../img/youtube.png" alt="talks">
-            <span>Talks</span>
-          </div>                    
-          <div class="bubbleContainer press" data-category="press">
-            <img src="../img/press.png" alt="press">
-            <span>Press
-          </div>
-			  </div>
-
 			</div>
 
 
@@ -976,11 +984,21 @@
       // Sort desc value
       timeLineUniqueDates.sort((a, b) => b - a);
 
-      // Insert dates on timeline
-      const listDates = document.querySelector('.newsfeed.' + category + ' .timeContainer');
+      // Insert dates on select Date
+      const listDates = document.querySelector('.bubbleContainer.' + category + ' .time .listDates')
       for (let date of timeLineUniqueDates) {
-        listDates.innerHTML += '<div>' +  date + '</div>'
+        listDates.innerHTML += '<li>' +  date + '</li>'
       }
+      // Add the date by default (first of the list)
+      const firstDate = document.querySelector('.bubbleContainer.' + category + ' .time .selectedDate')
+      firstDate.innerHTML = timeLineUniqueDates[0]
+
+      /* REMOVE */ 
+      const listDatesOld = document.querySelector('.newsfeed.' + category + ' .timeContainer');
+      for (let date of timeLineUniqueDates) {
+        listDatesOld.innerHTML += '<div>' +  date + '</div>'
+      }
+      /* END TO REMOVE */
 
       // Sliders TimeLine
       $('.newsfeed.' + category + ' .timeContainer').slick({
@@ -1071,14 +1089,18 @@
         });
 
       for (let choice of choices) {
-        choice.addEventListener('click', function () {
+        choice.addEventListener('click', function (e) {
+          // remove regenerated carousel when user click on Select Years Button
+          const classNamesTime = ['time', 'selectDate', 'list', 'selectedDate']
+          if (classNamesTime.some(classNameTime => e.target.classList.contains(classNameTime)))
+            return;
+          // Show the right carousel
           for (let choice of choices) {
             choice.classList.remove('active')
           }
           choice.classList.add('active')
-		  
-		  let category = choice.getAttribute('data-category')
-		  activateNewsFeed(category)
+		      let category = choice.getAttribute('data-category')
+		      activateNewsFeed(category)
         })
       }
     </script>
