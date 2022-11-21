@@ -377,14 +377,15 @@ header {
   background-position: center center;
 }
 
-.Cta{
+.cta{
+  display: block;
   padding: 3px 0;
   text-align: center;
   background: #3a65ff;
   width: 110px;
   margin: 5px auto 0;
+  font-size: 14px;
   color: white;
-  font-weight: bold;
   border-radius: 9px;
 }
 
