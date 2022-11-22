@@ -1,86 +1,26 @@
 /* Reset */
-
 * {
   margin: 0;
   padding: 0;
   font-size: 100%;
   line-height: 1;
 }
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* Scroll */
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #f5f5f5;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-  background-color: #f5f5f5;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    color-stop(0.44, rgb(193, 213, 249)),
-    color-stop(0.72, rgb(134, 177, 247)),
-    color-stop(0.86, rgb(105, 155, 247))
-  );
-}
-
-/* Tag */
-body {
-  background-image: url("../img/fond.png");
-  font-family: 'Roboto', sans-serif;
-}
-main{
-  display: flex;
-  flex-direction: column;    
-  align-items: center;
-}
-
-section {
-  margin: 16px 0 0;
-}
-
-p, span {
-  font-size: 12px;
-  margin-top: 3px;
-}
-
-select {
-  border: none;
-}
-h2 {
-  padding: 18px 0;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 28px;
-  color: #070721;
-  text-transform: capitalize;
-}
-
-h3 {
-  padding-top: 9px;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 21px;
-  text-decoration-line: underline;
-  color: #070721;
-  text-transform: capitalize;
-}
-
-h4 {
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 18px;
-  color: #070721;
-  text-transform: capitalize;
-  margin-bottom: 5px;
+aside {
+  display: none;
+  position: absolute;
+  z-index: 122222;
+  overflow: auto;
+  width: 85%;
+  max-width: 90%;
+  height: auto;
+  resize: both;
+  left: 50%;
+  top: 50%;
+  background: white;
+  transform: translate(-50%, -50%);
+  border: solid #699bf7 4px;
+  border-radius: 9px;
 }
 
 button {
@@ -89,40 +29,133 @@ button {
   cursor: pointer;
 }
 
+aside h3 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  text-decoration-line: underline;
+  color: #699bf7;
+  text-transform: capitalize;
+}
 
-
-.infoContainer{
+aside .titleContainer {
+  position: relative;
+  display: flex;
   width: 100%;
-  background-color: #ffff;
-  border-radius: 0 15px;
-  padding: 0 18px 37px;
-  margin: 18px;
+  padding: 9px 0;
+  justify-content: center;
+  align-items: center;
 }
-.avatarContainer .avatar {
-  height: 80px;
-  border-radius: 9px;
+
+aside .titleContainer .close {
+  position: absolute;
+  right: 9px;
 }
-.infoContainer .avatarContainer{
+
+aside .titleContainer h3 {
+  padding: 0 9px;
+}
+
+aside.billetContainer {
+  position: relative;
+  margin: 0 9px;
+}
+
+aside .infoPersonal {
+  width: calc(100vw - 70px);
+}
+
+aside .infoPersonal p {
+  white-space: break-spaces;
+}
+
+aside .avatarbillet {
+  position: absolute;
+  right: 29px;
+  height: 40px;
+  top: 9px;
+}
+
+aside .poupContainer .billetContainer,
+.buddy .billetContainer {
+  display: flex;
+  height: fit-content;
+  align-items: center;
+  margin: 9px;
+}
+
+aside .poupContainer .avatarbillet,
+.buddy .avatarbillet {
+  position: initial;
+  margin-right: 9px;
+}
+
+aside .headlineContainer {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 18px;
+  justify-content: space-around;
+  padding: 9px 0;
+  margin-bottom: 9px;
 }
 
-.infoContainer .infos p{
-  margin-bottom: 9px ;
-  line-height: 1.4;
+aside h5{
+  margin-top: 18px;
 }
 
-.infoContainer .infos .bold{
-  color: #070721;
+aside .Cta{
+  width: auto;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: initial;
+}
+
+aside .headlineContainer button {
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+
+aside .textContainer p {
+  margin-bottom: 9px;
+}
+
+aside .btnContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+aside.active {
+  display: inline;
+  position: absolute;
+  overflow: auto;
+  height: 80%;
+  padding: 20px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: solid 3px #699bf7;
+  background: #ffff;
+  border-radius: 8px;
+}
+
+.aside .headlineContainer .newTab{
+  font-weight: bold;
+  background-color: #699bf7;
+  color: #fff;
+  padding: 12px;
+  border-radius: 9px;
+  text-decoration: none;
+  margin: 9px 0;
+}
+
+.aside .headlineContainer h5{
+  color: #699bf7;
   font-weight: bold;
 }
 
-.infoContainer .infos li{
-  list-style: none;
-  margin: 4.5px 9px;
-  font-size: 14px;
+.aside .iframeContainer,.aside .iframeContainer iframe{
+  min-height: 600px;
 }
 
 @media screen and (min-width: 1024px) {
