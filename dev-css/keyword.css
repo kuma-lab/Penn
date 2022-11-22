@@ -20,6 +20,10 @@ p,li {
   line-height: 16px;
 }
 
+li{
+  list-style: none;
+}
+
 p+p{
   margin-top: 9px;
 }
@@ -270,6 +274,46 @@ header .logo{
   padding:9px 18px 18px;
 }
 
+.mediaContainer li{
+  position: relative;
+}
+
+.mediaContainer .press::before{  
+  position: absolute;
+  left: -30px;
+  background-image: url(../img/press.png);
+  background-size: contain;
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  content: "";
+  background-repeat: no-repeat;
+}
+
+.mediaContainer .talk::before{    
+  position: absolute;
+  left: -30px;
+  background-image: url(../img/youtube.png);
+  background-size: contain;
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  content: "";
+  background-repeat: no-repeat;
+}
+
+.mediaContainer .papers::before{  
+  position: absolute;
+  left: -30px;
+  background-image: url(../img/book.png);
+  background-size: contain;
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  content: "";
+  background-repeat: no-repeat;
+}
+
 .mediaContainer .year{
   text-align: center;
   margin: 9px;
@@ -281,6 +325,7 @@ header .logo{
 
 .mediaContainer li{
   margin: 0 18px;
+  padding-left: 6px; /* img de liste */
   text-transform: capitalize;
   padding: 5px 0;
 }
