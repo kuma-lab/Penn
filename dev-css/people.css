@@ -95,7 +95,12 @@ header {
   display: flex;
   padding: 9px;
 }
-
+header .logo{
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  height: 60px;
+}
 .imgContainer {
   display: flex;
   align-items: center;
