@@ -229,7 +229,7 @@ header {
   display: flex;
 }
 
-.choiceContainer .bubbleContainer .time.active {
+.choiceContainer .bubbleContainer.active .time img{
   background-color: #fff;
   color: #3162FF;
 }
@@ -409,6 +409,7 @@ header {
 
 .infoContainer .infos p{
   margin-bottom: 9px ;
+  line-height: 1.4;
 }
 
 .infoContainer .infos .bold{
@@ -419,6 +420,7 @@ header {
 .infoContainer .infos li{
   list-style: none;
   margin: 4.5px 9px;
+  font-size: 14px;
 }
 
 .avatarContainer .avatar{
