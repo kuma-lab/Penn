@@ -100,7 +100,7 @@ section {
 
 /* Header */
 
-.logo{
+header .logo{
   position: absolute;
   top: 9px;
   left: 9px;
