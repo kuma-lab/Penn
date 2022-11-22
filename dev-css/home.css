@@ -229,7 +229,7 @@ header {
   display: flex;
 }
 
-.choiceContainer .bubbleContainer.active .time img{
+.choiceContainer .bubbleContainer.active .time img {
   background-color: #fff;
   color: #3162FF;
 }
