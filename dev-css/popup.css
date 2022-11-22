@@ -89,7 +89,13 @@ button {
   cursor: pointer;
 }
 
-
+header img{
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  height: 80px;
+  width: auto;
+}
 
 .infoContainer{
   width: 100%;
