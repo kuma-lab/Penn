@@ -315,7 +315,7 @@ header {
 
 .mediaContainer .listArticlesByYears {
   flex-direction: column;
-  overflow: scroll;
+  overflow: auto;
   height: 600px;
   justify-content: start;
 }
