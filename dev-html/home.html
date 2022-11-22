@@ -73,9 +73,22 @@
                   <span class="selectedDate">2022</span>
                 </div>
               </div>
+              <!-- Button for See All : hide but important for select Date -->
+              <div class="bubbleContainer all" data-category="all">
+                <span>All</span>
+                <div class="time">
+                  <img src="../img/time.png" class="selectDate" alt="select date picto">
+                  <div class="list">
+                    <ul class="listDates">
+                      <!-- Completed by JS -->
+                    </ul>
+                  </div>
+                  <span class="selectedDate">2023</span>
+                </div>
+                </div>
             </div>
           </div>
-			  </div>
+			</div>
         <section class="newsfeed pub active">
             <section class="slider">
               <div class="arrow left"></div>
@@ -741,8 +754,8 @@
             <section class="slider">
               <div class="arrow left"></div>
               <div class="arrow right"></div>
-      <div class="slickContainer">
-                <div class="cardContainer pub" data-content-year="2013">
+              <div class="slickContainer">
+                <div class="cardContainer pub" data-content-year="2022">
                   <div class="backgroundIframe">
                     <div class="iframeContainer openModal">
                       <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/10/1026.png);"/></div>
@@ -773,16 +786,15 @@
                             </ul>
                           </div>
                         </div>
+                        <img src="../img/book.png" alt="" class="bubble pub">
                     </div>
-                    <img src="../img/book.png" alt="" class="bubble pub">
-                </div>
-                <div class="cardContainer talk" data-content-year="2010">
-                  <div class="backgroundIframe">
-                    <div class="iframeContainer">
-                      <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/11/1187.jpg);"/></div>
-                      <p class="Cta openModal">open the link</p>
-                    </div>
-                  </div>
+                    <div class="cardContainer talk" data-content-year="2010">
+                      <div class="backgroundIframe">
+                        <div class="iframeContainer">
+                          <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/11/1187.jpg);"/></div>
+                          <p class="Cta openModal">open the link</p>
+                        </div>
+                      </div>
 
                     <div class="infoContainer">
                       <div class="avatarContainer">
@@ -810,7 +822,7 @@
                     </div>
                     <img src="../img/youtube.png" alt="" class="bubble talk" style="width: 22px;">
                 </div>
-                <div class="cardContainer press" data-content-year="2009">
+                <div class="cardContainer press" data-content-year="2020">
                   <div class="backgroundIframe">
                     <div class="iframeContainer openModal">
                       <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/6/681.png);"/></div>
@@ -844,7 +856,7 @@
                     </div>
                     <img src="../img/press.png" alt="" class="bubble press">
                 </div>
-                <div class="cardContainer pub" data-content-year="2000">
+                <div class="cardContainer pub" data-content-year="2018">
                   <div class="backgroundIframe">
                     <div class="iframeContainer openModal">
                       <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/10/1026.png);"/></div>
@@ -878,7 +890,7 @@
                     </div>
                     <img src="../img/book.png" alt="" class="bubble pub">
                 </div>
-                <div class="cardContainer talk" data-content-year="2000">
+                <div class="cardContainer talk" data-content-year="2015">
                   <div class="backgroundIframe">
                     <div class="iframeContainer">
                       <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/11/1187.jpg);"/></div>
@@ -912,7 +924,7 @@
                     </div>
                     <img src="../img/youtube.png" alt="" class="bubble talk" style="width: 22px;">
                 </div>
-                <div class="cardContainer press" data-content-year="1999">
+                <div class="cardContainer press" data-content-year="2014">
                   <div class="backgroundIframe">
                     <div class="iframeContainer openModal">
                       <div class="newsFeedThumb" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/6/681.png);"/></div>
@@ -1227,7 +1239,7 @@
       // Insert dates on select Date
       const listDates = document.querySelector('.bubbleContainer.' + category + ' .time .listDates')
       for (let date of timeLineUniqueDates) {
-        listDates.innerHTML += '<li>' +  date + '</li>'
+        listDates.innerHTML += '<li class="dateOption">' +  date + '</li>'
       }
       // Add the date by default (first of the list)
       const firstDate = document.querySelector('.bubbleContainer.' + category + ' .time .selectedDate')
@@ -1252,9 +1264,19 @@
     </script>
   
     <script>
-      // active news feed
+      // To Simulate Click on another element 
+      const simulateClick = function (elem) {
+        let evt = new MouseEvent('click', {
+          bubbles: true,
+          cancelable: true,
+          view: window
+        });
+      };
+
+      // Active news feed
       const choices = document.querySelectorAll('.bubbleContainer')
       const allFeed = document.querySelector('#allFeed')
+      const selectsDateAll = document.querySelectorAll('.all .time')
 
       allFeed.addEventListener('click', function () {
         for (let choice of choices) {
@@ -1262,14 +1284,20 @@
         }
 		  
 		    activateNewsFeed('all')
+        simulateClick(selectsDateAll)
       });
 
       for (let choice of choices) {
         choice.addEventListener('click', function (e) {
-          // remove regenerated carousel when user click on Select Years Button
-          const classNamesTime = ['time', 'selectDate', 'list', 'selectedDate']
+          // Remove regenerated carousel when user click on Select Years Button
+          const classNamesTime = ['time', 'selectDate', 'list', 'selectedDate', 'dateOption']
           if (classNamesTime.some(classNameTime => e.target.classList.contains(classNameTime)))
             return;
+          // Hide all select Button Open
+          const selectsDate = document.querySelectorAll('.time')
+          for (let selectDate of selectsDate) {
+            selectDate.classList.remove('active')
+          }
           // Show the right carousel
           for (let choice of choices) {
             choice.classList.remove('active')
@@ -1286,11 +1314,7 @@
       const selectsDate = document.querySelectorAll('.time')
       for (let selectDate of selectsDate) {
         selectDate.addEventListener('click', function (e) {
-          // Show the right carousel
-          for (let selectDate of selectsDate) {
-            //if(e.target !== selectDate)
-              //selectDate.classList.remove('active')
-          }
+          // Show the right select and active right(s) button(s)
           selectDate.classList.toggle('active')
 
           // Configure each options of selectDate
@@ -1303,6 +1327,13 @@
               const category = selectedDate.closest('.bubbleContainer').getAttribute('data-category')
               let indexRightSlide = document.querySelector('.newsfeed.' + category + ' .slickContainer .cardContainer[data-content-year="' + e.currentTarget.textContent + '"]').closest(".slick-slide").getAttribute('data-slick-index')
               $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', indexRightSlide)
+              // if All Select Selected
+              const isAllSelected = document.querySelector('.bubbleContainer.all').classList.contains('active')
+              if(isAllSelected) {
+                for (let choice of choices) {
+                  choice.classList.add('active')
+                }
+              }
             })
           }
         })
