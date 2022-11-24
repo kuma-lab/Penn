@@ -95,12 +95,18 @@ header {
   display: flex;
   padding: 9px;
 }
-header .logo{
-  position: absolute;
-  top: 9px;
-  left: 9px;
-  height: 60px;
+
+header .linkHome {
+  display: flex;
+  align-items: center;
 }
+
+header .logo{
+  top: 18px;
+  right: 9px;
+  height: 40px;
+}
+
 .imgContainer {
   display: flex;
   align-items: center;
@@ -189,8 +195,12 @@ header .logo{
 .whoIAm{
   display: flex;
   flex-direction: column;
-  align-items: center;
+/*  align-items: center;  */
   justify-content: flex-start;
+}
+
+.whoIAm .title {
+  padding-left: 70px;	
 }
 
 .mainInfo{
@@ -349,6 +359,7 @@ header .logo{
   flex-wrap: wrap;    
   flex-direction: column;
   padding:9px 18px 18px;
+  width: 85%;
 }
 
 .mediaContainer .year{
@@ -468,6 +479,12 @@ header .logo{
 
 
 @media screen and (min-width: 1024px) {
+
+  header .logo{
+    position: absolute;
+    left: 9px;
+    height: 60px;
+  }
 
   h1{
     display: inline-block;
