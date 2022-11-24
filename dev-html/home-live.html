@@ -76,7 +76,7 @@
               </div>
               <!-- Button for See All : hide but important for select Date -->
               <div class="bubbleContainer all" data-category="all">
-                <span style="display:none">All</span>
+                <span class="titleAll">All</span>
                 <div class="time">
                   <img src="../img/time.png" class="selectDate" alt="select date picto">
                   <div class="list">
@@ -11306,15 +11306,15 @@
 	<script type="text/javascript" src="../slick/slick.js"></script>
 
   <script type="text/javascript">
-
+	
     const newsFeeds = document.querySelectorAll('.newsfeed')
-
+	  
 	  function activateNewsFeed(category) {
 		  for (let newsFeed of newsFeeds) {
 		    newsFeed.classList.remove('active')
 		  }
 		  document.querySelector('.newsfeed.' + category).classList.add('active')
-
+		  
 		  let slickContainer = document.querySelector('.newsfeed.' + category + ' .slickContainer')
 		  if (!slickContainer.classList.contains('slick-slider')) {
             initSlick(category)
@@ -11323,7 +11323,7 @@
 		    $('.newsfeed.' + category + ' .slickContainer').slick('setPosition')
 		  }
 	  }
-
+	  
     /**************************
     /* Create Sliders NewsFeed
     ***************************/
@@ -11339,7 +11339,7 @@
         slidesToScroll: 3,
         prevArrow: '.newsfeed.' + category + ' .slider .arrow.left',
         nextArrow: '.newsfeed.' + category + ' .slider .arrow.right',
-
+        
         responsive: [
           {
             breakpoint: 1025,
@@ -11394,7 +11394,7 @@
       const firstDate = document.querySelector('.bubbleContainer.' + category + ' .time .selectedDate')
       firstDate.innerHTML = timeLineUniqueDates[0]
 	}
-
+	  
     $(document).ready(function(){
       initSlick('pub');
     });
@@ -11411,9 +11411,9 @@
         })
       }
     </script>
-
+  
     <script>
-      // To Simulate Click on another element
+      // To Simulate Click on another element 
       const simulateClick = function (elem) {
         let evt = new MouseEvent('click', {
           bubbles: true,
@@ -11421,6 +11421,14 @@
           view: window
         });
       };
+
+      const closeSelectDate = function() {
+        // Hide all select Button Open
+        const selectsDate = document.querySelectorAll('.time')
+        for (let selectDate of selectsDate) {
+          selectDate.classList.remove('active')
+        }
+      }
 
       // Active news feed
       const choices = document.querySelectorAll('.bubbleContainer')
@@ -11431,7 +11439,7 @@
         for (let choice of choices) {
           choice.classList.add('active')
         }
-
+		  
 		    activateNewsFeed('all')
         simulateClick(selectsDateAll)
       });
@@ -11443,10 +11451,7 @@
           if (classNamesTime.some(classNameTime => e.target.classList.contains(classNameTime)))
             return;
           // Hide all select Button Open
-          const selectsDate = document.querySelectorAll('.time')
-          for (let selectDate of selectsDate) {
-            selectDate.classList.remove('active')
-          }
+          closeSelectDate()
           // Show the right carousel
           for (let choice of choices) {
             choice.classList.remove('active')
@@ -11456,15 +11461,26 @@
 		      activateNewsFeed(category)
         })
       }
-    </script>
 
-    <script>
       // Select Date feature
       const selectsDate = document.querySelectorAll('.time')
+      const overlaySelect = document.body;
+
       for (let selectDate of selectsDate) {
         selectDate.addEventListener('click', function (e) {
           // Show the right select and active right(s) button(s)
           selectDate.classList.toggle('active')
+
+          // Close Select Button when user clic outside
+          const removeClickEvent = function(e) {
+            const classNamesTime = ['time', 'selectDate', 'list', 'selectedDate', 'dateOption']
+            if (!classNamesTime.some(classNameTime => e.target.classList.contains(classNameTime))) {
+              // Hide all select Button Open
+              closeSelectDate()
+              overlaySelect.removeEventListener('click', removeClickEvent)
+            }
+          }
+          overlaySelect.addEventListener('click', removeClickEvent);
 
           // Configure each options of selectDate
           const optionsDate = selectDate.querySelectorAll('.listDates li')
