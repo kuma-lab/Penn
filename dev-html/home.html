@@ -1326,7 +1326,6 @@
           const removeClickEvent = function(e) {
             const classNamesTime = ['time', 'selectDate', 'list', 'selectedDate', 'dateOption']
             if (!classNamesTime.some(classNameTime => e.target.classList.contains(classNameTime))) {
-              console.log("test overlay select")
               // Hide all select Button Open
               closeSelectDate()
               overlaySelect.removeEventListener('click', removeClickEvent)
