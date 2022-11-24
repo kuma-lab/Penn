@@ -1357,65 +1357,6 @@
     </script>
 
     <script>
-      // popup
-      const itemsOpenModal = document.querySelectorAll('.openModal')
-      const aside = document.querySelector('aside')
-      const close = document.querySelector('.close')
-      const back = document.querySelector('.back')
-
-      for (let item of itemsOpenModal) {
-        item.addEventListener('click', function () {
-          if (item.classList.contains("disabledModal") === false) {
-            let authorName = this.getAttribute('data-author-name') ?? "Name";
-            let authorAvatar = this.getAttribute('data-author-avatar') ?? "Avatar-url-placeholder";
-            let authorField = this.getAttribute('data-author-field') ?? "Field";
-            let authorAffiliation = this.getAttribute('data-author-affiliation') ?? "Affiliation";
-            let popinTitle = this.getAttribute('data-content-title') ?? "Title";
-            let popinLink = this.getAttribute('data-content-url') ?? "Url-placeholder";
-            let source = this.getAttribute('data-content-source') ?? "www.youtube.com";
-            let category = this.getAttribute('data-content-category') ?? "pub";
-
-            document.querySelector('#contentPopin_authorName').innerHTML = authorName;
-            document.querySelector('#contentPopin_authorAvatar').src = authorAvatar;
-            document.querySelector('#contentPopin_authorField').innerHTML = authorField;
-            document.querySelector('#contentPopin_authorAffiliation').innerHTML = authorAffiliation;
-            document.querySelector('#contentPopin_title').innerHTML = popinTitle;
-            document.querySelector('#contentPopin_link').href = popinLink;
-
-            if (source.indexOf('www.youtube.com') === 8) {
-                document.querySelector('#contentPopin_iframe').innerHTML = '<iframe width="100%" height="80%" src="' + source + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-            } else {
-                document.querySelector('#contentPopin_iframe').innerHTML = '<iframe src="' + source + '" height="80%" width="100%" type="application/pdf"></iframe>';
-            }
-
-            switch (category) {
-                case 'pub' :
-                    document.querySelector('#contentPopin_categoryLabel').innerHTML = 'Publication';
-                    break;
-                case 'talk' :
-                    document.querySelector('#contentPopin_categoryLabel').innerHTML = 'Talk';
-                    break;
-                case 'press' :
-                    document.querySelector('#contentPopin_categoryLabel').innerHTML = 'Press';
-                    break;
-            }
-
-            aside.classList.add('active');
-          }
-        })
-      }
-
-      close.addEventListener('click', function () {
-        aside.classList.remove('active')
-      })
-
-      
-      back.addEventListener('click', function () {
-        aside.classList.remove('active')
-      })
-    </script>
-
-    <script>
       // Ranking
       const charts = document.querySelectorAll('.ranking .chart')
       const chartSelect = document.getElementById('rankingFiles')
