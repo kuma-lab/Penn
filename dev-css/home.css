@@ -228,7 +228,7 @@ header {
   border-radius: 40px 0px 0px 40px;
 }
 
-.choiceContainer .bubbleContainer.all {
+.choiceContainer .bubbleContainer.all, .choiceContainer .titleAll {
   width: 0;
   height: 0;
   font-size: 0;
