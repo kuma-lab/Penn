@@ -1273,6 +1273,14 @@
         });
       };
 
+      const closeSelectDate = function() {
+        // Hide all select Button Open
+        const selectsDate = document.querySelectorAll('.time')
+        for (let selectDate of selectsDate) {
+          selectDate.classList.remove('active')
+        }
+      }
+
       // Active news feed
       const choices = document.querySelectorAll('.bubbleContainer')
       const allFeed = document.querySelector('#allFeed')
@@ -1294,10 +1302,7 @@
           if (classNamesTime.some(classNameTime => e.target.classList.contains(classNameTime)))
             return;
           // Hide all select Button Open
-          const selectsDate = document.querySelectorAll('.time')
-          for (let selectDate of selectsDate) {
-            selectDate.classList.remove('active')
-          }
+          closeSelectDate()
           // Show the right carousel
           for (let choice of choices) {
             choice.classList.remove('active')
@@ -1307,15 +1312,27 @@
 		      activateNewsFeed(category)
         })
       }
-    </script>
 
-    <script>
       // Select Date feature
       const selectsDate = document.querySelectorAll('.time')
+      const overlaySelect = document.body;
+
       for (let selectDate of selectsDate) {
         selectDate.addEventListener('click', function (e) {
           // Show the right select and active right(s) button(s)
           selectDate.classList.toggle('active')
+
+          // Close Select Button when user clic outside
+          const removeClickEvent = function(e) {
+            const classNamesTime = ['time', 'selectDate', 'list', 'selectedDate', 'dateOption']
+            if (!classNamesTime.some(classNameTime => e.target.classList.contains(classNameTime))) {
+              console.log("test overlay select")
+              // Hide all select Button Open
+              closeSelectDate()
+              overlaySelect.removeEventListener('click', removeClickEvent)
+            }
+          }
+          overlaySelect.addEventListener('click', removeClickEvent);
 
           // Configure each options of selectDate
           const optionsDate = selectDate.querySelectorAll('.listDates li')
