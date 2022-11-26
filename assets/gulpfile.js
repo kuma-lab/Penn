@@ -61,7 +61,7 @@ gulp.task('less', ['clean'], function () {
     return gulp.src([
       './less/pages/home/home.less',
       './less/pages/people/people.less',
-      './less/pages/keywords/keywords.less'
+      './less/pages/keyword/keyword.less'
         ])
         .pipe(less({
             paths: [ path.join(__dirname, 'less', 'includes') ]
