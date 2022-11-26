@@ -1,18 +1,4 @@
-/* Reset */
-
-* {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  line-height: 1;
-}
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 /* Tag */
-body {
-  background-image: url("../img/fond.png");
-  font-family: 'Roboto', sans-serif;
-}
 
 p,li {
   font-size: 12px;
