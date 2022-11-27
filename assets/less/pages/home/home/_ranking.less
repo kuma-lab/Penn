@@ -1,0 +1,66 @@
+.ranking {
+    display: flex;
+    flex-direction: column;    
+    padding: 16px;
+
+    .titleBlock {
+        padding: 0 0 16px 0;
+        line-height: 28px;
+        font-weight: bold;
+        font-size: 24px;
+        color: #070721;
+        text-transform: capitalize;
+    }
+
+    .selectContainer {
+        display: flex;
+        justify-content: space-around;
+        margin: 8px 0;
+    }
+
+    .chart {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            font-size: 15px;
+            text-align: left;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+            color: white;
+            background-color: lightblue;
+            background: linear-gradient(141deg, #3162ff 0%, #3162ff 51%, #2cb5e8 75%);
+            border-radius: 20px;
+            box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.175);
+        }
+
+        .theOne{ 
+            background: linear-gradient(141deg, #edaef9 0%, #81b1fa 74%, #2cb5e8 85% );
+        }
+
+        .metric-value {
+            font-weight: bold;
+        }
+    }
+
+    .chart-horizontal {
+        width: 100%;
+
+        .metric {
+            margin-bottom: 3px;
+            min-width: 100px;
+            padding: 6px 15px;
+        }
+
+        .metric-value {
+            float: right;
+            font-weight: bold;
+        }
+    }
+}

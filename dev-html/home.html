@@ -19,7 +19,7 @@
       <div class="searchContainer">
           <img src="../img/Search.png" alt="search" class="searchIcon">
           <label class="labelSearch" for="gsearch"></label>
-          <input type="search" class="searchInput" id="gsearch" placeholder="search" name="gsearch">
+          <input type="search" class="searchInput" id="gsearch" placeholder="search people" name="gsearch">
       </div>
       <div class="imgContainer notification">
         <img src="../img/Notification 1.png" alt="notification" class="notificationIcon">
@@ -965,174 +965,181 @@
             </section>
         </section>
         <article>
+          <!-- Chats -->
           <section class="chatContainer">
-            <h2>Chat room</h2>
+            <h2>Chats</h2>
             <div class="messageContainer">
-                <div class="avatarContainer">
-            <img class="avatar" src="../img/avatar1.png" alt="avatar">
-          </div>
-                <div class="txtInfos">
-                  <h4>Name name2</h4>
-                  <span> je suis un message</span>
-                </div>
-                <div>
-                  <img src="../img/messages.png" class="messages" alt="">
-                </div>
-            </div>
-            <div class="messageContainer">
-                <div class="avatarContainer">
-            <img class="avatar" src="../img/avatar1.png" alt="avatar">
-          </div>
-                <div class="txtInfos">
-                  <h4>Name name2</h4>
-                  <span> je suis un message</span>
-                </div>
+              <div class="avatarContainer">
+                <img class="avatar" src="../img/avatar1.png" alt="avatar">
+              </div>
+              <div class="txtInfos">
+                <h4>Name name2</h4>
+                <span> je suis un message</span>
+              </div>
+              <div>
                 <img src="../img/messages.png" class="messages" alt="">
+              </div>
             </div>
-        </section>
+            <div class="messageContainer">
+              <div class="avatarContainer">
+                <img class="avatar" src="../img/avatar1.png" alt="avatar">
+              </div>
+              <div class="txtInfos">
+                <h4>Name name2</h4>
+                <span> je suis un message</span>
+              </div>
+              <img src="../img/messages.png" class="messages" alt="">
+            </div>
+          </section>
+
+        <!-- Block My Ranking -->
         <section class="ranking">
-            <h2>Ranking</h2>
-            <div class="selectContainer">
-              <div class="select doc">
-                <select name="rankingFiles" id="rankingFiles">
-                  <option value="pub">Papers</option>
-                  <option value="talk">Talks</option>
-                  <option value="press">Press</option>
-                </select>
-              </div>
-            <!-- disable order time 
-              <div class="select time">
-                <select name="rankingTimes" id="rankingTimes" class="rankingTimes">
-                  <option value="1">Last Week</option>
-                  <option value="2">Last Month</option>
-                  <option value="3">Last 3 Months</option>
-                </select>
-              </div>
-            -->
+          <h2 class="titleBlock">My Rankings</h2>
+          <div class="selectContainer">
+            <div class="select doc">
+              <select name="rankingFiles" id="rankingFiles">
+                <option value="pub">Papers</option>
+                <option value="talk">Talks</option>
+                <option value="press">Press</option>
+              </select>
             </div>
+          <!-- disable order time 
+            <div class="select time">
+              <select name="rankingTimes" id="rankingTimes" class="rankingTimes">
+                <option value="1">Last Week</option>
+                <option value="2">Last Month</option>
+                <option value="3">Last 3 Months</option>
+              </select>
+            </div>
+          -->
+          </div>
+          <div class="chart chart-bar chart-horizontal press">
+            <div class="metric theOne" style="width: 85%">
+              Damon Centola
+              <span class="metric-value">85</span>
+            </div>
+            <div class="metric" style="width: 70%">
+              Sandra González-Bailón
+              <span class="metric-value">70</span>
+            </div>
+            <div class="metric" style="width: 68%">Amy Gutmann <span class="metric-value">68</span></div>
+            <div class="metric" style="width: 65%">
+              Marta R. Durantini
+              <span class="metric-value">65</span>
+            </div>
+            <div class="metric" style="width: 58%">Emily Falk <span class="metric-value">58</span></div>
+            <div class="metric" style="width: 55%">
+              Bita Fayaz-Farkhad
+              <span class="metric-value">55</span>
+            </div>
+            <div class="metric" style="width: 48%">
+              Jessica Fishman
+              <span class="metric-value">48</span>
+            </div>
+            <div class="metric" style="width: 46%">
+              Oscar H. Gandy, Jr.
+              <span class="metric-value">46</span>
+            </div>
+            <div class="metric" style="width: 44%">
+              Juan Castrillon
+              <span class="metric-value">44</span>
+            </div>
+            <div class="metric" style="width: 42%">
+              CJ Calabrese
+              <span class="metric-value">42</span>
+            </div>
+            <div class="metric" style="width: 40%">
+              Juan Castrillon
+              <span class="metric-value">40</span>
+            </div>
+            <div class="metric" style="width: 39%">
+              Shannon M. Burns
+              <span class="metric-value">39</span>
+            </div>
+            <div class="metric" style="width: 38%">
+              Nicole Cooper
+              <span class="metric-value">38</span>
+            </div>
+          </div>
 
-            <div class="chart chart-bar chart-horizontal press">
-              <div class="metric theOne" style="width: 85%">
-                Damon Centola
-                <span class="metric-value">85</span>
-              </div>
-              <div class="metric" style="width: 70%">
-                Sandra González-Bailón
-                <span class="metric-value">70</span>
-              </div>
-              <div class="metric" style="width: 68%">Amy Gutmann <span class="metric-value">68</span></div>
-              <div class="metric" style="width: 65%">
-                Marta R. Durantini
-                <span class="metric-value">65</span>
-              </div>
-              <div class="metric" style="width: 58%">Emily Falk <span class="metric-value">58</span></div>
-              <div class="metric" style="width: 55%">
-                Bita Fayaz-Farkhad
-                <span class="metric-value">55</span>
-              </div>
-              <div class="metric" style="width: 48%">
-                Jessica Fishman
-                <span class="metric-value">48</span>
-              </div>
-              <div class="metric" style="width: 46%">
-                Oscar H. Gandy, Jr.
-                <span class="metric-value">46</span>
-              </div>
-              <div class="metric" style="width: 44%">
-                Juan Castrillon
-                <span class="metric-value">44</span>
-              </div>
-              <div class="metric" style="width: 42%">
-                CJ Calabrese
-                <span class="metric-value">42</span>
-              </div>
-              <div class="metric" style="width: 40%">
-                Juan Castrillon
-                <span class="metric-value">40</span>
-              </div>
-              <div class="metric" style="width: 39%">
-                Shannon M. Burns
-                <span class="metric-value">39</span>
-              </div>
-              <div class="metric" style="width: 38%">
-                Nicole Cooper
-                <span class="metric-value">38</span>
-              </div>
+          <div class="chart chart-bar chart-horizontal talk">
+            <div class="metric theOne" style="width: 75%">
+              Damon Centola
+              <span class="metric-value">75</span>
             </div>
+            <div class="metric" style="width: 69%">
+              Sandra González-Bailón
+              <span class="metric-value">69</span>
+            </div>
+            <div class="metric" style="width: 68%">Amy Gutmann <span class="metric-value">68</span></div>
+            <div class="metric" style="width: 67%">
+              Marta R. Durantini
+              <span class="metric-value">67</span>
+            </div>
+            <div class="metric" style="width: 42%">
+              CJ Calabrese
+              <span class="metric-value">42</span>
+            </div>
+            <div class="metric" style="width: 41%">
+              Juan Castrillon
+              <span class="metric-value">41</span>
+            </div>
+            <div class="metric" style="width: 33%">
+              Nicole Cooper
+              <span class="metric-value">33</span>
+            </div>
+          </div>
 
-            <div class="chart chart-bar chart-horizontal talk">
-              <div class="metric theOne" style="width: 75%">
-                Damon Centola
-                <span class="metric-value">75</span>
-              </div>
-              <div class="metric" style="width: 69%">
-                Sandra González-Bailón
-                <span class="metric-value">69</span>
-              </div>
-              <div class="metric" style="width: 68%">Amy Gutmann <span class="metric-value">68</span></div>
-              <div class="metric" style="width: 67%">
-                Marta R. Durantini
-                <span class="metric-value">67</span>
-              </div>
-              <div class="metric" style="width: 42%">
-                CJ Calabrese
-                <span class="metric-value">42</span>
-              </div>
-              <div class="metric" style="width: 41%">
-                Juan Castrillon
-                <span class="metric-value">41</span>
-              </div>
-              <div class="metric" style="width: 33%">
-                Nicole Cooper
-                <span class="metric-value">33</span>
-              </div>
+          <div class="chart chart-bar chart-horizontal pub active">
+            <div class="metric theOne" style="width: 86%">
+              Damon Centola
+              <span class="metric-value">86</span>
             </div>
-
-            <div class="chart chart-bar chart-horizontal pub active">
-              <div class="metric theOne" style="width: 86%">
-                Damon Centola
-                <span class="metric-value">86</span>
-              </div>
-              <div class="metric" style="width: 78%">Amy Gutmann <span class="metric-value">78</span></div>
-              <div class="metric" style="width: 62%">
-                CJ Calabrese
-                <span class="metric-value">62</span>
-              </div>
-              <div class="metric" style="width: 46%">
-                Juan Castrillon
-                <span class="metric-value">46</span>
-              </div>
+            <div class="metric" style="width: 78%">Amy Gutmann <span class="metric-value">78</span></div>
+            <div class="metric" style="width: 62%">
+              CJ Calabrese
+              <span class="metric-value">62</span>
             </div>
+            <div class="metric" style="width: 46%">
+              Juan Castrillon
+              <span class="metric-value">46</span>
+            </div>
+          </div>
         </section>
+
         </article>
       </article>
+
       <article class="side">
+        <!-- Connections -->
         <section class="chatContainer">
-          <h2>My Peers</h2>
+          <h2>Connections</h2>
           <div class="messageContainer">
               <div class="avatarContainer">
               <img class="avatar" src="../img/avatar1.png" alt="avatar">
             </div>
-              <div class="txtInfos">
-                <h4>Name name2</h4>
-                <p><span> Title:</span> Professor PennMedicine</p>
-              </div>
-              <img src="../img/messages.png" class="messages" alt="">
+            <div class="txtInfos">
+              <h4>Name name2</h4>
+              <p><span> Title:</span> Professor PennMedicine</p>
+            </div>
+            <img src="../img/messages.png" class="messages" alt="">
           </div>
           <div class="messageContainer">
-              <div class="avatarContainer">
-              <img class="avatar" src="../img/avatar1.png" alt="avatar">
+            <div class="avatarContainer">
+            <img class="avatar" src="../img/avatar1.png" alt="avatar">
+          </div>
+            <div class="txtInfos">
+              <h4>Name name2</h4>
+              <p><span> Title:</span> Professor PennMedicine</p>
             </div>
-              <div class="txtInfos">
-                <h4>Name name2</h4>
-                <p><span> Title:</span> Professor PennMedicine</p>
-              </div>
-              <img src="../img/messages.png" class="messages" alt="">
-            </div>
-      </section>
-      <section class="chatContainer">
-        <h2>Potential Connections</h2>
-        <div class="messageContainer">
+            <img src="../img/messages.png" class="messages" alt="">
+          </div>
+        </section>
+
+        <!-- Potential Connections -->
+        <section class="chatContainer">
+          <h2>Potential Connections</h2>
+          <div class="messageContainer">
             <div class="avatarContainer">
               <img class="avatar" src="../img/avatar1.png" alt="avatar">
             </div>
@@ -1142,7 +1149,7 @@
             </div>
             <img src="../img/add.png" class="messages" alt="">
           </div>
-        <div class="messageContainer">
+          <div class="messageContainer">
             <div class="avatarContainer">
               <img class="avatar" src="../img/avatar1.png" alt="avatar">
             </div>
@@ -1152,7 +1159,7 @@
             </div>
             <img src="../img/add.png" class="messages" alt="">
           </div>
-    </section>
+        </section>
       </article>
     </main>
 	<script type="text/javascript" src="../slick/jquery-1.11.0.min.js"></script>

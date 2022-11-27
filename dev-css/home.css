@@ -428,65 +428,7 @@ section {
 
 /* ranking */
 
-.ranking {
-  display: flex;
-  flex-direction: column;    
-  padding-left: 18px;
-}
 
-.selectContainer {
-  display: flex;
-  justify-content: space-around;
-  margin: 9px 0;
-}
-.ranking .chart {
-  display: none;
-  margin: 9px;
-}
-.ranking .chart.active {
-  display: block;
-}
-.ranking .chart .metric {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: lightblue;
-  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
-  background: -webkit-linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%); /* Standard syntax */
-  color: white;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
-  padding: 10px;
-  text-align: left;
-  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.175);
-}
-
-.chart .metric.theOne{
-  background: linear-gradient(141deg, #edaef9 0%, #81b1fa 74%, #2cb5e8 85% );
-  background: -webkit-linear-gradient(141deg,#edaef9 0%, #81b1fa 74%, #2cb5e8 85% ); 
-  background: -o-linear-gradient(141deg, #edaef9 0%, #81b1fa 74%, #2cb5e8 85% ); 
-  background: -moz-linear-gradient(141deg, #edaef9 0%, #81b1fa 74%, #2cb5e8 85% ); 
-  background: linear-gradient(141deg, #edaef9 0%, #81b1fa 74%, #2cb5e8 85% );
-}
-
-.chart .metric .metric-value {
-  font-weight: bold;
-}
-.chart-horizontal {
-  width: 95%;
-}
-.chart-horizontal .metric {
-  margin-bottom: 3px;
-  min-width: 100px;
-  padding: 6px 15px;
-}
-.chart-horizontal .metric .metric-value {
-  float: right;
-  font-weight: bold;
-}
 
 
 @media screen and (min-width: 1024px) {
