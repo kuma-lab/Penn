@@ -93,15 +93,6 @@ section {
   border-radius: 50px;
 }
 
-.pageTitle{
-  padding: 10px 20px;
-  background-color: #ffff;
-  border-radius: 20px;
-  width: max-content;
-  margin: 0 auto 18px;
-  color: #3162FF;
-}
-
 .all{
   font-weight: bold;
   color:#3162FF;
