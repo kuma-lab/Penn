@@ -64,16 +64,6 @@ section {
   border-radius: 50px;
 }
 
-.main{
-  width:90%;
-  padding: 0 9px;
-}
-
-.side{
-  width: 90%;
-  padding: 0 9px;
-}
-
 .all {
   font-weight: bold;
   text-transform: capitalize;

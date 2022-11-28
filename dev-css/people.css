@@ -80,15 +80,6 @@ section {
   border-radius: 50px;
 }
 
-.main{
-  width:90%;
-  padding: 0 9px;
-}
-
-.side{
-  width: 90%;
-  padding: 0 9px;
-}
 
 .all{
   font-weight: bold;
@@ -436,13 +427,6 @@ section {
   .notification{
     width: 30px;
     height: 30px;
-  }
-
-  .main{
-    width: calc(100% - 336px);
-  }
-  .side{
-    width: 336px;
   }
 
   .infos1{
