@@ -5,24 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../slick/slick.css"/>
     <link rel="stylesheet" href="../dev-css/keyword.css" />
+    <link rel="stylesheet" href="../assets/css/keyword.css" />
     <title>keyword Page</title>
   </head>
   <body>
-    <header>
-      <a class="linkHome" href="home.html"><img class="logo" src="../img/logo.png" alt=""></a>
+    <!-- Header site -->
+    <header class="headerSite">
+      <a href="home.html" class="linkToHome">
+        <img class="logo" src="../img/logo.png" alt="">
+      </a>
       <div class="searchContainer">
-          <img src="../img/Search.png" alt="search">
-          <label class="hide for="gsearch"></label>
-          <input type="search" id="gsearch" placeholder="search" name="gsearch">
+          <img src="../img/Search.png" alt="search" class="searchIcon">
+          <label class="labelSearch" for="gsearch"></label>
+          <input type="search" class="searchInput" id="gsearch" placeholder="search people" name="gsearch">
       </div>
       <div class="imgContainer notification">
-        <img src="../img/Notification 1.png" alt="notification">
+        <img src="../img/Notification 1.png" alt="notification" class="notificationIcon">
       </div>
       <div class="imgContainer avatar">
-        <img src="../img/avatar2.png" alt="avatar">
+        <img src="../img/avatar2.png" alt="avatar" class="avatarImage">
       </div>
-      
-  </header>
+    </header>
   <main>
 
     <article  class="main">
@@ -157,60 +160,63 @@
     </article>
 
     <article class="side">
-      <section class="chatContainer">
-        <h2>My Peers <span class="viewAll">view all</span></h2>
-        <div class="messageContainer">
-          <div class="avatarContainer">
-            <img class="avatar" src="../img/avatar1.png" alt="avatar">
-          </div>
-            <div class="txtInfos">
-              <h4>Annie Patel</h4>
-              <p><span>Main field: </span>Computer Science</p>
+      <!-- Connections -->
+      <section class="connectionsBlock">
+        <h2 class="titleBlock">Connections <span class="viewAll">view all</span></h2>
+        <div class="connectionsList">
+          <div class="connectionWrapper">
+            <div class="avatarContainer">
+              <img class="avatar" src="../img/avatar1.png" alt="avatar">
             </div>
-            <span class="time"> 15m ago</span>
-        </div>
-        <div class="messageContainer">
-          <div class="avatarContainer">
-            <img class="avatar" src="../img/avatar12.jpg" alt="avatar">
+              <div class="txtInfos">
+                <h4 class="name">Annie Patel</h4>
+                <p class="mainField"><span>Main field: </span>Computer Science</p>
+              </div>
+              <span class="time"> 15m ago</span>
           </div>
-            <div class="txtInfos">
-              <h4>Annie Patel</h4>
-              <p><span>Main field: </span>Computer Science</p>
+          <div class="connectionWrapper">
+            <div class="avatarContainer">
+              <img class="avatar" src="../img/avatar12.jpg" alt="avatar">
             </div>
-            <span class="time"> 15m ago</span>
-        </div>
-        <div class="messageContainer">
-          <div class="avatarContainer">
-            <img class="avatar" src="../img/avatar6.png" alt="avatar">
+              <div class="txtInfos">
+                <h4 class="name">Annie Patel</h4>
+                <p class="mainField"><span>Main field: </span>Computer Science</p>
+              </div>
+              <span class="time"> 15m ago</span>
           </div>
-            <div class="txtInfos">
-              <h4>Annie Patel</h4>
-              <p><span>Main field: </span>Computer Science</p>
+          <div class="connectionWrapper">
+            <div class="avatarContainer">
+              <img class="avatar" src="../img/avatar6.png" alt="avatar">
             </div>
-            <span class="time"> 15m ago</span>
-        </div>
-        <div class="messageContainer">
-          <div class="avatarContainer">
-            <img class="avatar" src="../img/avatar7.png" alt="avatar">
+              <div class="txtInfos">
+                <h4 class="name">Annie Patel</h4>
+                <p class="mainField"><span>Main field: </span>Computer Science</p>
+              </div>
+              <span class="time"> 15m ago</span>
           </div>
-            <div class="txtInfos">
-              <h4>Annie Patel</h4>
-              <p><span>Main field: </span>Computer Science</p>
+          <div class="connectionWrapper">
+            <div class="avatarContainer">
+              <img class="avatar" src="../img/avatar7.png" alt="avatar">
             </div>
-            <span class="time"> 15m ago</span>
-        </div>
-        <div class="messageContainer">
-          <div class="avatarContainer">
-            <img class="avatar" src="../img/avatar8.png" alt="avatar">
+              <div class="txtInfos">
+                <h4 class="name">Annie Patel</h4>
+                <p class="mainField"><span>Main field: </span>Computer Science</p>
+              </div>
+              <span class="time"> 15m ago</span>
           </div>
-            <div class="txtInfos">
-              <h4>Annie Patel</h4>
-              <p><span>Main field: </span>Computer Science</p>
+          <div class="connectionWrapper">
+            <div class="avatarContainer">
+              <img class="avatar" src="../img/avatar8.png" alt="avatar">
             </div>
-            <span class="time"> 15m ago</span>
+              <div class="txtInfos">
+                <h4 class="name">Annie Patel</h4>
+                <p class="mainField"><span>Main field: </span>Computer Science</p>
+              </div>
+              <span class="time"> 15m ago</span>
+          </div>
         </div>
+      </section>
 
-    </section>
     <section class="chatContainer potentialConnection">
       <h2>Potential Connections <span class="viewAll">view all</span></h2>
       <div class="messageContainer">

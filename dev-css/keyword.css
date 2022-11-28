@@ -6,14 +6,8 @@
   font-size: 100%;
   line-height: 1;
 }
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 /* Tag */
-body {
-  background-image: url("../img/fond.png");
-  font-family: 'Roboto', sans-serif;
-}
-
 p,li {
   font-size: 12px;
   margin-top: 3px;
@@ -92,69 +86,6 @@ section {
 .pointer.add {
   height: 20px;
   transform: translateY(5px);
-}
-
-/* Header */
-
-header {
-  display: flex;
-  padding: 9px;
-}
-
-header .linkHome {
-  display: flex;
-  align-items: center;
-}
-
-header .logo{
-  top: 18px;
-  right: 9px;
-  height: 40px;
-}
-
-.imgContainer {
-  display: flex;
-  align-items: center;
-}
-
-.searchContainer{
-  width: 60%;
-}
-
-.notification{
-  width: 40px;
-  height: 40px;
-  justify-content: center;
-}
-
-.notification,.searchContainer{
-  display: flex;    
-  align-items: center;
-  padding: 10px;
-  background-color: #ffff;
-  border-radius: 20px;
-  margin-right: 18px;
-
-}
-
-.searchContainer input{
-  margin-left: 9px;
-  width: 100%;
-  padding: 5px;
-  border: none;
-}
-
-.searchContainer img{
-  height: 20px;
-  width: 24px;
-}
-
-.avatar img {
-  display: flex;
-  align-items: center;
-  height: 60px;
-  width: 60px;
-  border-radius: 40px;
 }
 
 .avatarHeader {
@@ -335,7 +266,7 @@ header .logo{
 }
 
 /* Peers */
-
+/* Remove when all block is good */
 .chatContainer h2{
   display: flex;
   justify-content: space-between;
@@ -399,6 +330,7 @@ header .logo{
   background: #44cd45;
   display:inline-block;
 }
+/* Remove END */
 
 .potentialConnection h4{
   margin-left: 9px;
