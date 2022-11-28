@@ -93,25 +93,6 @@ section {
   border-radius: 50px;
 }
 
-.pageTitle{
-  padding: 10px 20px;
-  background-color: #ffff;
-  border-radius: 20px;
-  width: max-content;
-  margin: 0 auto 18px;
-  color: #3162FF;
-}
-
-.main{
-  width:90%;
-  padding: 0 9px;
-}
-
-.side{
-  width: 90%;
-  padding: 0 9px;
-}
-
 .all{
   font-weight: bold;
   color:#3162FF;
@@ -398,9 +379,6 @@ section {
 
   .main{
     width: calc(100% - 336px);
-  }
-  .side{
-    width: 336px;
   }
 
   .chatContainer, .ranking{

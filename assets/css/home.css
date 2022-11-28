@@ -20,8 +20,25 @@
   src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlvAw.ttf) format('truetype');
 }
 body {
-  background-image: url("../img/fond.png");
   font-family: 'Roboto', sans-serif;
+  background-image: url("../img/background-site.png");
+  background-size: cover;
+}
+.mainWrapper {
+  padding: 16px;
+}
+@media screen and (min-width: 1024px) {
+  .mainWrapper .main {
+    width: calc(100% - 336px);
+  }
+}
+.mainWrapper .main .pageTitle {
+  padding: 8px 0;
+  font-size: 24px;
+}
+.mainWrapper .side {
+  width: 336px;
+  padding-left: 16px;
 }
 /* Scroll */
 ::-webkit-scrollbar-track {
@@ -125,7 +142,7 @@ body {
   padding: 0 0 16px 0;
   line-height: 28px;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 22px;
   color: #070721;
   text-transform: capitalize;
 }
@@ -134,6 +151,7 @@ body {
   color: #3162ff;
   font-weight: normal;
   text-transform: lowercase;
+  cursor: pointer;
 }
 .connectionsBlock .connectionsList .connectionWrapper {
   display: flex;
@@ -236,4 +254,72 @@ body {
 .ranking .chart-horizontal .metric-value {
   float: right;
   font-weight: bold;
+}
+.potentialConnectionsBlock {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  margin: 0 0 16px;
+  background: #ffffff;
+  border-radius: 20px;
+}
+.potentialConnectionsBlock .titleBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 0 16px 0;
+  line-height: 28px;
+  font-weight: bold;
+  font-size: 22px;
+  color: #070721;
+  text-transform: capitalize;
+}
+.potentialConnectionsBlock .titleBlock .viewAll {
+  font-size: 14px;
+  color: #3162ff;
+  font-weight: normal;
+  text-transform: lowercase;
+  cursor: pointer;
+}
+.potentialConnectionsBlock .potentialConnectionsList .potentialConnectionWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 8px 0;
+}
+.potentialConnectionsBlock .potentialConnectionsList .potentialConnectionWrapper:last-child {
+  margin-bottom: 0;
+}
+.potentialConnectionsBlock .potentialConnectionsList .avatar {
+  height: 48px;
+  border-radius: 16px;
+}
+.potentialConnectionsBlock .potentialConnectionsList .txtInfos {
+  color: #8e8c99;
+  margin: 0 8px;
+  width: calc(100% - 96px);
+}
+.potentialConnectionsBlock .potentialConnectionsList .name {
+  margin-left: 8px;
+  margin-bottom: 0;
+  line-height: 18px;
+  font-weight: 500;
+  font-size: 15px;
+  color: #070721;
+  text-transform: capitalize;
+}
+.potentialConnectionsBlock .potentialConnectionsList .follow {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 8px;
+  width: 96px;
+  height: 18px;
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+  border-radius: 12px;
+  background-color: #3162ff;
 }

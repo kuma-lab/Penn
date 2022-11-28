@@ -10,7 +10,7 @@ select {
 h2 {
   padding: 18px 0;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 28px;
   color: #070721;
   text-transform: capitalize;
@@ -62,16 +62,6 @@ section {
 .avatarHeader {
   height: 40px;
   border-radius: 50px;
-}
-
-.main{
-  width:90%;
-  padding: 0 9px;
-}
-
-.side{
-  width: 90%;
-  padding: 0 9px;
 }
 
 .all {

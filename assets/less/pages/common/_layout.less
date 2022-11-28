@@ -1,8 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
-    background-image: url("../img/fond.png");
     font-family: 'Roboto', sans-serif;
+    background-image: url("../img/background-site.png");
+    background-size: cover;
+}
+
+.mainWrapper {
+    padding: 16px;
+
+    .main {
+        @media screen and (min-width: 1024px) {
+            width: calc(100% - 336px);
+        }
+
+        .pageTitle {
+            padding: 8px 0;
+            font-size: 24px;
+        }
+    }
+
+    .side {
+        width: 336px;
+        padding-left: 16px;
+    }
 }
 
 /* Scroll */
