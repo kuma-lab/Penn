@@ -266,7 +266,7 @@ section {
 }
 
 /* Peers */
-
+/* Remove when all block is good */
 .chatContainer h2{
   display: flex;
   justify-content: space-between;
@@ -330,6 +330,7 @@ section {
   background: #44cd45;
   display:inline-block;
 }
+/* Remove END */
 
 .potentialConnection h4{
   margin-left: 9px;
