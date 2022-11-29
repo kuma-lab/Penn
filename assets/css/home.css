@@ -36,6 +36,15 @@ body {
   padding: 8px 0;
   font-size: 24px;
 }
+.mainWrapper .main .secondContent {
+  margin-top: 16px;
+}
+.mainWrapper .main .secondContent section {
+  width: calc(50% - 8px);
+}
+.mainWrapper .main .secondContent section:first-child {
+  margin-right: 16px;
+}
 .mainWrapper .side {
   width: 336px;
   padding-left: 16px;
@@ -134,6 +143,7 @@ body {
   margin: 0 0 16px;
   background: #ffffff;
   border-radius: 20px;
+  box-sizing: border-box;
 }
 .connectionsBlock .titleBlock {
   display: flex;
@@ -206,6 +216,7 @@ body {
   margin: 0 0 16px;
   background: #ffffff;
   border-radius: 20px;
+  box-sizing: border-box;
 }
 .potentialConnectionsBlock .titleBlock {
   display: flex;
@@ -308,6 +319,9 @@ body {
   display: flex;
   flex-direction: column;
   padding: 16px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-sizing: border-box;
 }
 .ranking .titleBlock {
   padding: 0 0 16px 0;
@@ -359,4 +373,25 @@ body {
 .ranking .chart-horizontal .metric-value {
   float: right;
   font-weight: bold;
+}
+.chatsBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 16px;
+  margin: 0 0 16px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+.chatsBlock .titleBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 0 16px 0;
+  line-height: 28px;
+  font-weight: bold;
+  font-size: 22px;
+  color: #070721;
+  text-transform: capitalize;
 }

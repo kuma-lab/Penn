@@ -31,10 +31,6 @@ main{
   align-items: center;
 }
 
-section {
-  margin: 16px 0 0;
-}
-
 .hide{
   display: none;
 }
@@ -388,14 +384,6 @@ section {
   margin: 0 9px;
 }
 
-.chatContainer, .ranking{
-  width: calc(100% - 20px);
-  margin: 16px 8px 0;
-  background: white;
-  border-radius: 20px;
-  box-sizing: border-box;
-}
-
 .left article h2{
   text-align: center;
 }
@@ -405,11 +393,6 @@ section {
   position: absolute;
   right: 5px;
 }
-
-/* ranking */
-
-
-
 
 @media screen and (min-width: 1024px) {
 
