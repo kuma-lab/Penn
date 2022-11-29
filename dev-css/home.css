@@ -16,16 +16,6 @@ h2 {
   text-transform: capitalize;
 }
 
-h3 {
-  padding-top: 9px;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 21px;
-  text-decoration-line: underline;
-  color: #070721;
-  text-transform: capitalize;
-}
-
 h4 {
   font-weight: bold;
   font-size: 15px;
@@ -39,10 +29,6 @@ main{
   display: flex;
   flex-direction: column;    
   align-items: center;
-}
-
-section {
-  margin: 16px 0 0;
 }
 
 .hide{
@@ -77,24 +63,6 @@ section {
   position: relative;
 }
 
-/* First Line */
-.firstLine {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Second Line */
-.secondLine {
-  position: relative;
-}
-
-@media(max-width: 600px) {
-  .secondLine {
-    height: 96px;
-  }
-}
-
 /* Choice Container */
 .choiceContainer {
   position: relative;
@@ -127,13 +95,6 @@ section {
 
 .choiceContainer .bubbleContainer.pub {
   border-radius: 40px 0px 0px 40px;
-}
-
-.choiceContainer .bubbleContainer.all, .choiceContainer .titleAll {
-  width: 0;
-  height: 0;
-  font-size: 0;
-  border: 0;
 }
 
 .choiceContainer .bubbleContainer.active {
@@ -398,14 +359,6 @@ section {
   margin: 0 9px;
 }
 
-.chatContainer, .ranking{
-  width: calc(100% - 20px);
-  margin: 16px 8px 0;
-  background: white;
-  border-radius: 20px;
-  box-sizing: border-box;
-}
-
 .left article h2{
   text-align: center;
 }
@@ -415,11 +368,6 @@ section {
   position: absolute;
   right: 5px;
 }
-
-/* ranking */
-
-
-
 
 @media screen and (min-width: 1024px) {
 
