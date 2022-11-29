@@ -199,62 +199,6 @@ body {
   border-radius: 50%;
   background: #44cd45;
 }
-.ranking {
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-}
-.ranking .titleBlock {
-  padding: 0 0 16px 0;
-  line-height: 28px;
-  font-weight: bold;
-  font-size: 24px;
-  color: #070721;
-  text-transform: capitalize;
-}
-.ranking .selectContainer {
-  display: flex;
-  justify-content: space-around;
-  margin: 8px 0;
-}
-.ranking .chart {
-  display: none;
-}
-.ranking .chart.active {
-  display: block;
-}
-.ranking .chart .metric {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  font-size: 15px;
-  text-align: left;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  color: white;
-  background-color: lightblue;
-  background: linear-gradient(141deg, #3162ff 0%, #3162ff 51%, #2cb5e8 75%);
-  border-radius: 20px;
-  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.175);
-}
-.ranking .chart .theOne {
-  background: linear-gradient(141deg, #edaef9 0%, #81b1fa 74%, #2cb5e8 85%);
-}
-.ranking .chart .metric-value {
-  font-weight: bold;
-}
-.ranking .chart-horizontal {
-  width: 100%;
-}
-.ranking .chart-horizontal .metric {
-  margin-bottom: 3px;
-  min-width: 100px;
-  padding: 6px 15px;
-}
-.ranking .chart-horizontal .metric-value {
-  float: right;
-  font-weight: bold;
-}
 .potentialConnectionsBlock {
   display: flex;
   flex-direction: column;
@@ -322,4 +266,97 @@ body {
   color: white;
   border-radius: 12px;
   background-color: #3162ff;
+}
+.authorCard {
+  padding: 0 16px 32px;
+  background-color: #ffff;
+  border-radius: 0 16px;
+}
+.authorCard .avatarContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+.authorCard .avatarContainer .avatar {
+  height: 56px;
+  border-radius: 8px;
+}
+.authorCard .avatarContainer .authorName {
+  padding-top: 16px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #070721;
+  text-transform: capitalize;
+}
+.authorCard .infos {
+  color: #8e8c99;
+}
+.authorCard .infos .infosItem {
+  margin-bottom: 16px;
+}
+.authorCard .infos .bold {
+  font-weight: 700;
+}
+.authorCard .infos .keywordsItem {
+  margin: 4px 8px;
+  font-size: 14px;
+  list-style: none;
+}
+.ranking {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+.ranking .titleBlock {
+  padding: 0 0 16px 0;
+  line-height: 28px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #070721;
+  text-transform: capitalize;
+}
+.ranking .selectContainer {
+  display: flex;
+  justify-content: space-around;
+  margin: 8px 0;
+}
+.ranking .chart {
+  display: none;
+}
+.ranking .chart.active {
+  display: block;
+}
+.ranking .chart .metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: 15px;
+  text-align: left;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  color: white;
+  background-color: lightblue;
+  background: linear-gradient(141deg, #3162ff 0%, #3162ff 51%, #2cb5e8 75%);
+  border-radius: 20px;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.175);
+}
+.ranking .chart .theOne {
+  background: linear-gradient(141deg, #edaef9 0%, #81b1fa 74%, #2cb5e8 85%);
+}
+.ranking .chart .metric-value {
+  font-weight: bold;
+}
+.ranking .chart-horizontal {
+  width: 100%;
+}
+.ranking .chart-horizontal .metric {
+  margin-bottom: 3px;
+  min-width: 100px;
+  padding: 6px 15px;
+}
+.ranking .chart-horizontal .metric-value {
+  float: right;
+  font-weight: bold;
 }
