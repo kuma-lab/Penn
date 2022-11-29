@@ -63,24 +63,6 @@ main{
   position: relative;
 }
 
-/* First Line */
-.firstLine {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Second Line */
-.secondLine {
-  position: relative;
-}
-
-@media(max-width: 600px) {
-  .secondLine {
-    height: 96px;
-  }
-}
-
 /* Choice Container */
 .choiceContainer {
   position: relative;
@@ -113,13 +95,6 @@ main{
 
 .choiceContainer .bubbleContainer.pub {
   border-radius: 40px 0px 0px 40px;
-}
-
-.choiceContainer .bubbleContainer.all, .choiceContainer .titleAll {
-  width: 0;
-  height: 0;
-  font-size: 0;
-  border: 0;
 }
 
 .choiceContainer .bubbleContainer.active {

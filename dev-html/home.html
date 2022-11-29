@@ -32,67 +32,61 @@
     <main class="mainWrapper">
       <article class="main">
 			  <div class="headerNewsFeed">
-			    <div class="firstLine">
-				    <h2>Your Media</h2>
-				    <span id="allFeed" class="all">see all</span>
-			    </div>
-          <div class="secondLine">
-            <div class="choiceContainer">
-              <div class="bubbleContainer pub active" data-category="pub">
-                <img src="../img/book.png" alt="papers">
-                <span>Papers</span>
-                <div class="time">
-                  <img src="../img/time.png" class="selectDate" alt="select date picto">
-                  <div class="list">
-                    <ul class="listDates">
-                      <!-- Completed by JS -->
-                    </ul>
-                  </div>
-                  <span class="selectedDate">2020</span>
+          <div class="choiceContainer">
+            <div class="bubbleContainer pub active" data-category="pub">
+              <img src="../img/book.png" alt="papers">
+              <span>Papers</span>
+              <div class="time">
+                <img src="../img/time.png" class="selectDate" alt="select date picto">
+                <div class="list">
+                  <ul class="listDates">
+                    <!-- Completed by JS -->
+                  </ul>
                 </div>
+                <span class="selectedDate">2020</span>
               </div>
-              <div class="bubbleContainer talk" data-category="talk">
-                <img src="../img/youtube.png" alt="talks">
-                <span>Talks</span>
-                <div class="time">
-                  <img src="../img/time.png" class="selectDate" alt="select date picto">
-                  <div class="list">
-                    <ul class="listDates">
-                      <!-- Completed by JS -->
-                    </ul>
-                  </div>
-                  <span class="selectedDate">2021</span>
-                </div>
-              </div>                    
-              <div class="bubbleContainer press" data-category="press">
-                <img src="../img/press.png" alt="press">
-                <span>Press</span>
-                <div class="time">
-                  <img src="../img/time.png" class="selectDate" alt="select date picto">
-                  <div class="list">
-                    <ul class="listDates">
-                      <!-- Completed by JS -->
-                    </ul>
-                  </div>
-                  <span class="selectedDate">2022</span>
-                </div>
-              </div>
-              <!-- Button for See All : hide but important for select Date -->
-              <div class="bubbleContainer all" data-category="all">
-                <span class="titleAll">All</span>
-                <div class="time">
-                  <img src="../img/time.png" class="selectDate" alt="select date picto">
-                  <div class="list">
-                    <ul class="listDates">
-                      <!-- Completed by JS -->
-                    </ul>
-                  </div>
-                  <span class="selectedDate">2023</span>
-                </div>
-                </div>
             </div>
+            <div class="bubbleContainer talk" data-category="talk">
+              <img src="../img/youtube.png" alt="talks">
+              <span>Talks</span>
+              <div class="time">
+                <img src="../img/time.png" class="selectDate" alt="select date picto">
+                <div class="list">
+                  <ul class="listDates">
+                    <!-- Completed by JS -->
+                  </ul>
+                </div>
+                <span class="selectedDate">2021</span>
+              </div>
+            </div>                    
+            <div class="bubbleContainer press" data-category="press">
+              <img src="../img/press.png" alt="press">
+              <span>Press</span>
+              <div class="time">
+                <img src="../img/time.png" class="selectDate" alt="select date picto">
+                <div class="list">
+                  <ul class="listDates">
+                    <!-- Completed by JS -->
+                  </ul>
+                </div>
+                <span class="selectedDate">2022</span>
+              </div>
+            </div>
+            <!-- Button for See All : hide but important for select Date -->
+            <div class="bubbleContainer all" data-category="all">
+              <span class="titleAll">All</span>
+              <div class="time">
+                <img src="../img/time.png" class="selectDate" alt="select date picto">
+                <div class="list">
+                  <ul class="listDates">
+                    <!-- Completed by JS -->
+                  </ul>
+                </div>
+                <span class="selectedDate">2023</span>
+              </div>
+              </div>
           </div>
-			</div>
+			  </div>
         <section class="newsfeed pub active">
             <section class="slider">
               <div class="arrow left"></div>
@@ -1418,10 +1412,10 @@
     /**************************
     /* Create Sliders NewsFeed
     ***************************/
-	function initSlick(category) {
+	  function initSlick(category) {
 
-        // Sliders feed
-        const buttonsOpanModal = document.querySelectorAll('.openModal');
+      // Sliders feed
+      const buttonsOpanModal = document.querySelectorAll('.openModal');
 
 	    $('.newsfeed.' + category + ' .slickContainer').slick({
         dots: false,
@@ -1484,7 +1478,7 @@
       // Add the date by default (first of the list)
       const firstDate = document.querySelector('.bubbleContainer.' + category + ' .time .selectedDate')
       firstDate.innerHTML = timeLineUniqueDates[0]
-	}
+	  }
 	  
     $(document).ready(function(){
       initSlick('pub');
@@ -1523,7 +1517,7 @@
 
       // Active news feed
       const choices = document.querySelectorAll('.bubbleContainer')
-      const allFeed = document.querySelector('#allFeed')
+      const allFeed = document.querySelector('.bubbleContainer.all')
       const selectsDateAll = document.querySelectorAll('.all .time')
 
       allFeed.addEventListener('click', function () {
@@ -1545,7 +1539,8 @@
           closeSelectDate()
           // Show the right carousel
           for (let choice of choices) {
-            choice.classList.remove('active')
+            if (!e.currentTarget.classList.contains('all'))
+              choice.classList.remove('active')
           }
           choice.classList.add('active')
 		      let category = choice.getAttribute('data-category')
