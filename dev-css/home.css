@@ -363,10 +363,22 @@ main{
   text-align: center;
 }
 
-.messages{
-  width: 25px;  
+.lastConnection{
+  width: 70px;
+  font-size: 12px;  
   position: absolute;
   right: 5px;
+  color: #8E8C99;
+}
+.lastConnection::before{
+  position: absolute;
+  content: "";
+  border-radius: 50px;
+  background-color: #44CD45;
+  height: 6px;
+  width: 6px;
+  left: -10px;
+  top: 2px;
 }
 
 @media screen and (min-width: 1024px) {
