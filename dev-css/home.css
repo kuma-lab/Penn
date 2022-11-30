@@ -239,7 +239,7 @@ main{
   height: 300px;
   padding: 18px;
   background-image: url(../img/Rectangle\ 154.png);
-  border-radius: 15px 0;
+  border-radius: 15px 15px 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
