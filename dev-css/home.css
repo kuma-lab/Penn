@@ -367,7 +367,7 @@ main{
   width: 70px;
   font-size: 12px;  
   position: absolute;
-  right: 5px;
+  right: 0;
   color: #8E8C99;
 }
 .lastConnection::before{
@@ -432,4 +432,18 @@ main{
   .side .chatContainer{
     width: 100%;
   }
+}
+
+
+/* TODO DEL */
+
+.grey {
+  color: #8E8C99;
+  font-size: 12px;
+}
+
+P.grey{
+  width: 135px;
+  display: flex;
+  flex-direction: column;
 }
