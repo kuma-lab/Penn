@@ -169,59 +169,6 @@ section {
   transform: rotate(180deg);
 }
 
-.timeline {
-  position: relative;
-  display: flex;
-  width: 98%;
-  overflow: hidden;
-  align-items: center;
-  justify-content: space-between;
-  height: 67px;
-  background-color: #ffff;
-  border-radius: 18px;
-}
-
-.timeContainer{
-  display: flex;
-  width: calc(100% - 134px);
-  justify-content: center;
-}
-
-.timeContainer .slick-list {
-  height: 67px !important;
-}
-
-.timeContainer .slick-track {
-  width: max-content !important;
-}
-
-.timeContainer div + div {
-  margin-left: 9px;
-}
-
-.timeContainer .slick-slide {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.timeContainer .slick-current {
-  position: relative;
-    color: #3a65ff;
-    font-weight: bold;
-}
-
-.timeContainer .slick-current::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 0;
-  height: 0;
-  border-left: 17px solid transparent;
-  border-right: 17px solid transparent;
-  border-top: 17px solid #3a65ff;
-}
-
 /* mediaContainer */
 .containerListsArticles .papers, 
 .containerListsArticles .talks,
