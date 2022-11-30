@@ -108,13 +108,9 @@ section {
 
 .whoIAm{
   display: flex;
-  flex-direction: column;
   justify-content: flex-start;
 }
 
-.whoIAm .title {
-  padding-left: 70px;	
-}
 
 .mainInfo{
   display:flex;
@@ -148,28 +144,10 @@ section {
   justify-content: space-between;
 }
 
-.infos2 .keyword ul{
-  margin-left: 10px;
-  width: 30%;
+.keyword li{
+  list-style: none;
 }
 
-
-
-/* Timeline */
-.timeline .arrow img{
-  width: 40px;
-}
-
-.timeline .arrow.left {
-  margin-left: 12px;
-  cursor: pointer;
-}
-
-.timeline .arrow.right {
-  margin-right: 12px;
-  cursor: pointer;
-  transform: rotate(180deg);
-}
 
 /* mediaContainer */
 .containerListsArticles .papers, 
@@ -390,14 +368,6 @@ section {
   .notification{
     width: 30px;
     height: 30px;
-  }
-
-  .infos1{
-    width: 50%;
-  }
-
-  .infos2{
-    width: 48%;
   }
 
   .chatContainer, .ranking{
