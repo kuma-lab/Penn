@@ -239,7 +239,7 @@ main{
   height: 300px;
   padding: 18px;
   background-image: url(../img/Rectangle\ 154.png);
-  border-radius: 15px 15px 0;
+  border-radius: 15px 15px 0 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -312,12 +312,12 @@ main{
 .cardContainer .bubble{
   background: white;
   position: absolute;
-  bottom: -14px;
+  bottom: 0;
   right: 0;
   height: 20px;
   padding: 5px;
   border-radius: 30px;
-  border: solid 1px #3a65ff;
+  /* border: solid 1px #3a65ff; */
 }
 
 .cardContainer .bubble.trending{
