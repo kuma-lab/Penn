@@ -153,6 +153,8 @@ section {
   width: 30%;
 }
 
+
+
 /* Timeline */
 .timeline .arrow img{
   width: 40px;
@@ -193,6 +195,20 @@ section {
   overflow: auto;
   height: 600px;
   justify-content: start;
+}
+
+.listArticlesByYears li{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.listArticlesByYears .icon{
+  height: 12px;
+  width: auto;
+  padding-right: 6px;
 }
 
 .mediaContainer {
