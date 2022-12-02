@@ -23,6 +23,83 @@
         display: flex;
         justify-content: space-around;
         margin: 8px 0;
+
+
+        /* RAnking Choice Container */
+        .rankingChoiceContainer {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding-bottom: 18px;
+            width: 100%;
+            justify-content: center;
+            margin: 0 auto;
+
+            .rankingBubbleContainer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                padding: 8px 0;
+                width: 100px;
+                font-size: 14px;
+                color: #000000;
+                background-color: #edf2fb;
+                border-right: #070721 solid 1px;
+                cursor: pointer;
+
+                img {
+                    height: 20px;
+                    width: auto;
+                    background: #ffff;
+                    margin: 2px;
+                    padding: 2px;
+                }
+
+                &.press {
+                    border-right: none;
+                    border-radius: 0px 40px 40px 0px;
+                }
+
+                &.all {
+                    border-radius: 40px 0px 0px 40px;
+                }
+
+                &.active {
+                    background-color: #3162FF;
+                    color: #ffff;
+                }
+
+                &.active img {
+                    background-color: #3162FF;
+                }
+            }
+
+            .time {
+                display: none;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                padding: 8px 0;
+                width: 100px;
+                font-size: 14px;
+                color: #000000;
+                background-color: #ffffff;
+                border-right: #070721 solid 1px;
+                cursor: pointer;
+                z-index: 2;
+                right: 0;
+                top: 0;
+                width: 100px;
+                height: 28px;
+                border-right: none;
+                border-radius: 40px;
+                background-color: #ffff;
+            }
+        }
     }
 
     .chart {
