@@ -17,7 +17,6 @@
         }
 
         .authorName {
-            padding-top: 16px;
             padding-left: 9px;
             font-weight: bold;
             font-size: 18px;
@@ -25,11 +24,15 @@
             color: #070721;
             text-transform: capitalize;
         }
+
+        .authorName+.infosItem {
+            margin-left: 9px;
+        }
     }
 
     .infos {
         .infosItem {
-            margin-bottom: 18px;
+            margin-bottom: 9px;
         }
 
         .bold {
@@ -41,4 +44,16 @@
             font-size: 14px;
         }
     }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .authorCard {
+        .infos {
+            .keywordsItem {
+                font-size: 16px;
+            }
+        }
+    }
+
 }

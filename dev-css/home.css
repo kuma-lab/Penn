@@ -314,7 +314,6 @@ main{
   height: 20px;
   padding: 5px;
   border-radius: 30px;
-  /* border: solid 1px #3a65ff; */
 }
 
 .cardContainer .bubble.trending{
@@ -387,7 +386,7 @@ main{
   }
 
   p, span {
-    font-size: 14px;
+    font-size: 16px;
   }
   
 
@@ -429,18 +428,4 @@ main{
   .side .chatContainer{
     width: 100%;
   }
-}
-
-
-/* TODO DEL */
-
-.grey {
-  color: #8E8C99;
-  font-size: 12px;
-}
-
-P.grey{
-  width: 135px;
-  display: flex;
-  flex-direction: column;
 }

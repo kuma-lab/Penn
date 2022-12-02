@@ -193,6 +193,9 @@ body {
   color: #070721;
   text-transform: capitalize;
 }
+.connectionsBlock .connectionsList .newsMessage {
+  color: #3162ff;
+}
 .connectionsBlock .connectionsList .mainField {
   margin-top: 4px;
   line-height: 16px;
@@ -211,6 +214,17 @@ body {
   height: 8px;
   border-radius: 50%;
   background: #44cd45;
+}
+@media screen and (min-width: 1024px) {
+  .connectionsBlock .connectionsList .connectionWrapper {
+    margin-bottom: 18px;
+  }
+  .connectionsBlock .connectionsList .name {
+    font-size: 16px;
+  }
+  .connectionsBlock .connectionsList .avatar {
+    height: 60px;
+  }
 }
 .potentialConnectionsBlock {
   position: relative;
@@ -302,7 +316,6 @@ body {
   border-radius: 8px;
 }
 .authorCard .avatarContainer .authorName {
-  padding-top: 16px;
   padding-left: 9px;
   font-weight: bold;
   font-size: 18px;
@@ -310,8 +323,11 @@ body {
   color: #070721;
   text-transform: capitalize;
 }
+.authorCard .avatarContainer .authorName + .infosItem {
+  margin-left: 9px;
+}
 .authorCard .infos .infosItem {
-  margin-bottom: 18px;
+  margin-bottom: 9px;
 }
 .authorCard .infos .bold {
   font-weight: 700;
@@ -319,6 +335,11 @@ body {
 .authorCard .infos .keywordsItem {
   margin: 4px 8px;
   font-size: 14px;
+}
+@media screen and (min-width: 1024px) {
+  .authorCard .infos .keywordsItem {
+    font-size: 16px;
+  }
 }
 .ranking {
   position: relative;

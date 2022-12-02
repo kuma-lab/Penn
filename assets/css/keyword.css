@@ -193,6 +193,9 @@ body {
   color: #070721;
   text-transform: capitalize;
 }
+.connectionsBlock .connectionsList .newsMessage {
+  color: #3162ff;
+}
 .connectionsBlock .connectionsList .mainField {
   margin-top: 4px;
   line-height: 16px;
@@ -211,6 +214,17 @@ body {
   height: 8px;
   border-radius: 50%;
   background: #44cd45;
+}
+@media screen and (min-width: 1024px) {
+  .connectionsBlock .connectionsList .connectionWrapper {
+    margin-bottom: 18px;
+  }
+  .connectionsBlock .connectionsList .name {
+    font-size: 16px;
+  }
+  .connectionsBlock .connectionsList .avatar {
+    height: 60px;
+  }
 }
 .potentialConnectionsBlock {
   position: relative;
