@@ -137,22 +137,25 @@ body {
   border-radius: 40px;
 }
 .connectionsBlock {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 16px;
-  margin: 0 0 16px;
+  margin: 30px 0 16px 0;
   background: #ffffff;
   border-radius: 20px;
   box-sizing: border-box;
 }
 .connectionsBlock .titleBlock {
+  position: absolute;
   display: flex;
+  top: -37px;
   justify-content: space-between;
   align-items: baseline;
   padding: 0 0 16px 0;
   line-height: 28px;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 24px;
   color: #070721;
   text-transform: capitalize;
 }
@@ -210,22 +213,25 @@ body {
   background: #44cd45;
 }
 .potentialConnectionsBlock {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 16px;
-  margin: 0 0 16px;
+  margin: 60px 0 16px 0;
   background: #ffffff;
   border-radius: 20px;
   box-sizing: border-box;
 }
 .potentialConnectionsBlock .titleBlock {
+  position: absolute;
+  top: -36px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   padding: 0 0 16px 0;
   line-height: 28px;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 24px;
   color: #070721;
   text-transform: capitalize;
 }
@@ -315,15 +321,18 @@ body {
   font-size: 14px;
 }
 .ranking {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 16px;
-  margin-bottom: 16px;
+  margin: 30px 0 16px 0;
   background: #ffffff;
   border-radius: 20px;
   box-sizing: border-box;
 }
 .ranking .titleBlock {
+  position: absolute;
+  top: -36px;
   padding: 0 0 16px 0;
   line-height: 28px;
   font-weight: bold;
@@ -375,23 +384,26 @@ body {
   font-weight: bold;
 }
 .chatsBlock {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 16px;
-  margin: 0 0 16px;
+  margin: 30px 0 16px 0;
   background: #ffffff;
   border-radius: 20px;
   box-sizing: border-box;
 }
 .chatsBlock .titleBlock {
+  position: absolute;
+  top: -36px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   padding: 0 0 16px 0;
   line-height: 28px;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 24px;
   color: #070721;
   text-transform: capitalize;
 }
