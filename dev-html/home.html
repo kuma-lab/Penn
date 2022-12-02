@@ -1067,11 +1067,31 @@
           <h2 class="titleBlock">My Rankings</h2>
           <div class="selectContainer">
             <div class="select doc">
-              <select name="rankingFiles" id="rankingFiles">
+              <!-- <select name="rankingFiles" id="rankingFiles">
                 <option value="pub">Papers</option>
                 <option value="talk">Talks</option>
                 <option value="press">Press</option>
-              </select>
+              </select> -->
+
+              <div class="choiceContainer">
+                <div class="bubbleContainer all" data-category="all">
+                  <span class="titleAll">All</span>
+                </div>
+                <div class="bubbleContainer pub active" data-category="pub">
+                  <img src="../img/book.png" alt="papers">
+                  <span>Papers</span>
+                </div>
+                <div class="bubbleContainer talk" data-category="talk">
+                  <img src="../img/youtube.png" alt="talks">
+                  <span>Talks</span>
+                </div>                    
+                <div class="bubbleContainer press" data-category="press">
+                  <img src="../img/press.png" alt="press">
+                  <span>Press</span>
+                </div>
+              </div>
+
+
             </div>
           <!-- disable order time 
             <div class="select time">
