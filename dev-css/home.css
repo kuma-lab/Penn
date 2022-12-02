@@ -178,6 +178,10 @@ main{
   padding: 2px;
 }
 
+.choiceContainer .bubbleContainer.active img{
+  background-color: #3162FF;
+}
+
 .choiceContainer .bubbleContainer span, .choiceContainer .time span {
   padding: 0 6px;
 }
