@@ -50,14 +50,6 @@ main{
   border-radius: 50px;
 }
 
-.all {
-  font-weight: bold;
-  text-transform: capitalize;
-  color:#3162FF;
-  cursor: pointer;
-}
-
-
 /* Header News Feed */
 .headerNewsFeed{
   position: relative;
