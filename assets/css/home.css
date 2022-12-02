@@ -286,8 +286,9 @@ body {
 }
 .authorCard .avatarContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   padding: 16px;
 }
 .authorCard .avatarContainer .avatar {
@@ -296,14 +297,12 @@ body {
 }
 .authorCard .avatarContainer .authorName {
   padding-top: 16px;
+  padding-left: 9px;
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;
   color: #070721;
   text-transform: capitalize;
-}
-.authorCard .infos {
-  color: #8e8c99;
 }
 .authorCard .infos .infosItem {
   margin-bottom: 18px;
