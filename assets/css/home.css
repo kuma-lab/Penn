@@ -29,7 +29,7 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .mainWrapper .main {
-    width: calc(100% - 336px);
+    width: calc(100% - 360px);
   }
 }
 .mainWrapper .main .pageTitle {
@@ -46,7 +46,7 @@ body {
   margin-right: 16px;
 }
 .mainWrapper .side {
-  width: 336px;
+  width: 360px;
   padding-left: 16px;
 }
 /* Scroll */
@@ -170,7 +170,6 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  padding-right: 34px;
   margin: 8px 0;
 }
 .connectionsBlock .connectionsList .connectionWrapper:last-child {
@@ -265,6 +264,13 @@ body {
 .potentialConnectionsBlock .potentialConnectionsList .potentialConnectionWrapper:last-child {
   margin-bottom: 0;
 }
+.potentialConnectionsBlock .potentialConnectionsList .potentialConnectionWrapper .flexContainer {
+  width: calc(100% - 130px);
+}
+.potentialConnectionsBlock .potentialConnectionsList .potentialConnectionWrapper .flexContainer .txtInfos {
+  color: #8e8c99;
+  margin: 0 8px;
+}
 .potentialConnectionsBlock .potentialConnectionsList .avatar {
   height: 48px;
   border-radius: 16px;
@@ -272,7 +278,6 @@ body {
 .potentialConnectionsBlock .potentialConnectionsList .txtInfos {
   color: #8e8c99;
   margin: 0 8px;
-  width: calc(100% - 96px);
 }
 .potentialConnectionsBlock .potentialConnectionsList .name {
   margin-left: 8px;
@@ -285,12 +290,12 @@ body {
 }
 .potentialConnectionsBlock .potentialConnectionsList .follow {
   position: absolute;
-  right: 0;
+  right: -10px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 8px;
-  width: 96px;
+  width: 70px;
   height: 18px;
   font-size: 14px;
   text-decoration: none;
@@ -428,6 +433,7 @@ body {
   color: #070721;
   text-transform: capitalize;
 }
-.grey {
+.chatsBlock .txtInfos {
+  width: calc(100% - 125px);
   color: #8E8C99;
 }

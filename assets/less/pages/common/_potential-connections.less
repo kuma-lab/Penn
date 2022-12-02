@@ -40,6 +40,15 @@
             &:last-child {
                 margin-bottom: 0;
             }
+
+            .flexContainer {
+                width: calc(100% - 130px);
+
+                .txtInfos {
+                    color: #8e8c99;
+                    margin: 0 8px;
+                }
+            }
         }
 
         .avatar {
@@ -50,7 +59,6 @@
         .txtInfos {
             color: #8e8c99;
             margin: 0 8px;
-            width: calc(100% - 96px);
         }
 
         .name {
@@ -65,12 +73,12 @@
 
         .follow {
             position: absolute;
-            right: 0;
+            right: -10px;
             display: flex;
             align-items: center;
             justify-content: space-around;
             padding: 8px;
-            width: 96px;
+            width: 70px;
             height: 18px;
             font-size: 14px;
             text-decoration: none;
