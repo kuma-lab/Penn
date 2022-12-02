@@ -313,7 +313,6 @@ body {
 .authorCard .infos .keywordsItem {
   margin: 4px 8px;
   font-size: 14px;
-  list-style: none;
 }
 .ranking {
   display: flex;
