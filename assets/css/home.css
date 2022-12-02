@@ -279,9 +279,10 @@ body {
   background-color: #3162ff;
 }
 .authorCard {
-  padding: 0 16px 32px;
+  height: 414px;
+  padding: 9px 18px 32px;
   background-color: #ffff;
-  border-radius: 0 16px;
+  border-radius: 0 0 16px 16px;
 }
 .authorCard .avatarContainer {
   display: flex;
@@ -305,7 +306,7 @@ body {
   color: #8e8c99;
 }
 .authorCard .infos .infosItem {
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 .authorCard .infos .bold {
   font-weight: 700;
@@ -395,4 +396,7 @@ body {
   font-size: 22px;
   color: #070721;
   text-transform: capitalize;
+}
+.grey {
+  color: #8E8C99;
 }
