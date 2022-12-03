@@ -29,7 +29,7 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .mainWrapper .main {
-    width: calc(100% - 360px);
+    width: calc(100% - 320px);
   }
 }
 .mainWrapper .main .pageTitle {
@@ -406,7 +406,7 @@ body {
 .ranking .selectContainer .rankingChoiceContainer .rankingBubbleContainer img {
   height: 20px;
   width: auto;
-  background: #ffff;
+  background: #edf2fb;
   margin: 2px;
   padding: 2px;
 }
@@ -421,33 +421,8 @@ body {
   background-color: #3162FF;
   color: #ffff;
 }
-.ranking .selectContainer .rankingChoiceContainer .rankingBubbleContainer.active .time {
-  display: flex;
-}
 .ranking .selectContainer .rankingChoiceContainer .rankingBubbleContainer.active img {
   background-color: #3162FF;
-}
-.ranking .selectContainer .rankingChoiceContainer .time {
-  display: none;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  padding: 8px 0;
-  font-size: 14px;
-  color: #000000;
-  background-color: #ffffff;
-  border-right: #070721 solid 1px;
-  cursor: pointer;
-  z-index: 2;
-  right: 0;
-  top: 0;
-  width: 100px;
-  height: 28px;
-  border-right: none;
-  border-radius: 40px;
-  background-color: #ffff;
 }
 .ranking .chart {
   display: none;
