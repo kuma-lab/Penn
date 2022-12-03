@@ -99,153 +99,6 @@ section {
   text-transform: capitalize  ;
 }
 
-/* Timeline */
-.timeline .arrow.left {
-  margin-left: 12px;
-  cursor: pointer;
-}
-
-.timeline .arrow.right {
-  margin-right: 12px;
-  cursor: pointer;
-  transform: rotate(180deg);
-}
-
-.timeline .arrow img {
-  width: 40px;
-}
-
-.timeline {
-  position: relative;
-  display: flex;
-  width: 98%;
-  overflow: hidden;
-  align-items: center;
-  justify-content: space-between;
-  height: 67px;
-  background-color: #ffff;
-  border-radius: 18px;
-}
-
-.timeContainer {
-  display: flex;
-  width: calc(100% - 134px);
-}
-
-.timeContainer .slick-list {
-  height: 67px !important; /* to overwrite plugin slick slider */
-}
-
-.timeContainer div + div {
-  margin-left: 9px;
-}
-
-.timeContainer .slick-slide {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.timeContainer .slick-current {
-  position: relative;
-  color: #3a65ff;
-  font-weight: bold;
-}
-
-.timeContainer .slick-current::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 0; 
-  height: 0; 
-  border-left: 17px solid transparent;
-  border-right: 17px solid transparent;
-  border-top: 17px solid #3a65ff;
-}
-
-.slick-track {
-  width: max-content !important;
-}
-
-/* mediaContainer */
-
-.flexContainer {
-  display: flex;
-  flex-wrap: wrap;
-  height: auto;
-  max-height: 600px;
-  overflow: auto;
-}
-
-.mediaContainer{
-  width: 100%;   
-  background: white;
-  border-radius: 20px;
-}
-
-.mediaContainer ul{
-  display: flex;
-  flex-wrap: wrap;    
-  flex-direction: column;
-  padding:9px 18px 18px;
-}
-
-.mediaContainer li{
-  position: relative;
-}
-
-.mediaContainer .press::before{  
-  position: absolute;
-  left: -30px;
-  background-image: url(../img/press.png);
-  background-size: contain;
-  display: inline-block;
-  width: 30px;
-  height: 20px;
-  content: "";
-  background-repeat: no-repeat;
-}
-
-.mediaContainer .talk::before{    
-  position: absolute;
-  left: -30px;
-  background-image: url(../img/youtube.png);
-  background-size: contain;
-  display: inline-block;
-  width: 30px;
-  height: 20px;
-  content: "";
-  background-repeat: no-repeat;
-}
-
-.mediaContainer .papers::before{  
-  position: absolute;
-  left: -30px;
-  background-image: url(../img/book.png);
-  background-size: contain;
-  display: inline-block;
-  width: 30px;
-  height: 20px;
-  content: "";
-  background-repeat: no-repeat;
-}
-
-.mediaContainer .year{
-  text-align: center;
-  margin: 9px;
-  color: #3162FF;
-  font-size: 16px;
-  font-weight: bold;
-  list-style: none;
-}
-
-.mediaContainer li{
-  margin: 0 18px;
-  padding-left: 6px; /* img de liste */
-  text-transform: capitalize;
-  padding: 5px 0;
-}
-
 /* Peers */
 /* Remove when all block is good */
 .chatContainer h2{
@@ -254,7 +107,7 @@ section {
 }
 
 .viewAll{
-  padding-right: 9px;
+  padding-right: 16px;
   font-size: 14px;
   color: #3162FF;
   font-weight:normal;
@@ -340,29 +193,11 @@ section {
 
 
 @media screen and (min-width: 1024px) {
-
-  header .logo{
-    position: absolute;
-    left: 9px;
-    height: 60px;
-  }
-
-  h1{
-    display: inline-block;
-    position: absolute;
-    left: 9px;
-    top: 18px;
-  }
-
   main{
     flex-direction: row;
     align-items: flex-start;
   }  
 
-  header{
-    justify-content: flex-end;
-    align-items: center;
-  }
   .searchContainer{ 
     width: 150px;
   } 
@@ -389,10 +224,5 @@ section {
   
   .left article h2 {
     text-align: center;
-  }
-
-  .mediaContainer {
-    width: 47%;
-    margin-right: 18px; 
   }
 }
