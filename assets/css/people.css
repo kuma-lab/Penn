@@ -307,3 +307,119 @@ body {
   border-radius: 12px;
   background-color: #3162ff;
 }
+.authorIdentity {
+  display: flex;
+  margin: 0 16px 16px 0;
+  padding: 16px;
+  font-size: 16px;
+  background: #ffffff;
+  border-radius: 20px;
+}
+.authorIdentity .whoIAm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.authorIdentity .whoIAm .infosWrapper {
+  display: flex;
+  width: 100%;
+}
+.authorIdentity .whoIAm .mainInfo {
+  display: flex;
+  box-sizing: border-box;
+  width: 50%;
+  margin-bottom: 8px;
+}
+.authorIdentity .whoIAm .title {
+  width: 50%;
+  padding-top: 36px;
+}
+.authorIdentity .whoIAm .avatar {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+}
+.authorIdentity .whoIAm .affiliation {
+  margin-left: 16px;
+  margin-bottom: 8px;
+}
+.authorIdentity .whoIAm .line {
+  margin-bottom: 4px;
+}
+.authorIdentity .whoIAm .people {
+  padding: 0;
+  margin: 0 0 8px;
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration-line: underline;
+  color: #3162ff;
+}
+.authorIdentity .whoIAm .bold {
+  display: inline-block;
+  width: 100px;
+  font-weight: 700;
+}
+.authorIdentity .whoIAm .keywordsTitle {
+  margin-left: 76px;
+  font-weight: 700;
+}
+.authorIdentity .whoIAm .keywords {
+  display: flex;
+  justify-content: flex-start;
+  padding: 8px 0 0 120px;
+}
+.authorIdentity .whoIAm .keywords .listKeywords {
+  margin-right: 32px;
+  list-style: none;
+}
+.authorIdentity .avatarContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.authorIdentity .avatarContainer .avatar {
+  height: 56px;
+  border-radius: 8px;
+}
+.authorIdentity .avatarContainer .authorName {
+  padding-left: 8px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #070721;
+  text-transform: capitalize;
+}
+.authorIdentity .avatarContainer .authorName + .infosItem {
+  margin-left: 8px;
+  color: #8e8c99;
+}
+.authorIdentity .infos .infosItem {
+  margin-bottom: 8px;
+}
+.authorIdentity .infos .infosItem ul {
+  margin-top: 24px;
+}
+.authorIdentity .infos .infosItem.titleField {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: initial;
+}
+.authorIdentity .infos .bold {
+  font-weight: 700;
+}
+.authorIdentity .infos .keywordsItem {
+  margin: 4px 8px;
+  font-size: 14px;
+}
+@media screen and (min-width: 1024px) {
+  .authorCard .infos .keywordsItem {
+    font-size: 16px;
+  }
+}

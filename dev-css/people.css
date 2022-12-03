@@ -1,15 +1,4 @@
 /* Tag */
-
-p,li {
-  font-size: 12px;
-  margin-top: 3px;
-  line-height: 16px;
-}
-
-p+p{
-  margin-top: 9px;
-}
-
 select {
   border: none;
 }
@@ -97,39 +86,6 @@ section {
   text-decoration-line: underline;
   color: #3162FF;
   margin-bottom: 9px;
-}
-.infos1,.infos2{
-  margin-right: 18px;
-  background: white;
-  border-radius: 20px;
-  padding: 9px;
-
-}
-
-.whoIAm{
-  display: flex;
-  justify-content: flex-start;
-}
-
-
-.mainInfo{
-  display:flex;
-  width: 100%;
-  margin-bottom: 9px;
-}
-
-.mainInfo .affiliation{
-  width: 300px;
-  margin-left: 9px;
-  margin-bottom: 9px;
-}
-
-.whoIAm .mainInfo img{
-  display: flex;
-  align-items: center;
-  height: 60px;
-  width: 60px;
-  border-radius: 40px;
 }
 
 .whoIAm .bold{
