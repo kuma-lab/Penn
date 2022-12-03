@@ -160,6 +160,7 @@ body {
   text-transform: capitalize;
 }
 .connectionsBlock .titleBlock .viewAll {
+  padding-right: 16px;
   font-size: 14px;
   color: #3162ff;
   font-weight: normal;
@@ -253,6 +254,7 @@ body {
   text-transform: capitalize;
 }
 .potentialConnectionsBlock .titleBlock .viewAll {
+  padding-right: 16px;
   font-size: 14px;
   color: #3162ff;
   font-weight: normal;
@@ -306,6 +308,9 @@ body {
   color: white;
   border-radius: 12px;
   background-color: #3162ff;
+}
+.potentialConnectionsBlock .potentialConnectionsList .followIcon {
+  width: 20px;
 }
 .authorCard {
   height: 414px;
@@ -386,6 +391,7 @@ body {
   text-transform: capitalize;
 }
 .newsBlock .titleBlock .viewAll {
+  padding-right: 16px;
   font-size: 14px;
   color: #3162ff;
   font-weight: normal;

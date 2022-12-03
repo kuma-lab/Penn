@@ -160,6 +160,7 @@ body {
   text-transform: capitalize;
 }
 .connectionsBlock .titleBlock .viewAll {
+  padding-right: 16px;
   font-size: 14px;
   color: #3162ff;
   font-weight: normal;
@@ -253,6 +254,7 @@ body {
   text-transform: capitalize;
 }
 .potentialConnectionsBlock .titleBlock .viewAll {
+  padding-right: 16px;
   font-size: 14px;
   color: #3162ff;
   font-weight: normal;
@@ -307,6 +309,9 @@ body {
   border-radius: 12px;
   background-color: #3162ff;
 }
+.potentialConnectionsBlock .potentialConnectionsList .followIcon {
+  width: 20px;
+}
 .authorIdentity {
   display: flex;
   margin: 0 16px 16px 0;
@@ -346,6 +351,9 @@ body {
   margin-bottom: 8px;
 }
 .authorIdentity .whoIAm .line {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
   margin-bottom: 4px;
 }
 .authorIdentity .whoIAm .people {
@@ -360,6 +368,10 @@ body {
   display: inline-block;
   width: 100px;
   font-weight: 700;
+}
+.authorIdentity .whoIAm .info {
+  display: inline-block;
+  width: calc(100% - 112px);
 }
 .authorIdentity .whoIAm .keywordsTitle {
   margin-left: 76px;
