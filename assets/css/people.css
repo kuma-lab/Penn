@@ -27,6 +27,9 @@ body {
 .mainWrapper {
   padding: 16px;
 }
+.mainWrapper .main {
+  width: 100%;
+}
 @media screen and (min-width: 1024px) {
   .mainWrapper .main {
     width: calc(100% - 320px);
@@ -37,17 +40,43 @@ body {
   font-size: 24px;
 }
 .mainWrapper .main .secondContent {
-  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+@media screen and (min-width: 1024px) {
+  .mainWrapper .main .secondContent {
+    margin-top: 16px;
+  }
 }
 .mainWrapper .main .secondContent section {
-  width: calc(50% - 8px);
+  width: 100%;
+}
+@media screen and (min-width: 640px) {
+  .mainWrapper .main .secondContent section {
+    width: calc(50% - 8px);
+  }
 }
 .mainWrapper .main .secondContent section:first-child {
-  margin-right: 16px;
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 640px) {
+  .mainWrapper .main .secondContent section:first-child {
+    margin-right: 16px;
+    margin-bottom: 16px;
+  }
 }
 .mainWrapper .side {
-  width: 360px;
-  padding-left: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 16px;
+}
+@media screen and (min-width: 1024px) {
+  .mainWrapper .side {
+    width: 360px;
+    padding-left: 16px;
+    margin-top: 0;
+  }
 }
 /* Scroll */
 ::-webkit-scrollbar-track {
