@@ -11,7 +11,7 @@ body {
 
     .main {
         @media screen and (min-width: 1024px) {
-            width: calc(100% - 336px);
+            width: calc(100% - 320px);
         }
 
         .pageTitle {
@@ -33,7 +33,7 @@ body {
     }
 
     .side {
-        width: 336px;
+        width: 360px;
         padding-left: 16px;
     }
 }
@@ -44,20 +44,18 @@ body {
     background-color: #f5f5f5;
     border-radius: 10px;
 }
-  
+
 ::-webkit-scrollbar {
     width: 10px;
     background-color: #f5f5f5;
 }
-  
+
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-image: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      color-stop(0.44, rgb(193, 213, 249)),
-      color-stop(0.72, rgb(134, 177, 247)),
-      color-stop(0.86, rgb(105, 155, 247))
-    );
+    background-image: -webkit-gradient(linear,
+            left bottom,
+            left top,
+            color-stop(0.44, rgb(193, 213, 249)),
+            color-stop(0.72, rgb(134, 177, 247)),
+            color-stop(0.86, rgb(105, 155, 247)));
 }

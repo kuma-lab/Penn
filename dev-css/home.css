@@ -50,14 +50,6 @@ main{
   border-radius: 50px;
 }
 
-.all {
-  font-weight: bold;
-  text-transform: capitalize;
-  color:#3162FF;
-  cursor: pointer;
-}
-
-
 /* Header News Feed */
 .headerNewsFeed{
   position: relative;
@@ -93,7 +85,7 @@ main{
   border-radius: 0px 40px 40px 0px;
 }
 
-.choiceContainer .bubbleContainer.pub {
+.choiceContainer .bubbleContainer.all {
   border-radius: 40px 0px 0px 40px;
 }
 
@@ -145,17 +137,20 @@ main{
 .choiceContainer .time ul {
   display: none;
   background-color: #fff;
-  color: #000000;
+  width: 50px;
+  flex-direction: column;
+  align-items: center;
+  color: #3162ff;
   list-style: none;
   position: absolute;
-  left: -3px;
-  top: 12px;
+  left: -20px;
+  top: 15px;
   padding: 10px;
-  border-radius: 40px;
+  border-radius: 0 0 15px 15px;
 }
 
 .choiceContainer .time.active ul {
-  display: block;
+  display: flex;
 }
 
 .choiceContainer .time li {
@@ -176,6 +171,10 @@ main{
   background: #ffff;
   margin: 2px;
   padding: 2px;
+}
+
+.choiceContainer .bubbleContainer.active img{
+  background-color: #3162FF;
 }
 
 .choiceContainer .bubbleContainer span, .choiceContainer .time span {
@@ -318,7 +317,6 @@ main{
   height: 20px;
   padding: 5px;
   border-radius: 30px;
-  /* border: solid 1px #3a65ff; */
 }
 
 .cardContainer .bubble.trending{
@@ -391,13 +389,13 @@ main{
   }
 
   p, span {
-    font-size: 14px;
+    font-size: 16px;
   }
   
 
   main{
     flex-direction: row;
-    align-items: baseline;
+    align-items: flex-start;
   }
 
   .main{
@@ -433,18 +431,4 @@ main{
   .side .chatContainer{
     width: 100%;
   }
-}
-
-
-/* TODO DEL */
-
-.grey {
-  color: #8E8C99;
-  font-size: 12px;
-}
-
-P.grey{
-  width: 135px;
-  display: flex;
-  flex-direction: column;
 }

@@ -1,15 +1,4 @@
 /* Tag */
-
-p,li {
-  font-size: 12px;
-  margin-top: 3px;
-  line-height: 16px;
-}
-
-p+p{
-  margin-top: 9px;
-}
-
 select {
   border: none;
 }
@@ -97,39 +86,6 @@ section {
   text-decoration-line: underline;
   color: #3162FF;
   margin-bottom: 9px;
-}
-.infos1,.infos2{
-  margin-right: 18px;
-  background: white;
-  border-radius: 20px;
-  padding: 9px;
-
-}
-
-.whoIAm{
-  display: flex;
-  justify-content: flex-start;
-}
-
-
-.mainInfo{
-  display:flex;
-  width: 100%;
-  margin-bottom: 9px;
-}
-
-.mainInfo .affiliation{
-  width: 300px;
-  margin-left: 9px;
-  margin-bottom: 9px;
-}
-
-.whoIAm .mainInfo img{
-  display: flex;
-  align-items: center;
-  height: 60px;
-  width: 60px;
-  border-radius: 40px;
 }
 
 .whoIAm .bold{
@@ -233,25 +189,10 @@ section {
   width: 30px;
 }
 
-.mediaContainer .bubbleContainer{
+.mediaContainer .bubbleContainer {
   display: flex;
   justify-content: center;
   width: 100%;
-}
-
-/* Peers */
-
-.chatContainer h2{
-  display: flex;
-  justify-content: space-between;
-}
-
-.viewAll{
-  padding-right: 9px;
-  font-size: 14px;
-  color: #3162FF;
-  font-weight:normal;
-  text-transform: lowercase;
 }
 
 /* CHat */
@@ -264,72 +205,10 @@ section {
   padding: 0 18px;
 }
 
-.right .chatContainer{
-  width: 100%;
-}
-
-.chatContainer{
-  padding-left: 18px;
-  padding-bottom: 18px;
-  background: white;
-  border-radius: 20px;
-}
-
-.messageContainer{
-  position: relative;
-  display: flex;
-  align-items: center;
-  position: relative;
-  padding-right: 33px;
-  margin: 9px 0;
-}
-.messageContainer .txtInfos{
-  color: #8E8C99;
-  margin: 0 9px;
-  width: calc(100% - 95px);
-} 
-
-.messageContainer .time{
-  position: absolute;
-  right: 10px ;
-  font-size: 12px;
-  color: #8E8C99;
-}
-
-.messageContainer .time:before {
-  content:"\A";
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  background: #44cd45;
-  display:inline-block;
-}
-
 .potentialConnection h4{
   margin-left: 9px;
   width: calc(100% - 149px);
 }
-
-.follow{
-  position: absolute;
-  right: 9px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 9px;
-  width: 95px;
-  height: 14px;
-  border-radius: 9px;
-  background-color: #3162FF;
-  color: white;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.follow img{
-  width: 20px;
-}
-
 
 @media screen and (min-width: 1024px) {
 
@@ -354,25 +233,6 @@ section {
   header{
     justify-content: flex-end;
     align-items: center;
-  }
-  .searchContainer{ 
-    width: 150px;
-  } 
-
-  .notification, .searchContainer{
-    padding: 10px;
-    border-radius: 15px;
-  }
-
-  .notification{
-    width: 30px;
-    height: 30px;
-  }
-
-  .chatContainer, .ranking{
-    margin-right: 18px;    
-    background: white;
-    border-radius: 20px;
   }
   
   .left article h2{

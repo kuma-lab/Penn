@@ -29,7 +29,7 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .mainWrapper .main {
-    width: calc(100% - 336px);
+    width: calc(100% - 320px);
   }
 }
 .mainWrapper .main .pageTitle {
@@ -46,7 +46,7 @@ body {
   margin-right: 16px;
 }
 .mainWrapper .side {
-  width: 336px;
+  width: 360px;
   padding-left: 16px;
 }
 /* Scroll */
@@ -79,7 +79,7 @@ body {
 }
 .headerSite .linkToHome .logo {
   top: 16px;
-  right: 8px;
+  right: 27px;
   height: 40px;
 }
 @media screen and (min-width: 1024px) {
@@ -137,26 +137,30 @@ body {
   border-radius: 40px;
 }
 .connectionsBlock {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 16px;
-  margin: 0 0 16px;
+  margin: 30px 0 16px 0;
   background: #ffffff;
   border-radius: 20px;
   box-sizing: border-box;
 }
 .connectionsBlock .titleBlock {
+  position: absolute;
   display: flex;
+  top: -37px;
   justify-content: space-between;
   align-items: baseline;
   padding: 0 0 16px 0;
   line-height: 28px;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 24px;
   color: #070721;
   text-transform: capitalize;
 }
 .connectionsBlock .titleBlock .viewAll {
+  padding-right: 16px;
   font-size: 14px;
   color: #3162ff;
   font-weight: normal;
@@ -167,7 +171,6 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  padding-right: 34px;
   margin: 8px 0;
 }
 .connectionsBlock .connectionsList .connectionWrapper:last-child {
@@ -182,6 +185,10 @@ body {
   margin: 0 8px;
   width: calc(100% - 96px);
 }
+.connectionsBlock .connectionsList .txtInfos :last-of-type {
+  margin-top: 8px;
+  color: #070721;
+}
 .connectionsBlock .connectionsList .name {
   margin-bottom: 4px;
   line-height: 18px;
@@ -189,6 +196,9 @@ body {
   font-size: 15px;
   color: #070721;
   text-transform: capitalize;
+}
+.connectionsBlock .connectionsList .newsMessage {
+  color: #3162ff;
 }
 .connectionsBlock .connectionsList .mainField {
   margin-top: 4px;
@@ -209,27 +219,42 @@ body {
   border-radius: 50%;
   background: #44cd45;
 }
+@media screen and (min-width: 1024px) {
+  .connectionsBlock .connectionsList .connectionWrapper {
+    margin-bottom: 18px;
+  }
+  .connectionsBlock .connectionsList .name {
+    font-size: 16px;
+  }
+  .connectionsBlock .connectionsList .avatar {
+    height: 60px;
+  }
+}
 .potentialConnectionsBlock {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 16px;
-  margin: 0 0 16px;
+  margin: 60px 0 16px 0;
   background: #ffffff;
   border-radius: 20px;
   box-sizing: border-box;
 }
 .potentialConnectionsBlock .titleBlock {
+  position: absolute;
+  top: -36px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   padding: 0 0 16px 0;
   line-height: 28px;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 24px;
   color: #070721;
   text-transform: capitalize;
 }
 .potentialConnectionsBlock .titleBlock .viewAll {
+  padding-right: 16px;
   font-size: 14px;
   color: #3162ff;
   font-weight: normal;
@@ -245,6 +270,13 @@ body {
 .potentialConnectionsBlock .potentialConnectionsList .potentialConnectionWrapper:last-child {
   margin-bottom: 0;
 }
+.potentialConnectionsBlock .potentialConnectionsList .potentialConnectionWrapper .flexContainer {
+  width: calc(100% - 130px);
+}
+.potentialConnectionsBlock .potentialConnectionsList .potentialConnectionWrapper .flexContainer .txtInfos {
+  color: #8e8c99;
+  margin: 0 8px;
+}
 .potentialConnectionsBlock .potentialConnectionsList .avatar {
   height: 48px;
   border-radius: 16px;
@@ -252,13 +284,12 @@ body {
 .potentialConnectionsBlock .potentialConnectionsList .txtInfos {
   color: #8e8c99;
   margin: 0 8px;
-  width: calc(100% - 96px);
 }
 .potentialConnectionsBlock .potentialConnectionsList .name {
   margin-left: 8px;
   margin-bottom: 0;
   line-height: 18px;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 15px;
   color: #070721;
   text-transform: capitalize;
@@ -270,11 +301,57 @@ body {
   align-items: center;
   justify-content: space-around;
   padding: 8px;
-  width: 96px;
+  width: 70px;
   height: 18px;
   font-size: 14px;
   text-decoration: none;
   color: white;
   border-radius: 12px;
   background-color: #3162ff;
+}
+.potentialConnectionsBlock .potentialConnectionsList .followIcon {
+  width: 20px;
+}
+.listArticlesByYears {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  overflow: auto;
+}
+.listArticlesByYears .listArticles {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 16px;
+  background: white;
+  border-radius: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .listArticlesByYears .listArticles {
+    width: 47%;
+    margin-right: 16px;
+  }
+}
+.listArticlesByYears .listArticles .year {
+  margin: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #3162ff;
+  list-style: none;
+}
+.listArticlesByYears .listArticles .list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 8px 16px 16px;
+}
+.listArticlesByYears .listArticles .item {
+  padding: 4px 0;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+.icon {
+  height: 12px;
+  width: auto;
+  padding-right: 6px;
 }

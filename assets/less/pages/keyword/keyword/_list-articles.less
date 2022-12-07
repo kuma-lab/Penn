@@ -1,0 +1,48 @@
+.listArticlesByYears {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    overflow: auto;
+
+    .listArticles {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 16px;
+        background: white;
+        border-radius: 20px;
+
+        @media screen and (min-width: 1024px) {
+            width: 47%;
+            margin-right: 16px;
+        }
+
+        .year {
+            margin: 8px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            color: #3162ff;
+            list-style: none;
+        }
+
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            padding: 8px 16px 16px;
+        }
+
+        .item {
+            padding: 4px 0;
+            font-size: 16px;
+            text-transform: capitalize;
+        }
+    }
+}
+
+
+.icon {
+    height: 12px;
+    width: auto;
+    padding-right: 6px;
+}

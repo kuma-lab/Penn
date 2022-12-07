@@ -29,7 +29,7 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .mainWrapper .main {
-    width: calc(100% - 336px);
+    width: calc(100% - 320px);
   }
 }
 .mainWrapper .main .pageTitle {
@@ -46,7 +46,7 @@ body {
   margin-right: 16px;
 }
 .mainWrapper .side {
-  width: 336px;
+  width: 360px;
   padding-left: 16px;
 }
 /* Scroll */
@@ -79,7 +79,7 @@ body {
 }
 .headerSite .linkToHome .logo {
   top: 16px;
-  right: 8px;
+  right: 27px;
   height: 40px;
 }
 @media screen and (min-width: 1024px) {
@@ -137,26 +137,30 @@ body {
   border-radius: 40px;
 }
 .connectionsBlock {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 16px;
-  margin: 0 0 16px;
+  margin: 30px 0 16px 0;
   background: #ffffff;
   border-radius: 20px;
   box-sizing: border-box;
 }
 .connectionsBlock .titleBlock {
+  position: absolute;
   display: flex;
+  top: -37px;
   justify-content: space-between;
   align-items: baseline;
   padding: 0 0 16px 0;
   line-height: 28px;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 24px;
   color: #070721;
   text-transform: capitalize;
 }
 .connectionsBlock .titleBlock .viewAll {
+  padding-right: 16px;
   font-size: 14px;
   color: #3162ff;
   font-weight: normal;
@@ -167,7 +171,6 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  padding-right: 34px;
   margin: 8px 0;
 }
 .connectionsBlock .connectionsList .connectionWrapper:last-child {
@@ -182,6 +185,10 @@ body {
   margin: 0 8px;
   width: calc(100% - 96px);
 }
+.connectionsBlock .connectionsList .txtInfos :last-of-type {
+  margin-top: 8px;
+  color: #070721;
+}
 .connectionsBlock .connectionsList .name {
   margin-bottom: 4px;
   line-height: 18px;
@@ -189,6 +196,9 @@ body {
   font-size: 15px;
   color: #070721;
   text-transform: capitalize;
+}
+.connectionsBlock .connectionsList .newsMessage {
+  color: #3162ff;
 }
 .connectionsBlock .connectionsList .mainField {
   margin-top: 4px;
@@ -209,27 +219,42 @@ body {
   border-radius: 50%;
   background: #44cd45;
 }
+@media screen and (min-width: 1024px) {
+  .connectionsBlock .connectionsList .connectionWrapper {
+    margin-bottom: 18px;
+  }
+  .connectionsBlock .connectionsList .name {
+    font-size: 16px;
+  }
+  .connectionsBlock .connectionsList .avatar {
+    height: 60px;
+  }
+}
 .potentialConnectionsBlock {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 16px;
-  margin: 0 0 16px;
+  margin: 60px 0 16px 0;
   background: #ffffff;
   border-radius: 20px;
   box-sizing: border-box;
 }
 .potentialConnectionsBlock .titleBlock {
+  position: absolute;
+  top: -36px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   padding: 0 0 16px 0;
   line-height: 28px;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 24px;
   color: #070721;
   text-transform: capitalize;
 }
 .potentialConnectionsBlock .titleBlock .viewAll {
+  padding-right: 16px;
   font-size: 14px;
   color: #3162ff;
   font-weight: normal;
@@ -245,6 +270,13 @@ body {
 .potentialConnectionsBlock .potentialConnectionsList .potentialConnectionWrapper:last-child {
   margin-bottom: 0;
 }
+.potentialConnectionsBlock .potentialConnectionsList .potentialConnectionWrapper .flexContainer {
+  width: calc(100% - 130px);
+}
+.potentialConnectionsBlock .potentialConnectionsList .potentialConnectionWrapper .flexContainer .txtInfos {
+  color: #8e8c99;
+  margin: 0 8px;
+}
 .potentialConnectionsBlock .potentialConnectionsList .avatar {
   height: 48px;
   border-radius: 16px;
@@ -252,13 +284,12 @@ body {
 .potentialConnectionsBlock .potentialConnectionsList .txtInfos {
   color: #8e8c99;
   margin: 0 8px;
-  width: calc(100% - 96px);
 }
 .potentialConnectionsBlock .potentialConnectionsList .name {
   margin-left: 8px;
   margin-bottom: 0;
   line-height: 18px;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 15px;
   color: #070721;
   text-transform: capitalize;
@@ -270,7 +301,7 @@ body {
   align-items: center;
   justify-content: space-around;
   padding: 8px;
-  width: 96px;
+  width: 70px;
   height: 18px;
   font-size: 14px;
   text-decoration: none;
@@ -278,16 +309,20 @@ body {
   border-radius: 12px;
   background-color: #3162ff;
 }
+.potentialConnectionsBlock .potentialConnectionsList .followIcon {
+  width: 20px;
+}
 .authorCard {
   height: 414px;
-  padding: 9px 18px 32px;
+  padding: 8px 16px 32px;
   background-color: #ffff;
   border-radius: 0 0 16px 16px;
 }
 .authorCard .avatarContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   padding: 16px;
 }
 .authorCard .avatarContainer .avatar {
@@ -295,18 +330,30 @@ body {
   border-radius: 8px;
 }
 .authorCard .avatarContainer .authorName {
-  padding-top: 16px;
+  padding-left: 8px;
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;
   color: #070721;
   text-transform: capitalize;
 }
-.authorCard .infos {
+.authorCard .avatarContainer .authorName + .infosItem {
+  margin-left: 8px;
   color: #8e8c99;
 }
 .authorCard .infos .infosItem {
-  margin-bottom: 18px;
+  margin-bottom: 8px;
+}
+.authorCard .infos .infosItem ul {
+  margin-top: 24px;
+}
+.authorCard .infos .infosItem.titleField {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: initial;
 }
 .authorCard .infos .bold {
   font-weight: 700;
@@ -314,18 +361,122 @@ body {
 .authorCard .infos .keywordsItem {
   margin: 4px 8px;
   font-size: 14px;
-  list-style: none;
 }
-.ranking {
+@media screen and (min-width: 1024px) {
+  .authorCard .infos .keywordsItem {
+    font-size: 16px;
+  }
+}
+.newsBlock {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 16px;
-  margin-bottom: 16px;
+  margin: 30px 0 16px 0;
+  background: #ffffff;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+.newsBlock .titleBlock {
+  position: absolute;
+  display: flex;
+  top: -37px;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 0 16px 0;
+  line-height: 28px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #070721;
+  text-transform: capitalize;
+}
+.newsBlock .titleBlock .viewAll {
+  padding-right: 16px;
+  font-size: 14px;
+  color: #3162ff;
+  font-weight: normal;
+  text-transform: lowercase;
+  cursor: pointer;
+}
+.newsBlock .newsList .newsWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 8px 0;
+}
+.newsBlock .newsList .newsWrapper:last-child {
+  margin-bottom: 0;
+}
+.newsBlock .newsList .avatar {
+  height: 48px;
+  border-radius: 16px;
+}
+.newsBlock .newsList .txtInfos {
+  color: #8e8c99;
+  margin: 0 8px;
+  width: calc(100% - 96px);
+}
+.newsBlock .newsList .txtInfos :last-of-type {
+  margin-top: 8px;
+  color: #070721;
+}
+.newsBlock .newsList .name {
+  margin-bottom: 4px;
+  line-height: 18px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #070721;
+  text-transform: capitalize;
+}
+.newsBlock .newsList .mainField {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: initial;
+}
+.newsBlock .newsList .newsMessage {
+  color: #3162ff;
+}
+.newsBlock .newsList .time {
+  position: absolute;
+  right: 0;
+  font-size: 12px;
+  color: #8e8c99;
+}
+.newsBlock .newsList .time::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #44cd45;
+}
+@media screen and (min-width: 1024px) {
+  .newsBlock .newsList .newsWrapper {
+    margin-bottom: 18px;
+  }
+  .newsBlock .newsList .name {
+    font-size: 16px;
+  }
+  .newsBlock .newsList .avatar {
+    height: 60px;
+  }
+}
+.ranking {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  margin: 30px 0 16px 0;
   background: #ffffff;
   border-radius: 20px;
   box-sizing: border-box;
 }
 .ranking .titleBlock {
+  position: absolute;
+  top: -36px;
   padding: 0 0 16px 0;
   line-height: 28px;
   font-weight: bold;
@@ -337,6 +488,55 @@ body {
   display: flex;
   justify-content: space-around;
   margin: 8px 0;
+  /* Ranking Choice Container */
+}
+.ranking .selectContainer .rankingChoiceContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 18px;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+}
+.ranking .selectContainer .rankingChoiceContainer .rankingBubbleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  padding: 8px 0;
+  width: 100px;
+  max-width: 24%;
+  font-size: 14px;
+  color: #000000;
+  background-color: #edf2fb;
+  border-right: #070721 solid 1px;
+  cursor: pointer;
+}
+.ranking .selectContainer .rankingChoiceContainer .rankingBubbleContainer img {
+  height: 20px;
+  width: auto;
+  background: #edf2fb;
+  margin: 2px;
+  padding: 2px;
+}
+.ranking .selectContainer .rankingChoiceContainer .rankingBubbleContainer .wording {
+  display: none;
+}
+.ranking .selectContainer .rankingChoiceContainer .rankingBubbleContainer.press {
+  border-right: none;
+  border-radius: 0px 40px 40px 0px;
+}
+.ranking .selectContainer .rankingChoiceContainer .rankingBubbleContainer.all {
+  border-radius: 40px 0px 0px 40px;
+}
+.ranking .selectContainer .rankingChoiceContainer .rankingBubbleContainer.active {
+  background-color: #3162FF;
+  color: #ffff;
+}
+.ranking .selectContainer .rankingChoiceContainer .rankingBubbleContainer.active img {
+  background-color: #3162FF;
 }
 .ranking .chart {
   display: none;
@@ -348,6 +548,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
   padding: 10px;
   font-size: 15px;
   text-align: left;
@@ -377,26 +578,30 @@ body {
   font-weight: bold;
 }
 .chatsBlock {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 16px;
-  margin: 0 0 16px;
+  margin: 30px 0 16px 0;
   background: #ffffff;
   border-radius: 20px;
   box-sizing: border-box;
 }
 .chatsBlock .titleBlock {
+  position: absolute;
+  top: -36px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   padding: 0 0 16px 0;
   line-height: 28px;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 24px;
   color: #070721;
   text-transform: capitalize;
 }
-.grey {
+.chatsBlock .txtInfos {
+  width: calc(100% - 125px);
   color: #8E8C99;
 }
