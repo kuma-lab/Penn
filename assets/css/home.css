@@ -341,6 +341,63 @@ body {
 .potentialConnectionsBlock .potentialConnectionsList .followIcon {
   width: 20px;
 }
+.headerNewsFeed {
+  position: relative;
+}
+.headerNewsFeed .choiceContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+}
+.headerNewsFeed .choiceContainer .bubbleContainer,
+.headerNewsFeed .choiceContainer .time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  padding: 8px 0;
+  width: 100px;
+  font-size: 14px;
+  color: #000000;
+  background-color: #ffffff;
+  border-right: #070721 solid 1px;
+  cursor: pointer;
+}
+.headerNewsFeed .choiceContainer .bubbleContainer.press {
+  border-right: none;
+  border-radius: 0px 40px 40px 0px;
+}
+.headerNewsFeed .choiceContainer .bubbleContainer.all {
+  border-radius: 40px 0px 0px 40px;
+}
+.headerNewsFeed .choiceContainer .bubbleContainer.all.active .time {
+  z-index: 3;
+}
+.headerNewsFeed .choiceContainer .bubbleContainer.active {
+  background-color: #3162FF;
+  color: #ffff;
+}
+.headerNewsFeed .choiceContainer .bubbleContainer.active .time {
+  display: flex;
+}
+.headerNewsFeed .choiceContainer .bubbleContainer.active .selectDate {
+  background-color: #fff;
+  color: #3162FF;
+}
+.headerNewsFeed .choiceContainer .time {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  height: 28px;
+  border-right: none;
+  border-radius: 40px;
+}
 .authorCard {
   height: 414px;
   padding: 8px 16px 32px;

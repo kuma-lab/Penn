@@ -51,12 +51,12 @@ main{
 }
 
 /* Header News Feed */
-.headerNewsFeed{
+/*.headerNewsFeed{
   position: relative;
-}
+}*/
 
 /* Choice Container */
-.choiceContainer {
+/*.choiceContainer {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -92,10 +92,14 @@ main{
 .choiceContainer .bubbleContainer.active {
   background-color: #3162FF;
   color: #ffff;
-}
-
+}*/
+/*
 .choiceContainer .bubbleContainer.active .time{
   display: flex;
+}
+
+.choiceContainer .bubbleContainer.all.active .time{
+  z-index: 3;
 }
 
 .choiceContainer .bubbleContainer.active .time img {
@@ -114,7 +118,7 @@ main{
   border-right: none;
   border-radius: 40px;
   background-color: #ffff;
-}
+}*/
 
 @media(max-width: 600px) {
   .choiceContainer .time {
