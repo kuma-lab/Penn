@@ -504,15 +504,8 @@ body {
   margin-bottom: 16px;
 }
 .authorCard .infos .titleWording {
-  margin-right: 4px;
+  margin-right: 8px;
   font-weight: 700;
-}
-.authorCard .infos .infosItem.ellipsis {
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  overflow: hidden !important;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 3;
 }
 .authorCard .infos .bold {
   font-weight: 700;
