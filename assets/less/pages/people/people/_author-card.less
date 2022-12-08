@@ -70,7 +70,15 @@
             flex-wrap: wrap;
             justify-content: space-evenly;
             width: 100%;
-            margin-bottom: 4px;
+            margin-bottom: 9px;
+
+            .ellipsis {
+                -webkit-box-orient: vertical;
+                display: -webkit-box;
+                overflow: hidden !important;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 3;
+            }
         }
 
         .people {
@@ -134,7 +142,7 @@
             @media screen and (min-width: 1366px) {
                 padding: 8px 0 0 120px;
             }
-        
+
             .listKeywords {
                 width: 100%;
                 margin-right: 0;

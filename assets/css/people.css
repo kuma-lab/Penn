@@ -413,7 +413,14 @@ body {
   flex-wrap: wrap;
   justify-content: space-evenly;
   width: 100%;
-  margin-bottom: 4px;
+  margin-bottom: 9px;
+}
+.authorIdentity .whoIAm .line .ellipsis {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
 }
 .authorIdentity .whoIAm .people {
   padding: 0;
