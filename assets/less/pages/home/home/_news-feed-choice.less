@@ -26,6 +26,11 @@
         }
 
         .bubbleContainer {
+            @media screen and (min-width: 1024px) {
+                width: 112px;
+                font-size: 16px;
+            }
+
             &.press {
                 border-right: none;
                 border-radius: 0px 40px 40px 0px;
@@ -39,8 +44,21 @@
                 }
             }
 
+            .selectIcon {
+                margin: 2px;
+                padding: 2px;
+                height: 20px;
+                width: auto;
+                background: #ffff;
+            }
+
+            .selectWording,
+            .titleAll {
+                padding: 0 6px;
+            }
+
             &.active {
-                background-color: #3162FF;
+                background-color: #3162ff;
                 color: #ffff;
 
                 .time {
@@ -48,8 +66,13 @@
                 }
 
                 .selectDate {
+                    color: #3162ff;
                     background-color: #fff;
-                    color: #3162FF;
+                }
+
+                .selectIcon {
+                    color: #ffff;
+                    background-color: #3162ff;
                 }
             }
         }
@@ -58,11 +81,65 @@
             display: none;
             position: absolute;
             z-index: 2;
-            right: 0;
-            top: 0;
+            top: 64px;
+            right: 50%;
+            width: 300px;
             height: 28px;
+            margin-right: -150px;
             border-right: none;
             border-radius: 40px;
+
+            @media(min-width: 600px) {
+                right: 0;
+                top: 0;
+                width: 100px;
+                margin-right: inherit;
+            }
+
+            .selectDate {
+                margin: 2px;
+                padding: 2px;
+                height: 28px;
+                width: auto;
+                background: #ffff;
+            }
+
+            .list {
+                position: relative;
+            }
+
+            .listDates {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                left: -20px;
+                top: 15px;
+                width: 50px;
+                padding: 10px;
+                color: #3162ff;
+                list-style: none;
+                background-color: #fff;
+                border-radius: 0 0 15px 15px;
+            }
+
+            &.active {
+                .listDates {
+                    display: flex;
+
+                    .dateOption {
+                        margin-top: 8px;
+
+                        &::last-of-type {
+                            margin-bottom: 8px;
+                        }
+
+                        &::hover {
+                            color: #3162FF;
+                        }
+                    }
+                }
+            }
         }
     }
 }
