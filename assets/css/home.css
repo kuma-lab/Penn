@@ -494,19 +494,18 @@ body {
   margin-left: 8px;
   color: #8e8c99;
 }
-.authorCard .infos .infosItem {
-  margin-bottom: 8px;
-}
-.authorCard .infos .infosItem ul {
-  margin-top: 24px;
-}
 .authorCard .infos .infosItem.titleField {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   line-height: initial;
+  margin-bottom: 16px;
+}
+.authorCard .infos .titleWording {
+  margin-right: 4px;
+  font-weight: 700;
 }
 .authorCard .infos .infosItem.ellipsis {
   -webkit-box-orient: vertical;
@@ -516,6 +515,12 @@ body {
   -webkit-line-clamp: 3;
 }
 .authorCard .infos .bold {
+  font-weight: 700;
+}
+.authorCard .infos .keywordsTitle {
+  display: inline-block;
+  margin-top: 24px;
+  margin-bottom: 8px;
   font-weight: 700;
 }
 .authorCard .infos .keywordsItem {
