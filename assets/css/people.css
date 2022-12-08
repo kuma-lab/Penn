@@ -349,7 +349,7 @@ body {
   background: #ffffff;
   border-radius: 20px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1366px) {
   .authorIdentity {
     margin: 0 16px 16px 0;
   }
@@ -371,7 +371,7 @@ body {
   width: 100%;
   margin-bottom: 8px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1366px) {
   .authorIdentity .whoIAm .mainInfo {
     flex-direction: row;
     width: 50%;
@@ -380,7 +380,7 @@ body {
 .authorIdentity .whoIAm .title {
   width: 100%;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1366px) {
   .authorIdentity .whoIAm .title {
     width: 50%;
     padding-top: 36px;
@@ -394,11 +394,16 @@ body {
   margin: auto;
   border-radius: 30px;
 }
+@media screen and (min-width: 1366px) {
+  .authorIdentity .whoIAm .avatar {
+    margin: inherit;
+  }
+}
 .authorIdentity .whoIAm .affiliation {
   margin-left: 0;
   margin-bottom: 8px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1366px) {
   .authorIdentity .whoIAm .affiliation {
     margin-left: 16px;
   }
@@ -419,7 +424,7 @@ body {
   text-decoration-line: underline;
   color: #3162ff;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1366px) {
   .authorIdentity .whoIAm .people {
     text-align: left;
   }
@@ -445,11 +450,19 @@ body {
     margin: 0;
   }
 }
+.authorIdentity .whoIAm .sideAuthor {
+  margin-top: 8px;
+}
+@media screen and (min-width: 1366px) {
+  .authorIdentity .whoIAm .sideAuthor {
+    margin-top: 0;
+  }
+}
 .authorIdentity .whoIAm .keywordsTitle {
   margin-left: 0;
   font-weight: 700;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1366px) {
   .authorIdentity .whoIAm .keywordsTitle {
     margin-left: 76px;
   }
@@ -460,7 +473,7 @@ body {
   justify-content: flex-start;
   padding: 8px 0 0 24px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1366px) {
   .authorIdentity .whoIAm .keywords {
     padding: 8px 0 0 120px;
   }
@@ -470,7 +483,7 @@ body {
   margin-right: 0;
   list-style: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1366px) {
   .authorIdentity .whoIAm .keywords .listKeywords {
     width: inherit;
     margin-right: 32px;
@@ -520,7 +533,7 @@ body {
   margin: 4px 8px;
   font-size: 14px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1366px) {
   .authorCard .infos .keywordsItem {
     font-size: 16px;
   }
