@@ -10,6 +10,8 @@ body {
     padding: 16px;
 
     .main {
+        width: 100%;
+
         @media screen and (min-width: 1024px) {
             width: calc(100% - 320px);
         }
@@ -20,21 +22,43 @@ body {
         }
 
         .secondContent {
-            margin-top: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 32px;
+
+            @media screen and (min-width: 1024px) {
+                margin-top: 16px;
+            }
 
             section {
-                width: calc(50% - 8px);
+                width: 100%;
+
+                @media screen and (min-width: 640px) {
+                    width: calc(50% - 8px);
+                }
 
                 &:first-child {
-                    margin-right: 16px;
+                    margin-bottom: 32px;
+
+                    @media screen and (min-width: 640px) {
+                        margin-right: 16px;
+                        margin-bottom: 16px;
+                    }
                 }
             }
         }
     }
 
     .side {
-        width: 360px;
-        padding-left: 16px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 16px;
+
+        @media screen and (min-width: 1024px) {
+            width: 360px;
+            padding-left: 16px;
+            margin-top: 0;
+        }
     }
 }
 

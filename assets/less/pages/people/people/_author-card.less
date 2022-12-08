@@ -1,10 +1,14 @@
 .authorIdentity {
     display: flex;
-    margin: 0 16px 16px 0;
+    margin: 0 0 16px 0;
     padding: 16px;
     font-size: 16px;
     background: #ffffff;
     border-radius: 20px;
+
+    @media screen and (min-width: 1366px) {
+        margin: 0 16px 16px 0;
+    }
 
     .whoIAm {
         display: flex;
@@ -13,19 +17,30 @@
 
         .infosWrapper {
             display: flex;
+            flex-wrap: wrap;
             width: 100%;
         }
 
         .mainInfo {
             display: flex;
+            flex-direction: column;
             box-sizing: border-box;
-            width: 50%;
+            width: 100%;
             margin-bottom: 8px;
+
+            @media screen and (min-width: 1366px) {
+                flex-direction: row;
+                width: 50%;
+            }
         }
 
         .title {
-            width: 50%;
-            padding-top: 36px;
+            width: 100%;
+
+            @media screen and (min-width: 1366px) {
+                width: 50%;
+                padding-top: 36px;
+            }
         }
 
         .avatar {
@@ -33,19 +48,37 @@
             align-items: center;
             height: 60px;
             width: 60px;
+            margin: auto;
             border-radius: 30px;
+
+            @media screen and (min-width: 1366px) {
+                margin: inherit;
+            }
         }
 
         .affiliation {
-            margin-left: 16px;
+            margin-left: 0;
             margin-bottom: 8px;
+
+            @media screen and (min-width: 1366px) {
+                margin-left: 16px;
+            }
         }
 
         .line {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-evenly;
             width: 100%;
-            margin-bottom: 4px;
+            margin-bottom: 9px;
+
+            .ellipsis {
+                -webkit-box-orient: vertical;
+                display: -webkit-box;
+                overflow: hidden !important;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 3;
+            }
         }
 
         .people {
@@ -53,43 +86,79 @@
             margin: 0 0 8px;
             font-weight: 700;
             font-size: 20px;
+            text-align: center;
             text-decoration-line: underline;
             color: #3162ff;
+
+            @media screen and (min-width: 1366px) {
+                text-align: left;
+            }
         }
 
         .bold {
             display: inline-block;
-            width: 100px;
+            width: 100%;
             font-weight: 700;
+
+            @media screen and (min-width: 640px) {
+                width: 100px;
+            }
         }
 
         .info {
             display: inline-block;
-            width: calc(100% - 112px);
+            width: calc(100% - 32px);
+            margin: 4px 0 8px;
+
+            @media screen and (min-width: 640px) {
+                width: calc(100% - 112px);
+                margin: 0;
+            }
+        }
+
+        .sideAuthor {
+            margin-top: 8px;
+
+            @media screen and (min-width: 1366px) {
+                margin-top: 0;
+            }
         }
 
         .keywordsTitle {
-            margin-left: 76px;
+            margin-left: 0;
             font-weight: 700;
+
+            @media screen and (min-width: 1366px) {
+                margin-left: 76px;
+            }
         }
 
         .keywords {
             display: flex;
+            flex-wrap: wrap;
             justify-content: flex-start;
-            padding: 8px 0 0 120px;
-        
+            padding: 8px 0 0 24px;
+
+            @media screen and (min-width: 1366px) {
+                padding: 8px 0 0 120px;
+            }
+
             .listKeywords {
-                margin-right: 32px;
+                width: 100%;
+                margin-right: 0;
                 list-style: none;
+
+                li {
+                    margin-bottom: 9px;
+                }
+
+                @media screen and (min-width: 1366px) {
+                    width: inherit;
+                    margin-right: 32px;
+                }
             }
         }
     }
-
-
-
-
-
-
 
     .avatarContainer {
         display: flex;
@@ -147,8 +216,7 @@
     }
 }
 
-@media screen and (min-width: 1024px) {
-
+@media screen and (min-width: 1366px) {
     .authorCard {
         .infos {
             .keywordsItem {
