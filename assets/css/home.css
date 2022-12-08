@@ -508,6 +508,13 @@ body {
   -webkit-box-orient: vertical;
   line-height: initial;
 }
+.authorCard .infos .infosItem.ellipsis {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+}
 .authorCard .infos .bold {
   font-weight: 700;
 }

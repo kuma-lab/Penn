@@ -490,6 +490,9 @@ body {
   margin-right: 0;
   list-style: none;
 }
+.authorIdentity .whoIAm .keywords .listKeywords li {
+  margin-bottom: 9px;
+}
 @media screen and (min-width: 1366px) {
   .authorIdentity .whoIAm .keywords .listKeywords {
     width: inherit;
