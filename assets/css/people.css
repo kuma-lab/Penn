@@ -343,11 +343,16 @@ body {
 }
 .authorIdentity {
   display: flex;
-  margin: 0 16px 16px 0;
+  margin: 0 0 16px 0;
   padding: 16px;
   font-size: 16px;
   background: #ffffff;
   border-radius: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .authorIdentity {
+    margin: 0 16px 16px 0;
+  }
 }
 .authorIdentity .whoIAm {
   display: flex;
@@ -356,31 +361,51 @@ body {
 }
 .authorIdentity .whoIAm .infosWrapper {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
 }
 .authorIdentity .whoIAm .mainInfo {
   display: flex;
+  flex-direction: column;
   box-sizing: border-box;
-  width: 50%;
+  width: 100%;
   margin-bottom: 8px;
 }
+@media screen and (min-width: 1024px) {
+  .authorIdentity .whoIAm .mainInfo {
+    flex-direction: row;
+    width: 50%;
+  }
+}
 .authorIdentity .whoIAm .title {
-  width: 50%;
-  padding-top: 36px;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .authorIdentity .whoIAm .title {
+    width: 50%;
+    padding-top: 36px;
+  }
 }
 .authorIdentity .whoIAm .avatar {
   display: flex;
   align-items: center;
   height: 60px;
   width: 60px;
+  margin: auto;
   border-radius: 30px;
 }
 .authorIdentity .whoIAm .affiliation {
-  margin-left: 16px;
+  margin-left: 0;
   margin-bottom: 8px;
+}
+@media screen and (min-width: 1024px) {
+  .authorIdentity .whoIAm .affiliation {
+    margin-left: 16px;
+  }
 }
 .authorIdentity .whoIAm .line {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   width: 100%;
   margin-bottom: 4px;
@@ -390,30 +415,66 @@ body {
   margin: 0 0 8px;
   font-weight: 700;
   font-size: 20px;
+  text-align: center;
   text-decoration-line: underline;
   color: #3162ff;
 }
+@media screen and (min-width: 1024px) {
+  .authorIdentity .whoIAm .people {
+    text-align: left;
+  }
+}
 .authorIdentity .whoIAm .bold {
   display: inline-block;
-  width: 100px;
+  width: 100%;
   font-weight: 700;
+}
+@media screen and (min-width: 640px) {
+  .authorIdentity .whoIAm .bold {
+    width: 100px;
+  }
 }
 .authorIdentity .whoIAm .info {
   display: inline-block;
-  width: calc(100% - 112px);
+  width: calc(100% - 32px);
+  margin: 4px 0 8px;
+}
+@media screen and (min-width: 640px) {
+  .authorIdentity .whoIAm .info {
+    width: calc(100% - 112px);
+    margin: 0;
+  }
 }
 .authorIdentity .whoIAm .keywordsTitle {
-  margin-left: 76px;
+  margin-left: 0;
   font-weight: 700;
+}
+@media screen and (min-width: 1024px) {
+  .authorIdentity .whoIAm .keywordsTitle {
+    margin-left: 76px;
+  }
 }
 .authorIdentity .whoIAm .keywords {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
-  padding: 8px 0 0 120px;
+  padding: 8px 0 0 24px;
+}
+@media screen and (min-width: 1024px) {
+  .authorIdentity .whoIAm .keywords {
+    padding: 8px 0 0 120px;
+  }
 }
 .authorIdentity .whoIAm .keywords .listKeywords {
-  margin-right: 32px;
+  width: 100%;
+  margin-right: 0;
   list-style: none;
+}
+@media screen and (min-width: 1024px) {
+  .authorIdentity .whoIAm .keywords .listKeywords {
+    width: inherit;
+    margin-right: 32px;
+  }
 }
 .authorIdentity .avatarContainer {
   display: flex;
