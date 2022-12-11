@@ -106,6 +106,9 @@ section {
 
 .listArticlesByYears .connectionWrapper{
   display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+
 }
 .listArticlesByYears .connectionWrapper .avatarContainer {
   padding-right: 9px;
