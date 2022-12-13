@@ -191,7 +191,7 @@ body {
 .connectionsBlock .titleBlock .viewAll {
   padding-right: 16px;
   font-size: 14px;
-  color: #3162ff;
+  color: #5786FF;
   font-weight: normal;
   text-transform: lowercase;
   cursor: pointer;
@@ -227,7 +227,7 @@ body {
   text-transform: capitalize;
 }
 .connectionsBlock .connectionsList .newsMessage {
-  color: #3162ff;
+  color: #5786FF;
 }
 .connectionsBlock .connectionsList .mainField {
   margin-top: 4px;
@@ -285,7 +285,7 @@ body {
 .potentialConnectionsBlock .titleBlock .viewAll {
   padding-right: 16px;
   font-size: 14px;
-  color: #3162ff;
+  color: #5786FF;
   font-weight: normal;
   text-transform: lowercase;
   cursor: pointer;
@@ -336,7 +336,7 @@ body {
   text-decoration: none;
   color: white;
   border-radius: 12px;
-  background-color: #3162ff;
+  background-color: #5786FF;
 }
 .potentialConnectionsBlock .potentialConnectionsList .followIcon {
   width: 20px;
@@ -365,7 +365,7 @@ body {
   font-size: 20px;
   font-weight: bold;
   text-align: center;
-  color: #3162ff;
+  color: #5786FF;
   list-style: none;
 }
 .listArticlesByYears .listArticles .list {

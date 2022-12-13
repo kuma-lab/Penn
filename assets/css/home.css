@@ -191,7 +191,7 @@ body {
 .connectionsBlock .titleBlock .viewAll {
   padding-right: 16px;
   font-size: 14px;
-  color: #3162ff;
+  color: #5786FF;
   font-weight: normal;
   text-transform: lowercase;
   cursor: pointer;
@@ -227,7 +227,7 @@ body {
   text-transform: capitalize;
 }
 .connectionsBlock .connectionsList .newsMessage {
-  color: #3162ff;
+  color: #5786FF;
 }
 .connectionsBlock .connectionsList .mainField {
   margin-top: 4px;
@@ -285,7 +285,7 @@ body {
 .potentialConnectionsBlock .titleBlock .viewAll {
   padding-right: 16px;
   font-size: 14px;
-  color: #3162ff;
+  color: #5786FF;
   font-weight: normal;
   text-transform: lowercase;
   cursor: pointer;
@@ -336,7 +336,7 @@ body {
   text-decoration: none;
   color: white;
   border-radius: 12px;
-  background-color: #3162ff;
+  background-color: #5786FF;
 }
 .potentialConnectionsBlock .potentialConnectionsList .followIcon {
   width: 20px;
@@ -392,19 +392,19 @@ body {
   padding: 0 6px;
 }
 .headerNewsFeed .choiceContainer .bubbleContainer.active {
-  background-color: #3162ff;
+  background-color: #5786FF;
   color: #ffff;
 }
 .headerNewsFeed .choiceContainer .bubbleContainer.active .time {
   display: flex;
 }
 .headerNewsFeed .choiceContainer .bubbleContainer.active .selectDate {
-  color: #3162ff;
+  color: #5786FF;
   background-color: #fff;
 }
 .headerNewsFeed .choiceContainer .bubbleContainer.active .selectIcon {
   color: #ffff;
-  background-color: #3162ff;
+  background-color: #5786FF;
 }
 .headerNewsFeed .choiceContainer .time {
   display: none;
@@ -445,7 +445,7 @@ body {
   top: 15px;
   width: 50px;
   padding: 10px;
-  color: #3162ff;
+  color: #5786FF;
   list-style: none;
   background-color: #fff;
   border-radius: 0 0 15px 15px;
@@ -460,7 +460,7 @@ body {
   margin-bottom: 8px;
 }
 .headerNewsFeed .choiceContainer .time.active .listDates .dateOption::hover {
-  color: #3162FF;
+  color: #5786FF;
 }
 .cardContainer {
   position: relative;
@@ -569,7 +569,7 @@ body {
 .newsBlock .titleBlock .viewAll {
   padding-right: 16px;
   font-size: 14px;
-  color: #3162ff;
+  color: #5786FF;
   font-weight: normal;
   text-transform: lowercase;
   cursor: pointer;
@@ -613,7 +613,7 @@ body {
   line-height: initial;
 }
 .newsBlock .newsList .newsMessage {
-  color: #3162ff;
+  color: #5786FF;
 }
 .newsBlock .newsList .time {
   position: absolute;
@@ -708,11 +708,11 @@ body {
   border-radius: 40px 0px 0px 40px;
 }
 .ranking .selectContainer .rankingChoiceContainer .rankingBubbleContainer.active {
-  background-color: #3162FF;
+  background-color: #5786FF;
   color: #ffff;
 }
 .ranking .selectContainer .rankingChoiceContainer .rankingBubbleContainer.active img {
-  background-color: #3162FF;
+  background-color: #5786FF;
 }
 .ranking .chart {
   display: none;
