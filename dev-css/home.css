@@ -35,21 +35,6 @@ main{
   display: none;
 }
 
-.pointer {
-  cursor: pointer;
-  padding-left: 5px;
-}
-
-.pointer.add {
-  height: 20px;
-  transform: translateY(5px);
-}
-
-.avatarHeader {
-  height: 40px;
-  border-radius: 50px;
-}
-
 /* News Feed */
 .newsfeed {
   display: none;
@@ -90,12 +75,6 @@ main{
 
 .slider .arrow.right.slick-disabled {
   background-image: url("../img/slider-arrow-disabled.png");
-}
-
-.cardContainer {
-  position: relative;
-  margin: 18px 0;
-  height: 530px;
 }
 
 .slick-slide {
@@ -154,53 +133,11 @@ main{
   cursor: pointer;
 }
 
-.infoContainer{
-  background-color: #ffff;
-  border-radius: 0 15px;
-  padding: 0 18px 37px;
-}
-
-.infoContainer .avatarContainer{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 18px;
-}
-
-.infoContainer .infos p{
-  margin-bottom: 9px ;
-  line-height: 1.4;
-}
-
-.infoContainer .infos .bold{
-  color: #070721;
-  font-weight: bold;
-}
-
-.infoContainer .infos li{
-  list-style: none;
-  margin: 4.5px 9px;
-  font-size: 14px;
-}
-
 .avatarContainer .avatar{
   height: 60px;
   border-radius: 9px;
 }
 
-.cardContainer .bubble{
-  background: white;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 20px;
-  padding: 5px;
-  border-radius: 30px;
-}
-
-.cardContainer .bubble.trending{
-  right: 40px;
-}
 .arrow img{
   width: 40px;
 }
@@ -289,9 +226,6 @@ main{
     justify-content: flex-end;
   }
 
-  .cardContainer{
-    height: auto;
-  }
   .slider .arrow.right{
     right: 0px;
   }
