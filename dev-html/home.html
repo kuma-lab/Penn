@@ -1373,6 +1373,15 @@
         }, 0.5)
       });
 
+      /****************************************************
+      /*  Change date when user clic on an arrow sliders
+      *****************************************************/
+      $('.newsfeed.' + category + ' .slickContainer').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        let currentSlideDom = document.querySelectorAll('.newsfeed.' + category + ' .slickContainer .slick-slide')[nextSlide]
+        const year = currentSlideDom.firstChild.firstChild.getAttribute('data-content-year')
+        document.querySelector('.headerNewsFeed .bubbleContainer.active .selectedDate').innerText = year
+      });
+
       /**************************
       /* Create Select Button
       ***************************/
