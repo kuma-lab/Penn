@@ -166,7 +166,7 @@ header {
 .all {
   font-weight: bold;
   text-transform: capitalize;
-  color:#3162FF;
+  color:#5786FF;
   cursor: pointer;
 }
 
@@ -236,7 +236,7 @@ header {
 }
 
 .choiceContainer .bubbleContainer.active {
-  background-color: #3162FF;
+  background-color: #5786FF;
   color: #ffff;
 }
 
@@ -246,7 +246,7 @@ header {
 
 .choiceContainer .bubbleContainer.active .time img {
   background-color: #fff;
-  color: #3162FF;
+  color: #5786FF;
 }
 
 .choiceContainer .time {
@@ -305,7 +305,7 @@ header {
 }
 
 .choiceContainer .time li:hover {
-  color: #3162FF;
+  color: #5786FF;
 }
 
 .choiceContainer .bubbleContainer img {

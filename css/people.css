@@ -169,7 +169,7 @@ header .logo{
 
 .all{
   font-weight: bold;
-  color:#3162FF;
+  color:#5786FF;
   text-transform: capitalize  ;
 }
 
@@ -181,7 +181,7 @@ header .logo{
   font-weight: 700;
   font-size: 16px;
   text-decoration-line: underline;
-  color: #3162FF;
+  color: #5786FF;
   margin-bottom: 9px;
 }
 .infos1,.infos2{
@@ -363,7 +363,7 @@ header .logo{
 
 .mediaContainer .year{
   margin: 0;
-  color: #3162FF;
+  color: #5786FF;
   font-size: 16px;
   font-weight: bold;
   list-style: none;
@@ -395,7 +395,7 @@ header .logo{
 .viewAll{
   padding-right: 9px;
   font-size: 14px;
-  color: #3162FF;
+  color: #5786FF;
   font-weight:normal;
   text-transform: lowercase;
 }
@@ -466,7 +466,7 @@ header .logo{
   width: 95px;
   height: 14px;
   border-radius: 9px;
-  background-color: #3162FF;
+  background-color: #5786FF;
   color: white;
   font-size: 14px;
   text-decoration: none;

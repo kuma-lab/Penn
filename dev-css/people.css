@@ -72,7 +72,7 @@ section {
 
 .all{
   font-weight: bold;
-  color:#3162FF;
+  color:#5786FF;
   text-transform: capitalize  ;
 }
 
@@ -84,7 +84,7 @@ section {
   font-weight: 700;
   font-size: 16px;
   text-decoration-line: underline;
-  color: #3162FF;
+  color: #5786FF;
   margin-bottom: 9px;
 }
 
@@ -172,7 +172,7 @@ section {
 
 .mediaContainer .year{
   margin: 0;
-  color: #3162FF;
+  color: #5786FF;
   font-size: 16px;
   font-weight: bold;
   list-style: none;

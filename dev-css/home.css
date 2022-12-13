@@ -85,12 +85,16 @@ main{
   position: relative;
   margin-bottom: -16px;
   height: 300px;
-  padding: 18px ;
+  padding: 9px ;
   background-image: url(../img/Rectangle\ 154.png);
   border-radius: 16px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.backgroundIframe .iframeContainer{
+  height: 315px;
 }
 
 .backgroundIframe .titleIframe{
