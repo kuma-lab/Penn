@@ -85,8 +85,8 @@ main{
   position: relative;
   margin-bottom: -16px;
   height: 300px;
-  padding: 9px ;
-  background-image: url(../img/Rectangle\ 154.png);
+  padding: 8px ;
+  background-image: url(../assets/img/rectangle.png);
   border-radius: 16px;
   background-repeat: no-repeat;
   background-size: cover;
