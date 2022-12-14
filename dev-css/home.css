@@ -151,42 +151,6 @@ main{
   transform: rotate(180deg);
 }
 
-/* CHat */
-
-.left article{
-  display: flex;
-  padding: 0 18px;
-}
-
-.right .chatContainer{
-  width: 100%;
-}
-
-.chatContainer{
-  padding-left: 16px;
-  padding-bottom: 16px;
-}
-
-.messagesList {
-  overflow-y: auto;
-}
-
-.messageContainer{
-  display: flex;
-  align-items: center;
-  position: relative;
-  padding-right: 33px;
-  margin: 9px 0;
-}
-
-.txtInfos{
-  margin: 0 9px;
-}
-
-.left article h2{
-  text-align: center;
-}
-
 .lastConnection{
   width: 70px;
   font-size: 12px;  
@@ -216,7 +180,6 @@ main{
   p, span {
     font-size: 16px;
   }
-  
 
   main{
     flex-direction: row;
@@ -241,19 +204,5 @@ main{
 
   .main article{
     display: flex;
-  }
-  .chatContainer, .ranking{
-    width:50%;
-  }
-
-  .side .chatContainer{
-    width: 100%;
-    height: 754px;
-    padding-right: 8px;
-  }
-
-  .messagesList {
-    height: 100%;
-    padding-right: 8px;
   }
 }
