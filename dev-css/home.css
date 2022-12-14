@@ -36,51 +36,6 @@ main{
 }
 
 /* News Feed */
-.newsfeed {
-  display: none;
-  margin: 16px 0 32px;
-}
-
-.newsfeed.active {
-  display: block;
-}
-
-.slider{
-  position: relative;
-  padding: 0 10px;
-  margin: 0;
-}
-
-.slider .arrow {
-  position: absolute;
-  left: 0;
-  top: 325px;
-  z-index: 1;
-  width: 40px;
-  height: 40px;
-  background-image: url("../assets/img/slider-arrow.png");
-  background-size: contain;
-  cursor: pointer;
-}
-
-.slider .arrow.slick-disabled {
-  background-image: url("../assets/img/slider-arrow-disabled.png");
-  cursor: default;
-}
-
-.slider .arrow.right{
-  position: absolute;
-  left: inherit;
-  right: 0;
-}
-
-.slider .arrow.right.slick-disabled {
-  background-image: url("../assets/img/slider-arrow-disabled.png");
-}
-
-.slick-slide {
-  margin: 0 9px;
-}
 
 .backgroundIframe{
   position: relative;
@@ -196,10 +151,6 @@ main{
 
   header {
     justify-content: flex-end;
-  }
-
-  .slider .arrow.right{
-    right: 0px;
   }
 
   .main article{

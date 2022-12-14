@@ -492,6 +492,49 @@ body {
 .headerNewsFeed .choiceContainer .time.active .listDates .dateOption::hover {
   color: #5786FF;
 }
+.newsfeed {
+  display: none;
+  margin: 16px 0 32px;
+}
+.newsfeed.active {
+  display: block;
+}
+.newsfeed .slider {
+  position: relative;
+  padding: 0 10px;
+  margin: 0;
+}
+.newsfeed .slider .arrow {
+  position: absolute;
+  left: 0;
+  top: 325px;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/slider-arrow.png");
+  background-size: contain;
+  cursor: pointer;
+}
+.newsfeed .slider .arrow.right {
+  position: absolute;
+  left: inherit;
+  right: 0;
+}
+@media screen and (min-width: 1024px) {
+  .newsfeed .slider .arrow.right {
+    right: 0;
+  }
+}
+.newsfeed .slider .arrow.right.slick-disabled {
+  background-image: url("../img/slider-arrow-disabled.png");
+}
+.newsfeed .slider .arrow.slick-disabled {
+  background-image: url("../img/slider-arrow-disabled.png");
+  cursor: default;
+}
+.newsfeed .slider .slick-slide {
+  margin: 0 8px;
+}
 .cardContainer {
   position: relative;
   height: auto;
