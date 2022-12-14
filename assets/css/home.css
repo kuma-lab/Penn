@@ -725,7 +725,7 @@ body {
   cursor: pointer;
 }
 .ranking .selectContainer .rankingChoiceContainer .rankingBubbleContainer img {
-  height: 20px;
+  height: 25px;
   width: auto;
   background: #edf2fb;
   margin: 2px;
