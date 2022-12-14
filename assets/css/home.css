@@ -74,6 +74,7 @@ body {
 @media screen and (min-width: 1024px) {
   .mainWrapper .side {
     width: 360px;
+    padding-top: 26px;
     padding-left: 16px;
     margin-top: 0;
   }
@@ -82,14 +83,14 @@ body {
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #f5f5f5;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
   background-color: #f5f5f5;
 }
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
+  border-radius: 8px;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, #c1d5f9), color-stop(0.72, #86b1f7), color-stop(0.86, #699bf7));
 }
 .headerSite {
@@ -264,10 +265,16 @@ body {
   display: flex;
   flex-direction: column;
   padding: 16px;
-  margin: 60px 0 16px 0;
+  margin: 64px 0 16px 0;
   background: #ffffff;
   border-radius: 20px;
   box-sizing: border-box;
+}
+@media screen and (min-width: 1024px) {
+  .potentialConnectionsBlock {
+    height: 456px;
+    padding-right: 8px;
+  }
 }
 .potentialConnectionsBlock .titleBlock {
   position: absolute;
@@ -289,6 +296,15 @@ body {
   font-weight: normal;
   text-transform: lowercase;
   cursor: pointer;
+}
+.potentialConnectionsBlock .potentialConnectionsList {
+  overflow-y: auto;
+  height: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .potentialConnectionsBlock .potentialConnectionsList {
+    padding-right: 8px;
+  }
 }
 .potentialConnectionsBlock .potentialConnectionsList .potentialConnectionWrapper {
   display: flex;
@@ -464,13 +480,7 @@ body {
 }
 .cardContainer {
   position: relative;
-  height: 530px;
-  margin: 18px 0;
-}
-@media screen and (min-width: 1024px) {
-  .cardContainer {
-    height: auto;
-  }
+  height: auto;
 }
 .cardContainer .bubble {
   position: absolute;
@@ -534,8 +544,15 @@ body {
   margin-bottom: 8px;
   font-weight: 700;
 }
+.authorCard .infos .keywordsList {
+  display: flex;
+  flex-wrap: wrap;
+}
 .authorCard .infos .keywordsItem {
-  margin: 4px 8px;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 50%;
+  padding: 4px 8px;
   font-size: 14px;
 }
 @media screen and (min-width: 1024px) {
@@ -630,8 +647,17 @@ body {
   background: #44cd45;
 }
 @media screen and (min-width: 1024px) {
+  .newsBlock {
+    height: 456px;
+    padding-right: 8px;
+  }
+  .newsBlock .newsList {
+    overflow-y: auto;
+    height: 100%;
+    padding-right: 8px;
+  }
   .newsBlock .newsList .newsWrapper {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
   }
   .newsBlock .newsList .name {
     font-size: 16px;
@@ -649,6 +675,11 @@ body {
   background: #ffffff;
   border-radius: 20px;
   box-sizing: border-box;
+}
+@media screen and (min-width: 1024px) {
+  .ranking {
+    height: 456px;
+  }
 }
 .ranking .titleBlock {
   position: absolute;
@@ -743,6 +774,8 @@ body {
 }
 .ranking .chart-horizontal {
   width: 100%;
+  padding-right: 8px;
+  overflow-y: auto;
 }
 .ranking .chart-horizontal .metric {
   margin-bottom: 3px;
