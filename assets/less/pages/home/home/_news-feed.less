@@ -1,0 +1,85 @@
+.newsfeed {
+    display: none;
+    margin: 16px 0 32px;
+
+    &.active {
+        display: block;
+    }
+
+    .slider{
+        position: relative;
+        padding: 0 10px;
+        margin: 0;
+
+        .arrow {
+            position: absolute;
+            left: 0;
+            top: 325px;
+            z-index: 1;
+            width: 40px;
+            height: 40px;
+            background-image: url("../img/slider-arrow.png");
+            background-size: contain;
+            cursor: pointer;
+
+            &.right {
+                position: absolute;
+                left: inherit;
+                right: 0;
+                transform: rotate(180deg);
+
+                @media screen and (min-width: 1024px) {
+                    right: 0;
+                }
+
+                &.slick-disabled {
+                    background-image: url("../img/slider-arrow-disabled.png");
+                }
+            }
+
+            &.slick-disabled {
+                background-image: url("../img/slider-arrow-disabled.png");
+                cursor: default;
+            }
+        }
+          
+        .slick-slide {
+            margin: 0 8px;
+        }
+
+        .backgroundIframe {
+            position: relative;
+            margin-bottom: -16px;
+            height: 300px;
+            padding: 8px ;
+            background-image: url(../img/rectangle.png);
+            border-radius: 16px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            .iframeContainer {
+                height: 315px;
+            }
+
+            .titleIframe {
+                padding: 8px 16px 0 16px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                line-height: initial;
+            }
+
+            .newsFeedThumb {
+                position: relative;
+                width: 100%;
+                height: 95%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: top center;
+            }
+        }
+    }
+}
