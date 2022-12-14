@@ -170,7 +170,10 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 754px;
   padding: 16px;
+  padding-right: 8px;
   margin: 30px 0 16px 0;
   background: #ffffff;
   border-radius: 20px;
@@ -197,51 +200,44 @@ body {
   text-transform: lowercase;
   cursor: pointer;
 }
-.connectionsBlock .connectionsList .connectionWrapper {
+.connectionsBlock .messagesList .messageContainer {
   display: flex;
   align-items: center;
   position: relative;
   margin: 8px 0;
 }
-.connectionsBlock .connectionsList .connectionWrapper:last-child {
-  margin-bottom: 0;
-}
-.connectionsBlock .connectionsList .avatar {
+.connectionsBlock .messagesList .avatar {
   height: 48px;
   border-radius: 16px;
 }
-.connectionsBlock .connectionsList .txtInfos {
-  color: #8e8c99;
+.connectionsBlock .messagesList .txtInfos {
   margin: 0 8px;
-  width: calc(100% - 96px);
+  width: calc(100% - 100px);
 }
-.connectionsBlock .connectionsList .txtInfos :last-of-type {
-  margin-top: 8px;
-  color: #070721;
-}
-.connectionsBlock .connectionsList .name {
-  margin-bottom: 4px;
-  line-height: 18px;
+.connectionsBlock .messagesList .name {
+  margin-bottom: 5px;
   font-weight: bold;
   font-size: 15px;
+  line-height: 18px;
   color: #070721;
   text-transform: capitalize;
 }
-.connectionsBlock .connectionsList .newsMessage {
+.connectionsBlock .messagesList .newsMessage {
   color: #5786FF;
 }
-.connectionsBlock .connectionsList .mainField {
-  margin-top: 4px;
-  line-height: 16px;
-  font-size: 12px;
+.connectionsBlock .messagesList .mainField {
+  color: #8e8c99;
 }
-.connectionsBlock .connectionsList .time {
+.connectionsBlock .messagesList .iconMsg {
+  width: 24px;
+}
+.connectionsBlock .messagesList .time {
   position: absolute;
   right: 0;
   font-size: 12px;
   color: #8e8c99;
 }
-.connectionsBlock .connectionsList .time::before {
+.connectionsBlock .messagesList .time::before {
   content: "";
   display: inline-block;
   width: 8px;
@@ -250,13 +246,14 @@ body {
   background: #44cd45;
 }
 @media screen and (min-width: 1024px) {
-  .connectionsBlock .connectionsList .connectionWrapper {
-    margin-bottom: 18px;
+  .connectionsBlock .messagesList {
+    height: 100%;
+    padding-right: 8px;
   }
-  .connectionsBlock .connectionsList .name {
+  .connectionsBlock .messagesList .name {
     font-size: 16px;
   }
-  .connectionsBlock .connectionsList .avatar {
+  .connectionsBlock .messagesList .avatar {
     height: 60px;
   }
 }
