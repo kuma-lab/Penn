@@ -593,7 +593,6 @@ body {
 }
 .newsBlock .newsList .newsWrapper {
   display: flex;
-  align-items: center;
   position: relative;
   margin: 8px 0;
 }
@@ -629,7 +628,11 @@ body {
   -webkit-box-orient: vertical;
   line-height: initial;
 }
+.newsBlock .newsList .iframeContainer {
+  height: 150px;
+}
 .newsBlock .newsList .newsMessage {
+  text-align: center;
   color: #5786FF;
 }
 .newsBlock .newsList .time {
