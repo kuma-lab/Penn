@@ -202,9 +202,12 @@ body {
 }
 .connectionsBlock .messagesList .messageContainer {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
-  margin: 8px 0;
+  margin: 8px 0 16px;
+}
+.connectionsBlock .messagesList .messageContainer::last-child {
+  margin-bottom: 8px;
 }
 .connectionsBlock .messagesList .avatar {
   height: 48px;
@@ -228,6 +231,15 @@ body {
 .connectionsBlock .messagesList .mainField {
   color: #8e8c99;
 }
+.connectionsBlock .messagesList .titleField {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: initial;
+  color: #8e8c99;
+}
 .connectionsBlock .messagesList .iconMsg {
   width: 24px;
 }
@@ -247,6 +259,7 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .connectionsBlock .messagesList {
+    overflow-y: auto;
     height: 100%;
     padding-right: 8px;
   }
