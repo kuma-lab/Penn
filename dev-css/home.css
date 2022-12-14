@@ -37,41 +37,6 @@ main{
 
 /* News Feed */
 
-.backgroundIframe{
-  position: relative;
-  margin-bottom: -16px;
-  height: 300px;
-  padding: 8px ;
-  background-image: url(../assets/img/rectangle.png);
-  border-radius: 16px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.backgroundIframe .iframeContainer{
-  height: 315px;
-}
-
-.backgroundIframe .titleIframe{
-  padding: 9px 18px 0 18px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  line-height: initial;
-}
-
-.newsFeedThumb{
-  position: relative;
-  width: 100%;
-  height: 95%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-}
-
 .talk .newsFeedThumb{
   background-position: center center;
 }
@@ -96,14 +61,6 @@ main{
 .avatarContainer .avatar{
   height: 60px;
   border-radius: 9px;
-}
-
-.arrow img{
-  width: 40px;
-}
-
-.arrow.right{
-  transform: rotate(180deg);
 }
 
 .lastConnection{
