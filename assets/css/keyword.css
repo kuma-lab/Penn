@@ -202,9 +202,12 @@ body {
 }
 .connectionsBlock .messagesList .messageContainer {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
-  margin: 8px 0;
+  margin: 8px 0 16px;
+}
+.connectionsBlock .messagesList .messageContainer::last-child {
+  margin-bottom: 8px;
 }
 .connectionsBlock .messagesList .avatar {
   height: 48px;
@@ -215,7 +218,7 @@ body {
   width: calc(100% - 100px);
 }
 .connectionsBlock .messagesList .name {
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   font-weight: bold;
   font-size: 15px;
   line-height: 18px;
@@ -226,6 +229,18 @@ body {
   color: #5786FF;
 }
 .connectionsBlock .messagesList .mainField {
+  font-size: 14px;
+  color: #8e8c99;
+}
+.connectionsBlock .messagesList .titleField {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 16px;
+  margin-top: 4px;
+  font-size: 14px;
   color: #8e8c99;
 }
 .connectionsBlock .messagesList .iconMsg {
@@ -247,6 +262,7 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .connectionsBlock .messagesList {
+    overflow-y: auto;
     height: 100%;
     padding-right: 8px;
   }
@@ -307,7 +323,7 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  margin: 8px 0;
+  margin: 8px 0 16px;
 }
 .potentialConnectionsBlock .potentialConnectionsList .potentialConnectionWrapper:last-child {
   margin-bottom: 0;
@@ -324,8 +340,9 @@ body {
   border-radius: 16px;
 }
 .potentialConnectionsBlock .potentialConnectionsList .txtInfos {
+  margin: 0 8px 4px;
+  font-size: 14px;
   color: #8e8c99;
-  margin: 0 8px;
 }
 .potentialConnectionsBlock .potentialConnectionsList .name {
   margin-left: 8px;
