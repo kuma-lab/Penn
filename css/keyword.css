@@ -309,7 +309,7 @@ header .logo{
 .mediaContainer .papers::before{  
   position: absolute;
   left: -30px;
-  background-image: url(../img/book.png);
+  background-image: url(../img/pdf.png);
   background-size: contain;
   display: inline-block;
   width: 30px;
