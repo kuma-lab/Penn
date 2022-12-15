@@ -720,6 +720,10 @@ body {
 .newsBlock .newsList .iframeContainer {
   height: 150px;
 }
+.newsBlock .newsList .newsFeedThumb {
+  height: 150px;
+  background-size: cover;
+}
 .newsBlock .newsList .newsMessage {
   text-align: center;
   color: #5786FF;
