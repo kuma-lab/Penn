@@ -700,8 +700,7 @@ body {
   width: calc(100% - 96px);
 }
 .newsBlock .newsList .txtInfos :last-of-type {
-  margin-top: 8px;
-  color: #070721;
+  margin: 25px 0;
 }
 .newsBlock .newsList .name {
   margin-bottom: 4px;
@@ -710,6 +709,12 @@ body {
   font-size: 15px;
   color: #070721;
   text-transform: capitalize;
+}
+.newsBlock .newsList .previewMessage {
+  background: #5686ff;
+  color: white;
+  padding: 8px;
+  border-radius: 13px;
 }
 .newsBlock .newsList .mainField {
   overflow: hidden;
