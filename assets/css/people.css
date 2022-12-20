@@ -508,11 +508,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  padding: 8px 0 0 24px;
+  padding: 16px 0 0 24px;
 }
 @media screen and (min-width: 1366px) {
   .authorIdentity .whoIAm .keywords {
-    padding: 8px 0 0 120px;
+    padding: 16px 0 0 77px;
   }
 }
 .authorIdentity .whoIAm .keywords .listKeywords {
