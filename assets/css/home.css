@@ -541,6 +541,7 @@ body {
   margin-bottom: -16px;
   height: 300px;
   padding: 8px;
+  padding-bottom: 30px;
   background-image: url(../img/rectangle.png);
   border-radius: 16px;
   background-repeat: no-repeat;
