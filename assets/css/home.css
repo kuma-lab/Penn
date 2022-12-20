@@ -663,7 +663,7 @@ body {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   line-height: initial;
-  height: 20px;
+  height: 21px;
 }
 @media screen and (min-width: 1024px) {
   .authorCard .infos .keywordsItem {
