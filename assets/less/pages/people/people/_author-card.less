@@ -147,9 +147,22 @@
                 width: 100%;
                 margin-right: 0;
                 list-style: none;
+                display: flex;
+                flex-wrap: wrap;
 
                 li {
                     margin-bottom: 9px;
+                    display: -webkit-box;
+                    box-sizing: border-box;
+                    width: 50%;
+                    padding: 4px 8px;
+                    font-size: 14px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    line-height: initial;
+                    height: 26px;
                 }
 
                 @media screen and (min-width: 1366px) {
