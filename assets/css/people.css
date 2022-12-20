@@ -526,7 +526,7 @@ body {
   margin-bottom: 9px;
   display: -webkit-box;
   box-sizing: border-box;
-  width: 50%;
+  width: 150px;
   padding: 4px 8px;
   font-size: 14px;
   overflow: hidden;
@@ -534,7 +534,7 @@ body {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   line-height: initial;
-  height: 26px;
+  height: 19px;
 }
 @media screen and (min-width: 1366px) {
   .authorIdentity .whoIAm .keywords .listKeywords {
