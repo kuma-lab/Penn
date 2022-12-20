@@ -621,6 +621,13 @@ body {
 .authorCard .infos .infosItem.titleIframe {
   font-weight: 700;
   margin-top: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  line-height: initial;
+  margin-bottom: 9px;
 }
 .authorCard .infos .titleWording {
   margin-right: 8px;
