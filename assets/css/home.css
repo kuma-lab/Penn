@@ -597,6 +597,12 @@ body {
   height: 56px;
   border-radius: 8px;
 }
+.authorCard .avatarContainer .authorContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
 .authorCard .avatarContainer .authorName {
   padding-left: 8px;
   font-weight: bold;
