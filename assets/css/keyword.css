@@ -32,7 +32,7 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .mainWrapper .main {
-    width: calc(100% - 320px);
+    width: calc(100% - 360px);
   }
 }
 .mainWrapper .main .pageTitle {
