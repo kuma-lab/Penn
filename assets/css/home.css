@@ -514,7 +514,7 @@ body {
   display: flex;
 }
 .headerNewsFeed .choiceContainer .time.active .listDates .dateOption {
-  margin-top: 8px;
+  padding: 8px;
 }
 .headerNewsFeed .choiceContainer .time.active .listDates .dateOption::last-of-type {
   margin-bottom: 8px;
