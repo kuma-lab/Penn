@@ -83,7 +83,8 @@ main{
 
 @media screen and (min-width: 1024px) {
 
-  body .headerSite .linkToHome .logo{
+  /* ne pas supprimer leger ecart dù au slider */
+  body .headerSite .linkToHome .logo{ 
     left: 24px;
   }
 
