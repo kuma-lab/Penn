@@ -364,7 +364,6 @@ body {
 }
 .listArticlesByYears .connectionWrapper {
   display: flex;
-  justify-content: center;
   margin-bottom: 9px;
 }
 .listArticlesByYears .connectionWrapper .avatarContainer {
