@@ -521,7 +521,7 @@ body {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   line-height: initial;
-  height: 19px;
+  height: 21px;
   cursor: pointer;
 }
 @media screen and (min-width: 480px) {
