@@ -83,10 +83,8 @@ main{
 
 @media screen and (min-width: 1024px) {
 
-  header .logo{
-    position: absolute;
-    left: 9px;
-    height: 60px;
+  body .headerSite .linkToHome .logo{
+    left: 24px;
   }
 
   p, span {
