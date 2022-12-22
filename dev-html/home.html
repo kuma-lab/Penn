@@ -1668,21 +1668,25 @@
     <script>
       // News link with feed's publications
       const newsList = document.querySelectorAll('.newsWrapper[data-content-id]')
-      const allFeedCta = document.querySelectorAll('.bubbleContainer.all')[0]
+      const allFeedCta = document.querySelector('.bubbleContainer.all')
 
       for (let newsElt of newsList) {
         newsElt.addEventListener('click', function(e) {
           newsId = newsElt.getAttribute('data-content-id')
-          console.log('newsId',newsId)
 
           // 1 - click on allfeed CTA
           activateNewsFeed('all')
-          simulateClick(allFeedCta)
+          for (let choice of choices) {
+            choice.classList.add('active')
+          }
 
-          // 2 - find data-content-id on newsfeed all element
-          // 3 - calculate index position of this slide
-          // 4 - go to this slide
-          // 5 - scroll to the newsfeed all
+          // 2 - find data-content-id on newsfeed all element and calculate index position of this slide
+          let indexRightSlide = document.querySelector('.newsfeed.all .slickContainer .cardContainer[data-content-id="' + newsId + '"]').closest(".slick-slide").getAttribute('data-slick-index')
+
+          // 3 - go to this slide
+          $('.newsfeed.all .slickContainer').slick('slickGoTo', indexRightSlide)
+
+          // 4 - scroll to the newsfeed all
           allFeedCta.scrollIntoView({ behavior: 'smooth'});
         })
       }
