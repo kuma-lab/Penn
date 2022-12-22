@@ -726,6 +726,7 @@ body {
 .newsBlock .newsList .avatar {
   height: 48px;
   border-radius: 16px;
+  cursor: pointer;
 }
 .newsBlock .newsList .txtInfos {
   color: #8e8c99;
