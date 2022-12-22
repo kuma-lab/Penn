@@ -611,3 +611,89 @@ body {
     font-size: 16px;
   }
 }
+.containerListsArticles .papers,
+.containerListsArticles .talks,
+.containerListsArticles .press {
+  height: 660px;
+}
+@media (min-width: 1024px) {
+  .containerListsArticles .papers,
+  .containerListsArticles .talks,
+  .containerListsArticles .press {
+    margin-right: 16px;
+  }
+}
+.containerListsArticles .papers:last-child,
+.containerListsArticles .talks:last-child,
+.containerListsArticles .press:last-child {
+  margin-right: 0;
+}
+@media (min-width: 1366px) {
+  .containerListsArticles .papers:last-child,
+  .containerListsArticles .talks:last-child,
+  .containerListsArticles .press:last-child {
+    margin-right: 16px;
+  }
+}
+.containerListsArticles .mediaContainer {
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+}
+.containerListsArticles .mediaContainer div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.containerListsArticles .mediaContainer > div {
+  padding-top: 8px;
+}
+.containerListsArticles .mediaContainer .bubbleContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 8px 16px;
+}
+.containerListsArticles .mediaContainer .bubbleContainer img {
+  height: 20px;
+}
+.containerListsArticles .mediaContainer .bubbleContainer span {
+  padding: 0 8px;
+  font-weight: bolder;
+}
+.containerListsArticles .mediaContainer li {
+  margin: 0 16px;
+  text-transform: capitalize;
+  padding: 5px 0;
+}
+.containerListsArticles .mediaContainer .year {
+  margin: 0;
+  color: #5786FF;
+  font-size: 16px;
+  font-weight: bold;
+  list-style: none;
+}
+.containerListsArticles .mediaContainer .listArticlesByYears {
+  flex-direction: column;
+  overflow: auto;
+  height: 600px;
+  justify-content: start;
+}
+.containerListsArticles .mediaContainer .listArticlesByYears li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+}
+.containerListsArticles .mediaContainer .listArticlesByYears .icon {
+  height: 12px;
+  width: auto;
+  padding-right: 6px;
+}
+.containerListsArticles .mediaContainer .listArticlesByYear {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 8px 16px 16px;
+  width: 85%;
+}

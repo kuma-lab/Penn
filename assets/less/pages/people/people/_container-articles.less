@@ -1,0 +1,93 @@
+.containerListsArticles {
+    .papers, 
+    .talks,
+    .press {
+        height: 660px;
+
+        @media(min-width: 1024px) {
+            margin-right: 16px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+
+            @media(min-width: 1366px) {
+                margin-right: 16px;
+            }
+        }
+    }
+
+    .mediaContainer {
+        width: 100%;
+        background: white;
+        border-radius: 20px;
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        & > div {
+            padding-top: 8px;
+        }
+
+        .bubbleContainer {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 8px 16px;
+
+            img {
+                height: 20px;
+            }
+
+            span {
+                padding: 0 8px;
+                font-weight: bolder;
+            }
+        }
+
+        li {
+            margin: 0 16px;
+            text-transform: capitalize;
+            padding: 5px 0;
+        }
+
+        .year {
+            margin: 0;
+            color: #5786FF;
+            font-size: 16px;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        .listArticlesByYears {
+            flex-direction: column;
+            overflow: auto;
+            height: 600px;
+            justify-content: start;
+
+            li {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                list-style: none;
+            }
+
+            .icon{
+                height: 12px;
+                width: auto;
+                padding-right: 6px;
+            }
+        }
+
+        .listArticlesByYear {
+            display: flex;
+            flex-wrap: wrap;    
+            flex-direction: column;
+            padding: 8px 16px 16px;
+            width: 85%;
+        }
+    }
+}
