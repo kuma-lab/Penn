@@ -2,8 +2,8 @@
     @media(min-width: 1024px) {
         display: flex;
     }
-    
-    .papers, 
+
+    .papers,
     .talks,
     .press {
         height: 660px;
@@ -32,7 +32,7 @@
             justify-content: space-between;
         }
 
-        & > div {
+        &>div {
             padding-top: 8px;
         }
 
@@ -64,6 +64,7 @@
             font-size: 16px;
             font-weight: bold;
             list-style: none;
+            cursor: initial !important;
         }
 
         .listArticlesByYears {
@@ -77,9 +78,10 @@
                 flex-direction: row;
                 align-items: center;
                 list-style: none;
+                cursor: pointer;
             }
 
-            .icon{
+            .icon {
                 height: 12px;
                 width: auto;
                 padding-right: 6px;
@@ -88,7 +90,7 @@
 
         .listArticlesByYear {
             display: flex;
-            flex-wrap: wrap;    
+            flex-wrap: wrap;
             flex-direction: column;
             padding: 8px 16px 16px;
             width: 85%;

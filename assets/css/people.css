@@ -206,6 +206,7 @@ body {
 .connectionsBlock .messagesList .avatar {
   height: 48px;
   border-radius: 16px;
+  cursor: pointer;
 }
 .connectionsBlock .messagesList .txtInfos {
   margin: 0 8px;
@@ -218,6 +219,7 @@ body {
   line-height: 18px;
   color: #070721;
   text-transform: capitalize;
+  cursor: pointer;
 }
 .connectionsBlock .messagesList .newsMessage {
   color: #5786FF;
@@ -239,20 +241,7 @@ body {
 }
 .connectionsBlock .messagesList .iconMsg {
   width: 24px;
-}
-.connectionsBlock .messagesList .time {
-  position: absolute;
-  right: 0;
-  font-size: 12px;
-  color: #8e8c99;
-}
-.connectionsBlock .messagesList .time::before {
-  content: "";
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #44cd45;
+  cursor: pointer;
 }
 @media screen and (min-width: 1024px) {
   .connectionsBlock .messagesList {
@@ -332,6 +321,7 @@ body {
 .potentialConnectionsBlock .potentialConnectionsList .avatar {
   height: 48px;
   border-radius: 16px;
+  cursor: pointer;
 }
 .potentialConnectionsBlock .potentialConnectionsList .txtInfos {
   margin: 0 8px 4px;
@@ -346,6 +336,7 @@ body {
   font-size: 15px;
   color: #070721;
   text-transform: capitalize;
+  cursor: pointer;
 }
 .potentialConnectionsBlock .potentialConnectionsList .follow {
   position: absolute;
@@ -531,6 +522,7 @@ body {
   -webkit-box-orient: vertical;
   line-height: initial;
   height: 19px;
+  cursor: pointer;
 }
 @media screen and (min-width: 480px) {
   .authorIdentity .whoIAm .keywords .listKeywords li {
@@ -673,6 +665,7 @@ body {
   font-size: 16px;
   font-weight: bold;
   list-style: none;
+  cursor: initial !important;
 }
 .containerListsArticles .mediaContainer .listArticlesByYears {
   flex-direction: column;
@@ -685,6 +678,7 @@ body {
   flex-direction: row;
   align-items: center;
   list-style: none;
+  cursor: pointer;
 }
 .containerListsArticles .mediaContainer .listArticlesByYears .icon {
   height: 12px;

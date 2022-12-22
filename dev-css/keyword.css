@@ -104,26 +104,6 @@ section {
   width: calc(100% - 149px);
 }
 
-.listArticlesByYears .connectionWrapper{
-  display: flex;
-  justify-content: center;
-  margin-bottom: 9px;
-
-}
-.listArticlesByYears .connectionWrapper .avatarContainer {
-  padding-right: 9px;
-}
-
-.listArticlesByYears .connectionWrapper .avatarContainer .avatar{
-  height: 48px;
-  border-radius: 16px;
-}
-
-.listArticlesByYears .connectionWrapper .txtInfos .mainField{
-  margin-top: 0;
-}
-
-
 @media screen and (min-width: 1024px) {
   main{
     flex-direction: row;
