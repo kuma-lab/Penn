@@ -604,26 +604,26 @@ body {
     display: flex;
   }
 }
-.containerListsArticles .papers,
-.containerListsArticles .talks,
+.containerListsArticles .pub,
+.containerListsArticles .talk,
 .containerListsArticles .press {
   height: 660px;
 }
 @media (min-width: 1024px) {
-  .containerListsArticles .papers,
-  .containerListsArticles .talks,
+  .containerListsArticles .pub,
+  .containerListsArticles .talk,
   .containerListsArticles .press {
     margin-right: 16px;
   }
 }
-.containerListsArticles .papers:last-child,
-.containerListsArticles .talks:last-child,
+.containerListsArticles .pub:last-child,
+.containerListsArticles .talk:last-child,
 .containerListsArticles .press:last-child {
   margin-right: 0;
 }
 @media (min-width: 1366px) {
-  .containerListsArticles .papers:last-child,
-  .containerListsArticles .talks:last-child,
+  .containerListsArticles .pub:last-child,
+  .containerListsArticles .talk:last-child,
   .containerListsArticles .press:last-child {
     margin-right: 16px;
   }
