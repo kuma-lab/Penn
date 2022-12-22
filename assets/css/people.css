@@ -116,7 +116,7 @@ body {
 @media screen and (min-width: 1024px) {
   .headerSite .linkToHome .logo {
     position: absolute;
-    left: 24px;
+    left: 16px;
     height: 64px;
   }
 }
