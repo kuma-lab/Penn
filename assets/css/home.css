@@ -373,6 +373,17 @@ body {
 }
 .headerNewsFeed {
   position: relative;
+  height: 160px;
+}
+@media screen and (min-width: 520px) {
+  .headerNewsFeed {
+    height: 112px;
+  }
+}
+@media screen and (min-width: 640px) {
+  .headerNewsFeed {
+    height: inherit;
+  }
 }
 .headerNewsFeed .choiceContainer {
   position: relative;
@@ -389,7 +400,7 @@ body {
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  margin: 0 10px;
+  margin: 0 10px 16px;
   width: 100px;
   font-size: 14px;
   color: #000000;
@@ -397,6 +408,12 @@ body {
   cursor: pointer;
   padding: 8px 0;
   border-radius: 25px;
+}
+@media screen and (min-width: 640px) {
+  .headerNewsFeed .choiceContainer .bubbleContainer,
+  .headerNewsFeed .choiceContainer .time {
+    margin: 0 10px;
+  }
 }
 @media screen and (min-width: 1024px) {
   .headerNewsFeed .choiceContainer .bubbleContainer {
@@ -410,12 +427,19 @@ body {
 .headerNewsFeed .choiceContainer .bubbleContainer.all.active .time {
   z-index: 3;
 }
+.headerNewsFeed .choiceContainer .bubbleContainer.all.active ~ .bubbleContainer {
+  color: #000;
+  background: #fff;
+}
+.headerNewsFeed .choiceContainer .bubbleContainer.all.active ~ .bubbleContainer .selectIcon {
+  background: #fff;
+}
 .headerNewsFeed .choiceContainer .bubbleContainer .selectIcon {
   margin: 2px;
   padding: 2px;
   height: 20px;
   width: auto;
-  background: #ffff;
+  background: #fff;
 }
 .headerNewsFeed .choiceContainer .bubbleContainer .selectWording,
 .headerNewsFeed .choiceContainer .bubbleContainer .titleAll {
@@ -423,7 +447,7 @@ body {
 }
 .headerNewsFeed .choiceContainer .bubbleContainer.active {
   background-color: #5786FF;
-  color: #ffff;
+  color: #fff;
 }
 .headerNewsFeed .choiceContainer .bubbleContainer.active .time {
   display: flex;
@@ -440,7 +464,7 @@ body {
   display: none;
   position: absolute;
   z-index: 2;
-  top: 64px;
+  top: 120px;
   right: 50%;
   width: 300px;
   height: 28px;
@@ -448,7 +472,12 @@ body {
   border-right: none;
   border-radius: 40px;
 }
-@media (min-width: 600px) {
+@media (min-width: 520px) {
+  .headerNewsFeed .choiceContainer .time {
+    top: 64px;
+  }
+}
+@media (min-width: 640px) {
   .headerNewsFeed .choiceContainer .time {
     right: 0;
     top: 0;
