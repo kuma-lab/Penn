@@ -384,7 +384,7 @@ body {
     margin-right: 16px;
   }
 }
-.listArticlesByYears .listArticles .txtInfos {
+.listArticlesByYears .listArticles .name {
   cursor: pointer;
 }
 .listArticlesByYears .listArticles .year {
