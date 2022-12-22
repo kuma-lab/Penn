@@ -112,6 +112,7 @@ body {
   top: 16px;
   right: 27px;
   height: 40px;
+  cursor: pointer;
 }
 @media screen and (min-width: 1024px) {
   .headerSite .linkToHome .logo {
@@ -147,18 +148,10 @@ body {
   margin-left: 8px;
   border: none;
 }
-.headerSite .notification {
-  display: flex;
-  align-items: center;
-  padding: 8px;
-  margin-right: 8px;
-  background-color: #fff;
-  border-radius: 20px;
-  cursor: pointer;
-}
 .headerSite .avatar {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .headerSite .avatar .avatarImage {
   display: flex;
@@ -624,6 +617,7 @@ body {
 .authorCard .avatarContainer .avatar {
   height: 56px;
   border-radius: 8px;
+  cursor: pointer;
 }
 .authorCard .avatarContainer .authorContainer {
   display: flex;
@@ -637,6 +631,7 @@ body {
   line-height: 21px;
   color: #070721;
   text-transform: capitalize;
+  cursor: pointer;
 }
 .authorCard .avatarContainer .authorName + .infosItem {
   margin-left: 8px;
@@ -691,6 +686,7 @@ body {
   -webkit-box-orient: vertical;
   line-height: initial;
   height: 25px;
+  cursor: pointer;
 }
 @media screen and (min-width: 1024px) {
   .authorCard .infos .keywordsItem {
@@ -745,16 +741,15 @@ body {
   margin: 0 8px;
   width: calc(100% - 96px);
 }
-.newsBlock .newsList .txtInfos :last-of-type {
-  margin: 25px 0;
-}
 .newsBlock .newsList .name {
-  margin-bottom: 4px;
+  display: inline-block;
+  margin: 25px 0;
   line-height: 18px;
   font-weight: bold;
   font-size: 15px;
   color: #070721;
   text-transform: capitalize;
+  cursor: pointer;
 }
 .newsBlock .newsList .previewMessage {
   background: #5686ff;
@@ -772,6 +767,7 @@ body {
 }
 .newsBlock .newsList .iframeContainer {
   height: 150px;
+  cursor: pointer;
 }
 .newsBlock .newsList .newsFeedThumb {
   height: 150px;
@@ -780,6 +776,7 @@ body {
 .newsBlock .newsList .newsMessage {
   text-align: center;
   color: #5786FF;
+  cursor: pointer;
 }
 .newsBlock .newsList .message {
   position: absolute;

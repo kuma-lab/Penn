@@ -112,6 +112,7 @@ body {
   top: 16px;
   right: 27px;
   height: 40px;
+  cursor: pointer;
 }
 @media screen and (min-width: 1024px) {
   .headerSite .linkToHome .logo {
@@ -147,18 +148,10 @@ body {
   margin-left: 8px;
   border: none;
 }
-.headerSite .notification {
-  display: flex;
-  align-items: center;
-  padding: 8px;
-  margin-right: 8px;
-  background-color: #fff;
-  border-radius: 20px;
-  cursor: pointer;
-}
 .headerSite .avatar {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .headerSite .avatar .avatarImage {
   display: flex;
@@ -390,6 +383,9 @@ body {
     width: 47%;
     margin-right: 16px;
   }
+}
+.listArticlesByYears .listArticles .txtInfos {
+  cursor: pointer;
 }
 .listArticlesByYears .listArticles .year {
   margin: 16px 0;
