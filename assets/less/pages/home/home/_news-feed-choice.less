@@ -1,5 +1,14 @@
 .headerNewsFeed {
     position: relative;
+    height: 160px;
+
+    @media screen and (min-width: 520px) {
+        height: 112px;
+    }
+
+    @media screen and (min-width: 640px) {
+        height: inherit;
+    }
 
     .choiceContainer {
         position: relative;
@@ -16,7 +25,7 @@
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            margin: 0 10px;
+            margin: 0 10px 16px;
             width: 100px;
             font-size: 14px;
             color: #000000;
@@ -25,6 +34,10 @@
             // border-right: #070721 solid 1px;
             padding: 8px 0;
             border-radius: 25px;
+
+            @media screen and (min-width: 640px) {
+                margin: 0 10px;
+            }
         }
 
         .bubbleContainer {
@@ -41,8 +54,19 @@
             &.all {
                 // border-radius: 40px 0px 0px 40px;
 
-                &.active .time {
-                    z-index: 3;
+                &.active {
+                    .time {
+                        z-index: 3;
+                    }
+
+                    ~ .bubbleContainer {
+                        color: #000;
+                        background: #fff;
+
+                        .selectIcon {
+                            background: #fff;
+                        }
+                    }
                 }
             }
 
@@ -51,7 +75,7 @@
                 padding: 2px;
                 height: 20px;
                 width: auto;
-                background: #ffff;
+                background: #fff;
             }
 
             .selectWording,
@@ -61,7 +85,7 @@
 
             &.active {
                 background-color: #5786FF;
-                color: #ffff;
+                color: #fff;
 
                 .time {
                     display: flex;
@@ -83,7 +107,7 @@
             display: none;
             position: absolute;
             z-index: 2;
-            top: 64px;
+            top: 120px;
             right: 50%;
             width: 300px;
             height: 28px;
@@ -91,7 +115,11 @@
             border-right: none;
             border-radius: 40px;
 
-            @media(min-width: 600px) {
+            @media(min-width: 520px) {
+                top: 64px;
+            }
+
+            @media(min-width: 640px) {
                 right: 0;
                 top: 0;
                 width: 100px;
