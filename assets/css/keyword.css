@@ -365,6 +365,7 @@ body {
 .listArticlesByYears .connectionWrapper {
   display: flex;
   margin-bottom: 9px;
+  cursor: pointer;
 }
 .listArticlesByYears .connectionWrapper .avatarContainer {
   padding-right: 9px;
@@ -397,7 +398,6 @@ body {
   line-height: 18px;
   color: #070721;
   text-transform: capitalize;
-  cursor: pointer;
 }
 .listArticlesByYears .listArticles .year {
   margin: 16px 0;
