@@ -47,6 +47,7 @@ body {
 @media screen and (min-width: 1024px) {
   .mainWrapper .main .secondContent {
     margin-top: 16px;
+    margin-left: 9px;
   }
 }
 .mainWrapper .main .secondContent section {
@@ -115,7 +116,7 @@ body {
 @media screen and (min-width: 1024px) {
   .headerSite .linkToHome .logo {
     position: absolute;
-    left: 8px;
+    left: 24px;
     height: 64px;
   }
 }
