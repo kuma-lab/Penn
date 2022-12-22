@@ -104,6 +104,7 @@ section {
   width: calc(100% - 149px);
 }
 
+
 @media screen and (min-width: 1024px) {
   main{
     flex-direction: row;
