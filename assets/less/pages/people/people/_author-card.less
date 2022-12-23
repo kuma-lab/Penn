@@ -36,10 +36,28 @@
 
         .title {
             width: 100%;
+            position: relative;
 
             @media screen and (min-width: 1366px) {
                 width: 50%;
                 padding-top: 36px;
+            }
+
+            .follow {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                padding: 8px;
+                width: 70px;
+                height: 18px;
+                font-size: 14px;
+                text-decoration: none;
+                color: white;
+                border-radius: 12px;
+                background-color: #5786FF;
             }
         }
 

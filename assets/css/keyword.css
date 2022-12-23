@@ -378,6 +378,19 @@ body {
 .listArticlesByYears .connectionWrapper .txtInfos .mainField {
   margin-top: 0;
 }
+.listArticlesByYears .connectionWrapper .follow {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 8px;
+  width: 70px;
+  height: 18px;
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+  border-radius: 12px;
+  background-color: #5786FF;
+}
 .listArticlesByYears .listArticles {
   box-sizing: border-box;
   width: 100%;
