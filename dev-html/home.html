@@ -1623,15 +1623,18 @@
       /****************************************************
       /*  Save slide active after each slider event
       *****************************************************/
+      function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+      }
+
+      // Save currentSlide for each category
       $('.newsfeed.' + category + ' .slickContainer').on('afterChange', function(event, slick, currentSlide) {
         // Save category feed on localStorage
-        localStorage.setItem('slide', currentSlide)
+        localStorage.setItem('slide' + capitalizeFirstLetter(category), currentSlide)
       });
 
-      // TO DO : for each slider and no just the same index for all
-      if(localStorage.getItem('slide')) {
-        $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', localStorage.getItem('slide'))
-      }
+      // If currentSlide of category saved, go to the right slide
+      if(localStorage.getItem('slide' + capitalizeFirstLetter(category))) $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', localStorage.getItem('slide' + capitalizeFirstLetter(category)))
 
       /**************************
       /* Create Select Button
@@ -1658,6 +1661,8 @@
 	  }
 	  
     $(document).ready(function(){
+      initSlick('pub');
+
       // Active right feed with localStorage
       if(localStorage.getItem('feed')) {
         switch(localStorage.getItem('feed')) {
@@ -1676,7 +1681,8 @@
             activateNewsCta('press')
             break;
           default:
-            initSlick('pub');
+            activateNewsFeed('pub')
+            activateNewsCta('pub')
         }
       }
     });
