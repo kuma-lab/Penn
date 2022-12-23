@@ -378,11 +378,7 @@
                     </div>
                     <div class="iconContainer">
                       <img src="../assets/img/fire.png" alt="" class="bubble all">
-<<<<<<< HEAD
-                      <img src="../assets/img/youtube.png" alt="" class="bubble pub">
-=======
-                      <img src="../assets/img/pdf.png" alt="" class="bubble talk">
->>>>>>> 5ef9e43... localstorage feed
+                      <img src="../assets/img/youtube.png" alt="" class="bubble talk">
                     </div>
                 </div>
                 <div class="cardContainer talk" data-content-year="2015" data-content-id="1888">
@@ -1617,11 +1613,25 @@
       /****************************************************
       /*  Change date when user clic on an arrow sliders
       *****************************************************/
-      $('.newsfeed.' + category + ' .slickContainer').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+      $('.newsfeed.' + category + ' .slickContainer').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
         let currentSlideDom = document.querySelectorAll('.newsfeed.' + category + ' .slickContainer .slick-slide')[nextSlide]
         const year = currentSlideDom.firstChild.firstChild.getAttribute('data-content-year')
         document.querySelector('.headerNewsFeed .bubbleContainer.active .selectedDate').innerText = year
       });
+
+
+      /****************************************************
+      /*  Save slide active after each slider event
+      *****************************************************/
+      $('.newsfeed.' + category + ' .slickContainer').on('afterChange', function(event, slick, currentSlide) {
+        // Save category feed on localStorage
+        localStorage.setItem('slide', currentSlide)
+      });
+
+      // TO DO : for each slider and no just the same index for all
+      if(localStorage.getItem('slide')) {
+        $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', localStorage.getItem('slide'))
+      }
 
       /**************************
       /* Create Select Button
@@ -1784,7 +1794,6 @@
       // News link with feed's publications
       const newsList = document.querySelectorAll('.newsWrapper[data-content-id]')
       const allFeedCta = document.querySelector('.bubbleContainer.all')
-
       
       for (let newsElt of newsList) {
         newsElt.addEventListener('click', function(e) {
@@ -1813,14 +1822,12 @@
           // 4 - scroll to the newsfeed all
           allFeedCta.scrollIntoView({ behavior: 'smooth'});
 
-          //5 remove class active when click in body 
-
+          // 5 - remove class active when click in body 
           overlayBody.addEventListener('click',function(e){
             choice.classList.remove('active')
-
           })
-           //6 Close Select Button when user clic outside
 
+          // 6 - Remove active class when user clic outside
           const removeClickEventNews = function(e) { 
             const classNamesTime = ['newsList','newsWrapper','avatarContainer','avatar','txtInfos','name','iframeContainer','newsFeedThumb','newsMessage ']
             if (!classNamesTime.some(classNameTime => e.target.classList.contains(classNameTime))) {
