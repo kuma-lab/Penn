@@ -513,6 +513,9 @@ body {
 .newsfeed.active {
   display: block;
 }
+.newsfeed.all .slider .iconContainer .all {
+  right: 40px;
+}
 .newsfeed .slider {
   position: relative;
   margin: 0;
