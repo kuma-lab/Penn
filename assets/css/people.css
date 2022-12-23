@@ -503,11 +503,28 @@ body {
   }
 }
 .authorIdentity .whoIAm .keywords .listKeywords {
-  width: 100%;
-  margin-right: 0;
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
+  columns: 1;
+}
+@media screen and (min-width: 480px) {
+  .authorIdentity .whoIAm .keywords .listKeywords {
+    columns: 2;
+  }
+}
+@media screen and (min-width: 640px) {
+  .authorIdentity .whoIAm .keywords .listKeywords {
+    columns: 3;
+  }
+}
+@media screen and (min-width: 840px) {
+  .authorIdentity .whoIAm .keywords .listKeywords {
+    columns: 4;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .authorIdentity .whoIAm .keywords .listKeywords {
+    columns: 5;
+  }
 }
 .authorIdentity .whoIAm .keywords .listKeywords li {
   margin-bottom: 9px;
@@ -523,26 +540,6 @@ body {
   line-height: initial;
   height: 21px;
   cursor: pointer;
-}
-@media screen and (min-width: 480px) {
-  .authorIdentity .whoIAm .keywords .listKeywords li {
-    width: 50%;
-  }
-}
-@media screen and (min-width: 640px) {
-  .authorIdentity .whoIAm .keywords .listKeywords li {
-    width: 33%;
-  }
-}
-@media screen and (min-width: 840px) {
-  .authorIdentity .whoIAm .keywords .listKeywords li {
-    width: 25%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .authorIdentity .whoIAm .keywords .listKeywords li {
-    width: 20%;
-  }
 }
 @media screen and (min-width: 1366px) {
   .authorIdentity .whoIAm .keywords .listKeywords {
