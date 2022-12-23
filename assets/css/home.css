@@ -513,8 +513,8 @@ body {
 .newsfeed.active {
   display: block;
 }
-.newsfeed.all .slider .iconContainer .all {
-  right: 40px;
+.newsfeed.all .cardContainer .iconContainer .all {
+  display: inline-block;
 }
 .newsfeed .slider {
   position: relative;
@@ -590,12 +590,16 @@ body {
   position: relative;
   height: auto;
 }
-.cardContainer .bubble {
+.cardContainer .iconContainer .bubble {
   position: absolute;
   bottom: 8px;
   right: 8px;
   height: 20px;
   padding: 5px;
+}
+.cardContainer .iconContainer .all {
+  right: 40px;
+  display: none;
 }
 .authorCard {
   height: 414px;
