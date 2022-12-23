@@ -1649,7 +1649,7 @@
 
       // Select Date feature
       const selectsDate = document.querySelectorAll('.time')
-      const overlaySelect = document.body;
+      const overlayBody = document.body;
 
       for (let selectDate of selectsDate) {
         selectDate.addEventListener('click', function (e) {
@@ -1662,10 +1662,10 @@
             if (!classNamesTime.some(classNameTime => e.target.classList.contains(classNameTime))) {
               // Hide all select Button Open
               closeSelectDate()
-              overlaySelect.removeEventListener('click', removeClickEvent)
+              overlayBody.removeEventListener('click', removeClickEvent)
             }
           }
-          overlaySelect.addEventListener('click', removeClickEvent);
+          overlayBody.addEventListener('click', removeClickEvent);
 
           // Configure each options of selectDate
           const optionsDate = selectDate.querySelectorAll('.listDates li')
@@ -1695,9 +1695,14 @@
       const newsList = document.querySelectorAll('.newsWrapper[data-content-id]')
       const allFeedCta = document.querySelector('.bubbleContainer.all')
 
+      
       for (let newsElt of newsList) {
         newsElt.addEventListener('click', function(e) {
-          newsElt.classList.add('active');
+
+          for (let newsElt of newsList) {
+            newsElt.classList.remove('active')
+          }
+          newsElt.classList.add('active')
           newsId = newsElt.getAttribute('data-content-id');
 
           // 1 - click on allfeed CTA
@@ -1714,6 +1719,24 @@
 
           // 4 - scroll to the newsfeed all
           allFeedCta.scrollIntoView({ behavior: 'smooth'});
+
+          //5 remove class active when click in body 
+
+          overlayBody.addEventListener('click',function(e){
+            choice.classList.remove('active')
+
+          })
+           //6 Close Select Button when user clic outside
+
+          const removeClickEventNews = function(e) { 
+            const classNamesTime = ['newsList','newsWrapper','avatarContainer','avatar','txtInfos','name','iframeContainer','newsFeedThumb','newsMessage ']
+            if (!classNamesTime.some(classNameTime => e.target.classList.contains(classNameTime))) {
+              // Hide all select Button Open
+              newsElt.classList.remove('active')
+              overlayBody.removeEventListener('click', removeClickEventNews)
+            }
+          }
+          overlayBody.addEventListener('click', removeClickEventNews);
         })
       }
     </script>
