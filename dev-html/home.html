@@ -378,7 +378,11 @@
                     </div>
                     <div class="iconContainer">
                       <img src="../assets/img/fire.png" alt="" class="bubble all">
+<<<<<<< HEAD
                       <img src="../assets/img/youtube.png" alt="" class="bubble pub">
+=======
+                      <img src="../assets/img/pdf.png" alt="" class="bubble talk">
+>>>>>>> 5ef9e43... localstorage feed
                     </div>
                 </div>
                 <div class="cardContainer talk" data-content-year="2015" data-content-id="1888">
@@ -1532,7 +1536,10 @@
 	<script type="text/javascript" src="../slick/slick.js"></script>
 	
   <script type="text/javascript">
-	
+    
+    /**************************
+    /* Activate News Feed
+    ***************************/
     const newsFeeds = document.querySelectorAll('.newsfeed')
 	  
 	  function activateNewsFeed(category) {
@@ -1549,6 +1556,16 @@
 		    $('.newsfeed.' + category + ' .slickContainer').slick('setPosition')
 		  }
 	  }
+
+    /**************************
+    /* Activate News CTA
+    ***************************/
+    function activateNewsCta(category) {
+      for (let choice of choices) {
+        choice.classList.remove('active')
+      }
+      document.querySelector('.bubbleContainer.' + category).classList.add('active')
+    }
 	  
     /**************************
     /* Create Sliders NewsFeed
@@ -1631,7 +1648,27 @@
 	  }
 	  
     $(document).ready(function(){
-      initSlick('pub');
+      // Active right feed with localStorage
+      if(localStorage.getItem('feed')) {
+        switch(localStorage.getItem('feed')) {
+          case 'all':
+            activateNewsFeed('all')
+            for (let choice of choices) {
+              choice.classList.add('active')
+            }
+            break;
+          case 'talk':
+            activateNewsFeed('talk')
+            activateNewsCta('talk')
+            break;
+          case 'press':
+            activateNewsFeed('press')
+            activateNewsCta('press')
+            break;
+          default:
+            initSlick('pub');
+        }
+      }
     });
   </script>
 
@@ -1695,6 +1732,8 @@
           choice.classList.add('active')
 		      let category = choice.getAttribute('data-category')
 		      activateNewsFeed(category)
+          // Save category feed on localStorage
+          localStorage.setItem('feed', category);
         })
       }
 
@@ -1761,6 +1800,9 @@
           for (let choice of choices) {
             choice.classList.add('active')
           }
+
+          // 2 - Save All feed on localStorage
+          localStorage.setItem('feed', 'all');
 
           // 2 - find data-content-id on newsfeed all element and calculate index position of this slide
           let indexRightSlide = document.querySelector('.newsfeed.all .slickContainer .cardContainer[data-content-id="' + newsId + '"]').closest(".slick-slide").getAttribute('data-slick-index')
