@@ -1830,7 +1830,9 @@
 
           // 5 - remove class active when click in body 
           overlayBody.addEventListener('click',function(e){
-            choice.classList.remove('active')
+            for (let choice of choices) {
+              choice.classList.remove('active')
+            }
           })
 
           // 6 - Remove active class when user clic outside
