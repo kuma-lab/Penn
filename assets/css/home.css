@@ -679,7 +679,7 @@ body {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   line-height: initial;
-  height: 25px;
+  height: 20px;
   cursor: pointer;
 }
 @media screen and (min-width: 1024px) {
