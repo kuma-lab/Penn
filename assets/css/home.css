@@ -729,6 +729,11 @@ body {
 .newsBlock .newsList .newsWrapper:last-child {
   margin-bottom: 0;
 }
+.newsBlock .newsList .newsWrapper.active {
+  background: #cadfff;
+  border-radius: 20px;
+  border: solid 3px #93b1fb;
+}
 .newsBlock .newsList .avatar {
   height: 48px;
   border-radius: 16px;

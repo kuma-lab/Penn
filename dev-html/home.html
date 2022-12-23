@@ -1697,7 +1697,8 @@
 
       for (let newsElt of newsList) {
         newsElt.addEventListener('click', function(e) {
-          newsId = newsElt.getAttribute('data-content-id')
+          newsElt.classList.add('active');
+          newsId = newsElt.getAttribute('data-content-id');
 
           // 1 - click on allfeed CTA
           activateNewsFeed('all')
