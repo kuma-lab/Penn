@@ -356,6 +356,9 @@ body {
 .potentialConnectionsBlock .potentialConnectionsList .followIcon {
   width: 20px;
 }
+.mainWrapper .main .pageTitle {
+  padding-top: 16px;
+}
 .listArticlesByYears {
   display: flex;
   flex-wrap: wrap;
@@ -400,8 +403,8 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .listArticlesByYears .listArticles {
-    width: 47%;
-    margin-right: 16px;
+    width: calc(50% - 16px);
+    margin: 8px;
   }
 }
 .listArticlesByYears .listArticles .name {
