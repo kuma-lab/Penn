@@ -440,12 +440,35 @@ body {
   background: #F5E8FF;
   align-self: flex-end;
 }
+.mainWrapper .commWrapper .messageContainer .messagesLayout .iframeContainer {
+  height: 170px;
+  cursor: pointer;
+  width: 100%;
+}
+.mainWrapper .commWrapper .messageContainer .messagesLayout .iframeContainer .iframe {
+  height: 150px;
+  background-size: cover;
+  border-radius: 20px;
+}
 .mainWrapper .commWrapper .keyboardContainer {
   position: relative;
   display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 16px;
   flex-direction: row;
   background: #ffffff;
   border-radius: 20px;
   box-sizing: border-box;
+  padding: 16px;
+}
+.mainWrapper .commWrapper .keyboardContainer .keyboard {
+  width: calc(100% - 131px);
+  border: none;
+  padding: 0 8px;
+  font-size: 20px;
+}
+.mainWrapper .commWrapper .keyboardContainer .clip {
+  margin-right: 16px;
+  height: 30px;
 }

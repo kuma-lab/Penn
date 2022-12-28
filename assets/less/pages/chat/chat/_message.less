@@ -68,21 +68,43 @@
                     }
                 }
 
+                .iframeContainer {
+                    height: 170px;
+                    cursor: pointer;
+                    width: 100%;
 
-
+                    .iframe {
+                        height: 150px;
+                        background-size: cover;
+                        border-radius: 20px;
+                    }
+                }
             }
-
-
         }
 
         .keyboardContainer {
             position: relative;
             display: flex;
+            align-items: center;
+            justify-content: center;
             margin-top: 16px;
             flex-direction: row;
             background: #ffffff;
             border-radius: 20px;
             box-sizing: border-box;
+            padding: 16px;
+
+            .keyboard {
+                width: calc(100% - 131px);
+                border: none;
+                padding: 0 8px;
+                font-size: 20px;
+            }
+
+            .clip {
+                margin-right: 16px;
+                height: 30px;
+            }
         }
     }
 
