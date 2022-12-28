@@ -390,7 +390,10 @@ body {
   position: relative;
   margin: 8px 0 16px;
 }
-.mainWrapper .commWrapper .personContainer .avatar {
+.mainWrapper .commWrapper .personContainer .avatarContainer {
+  margin-right: 8px;
+}
+.mainWrapper .commWrapper .personContainer .avatarContainer .avatar {
   height: 60px;
   border-radius: 16px;
   cursor: pointer;
