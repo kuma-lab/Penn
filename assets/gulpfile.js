@@ -10,7 +10,7 @@ var gulp = require('gulp'),
     purgecss = require('gulp-purgecss');
 
 gulp.task('default', ['minify-js', 'autoprefixer']);
-gulp.task('default', ['concat','less']);
+gulp.task('default', ['concat', 'less']);
 
 /**
  * Supprime les fichier defini
@@ -59,12 +59,13 @@ gulp.task("babel", ['concat'], function () {
  */
 gulp.task('less', ['clean'], function () {
     return gulp.src([
-      './less/pages/home/home.less',
-      './less/pages/people/people.less',
-      './less/pages/keyword/keyword.less'
-        ])
+        './less/pages/home/home.less',
+        './less/pages/people/people.less',
+        './less/pages/keyword/keyword.less',
+        './less/pages/chat/chat.less'
+    ])
         .pipe(less({
-            paths: [ path.join(__dirname, 'less', 'includes') ]
+            paths: [path.join(__dirname, 'less', 'includes')]
         }))
         .pipe(gulp.dest('./css'));
 });
