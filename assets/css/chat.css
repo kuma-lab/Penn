@@ -383,6 +383,26 @@ body {
 .mainWrapper .commWrapper {
   width: calc(100% - 400px);
 }
+.mainWrapper .commWrapper .personContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  margin: 8px 0 16px;
+}
+.mainWrapper .commWrapper .personContainer .avatar {
+  height: 60px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+.mainWrapper .commWrapper .personContainer .name {
+  margin-bottom: 8px;
+}
+.mainWrapper .commWrapper .personContainer .titleField {
+  font-size: 14px;
+  color: #8e8c99;
+  margin-bottom: 4px;
+}
 .mainWrapper .commWrapper .messageContainer {
   position: relative;
   display: flex;
@@ -395,16 +415,27 @@ body {
   border-radius: 20px;
   box-sizing: border-box;
 }
-.mainWrapper .commWrapper .messageContainer .personContainer {
+.mainWrapper .commWrapper .messageContainer .messagesLayout {
+  margin-top: 32px;
   display: flex;
-  align-items: flex-start;
-  position: relative;
-  margin: 8px 0 16px;
+  flex-direction: column;
 }
-.mainWrapper .commWrapper .messageContainer .personContainer .avatar {
-  height: 60px;
-  border-radius: 16px;
-  cursor: pointer;
+.mainWrapper .commWrapper .messageContainer .messagesLayout .message {
+  max-width: 45%;
+  width: fit-content;
+  margin-bottom: 8px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px;
+}
+.mainWrapper .commWrapper .messageContainer .messagesLayout .message.send {
+  background: #D2ECFF;
+}
+.mainWrapper .commWrapper .messageContainer .messagesLayout .message.receive {
+  background: #F5E8FF;
+  align-self: flex-end;
 }
 .mainWrapper .commWrapper .keyboardContainer {
   position: relative;
