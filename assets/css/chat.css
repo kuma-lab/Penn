@@ -367,6 +367,17 @@ body {
   position: initial;
   top: initial;
 }
+.mainWrapper .connectionsBlock .messagesList .messageContainer {
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 8px;
+}
+.mainWrapper .connectionsBlock .messagesList .messageContainer.unread {
+  background-color: #D2ECFF;
+}
+.mainWrapper .connectionsBlock .messagesList .messageContainer.active {
+  background-color: #f5e8ff;
+}
 .mainWrapper .connectionsBlock .messagesList .iconMsg {
   display: none;
 }
