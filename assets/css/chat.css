@@ -433,6 +433,8 @@ body {
   margin-top: 32px;
   display: flex;
   flex-direction: column;
+  padding-right: 8px;
+  overflow: auto;
 }
 .mainWrapper .commWrapper .messageContainer .messagesLayout .message {
   max-width: 45%;
@@ -475,9 +477,10 @@ body {
 }
 .mainWrapper .commWrapper .keyboardContainer .keyboard {
   width: calc(100% - 131px);
-  border: none;
   padding: 0 8px;
   font-size: 20px;
+  border: none;
+  outline: none;
 }
 .mainWrapper .commWrapper .keyboardContainer .clip {
   margin-right: 16px;

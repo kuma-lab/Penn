@@ -159,6 +159,17 @@
       const sendBtn = document.querySelector('.sendBtn')
       const sendInput = document.querySelector('.keyboard')
 
+      // Get Current Date
+      function getCurrentDate() {
+        let today = new Date()
+        const dd = String(today.getDate()).padStart(2, '0')
+        const mm = String(today.getMonth() + 1).padStart(2, '0') //January is 0!
+        const yyyy = today.getFullYear()
+
+        today = mm + '/' + dd + '/' + yyyy
+        return today
+      }
+
       // Button/Enter Key
       sendBtn.addEventListener('click', sendMessage)
       sendInput.addEventListener('keyup', function(e) { 
@@ -169,63 +180,51 @@
       function sendMessage() {
         let message = sendInput.value
         sendInput.value = ''
-        writeLine(message)
+        // skip blank messages
+        if(message.length < 1) {
+          sendInput.placeholder = "Minimum length is 1 character!"
+        } else {
+          sendInput.placeholder = "Type your message..."
+          let lastMessageId = document.querySelector('.messagesLayout').lastChild.getAttribute('data-id-message')
+          // @todo : send new message to server with fetch POST
+          writeLine(message, true, getCurrentDate(), lastMessageId++)
+        }
       }
 
-      function addMessage(e) {
-        let message = e.data ? JSON.parse(e.data) : e
-        writeLine(`${message.FROM}: ${message.MESSAGE}`)
-      }
-
-      function writeLine(text) {
-        let message = document.createElement('P')
-        message.classList.add('message', 'send')
-        message.innerHTML = text
-        messages.appendChild(message)
-        messages.scrollTop = messages.scrollHeight
+      function writeLine(text, sent, date, id) {
+        const idExist = document.querySelector('[data-id-message="' + id+ '"]')
+        // If message doesn't exist, we create it 
+        if(!idExist) {
+          let message = document.createElement('P')
+          message.dataset.idMessage = id
+          sent ? message.classList.add('message', 'send') : message.classList.add('message', 'receive')
+          message.innerHTML = text
+          messages.appendChild(message)
+          messages.scrollTop = messages.scrollHeight
+        }
       }
 
       /**************************
-      /* AJAX XHR Method
+      /* Refresh messages
       ***************************/
-      function ajax(type, path, data, timeout, func, timeout_func) {
-        var xhr = new XMLHttpRequest();
-      
-        xhr.onload = function() {
-          if(this.status === 200){
-            func(this.responseText) // call gived function
-          }
-          else if(this.status === 204) { // no data
-            timeout_func() // call timeout function because server closed connection with return code 204 - no content (data)
-          }
-          else {
-            console.log(this.status)
-            fail("Unknown status: " + this.status + " status text: " + this.statusText)
-          }
-        }
 
-        xhr.open(type, path, true)
-
-        if(timeout > 0) {
-          xhr.timeout = timeout // set timeout if timeout is bigger than 0
-
-          xhr.ontimeout = function (e) {
-            //console.log(e);
-            //console.log("timeout");
-            timeout_func()
-          };
-        }
-
-        let fin = new Object() // create new object (for JSON)
-        fin.nick = nickname // save nickname
-        fin.stranger = chatwith // save stranger nickname
-        let json = JSON.stringify(fin) // create JSON
-
-        console.log('fin', fin, 'json', json)
-
-        xhr.setRequestHeader("info", json) // add JSON to header
-        xhr.send(data) // send data
+      function refreshMessages() {
+        fetch('http://sil.asc.upenn.edu/exchange/chat/22',{
+          method: "GET"}).then(function (response) {
+          // The API call was successful!
+          return response.json()
+        }).then(function (data) {
+          // This is the JSON from our response
+          Object.entries(data).forEach(([key, value]) => {
+            writeLine(value.content, value.sent, value.date, value.id)
+          })
+        }).catch(function (err) {
+          // There was an error
+          console.warn('Something went wrong.', err)
+        })
       }
+
+      const intervalRefresh = setInterval(refreshMessages, 5000)
     </script>
 
 </body>
