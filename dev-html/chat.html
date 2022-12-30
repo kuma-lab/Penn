@@ -130,13 +130,13 @@
                     </div>
                 </div>
                 <div class="messagesLayout">
-                    <p class="message send">
+                    <p class="message send" data-id-message="-3">
                         Hello how are you today?
                     </p>
-                    <p class="message receive">
+                    <p class="message receive" data-id-message="-2">
                         So tired after chirstams Eve. However i can’t wait to go back to work
                     </p>
-                    <div class="iframeContainer message send">
+                    <div class="iframeContainer message send" data-id-message="-1">
                         <div class="iframe" style="background-image: url(https://sil.asc.upenn.edu/exchange/thumbnails/11/1187.jpg);"></div>
                 </div>
             </section>
@@ -185,9 +185,14 @@
           sendInput.placeholder = "Minimum length is 1 character!"
         } else {
           sendInput.placeholder = "Type your message..."
-          let lastMessageId = document.querySelector('.messagesLayout').lastChild.getAttribute('data-id-message')
+          let lastMessage = document.querySelector('.messagesLayout').lastChild
+          lastMessageId = 0
+          if (lastMessage !== null && 'getAttribute' in lastMessage) {
+            lastMessageId = lastMessage.getAttribute('data-id-message')
+          }
+          lastMessageId++
           // @todo : send new message to server with fetch POST
-          writeLine(message, true, getCurrentDate(), lastMessageId++)
+          writeLine(message, true, getCurrentDate(), lastMessageId)
         }
       }
 
