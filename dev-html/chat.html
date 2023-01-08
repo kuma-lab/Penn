@@ -151,6 +151,19 @@
     </main>
 
     <script type="text/javascript">
+
+      /*******************************************
+      /* Verify if element is visible in viewport
+      *******************************************/
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect()
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        )
+      }
     
       /**************************
       /* Send Message
@@ -161,13 +174,7 @@
 
       // Get Current Date
       function getCurrentDate() {
-        let today = new Date()
-        const dd = String(today.getDate()).padStart(2, '0')
-        const mm = String(today.getMonth() + 1).padStart(2, '0') //January is 0!
-        const yyyy = today.getFullYear()
-
-        today = mm + '/' + dd + '/' + yyyy
-        return today
+        return new Date(Date.now() - (new Date().getTimezoneOffset() * 60 * 1000)).toISOString().slice(0,-5).replace("T", " ")
       }
 
       // Button/Enter Key
@@ -191,8 +198,22 @@
             lastMessageId = lastMessage.getAttribute('data-id-message')
           }
           lastMessageId++
-          // @todo : send new message to server with fetch POST
-          writeLine(message, true, getCurrentDate(), lastMessageId)
+
+          // @todo : send new message to server with fetch Position
+          fetch('http://sil.asc.upenn.edu/exchange/chat/22', {
+            method: 'POST',
+            body: JSON.stringify({
+              "id": lastMessageId,
+              "content": message,
+              "date": getCurrentDate(),
+              "sent": true
+            })
+          })
+          .then(response => response.json())
+          .then(
+            data => console.log(data) 
+            writeLine(message, true, getCurrentDate(), lastMessageId)
+          )
         }
       }
 
@@ -207,13 +228,13 @@
           messages.appendChild(message)
 
           let lastMessage = document.querySelector('.message:nth-last-child(2)')
-          const rect = lastMessage.getBoundingClientRect()
+          /*const rect = lastMessage.getBoundingClientRect()
           const isInViewport = rect.top >= 0 &&
                   rect.left >= 0 &&
                   rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                  rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                  rect.right <= (window.innerWidth || document.documentElement.clientWidth)*/
 
-          if(isInViewport === true) messages.scrollTop = messages.scrollHeight
+          if(isInViewport(lastMessage) === true) messages.scrollTop = messages.scrollHeight
         }
       }
 
