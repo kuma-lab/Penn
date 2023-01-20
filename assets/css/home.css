@@ -578,13 +578,15 @@ body {
   line-height: initial;
 }
 .newsfeed .slider .backgroundIframe .newsFeedThumb {
-  position: relative;
-  width: 100%;
   height: 95%;
   border-radius: 8px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
+  overflow: hidden;
+}
+.newsfeed .slider .backgroundIframe .newsFeedThumb .newsFeedImg {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .cardContainer {
   position: relative;
@@ -777,8 +779,12 @@ body {
   cursor: pointer;
 }
 .newsBlock .newsList .newsFeedThumb {
+  overflow: hidden;
   height: 150px;
   background-size: cover;
+}
+.newsBlock .newsList .newsFeedThumb .newsFeedImg {
+  width: 100%;
 }
 .newsBlock .newsList .newsMessage {
   text-align: center;
