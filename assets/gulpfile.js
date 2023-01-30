@@ -59,9 +59,10 @@ gulp.task("babel", ['concat'], function () {
  */
 gulp.task('less', ['clean'], function () {
     return gulp.src([
+      './less/pages/login/login.less',
       './less/pages/home/home.less',
       './less/pages/people/people.less',
-      './less/pages/keyword/keyword.less'
+      './less/pages/keyword/keyword.less',
         ])
         .pipe(less({
             paths: [ path.join(__dirname, 'less', 'includes') ]
