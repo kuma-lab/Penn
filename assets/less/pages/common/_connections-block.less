@@ -1,0 +1,116 @@
+.connectionsBlock {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 776px;
+    padding: 16px;
+    padding-right: 8px;
+    margin: 34px 0 16px 0;
+    background: #ffffff;
+    border-radius: 20px;
+    box-sizing: border-box;
+
+    .titleBlock {
+        position: absolute;
+        display: flex;
+        top: -45px;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 0 0 16px 0;
+        line-height: 28px;
+        font-weight: bold;
+        font-size: 24px;
+        color: #070721;
+        text-transform: capitalize;
+
+        .viewAll {
+            padding-right: 16px;
+            font-size: 14px;
+            color: #5786FF;
+            font-weight: normal;
+            text-transform: lowercase;
+            cursor: pointer;
+        }
+    }
+
+    .messagesList {
+        .messageContainer {
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            margin: 8px 0 16px;
+
+            &::last-child {
+                margin-bottom: 8px;
+            }
+        }
+
+        .avatar {
+            height: 48px;
+            border-radius: 16px;
+            cursor: pointer;
+        }
+
+        .txtInfos {
+            margin: 0 8px;
+            width: calc(100% - 100px);
+        }
+
+        .name {
+            margin-bottom: 4px;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 18px;
+            color: #070721;
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+
+        .newsMessage {
+            color: #5786FF;
+        }
+
+        .mainField {
+            font-size: 14px;
+            color: #8e8c99;
+        }
+
+        .titleField {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            line-height: 16px;
+            margin-top: 4px;
+            font-size: 14px;
+            color: #8e8c99;
+        }
+
+        .iconMsg {
+            width: 24px;
+            cursor: pointer;
+        }
+
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .connectionsBlock {
+        .messagesList {
+            overflow-y: auto;
+            height: 100%;
+            padding-right: 8px;
+
+            .name {
+                font-size: 16px;
+            }
+
+            .avatar {
+                height: 60px;
+            }
+        }
+    }
+}

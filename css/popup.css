@@ -23,11 +23,6 @@ aside {
   border-radius: 9px;
 }
 
-.poupContainer,
-.textContainer,
-.btnContainer {
-  padding: 9px;
-}
 button {
   border: none;
   background: none;
@@ -100,9 +95,19 @@ aside .headlineContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
   padding: 9px 0;
   margin-bottom: 9px;
+}
+
+aside h5{
+  margin-top: 18px;
+}
+
+aside .Cta{
+  width: auto;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: initial;
 }
 
 aside .headlineContainer button {
@@ -134,7 +139,7 @@ aside.active {
   border-radius: 8px;
 }
 
-.headlineContainer .newTab{
+.aside .headlineContainer .newTab{
   font-weight: bold;
   background-color: #699bf7;
   color: #fff;
@@ -144,17 +149,17 @@ aside.active {
   margin: 9px 0;
 }
 
-.headlineContainer h5{
+.aside .headlineContainer h5{
   color: #699bf7;
   font-weight: bold;
 }
 
-.iframeContainer, .iframeContainer iframe{
+.aside .iframeContainer,.aside .iframeContainer iframe{
   min-height: 600px;
 }
 
 @media screen and (min-width: 1024px) {
-  aside .headlineContainer {
+  .aside .headlineContainer {
     flex-direction: row;
   }
 

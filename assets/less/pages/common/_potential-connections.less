@@ -1,0 +1,110 @@
+.potentialConnectionsBlock {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    margin: 64px 0 16px 0;
+    background: #ffffff;
+    border-radius: 20px;
+    box-sizing: border-box;
+
+    @media screen and (min-width: 1024px) {
+        height: 456px;
+        padding-right: 8px;
+    }
+
+    .titleBlock {
+        position: absolute;
+        top: -36px;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 0 0 16px 0;
+        line-height: 28px;
+        font-weight: bold;
+        font-size: 24px;
+        color: #070721;
+        text-transform: capitalize;
+
+        .viewAll {
+            padding-right: 16px;
+            font-size: 14px;
+            color: #5786FF;
+            font-weight: normal;
+            text-transform: lowercase;
+            cursor: pointer;
+        }
+    }
+
+    .potentialConnectionsList {
+        overflow-y: auto;
+        height: 100%;
+
+        @media screen and (min-width: 1024px) {
+            padding-right: 8px;
+        }
+
+        .potentialConnectionWrapper {
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin: 8px 0 16px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .flexContainer {
+                width: calc(100% - 130px);
+
+                .txtInfos {
+                    color: #8e8c99;
+                    margin: 0 8px;
+                }
+            }
+        }
+
+        .avatar {
+            height: 48px;
+            border-radius: 16px;
+            cursor: pointer;
+        }
+
+        .txtInfos {
+            margin: 0 8px 4px;
+            font-size: 14px;
+            color: #8e8c99;
+        }
+
+        .name {
+            margin-left: 8px;
+            margin-bottom: 0;
+            line-height: 18px;
+            font-weight: 700;
+            font-size: 15px;
+            color: #070721;
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+
+        .follow {
+            position: absolute;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 8px;
+            width: 70px;
+            height: 18px;
+            font-size: 14px;
+            text-decoration: none;
+            color: white;
+            border-radius: 12px;
+            background-color: #5786FF;
+        }
+
+        .followIcon {
+            width: 20px;
+        }
+    }
+}

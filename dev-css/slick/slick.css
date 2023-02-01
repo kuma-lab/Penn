@@ -69,11 +69,8 @@
 .slick-slide {
   display: none;
   float: left;
+  height: 560px;
   min-height: 1px;
-}
-
-.js-newsFeed_list  .slick-slide {
-  height: 460px;
 }
 
 [dir='rtl'] .slick-slide {

@@ -1,0 +1,97 @@
+.listArticlesByYears {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    overflow: auto;
+
+    .connectionWrapper {
+        display: flex;
+        margin-bottom: 9px;
+        cursor: pointer;
+
+        .avatarContainer {
+            padding-right: 9px;
+
+            .avatar {
+                height: 48px;
+                border-radius: 16px;
+                cursor: pointer;
+            }
+        }
+
+        .txtInfos {
+            .mainField {
+                margin-top: 0;
+            }
+        }
+
+        .follow {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 8px;
+            width: 70px;
+            height: 18px;
+            font-size: 14px;
+            text-decoration: none;
+            color: white;
+            border-radius: 12px;
+            background-color: #5786FF;
+        }
+    }
+
+    .listArticles {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 16px;
+        background: white;
+        border-radius: 20px;
+
+        @media screen and (min-width: 1024px) {
+            width: calc(50% - 16px);
+            margin: 8px;
+        }
+
+        .name {
+            margin-bottom: 4px;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 18px;
+            color: #070721;
+            text-transform: capitalize;
+        }
+
+        .year {
+            margin: 16px 0;
+            font-size: 16px;
+            font-weight: bold;
+            color: #5786FF;
+            list-style: none;
+        }
+
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            padding: 8px 16px 16px;
+        }
+
+        .item {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 4px 0;
+            font-size: 16px;
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+    }
+
+}
+
+
+.icon {
+    height: 12px;
+    width: auto;
+    padding-right: 6px;
+}

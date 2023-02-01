@@ -1,0 +1,15 @@
+main{
+  display: flex;
+  flex-direction: column;    
+  align-items: center;
+
+}
+
+
+@media screen and (min-width: 1024px) {
+
+  main{
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}

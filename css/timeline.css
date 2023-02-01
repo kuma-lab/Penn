@@ -1,0 +1,73 @@
+
+.contentTimelineContainer{
+    margin: 10px 0;
+  
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    margin: 0 auto;
+}
+
+
+.contentTimeline {
+    justify-content: center;
+    width: 140px;
+    height: 4em;
+    padding: 0 2em;
+    overflow: hidden;
+}
+
+#contentTimeline__prev {
+    padding-right: 1.5em;
+    cursor: pointer;
+}
+#contentTimeline__next {
+    padding-left: 1.5em;
+    cursor: pointer;
+}
+  
+  .contentYear {
+    position: relative;
+    padding: 10px;
+  }
+  
+  .contentYear:before {
+    content: "";
+    position: absolute;
+    top: 33px;
+    left: 50%;
+    margin-left: -8px;
+    width: 16px;
+    height: 16px;
+    background-color: #d3d6f5;
+    border-radius: 50%;
+  }
+  
+  .contentYear:after {
+    content: "";
+    position: absolute;
+    top: 39px;
+    left: 0;
+    margin-left: -50%;
+    width: 100%;
+    height: 4px;
+    background-color: #d3d6f5;
+  }
+  
+  .contentYear:first-of-type:after {
+    content: none;
+  }
+  
+  .active {
+    font-weight: bold;
+  }
+  
+  .contentYear.active:before {
+    background-color: #73a1f8;
+    z-index: 1;
+  }
+  
+  .contentYear:not(.contentYear.active ~ .contentYear):before,.contentYear:not(.contentYear.active ~ .contentYear):after {
+    background-color: #73a1f8;
+  }
+  

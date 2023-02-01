@@ -1,0 +1,175 @@
+.headerNewsFeed {
+    position: relative;
+    height: 160px;
+
+    @media screen and (min-width: 520px) {
+        height: 112px;
+    }
+
+    @media screen and (min-width: 640px) {
+        height: inherit;
+    }
+
+    .choiceContainer {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: flex-start;
+        margin: 0 auto;
+
+        .bubbleContainer,
+        .time {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 10px 16px;
+            width: 100px;
+            font-size: 14px;
+            color: #000000;
+            background-color: #ffffff;
+            cursor: pointer;
+            // border-right: #070721 solid 1px;
+            padding: 8px 0;
+            border-radius: 25px;
+
+            @media screen and (min-width: 640px) {
+                margin: 0 10px;
+            }
+        }
+
+        .bubbleContainer {
+            @media screen and (min-width: 1024px) {
+                width: 112px;
+                font-size: 16px;
+            }
+
+            &.press {
+                border-right: none;
+                // border-radius: 0px 40px 40px 0px;
+            }
+
+            &.all {
+                // border-radius: 40px 0px 0px 40px;
+
+                &.active {
+                    .time {
+                        z-index: 3;
+                    }
+
+                    ~.bubbleContainer {
+                        color: #000;
+                        background: #fff;
+
+                        .selectIcon {
+                            background: #fff;
+                        }
+                    }
+                }
+            }
+
+            .selectIcon {
+                margin: 2px;
+                padding: 2px;
+                height: 20px;
+                width: auto;
+                background: #fff;
+            }
+
+            .selectWording,
+            .titleAll {
+                padding: 0 6px;
+            }
+
+            &.active {
+                background-color: #5786FF;
+                color: #fff;
+
+                .time {
+                    display: flex;
+                }
+
+                .selectDate {
+                    color: #5786FF;
+                    background-color: #fff;
+                }
+
+                .selectIcon {
+                    color: #ffff;
+                    background-color: #5786FF;
+                }
+            }
+        }
+
+        .time {
+            display: none;
+            position: absolute;
+            z-index: 2;
+            top: 120px;
+            right: 50%;
+            width: 300px;
+            height: 28px;
+            margin-right: -150px;
+            border-right: none;
+            border-radius: 40px;
+
+            @media(min-width: 520px) {
+                top: 64px;
+            }
+
+            @media(min-width: 640px) {
+                right: 0;
+                top: 0;
+                width: 100px;
+                margin-right: inherit;
+            }
+
+            .selectDate {
+                margin: 2px;
+                padding: 2px;
+                height: 28px;
+                width: auto;
+                background: #ffff;
+            }
+
+            .list {
+                position: relative;
+            }
+
+            .listDates {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                left: -20px;
+                top: 15px;
+                width: 50px;
+                padding: 10px;
+                color: #5786FF;
+                list-style: none;
+                background-color: #fff;
+                border-radius: 0 0 15px 15px;
+            }
+
+            &.active {
+                .listDates {
+                    display: flex;
+
+                    .dateOption {
+                        padding: 8px;
+
+                        &::last-of-type {
+                            margin-bottom: 8px;
+                        }
+
+                        &::hover {
+                            color: #5786FF;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

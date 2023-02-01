@@ -1,0 +1,148 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 100%;
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlvAw.ttf) format('truetype');
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url("../img/background-site.png");
+  background-size: cover;
+}
+.mainWrapper {
+  padding: 16px;
+}
+.mainWrapper .main {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .mainWrapper .main {
+    width: calc(100% - 360px);
+  }
+}
+.mainWrapper .main .pageTitle {
+  padding: 8px 0;
+  font-size: 24px;
+}
+.mainWrapper .main .secondContent {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+@media screen and (min-width: 1024px) {
+  .mainWrapper .main .secondContent {
+    margin-top: 16px;
+    margin-left: 9px;
+  }
+}
+.mainWrapper .main .secondContent section {
+  width: 100%;
+}
+@media screen and (min-width: 640px) {
+  .mainWrapper .main .secondContent section {
+    width: calc(50% - 8px);
+  }
+}
+.mainWrapper .main .secondContent section:first-child {
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 640px) {
+  .mainWrapper .main .secondContent section:first-child {
+    margin-right: 16px;
+    margin-bottom: 16px;
+  }
+}
+.mainWrapper .side {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 16px;
+}
+@media screen and (min-width: 1024px) {
+  .mainWrapper .side {
+    width: 360px;
+    padding-top: 26px;
+    padding-left: 16px;
+    margin-top: 0;
+  }
+}
+/* Scroll */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #f5f5f5;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, #c1d5f9), color-stop(0.72, #86b1f7), color-stop(0.86, #699bf7));
+}
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+body .mainWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0;
+  background-image: url("../img/compass-locust-walk-upenn-bg.jpeg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.loginBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 296px;
+  width: 300px;
+  padding-top: 24px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.loginBox .logo {
+  height: 120px;
+}
+.loginBox .loginForm {
+  width: 232px;
+  line-height: 2em;
+  padding-top: 24px;
+}
+.loginBox .textInput {
+  width: 100%;
+  height: 32px;
+  padding: 8px 16px;
+  margin-bottom: 12px;
+  border: 0;
+  border-radius: 12px;
+}
+.loginBox .submitInput {
+  width: 100%;
+  height: 32px;
+  color: white;
+  border-radius: 12px;
+  background-color: #004b8d;
+  border: 0;
+  cursor: pointer;
+}
+.loginBox .submitInput:hover {
+  background-color: #5786FF;
+}

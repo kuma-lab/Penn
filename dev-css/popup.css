@@ -1,0 +1,139 @@
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  line-height: 1;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Scroll */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.44, rgb(193, 213, 249)),
+    color-stop(0.72, rgb(134, 177, 247)),
+    color-stop(0.86, rgb(105, 155, 247))
+  );
+}
+
+/* Tag */
+body {
+  background-image: url("../img/fond.png");
+  font-family: 'Roboto', sans-serif;
+}
+main{
+  display: flex;
+  flex-direction: column;    
+  align-items: center;
+}
+
+section {
+  margin: 16px 0 0;
+}
+
+p, span {
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+select {
+  border: none;
+}
+h2 {
+  padding: 18px 0;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #070721;
+  text-transform: capitalize;
+}
+
+h3 {
+  padding-top: 9px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  text-decoration-line: underline;
+  color: #070721;
+  text-transform: capitalize;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  color: #070721;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+header img{
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  height: 80px;
+  width: auto;
+}
+
+.infoContainer{
+  width: 100%;
+  background-color: #ffff;
+  border-radius: 0 15px;
+  padding: 0 18px 37px;
+  margin: 18px;
+}
+.avatarContainer .avatar {
+  height: 80px;
+  border-radius: 9px;
+}
+.infoContainer .avatarContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px;
+}
+
+.infoContainer .infos p{
+  margin-bottom: 9px ;
+  line-height: 1.4;
+}
+
+.infoContainer .infos .bold{
+  color: #070721;
+  font-weight: bold;
+}
+
+.infoContainer .infos li{
+  list-style: none;
+  margin: 4.5px 9px;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 1024px) {
+  .aside .headlineContainer {
+    flex-direction: row;
+  }
+
+}
