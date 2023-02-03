@@ -1537,6 +1537,13 @@
 	<script type="text/javascript" src="../slick/slick.js"></script>
 	
   <script type="text/javascript">
+
+    /***********************************
+    /* initialize email for localStorage
+    ************************************/
+
+    const email = 'brunet.pierre.gorn@gmail.com'
+    //const email = 'damon.centola@asc.upenn.edu'
     
     /**************************
     /* Activate News Feed
@@ -1641,11 +1648,11 @@
       // Save currentSlide for each category
       $('.newsfeed.' + category + ' .slickContainer').on('afterChange', function(event, slick, currentSlide) {
         // Save category feed on localStorage
-        localStorage.setItem('slide' + capitalizeFirstLetter(category), currentSlide)
+        localStorage.setItem(email + '-slide' + capitalizeFirstLetter(category), currentSlide)
       });
 
       // If currentSlide of category saved, go to the right slide
-      if(localStorage.getItem('slide' + capitalizeFirstLetter(category))) $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', localStorage.getItem('slide' + capitalizeFirstLetter(category)))
+      if(localStorage.getItem(email + '-slide' + capitalizeFirstLetter(category))) $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', localStorage.getItem(email + '-slide' + capitalizeFirstLetter(category)))
 
       /**************************
       /* Create Select Button
@@ -1675,8 +1682,8 @@
       initSlick('pub');
 
       // Active right feed with localStorage
-      if(localStorage.getItem('feed')) {
-        switch(localStorage.getItem('feed')) {
+      if(localStorage.getItem(email + '-feed')) {
+        switch(localStorage.getItem(email + '-feed')) {
           case 'all':
             activateNewsFeed('all')
             for (let choice of choices) {
@@ -1760,7 +1767,7 @@
 		      let category = choice.getAttribute('data-category')
 		      activateNewsFeed(category)
           // Save category feed on localStorage
-          localStorage.setItem('feed', category)
+          localStorage.setItem(email + '-feed', category)
         })
 
         // Init slider on hover to anticipate user's click and fix width slider bug
@@ -1838,7 +1845,7 @@
           }
 
           // 2 - Save All feed on localStorage
-          localStorage.setItem('feed', 'all');
+          localStorage.setItem(email + '-feed', 'all');
 
           // 2 - find data-content-id on newsfeed all element and calculate index position of this slide
           let indexRightSlide = document.querySelector('.newsfeed.all .slickContainer .cardContainer[data-content-id="' + newsId + '"]').closest(".slick-slide").getAttribute('data-slick-index')

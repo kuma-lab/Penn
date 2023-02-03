@@ -514,7 +514,7 @@ body {
   display: none;
   margin: 16px 0 32px;
 }
-.newsfeed.slickSlideInitied.active {
+.newsfeed.slickSlideInitialized.active {
   display: block;
 }
 .newsfeed.all .cardContainer .iconContainer .all {
