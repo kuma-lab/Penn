@@ -356,6 +356,10 @@ body {
 .potentialConnectionsBlock .potentialConnectionsList .followIcon {
   width: 20px;
 }
+.allSliders {
+  height: 776px;
+  margin: 16px 0 32px;
+}
 .headerNewsFeed {
   position: relative;
   height: 160px;
@@ -510,7 +514,7 @@ body {
   display: none;
   margin: 16px 0 32px;
 }
-.newsfeed.active {
+.newsfeed.slickSlideInitialized.active {
   display: block;
 }
 .newsfeed.all .cardContainer .iconContainer .all {
