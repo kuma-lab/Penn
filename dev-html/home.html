@@ -89,6 +89,8 @@
 
           </div>
 			  </div>
+        <section class="allSliders">
+
         <section class="newsfeed pub active">
             <section class="slider">
               <div class="arrow left"></div>
@@ -1172,8 +1174,11 @@
                 </div>
               </div>
             </div>
+
           </section>
         </section>
+
+      </section>
         <article class="secondContent">
             
                 <!-- News -->
@@ -1571,6 +1576,12 @@
       // Sliders feed
       const buttonsOpanModal = document.querySelectorAll('.openModal');
 
+      // Show slider when slider is init
+      $('.newsfeed.' + category + ' .slickContainer').on('init', function(slick) {
+        const slider = document.querySelector('.newsfeed.' + category)
+        slider.classList.add('slickSlideInitialized')
+      });
+
 	    $('.newsfeed.' + category + ' .slickContainer').slick({
         dots: false,
         infinite: false,
@@ -1749,7 +1760,17 @@
 		      let category = choice.getAttribute('data-category')
 		      activateNewsFeed(category)
           // Save category feed on localStorage
-          localStorage.setItem('feed', category);
+          localStorage.setItem('feed', category)
+        })
+
+        // Init slider on hover to anticipate user's click and fix width slider bug
+        choice.addEventListener('mouseenter', (event) => {
+          let category = choice.getAttribute('data-category')
+          let slider = document.querySelector('.newsfeed.' + category)
+
+          if(!slider.classList.contains('slickSlideInitialized')) {
+            initSlick(category)
+          }
         })
       }
 
