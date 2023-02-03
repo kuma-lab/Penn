@@ -1,0 +1,111 @@
+.mainWrapper {
+    .commWrapper {
+        .personContainer {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            position: relative;
+            margin: 8px 0 16px;
+
+            .avatarContainer {
+                margin-right: 8px;
+
+                .avatar {
+                    height: 60px;
+                    border-radius: 16px;
+                    cursor: pointer;
+                }
+
+            }
+
+            .name {
+                margin-bottom: 8px;
+            }
+
+            .titleField {
+                font-size: 14px;
+                color: #8e8c99;
+                margin-bottom: 4px;
+            }
+        }
+
+        .messageContainer {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 776px;
+            padding: 16px;
+            padding-right: 8px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-sizing: border-box;
+
+            .messagesLayout {
+                margin-top: 32px;
+                display: flex;
+                flex-direction: column;
+                padding-right: 8px;
+                overflow: auto;
+
+                .message {
+                    max-width: 45%;
+                    width: fit-content;
+                    margin-bottom: 8px;
+                    border-radius: 20px;
+                    box-sizing: border-box;
+                    font-size: 14px;
+                    font-weight: bold;
+                    padding: 8px;
+
+                    &.send {
+                        background: #D2ECFF;
+                    }
+
+                    &.receive {
+                        background: #F5E8FF;
+                        align-self: flex-end;
+                    }
+                }
+
+                .iframeContainer {
+                    height: 170px;
+                    cursor: pointer;
+                    width: 100%;
+
+                    .iframe {
+                        height: 150px;
+                        background-size: cover;
+                        border-radius: 20px;
+                    }
+                }
+            }
+        }
+
+        .keyboardContainer {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 16px;
+            flex-direction: row;
+            background: #ffffff;
+            border-radius: 20px;
+            box-sizing: border-box;
+            padding: 16px;
+
+            .keyboard {
+                width: calc(100% - 131px);
+                padding: 0 8px;
+                font-size: 20px;
+                border: none;
+                outline: none;
+            }
+
+            .clip {
+                margin-right: 16px;
+                height: 30px;
+            }
+        }
+    }
+}
