@@ -1579,7 +1579,7 @@
       // Show slider when slider is init
       $('.newsfeed.' + category + ' .slickContainer').on('init', function(slick) {
         const slider = document.querySelector('.newsfeed.' + category)
-        slider.classList.add('slickSlideInitied')
+        slider.classList.add('slickSlideInitialized')
       });
 
 	    $('.newsfeed.' + category + ' .slickContainer').slick({
@@ -1768,7 +1768,7 @@
           let category = choice.getAttribute('data-category')
           let slider = document.querySelector('.newsfeed.' + category)
 
-          if(!slider.classList.contains('slickSlideInitied')) {
+          if(!slider.classList.contains('slickSlideInitialized')) {
             initSlick(category)
           }
         })
