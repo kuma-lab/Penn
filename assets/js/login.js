@@ -1,9 +1,3 @@
-/***********************************
-/* initialize email for localStorage
-************************************/
-
-// Testing email: brunet.pierre.gorn@gmail.com / damon.centola@asc.upenn.edu
-
 /*****************************
  * Verify form field submit
  *****************************/
@@ -49,7 +43,34 @@ const validateForm = (evt) => {
   
   // Prevent Form submit on any error
   if (!errors.length) {
-    localStorage.setItem('email', emailField.value)
+    /***********************************
+    /* initialize user for localStorage
+    ************************************/
+    // replace by user's id send by server
+    const idUser = 2344
+    // Set user Object with defaults values
+    const userOptions = {
+      "email": emailField.value,
+      "feed": "press",
+      "slidePress": 0,
+      "slidePub": 0,
+      "slideTalk": 0
+    }
+
+    // If users exists on this browser
+    if (localStorage.getItem('usersOptions')) {
+      // Get users options on local storage
+      let usersOptionsStorage = JSON.parse(localStorage.getItem('usersOptions'))
+      // Verify if idUser exist
+      if(!usersOptionsStorage.hasOwnProperty(idUser)) {
+        // idUser doesn't exit so we add it
+        usersOptionsStorage[idUser] = [userOptions]
+        localStorage.setItem('usersOptions', JSON.stringify(usersOptionsStorage))
+      }
+    } else {
+      // Else we initialized it with first user
+      localStorage.setItem('usersOptions', JSON.stringify({[idUser]: userOptions}))
+    }
   }
 };
 
