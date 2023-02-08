@@ -47,7 +47,7 @@ const validateForm = (evt) => {
     /* initialize user for localStorage
     ************************************/
     // replace by user's id send by server
-    const idUser = 2344
+    const idUser = 1234
     // Set user Object with defaults values
     const userOptions = {
       "email": emailField.value,
@@ -64,7 +64,7 @@ const validateForm = (evt) => {
       // Verify if idUser exist
       if(!usersOptionsStorage.hasOwnProperty(idUser)) {
         // idUser doesn't exit so we add it
-        usersOptionsStorage[idUser] = [userOptions]
+        usersOptionsStorage[idUser] = userOptions
         localStorage.setItem('usersOptions', JSON.stringify(usersOptionsStorage))
       }
     } else {
