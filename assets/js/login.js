@@ -46,7 +46,7 @@ const validateForm = (evt) => {
     /***********************************
     /* initialize user for localStorage
     ************************************/
-    // replace by user's id send by server
+    // @todo : replace by user's id send by server
     const idUser = 1234
     // Set user Object with defaults values
     const userOptions = {
