@@ -7,7 +7,6 @@ const el = (sel, parent) => (parent || document).querySelector(sel)
 const els = (sel, parent) => (parent || document).querySelectorAll(sel)
 const elNew = (tag, prop) => Object.assign(document.createElement(tag), prop)
 
-
 // Form validation script:
 const loginForm = el("#loginForm");
 
