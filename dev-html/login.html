@@ -9,7 +9,10 @@
     <body>
         <div class="mainWrapper"> 
             <div class="loginBox">   
-                <img class="logo" src="../assets/img/logo.png" alt="">
+                <header class="headerLogin">
+                    <img class="logo" src="../assets/img/logo.png" alt="">
+                    <div class="welcome">Welcome back</div>
+                </header>
                 <form class="loginForm" id="loginForm" name="loginForm" action="" method="POST">
                     <label for="loginEmail" class="loginEmail">
                         <input class="textInput" type="text" name="loginEmail" id="loginEmail" placeholder="email" />
@@ -17,6 +20,9 @@
                     <label for="loginPassword" class="loginPassword">
                         <input class="textInput" type="password" name="loginPassword" id="loginPassword" placeholder="password" />
                     </label><br />
+                    <span class="askPassword">
+                        <a href="/password" class="forgotPassword">Forgot password ?</a>
+                    </span><br/>
                     <input class="submitInput" type="submit" value="Login" id="submitLoginInput"/>
                 </form> 
             </div>
