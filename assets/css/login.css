@@ -147,6 +147,13 @@ body .mainWrapper {
   border: 0;
   border-radius: 5px;
 }
+.loginBox .loginEmail,
+.loginBox .loginPassword {
+  display: block;
+  height: 48px;
+  width: 100%;
+  margin-bottom: 16px;
+}
 .loginBox .askPassword {
   width: 100%;
   margin-bottom: 32px;
@@ -170,22 +177,22 @@ body .mainWrapper {
 .loginBox .submitInput:hover {
   background-color: #575aff;
 }
-.loginEmail,
-.loginPassword {
-  display: block;
-  position: relative;
-  height: 48px;
-  width: 100%;
-  margin-bottom: 16px;
+input.textInput.loginError {
+  font-weight: 600;
+  border: 3px solid #ff0000;
 }
-.loginEmail .loginError,
-.loginPassword .loginError {
-  position: absolute;
-  right: 8px;
-  bottom: -16px;
-  padding: 4px 8px;
-  font-size: 12px;
-  color: #fff;
-  background: #cc0000;
-  border-radius: 12px;
+input.textInput.loginError::-webkit-input-placeholder {
+  color: #ff0000;
+}
+input.textInput.loginError:-moz-placeholder {
+  color: #ff0000;
+}
+input.textInput.loginError::-moz-placeholder {
+  color: #ff0000;
+}
+input.textInput.loginError:-ms-input-placeholder {
+  color: #ff0000;
+}
+input.textInput.loginError:focus-visible {
+  outline: none;
 }

@@ -13,7 +13,7 @@ const loginForm = el("#loginForm");
 const validateForm = (evt) => { 
     evt.preventDefault()
   // Remove old errors
-  els(".loginError", loginForm).forEach(el => el.remove())
+  els(".loginError", loginForm).forEach(el => el.classList.remove('loginError'))
 
   // Prepare an array to hold your errors
   const errors = []
@@ -33,11 +33,10 @@ const validateForm = (evt) => {
   
   // Show errors
   errors.forEach(err => {
-    const loginError = elNew("span", {
-      className: "loginError",
-      textContent: err.text,
-    });
-    el(`[name="${err.name}"]`, loginForm).closest("label").append(loginError)
+    const inputError = el(`[name="${err.name}"]`, loginForm).closest("label").getElementsByTagName('input')[0]
+    inputError.classList.add('loginError')
+    inputError.value = ''
+    inputError.placeholder = err.text
   });
   
   // Prevent Form submit on any error
