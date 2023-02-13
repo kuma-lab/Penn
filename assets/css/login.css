@@ -113,54 +113,86 @@ body .mainWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 296px;
-  width: 300px;
-  padding-top: 24px;
+  width: 320px;
+  padding: 32px;
   background-color: rgba(255, 255, 255, 0.7);
 }
-.loginBox .logo {
-  height: 120px;
+.loginBox .headerLogin {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.loginBox .headerLogin .logo {
+  height: 80px;
+}
+.loginBox .headerLogin .welcome {
+  font-weight: 600;
+  font-size: 26px;
+  width: calc(100% - 80px);
+  text-align: center;
 }
 .loginBox .loginForm {
-  width: 232px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 100%;
   line-height: 2em;
   padding-top: 24px;
 }
 .loginBox .textInput {
   width: 100%;
-  height: 32px;
+  height: 48px;
   padding: 8px 16px;
   margin-bottom: 12px;
   border: 0;
-  border-radius: 12px;
+  border-radius: 5px;
+}
+.loginBox .loginEmail,
+.loginBox .loginPassword {
+  display: block;
+  height: 48px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+.loginBox .askPassword {
+  width: 100%;
+  margin-bottom: 32px;
+  text-align: right;
+}
+.loginBox .forgotPassword {
+  display: block;
+  text-decoration: none;
+  color: white;
 }
 .loginBox .submitInput {
-  width: 100%;
-  height: 32px;
+  width: 144px;
+  height: 48px;
+  text-transform: uppercase;
   color: white;
-  border-radius: 12px;
-  background-color: #004b8d;
+  border-radius: 24px;
+  background-color: #5786f4;
   border: 0;
   cursor: pointer;
 }
 .loginBox .submitInput:hover {
-  background-color: #5786FF;
+  background-color: #575aff;
 }
-.loginEmail,
-.loginPassword {
-  display: block;
-  position: relative;
-  height: 32px;
-  margin-bottom: 4px;
+input.textInput.loginError {
+  font-weight: 600;
+  border: 3px solid #ff0000;
 }
-.loginEmail .loginError,
-.loginPassword .loginError {
-  position: absolute;
-  right: 8px;
-  bottom: -16px;
-  padding: 4px 8px;
-  font-size: 12px;
-  color: #fff;
-  background: #cc0000;
-  border-radius: 12px;
+input.textInput.loginError::-webkit-input-placeholder {
+  color: #ff0000;
+}
+input.textInput.loginError:-moz-placeholder {
+  color: #ff0000;
+}
+input.textInput.loginError::-moz-placeholder {
+  color: #ff0000;
+}
+input.textInput.loginError:-ms-input-placeholder {
+  color: #ff0000;
+}
+input.textInput.loginError:focus-visible {
+  outline: none;
 }
