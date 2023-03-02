@@ -63,6 +63,7 @@ gulp.task('less', ['clean'], function () {
         './less/pages/home/home.less',
         './less/pages/people/people.less',
         './less/pages/keyword/keyword.less',
+        './less/pages/search/search.less',
         './less/pages/chat/chat.less'
         ])
         .pipe(less({
