@@ -160,3 +160,282 @@ body {
   width: 60px;
   border-radius: 40px;
 }
+.connectionsBlock {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 776px;
+  padding: 16px;
+  padding-right: 8px;
+  margin: 34px 0 16px 0;
+  background: #ffffff;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+.connectionsBlock .titleBlock {
+  position: absolute;
+  display: flex;
+  top: -45px;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 0 16px 0;
+  line-height: 28px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #070721;
+  text-transform: capitalize;
+}
+.connectionsBlock .titleBlock .viewAll {
+  padding-right: 16px;
+  font-size: 14px;
+  color: #5786FF;
+  font-weight: normal;
+  text-transform: lowercase;
+  cursor: pointer;
+}
+.connectionsBlock .messagesList .messageContainer {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  margin: 8px 0 16px;
+}
+.connectionsBlock .messagesList .messageContainer::last-child {
+  margin-bottom: 8px;
+}
+.connectionsBlock .messagesList .avatar {
+  height: 48px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+.connectionsBlock .messagesList .txtInfos {
+  margin: 0 8px;
+  width: calc(100% - 100px);
+}
+.connectionsBlock .messagesList .name {
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  color: #070721;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.connectionsBlock .messagesList .newsMessage {
+  color: #5786FF;
+}
+.connectionsBlock .messagesList .mainField {
+  font-size: 14px;
+  color: #8e8c99;
+}
+.connectionsBlock .messagesList .titleField {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 16px;
+  margin-top: 4px;
+  font-size: 14px;
+  color: #8e8c99;
+}
+.connectionsBlock .messagesList .iconMsg {
+  width: 24px;
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  .connectionsBlock .messagesList {
+    overflow-y: auto;
+    height: 100%;
+    padding-right: 8px;
+  }
+  .connectionsBlock .messagesList .name {
+    font-size: 16px;
+  }
+  .connectionsBlock .messagesList .avatar {
+    height: 60px;
+  }
+}
+.potentialConnectionsBlock {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  margin: 64px 0 16px 0;
+  background: #ffffff;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 1024px) {
+  .potentialConnectionsBlock {
+    height: 456px;
+    padding-right: 8px;
+  }
+}
+.potentialConnectionsBlock .titleBlock {
+  position: absolute;
+  top: -36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 0 16px 0;
+  line-height: 28px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #070721;
+  text-transform: capitalize;
+}
+.potentialConnectionsBlock .titleBlock .viewAll {
+  padding-right: 16px;
+  font-size: 14px;
+  color: #5786FF;
+  font-weight: normal;
+  text-transform: lowercase;
+  cursor: pointer;
+}
+.potentialConnectionsBlock .potentialConnectionsList {
+  overflow-y: auto;
+  height: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .potentialConnectionsBlock .potentialConnectionsList {
+    padding-right: 8px;
+  }
+}
+.potentialConnectionsBlock .potentialConnectionsList .potentialConnectionWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 8px 0 16px;
+}
+.potentialConnectionsBlock .potentialConnectionsList .potentialConnectionWrapper:last-child {
+  margin-bottom: 0;
+}
+.potentialConnectionsBlock .potentialConnectionsList .potentialConnectionWrapper .flexContainer {
+  width: calc(100% - 130px);
+}
+.potentialConnectionsBlock .potentialConnectionsList .potentialConnectionWrapper .flexContainer .txtInfos {
+  color: #8e8c99;
+  margin: 0 8px;
+}
+.potentialConnectionsBlock .potentialConnectionsList .avatar {
+  height: 48px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+.potentialConnectionsBlock .potentialConnectionsList .txtInfos {
+  margin: 0 8px 4px;
+  font-size: 14px;
+  color: #8e8c99;
+}
+.potentialConnectionsBlock .potentialConnectionsList .name {
+  margin-left: 8px;
+  margin-bottom: 0;
+  line-height: 18px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #070721;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.potentialConnectionsBlock .potentialConnectionsList .follow {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 8px;
+  width: 70px;
+  height: 18px;
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+  border-radius: 12px;
+  background-color: #5786FF;
+}
+.potentialConnectionsBlock .potentialConnectionsList .followIcon {
+  width: 20px;
+}
+.researchContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 16px;
+  padding-right: 8px;
+  margin: 34px 0 16px 0;
+  background: #ffffff;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+.researchContainer > h3 {
+  position: absolute;
+  top: -20px;
+}
+.researchContainer .resulatContainer {
+  display: flex;
+  border-radius: 20px;
+  margin: 9px;
+}
+.researchContainer .resulatContainer .personInfo {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  margin: 8px 0 16px;
+}
+.researchContainer .resulatContainer .personInfo .avatarContainer .avatar {
+  height: 40px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  .researchContainer .resulatContainer .personInfo .avatarContainer .avatar {
+    height: 60px;
+  }
+}
+.researchContainer .resulatContainer .personInfo .txtInfos {
+  margin: 0 8px;
+  width: calc(100% - 100px);
+}
+.researchContainer .resulatContainer .personInfo .name {
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  color: #070721;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  .researchContainer .resulatContainer .personInfo .name {
+    font-size: 16px;
+  }
+}
+.researchContainer .resulatContainer .personInfo .mainField {
+  font-size: 14px;
+  color: #8e8c99;
+}
+.researchContainer .resulatContainer .personInfo .titleField {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 16px;
+  margin-top: 4px;
+  font-size: 14px;
+  color: #8e8c99;
+}
+.researchContainer .personKeyword .sideAuthor .keywordsTitle {
+  font-weight: 700;
+}
+.researchContainer .personKeyword .sideAuthor .keywords {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 16px 0 0 24px;
+}
+.researchContainer .personKeyword .sideAuthor .keywords .listKeywords {
+  list-style: none;
+  columns: 2 200px;
+}
