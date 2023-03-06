@@ -356,7 +356,57 @@ body {
 .potentialConnectionsBlock .potentialConnectionsList .followIcon {
   width: 20px;
 }
-.researchContainer {
+.mainWrapper .searchContainer {
+  columns: 2 200px;
+  column-fill: auto;
+  margin-bottom: 60px;
+  height: 220px;
+}
+.mainWrapper .searchContainer .inputContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  padding-right: 8px;
+  margin: 9px 0;
+  background: #ffffff;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+.mainWrapper .searchContainer .inputContainer.keywords {
+  height: 100px;
+}
+.mainWrapper .searchContainer .inputContainer label {
+  font-weight: bold;
+  width: auto;
+}
+.mainWrapper .searchContainer .inputContainer input {
+  border: none;
+  margin-left: 9px;
+  width: 100%;
+  max-width: calc(100% - 100px);
+}
+.mainWrapper .searchContainer .ctaSearchContainer {
+  display: flex;
+  padding: 8px;
+  width: 70px;
+  height: 18px;
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+  border-radius: 12px;
+  background-color: #5786FF;
+}
+.mainWrapper .searchContainer .ctaSearchContainer img {
+  margin-right: 9px;
+}
+.mainWrapper .searchContainer .ctaSearchContainer input#searchPeers {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+}
+.mainWrapper .researchContainer {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -368,36 +418,36 @@ body {
   border-radius: 20px;
   box-sizing: border-box;
 }
-.researchContainer > h3 {
+.mainWrapper .researchContainer > h3 {
   position: absolute;
   top: -20px;
 }
-.researchContainer .resulatContainer {
+.mainWrapper .researchContainer .resulatContainer {
   display: flex;
   border-radius: 20px;
   margin: 9px;
 }
-.researchContainer .resulatContainer .personInfo {
+.mainWrapper .researchContainer .resulatContainer .personInfo {
   display: flex;
   align-items: flex-start;
   position: relative;
   margin: 8px 0 16px;
 }
-.researchContainer .resulatContainer .personInfo .avatarContainer .avatar {
+.mainWrapper .researchContainer .resulatContainer .personInfo .avatarContainer .avatar {
   height: 40px;
   border-radius: 16px;
   cursor: pointer;
 }
 @media screen and (min-width: 1024px) {
-  .researchContainer .resulatContainer .personInfo .avatarContainer .avatar {
+  .mainWrapper .researchContainer .resulatContainer .personInfo .avatarContainer .avatar {
     height: 60px;
   }
 }
-.researchContainer .resulatContainer .personInfo .txtInfos {
+.mainWrapper .researchContainer .resulatContainer .personInfo .txtInfos {
   margin: 0 8px;
   width: calc(100% - 100px);
 }
-.researchContainer .resulatContainer .personInfo .name {
+.mainWrapper .researchContainer .resulatContainer .personInfo .name {
   margin-bottom: 4px;
   font-weight: bold;
   font-size: 15px;
@@ -407,15 +457,15 @@ body {
   cursor: pointer;
 }
 @media screen and (min-width: 1024px) {
-  .researchContainer .resulatContainer .personInfo .name {
+  .mainWrapper .researchContainer .resulatContainer .personInfo .name {
     font-size: 16px;
   }
 }
-.researchContainer .resulatContainer .personInfo .mainField {
+.mainWrapper .researchContainer .resulatContainer .personInfo .mainField {
   font-size: 14px;
   color: #8e8c99;
 }
-.researchContainer .resulatContainer .personInfo .titleField {
+.mainWrapper .researchContainer .resulatContainer .personInfo .titleField {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -426,16 +476,16 @@ body {
   font-size: 14px;
   color: #8e8c99;
 }
-.researchContainer .personKeyword .sideAuthor .keywordsTitle {
+.mainWrapper .researchContainer .personKeyword .sideAuthor .keywordsTitle {
   font-weight: 700;
 }
-.researchContainer .personKeyword .sideAuthor .keywords {
+.mainWrapper .researchContainer .personKeyword .sideAuthor .keywords {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   padding: 16px 0 0 24px;
 }
-.researchContainer .personKeyword .sideAuthor .keywords .listKeywords {
+.mainWrapper .researchContainer .personKeyword .sideAuthor .keywords .listKeywords {
   list-style: none;
   columns: 2 200px;
 }
