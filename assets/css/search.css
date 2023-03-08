@@ -356,55 +356,127 @@ body {
 .potentialConnectionsBlock .potentialConnectionsList .followIcon {
   width: 20px;
 }
-.mainWrapper .searchContainer {
-  columns: 2 200px;
-  column-fill: auto;
-  margin-bottom: 60px;
-  height: 220px;
+.formSearchPeers {
+  position: relative;
+  height: 240px;
 }
-.mainWrapper .searchContainer .inputContainer {
+.formSearchPeers .inputSearchPeers {
+  display: flex;
+  flex-wrap: wrap;
+}
+.formSearchPeers .inputSearchPeers .searchInput {
   display: flex;
   align-items: center;
-  width: 100%;
-  padding: 10px;
-  padding-right: 8px;
-  margin: 9px 0;
+  box-sizing: border-box;
+  height: 60px;
+  width: calc(50% - 8px);
+  padding: 0 16px;
+  margin-bottom: 16px;
   background: #ffffff;
   border-radius: 20px;
-  box-sizing: border-box;
 }
-.mainWrapper .searchContainer .inputContainer.keywords {
-  height: 100px;
+.formSearchPeers .inputSearchPeers .searchInput:nth-child(2n) {
+  margin-left: 16px;
 }
-.mainWrapper .searchContainer .inputContainer label {
-  font-weight: bold;
-  width: auto;
+.formSearchPeers .inputSearchPeers .searchInput .label {
+  width: 100px;
+  font-weight: 700;
 }
-.mainWrapper .searchContainer .inputContainer input {
-  border: none;
-  margin-left: 9px;
-  width: 100%;
-  max-width: calc(100% - 100px);
+.formSearchPeers .inputSearchPeers .searchInput .input {
+  width: calc(100% - 100px);
+  border: 0;
 }
-.mainWrapper .searchContainer .ctaSearchContainer {
+.formSearchPeers .inputSearchPeers .searchInput .input:focus-visible {
+  outline: 0;
+}
+.formSearchPeers .ctaSearchContainer {
   display: flex;
-  padding: 8px;
-  width: 70px;
-  height: 18px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  height: 60px;
   font-size: 14px;
   text-decoration: none;
   color: white;
-  border-radius: 12px;
+  border-radius: 20px;
   background-color: #5786FF;
+  cursor: pointer;
 }
-.mainWrapper .searchContainer .ctaSearchContainer img {
-  margin-right: 9px;
+.formSearchPeers .ctaSearchContainer .searchIcon {
+  height: 24px;
+  margin-right: 8px;
+  cursor: pointer;
 }
-.mainWrapper .searchContainer .ctaSearchContainer input#searchPeers {
+.formSearchPeers .ctaSearchContainer .submitSearchPeers {
   background: none;
   border: none;
   color: white;
   font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.mainWrapper {
+  /*.searchContainer {
+        columns: 2 200px;
+        column-fill: auto;
+        margin-bottom: 60px;
+        height: 220px;
+
+        .inputContainer {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 10px;
+            padding-right: 8px;
+            margin: 9px 0;
+            background: #ffffff;
+            border-radius: 20px;
+            box-sizing: border-box;
+
+            &.keywords {
+                height: 100px;
+            }
+
+            label {
+                font-weight: bold;
+                width: auto;
+            }
+
+            input {
+                border: none;
+                margin-left: 9px;
+                width: 100%;
+                max-width: calc(100% - 100px);
+            }
+        }
+
+        .ctaSearchContainer {
+            display: flex;
+            padding: 8px;
+            margin-left: calc(100% - 86px);
+            width: 70px;
+            height: 18px;
+            font-size: 14px;
+            text-decoration: none;
+            color: white;
+            border-radius: 12px;
+            background-color: #5786FF;
+
+            img {
+                margin-right: 8px;
+            }
+
+            .submitSearchPeers {
+                background: none;
+                border: none;
+                color: white;
+                font-size: 16px;
+            }
+        }
+    } */
 }
 .mainWrapper .researchContainer {
   position: relative;
