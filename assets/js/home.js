@@ -300,17 +300,24 @@ for (let newsElt of newsList) {
     // 3 - go to this slide
     $('.newsfeed.all .slickContainer').slick('slickGoTo', indexRightSlide)
 
-    // 4 - scroll to the newsfeed all
+    // 4 - add halo
+    let activeSlide = document.querySelector('.newsfeed.all .slickContainer .cardContainer[data-content-id="' + newsId + '"]').closest(".slick-slide")
+    activeSlide.classList.add('active')
+    setTimeout(function () {
+      activeSlide.classList.remove('active')
+    }, 5000)
+
+    // 5 - scroll to the newsfeed all
     allFeedCta.scrollIntoView({ behavior: 'smooth' });
 
-    // 5 - remove class active when click in body 
+    // 6 - remove class active when click in body 
     overlayBody.addEventListener('click', function (e) {
       for (let choice of choices) {
         choice.classList.remove('active')
       }
     })
 
-    // 6 - Remove active class when user clic outside
+    // 7 - Remove active class when user clic outside
     const removeClickEventNews = function (e) {
       const classNamesTime = ['newsList', 'newsWrapper', 'avatarContainer', 'avatar', 'txtInfos', 'name', 'iframeContainer', 'newsFeedThumb', 'newsMessage ']
       if (!classNamesTime.some(classNameTime => e.target.classList.contains(classNameTime))) {
