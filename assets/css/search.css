@@ -157,6 +157,9 @@ body {
   margin-left: 8px;
   border: none;
 }
+.headerSite .searchContainer .searchInput.keyword {
+  width: 136px;
+}
 .headerSite .avatar {
   display: flex;
   align-items: center;
@@ -364,69 +367,6 @@ body {
 }
 .potentialConnectionsBlock .potentialConnectionsList .followIcon {
   width: 20px;
-}
-.formSearchPeers {
-  position: relative;
-  height: 212px;
-  margin-top: 12px;
-}
-.formSearchPeers .inputSearchPeers {
-  display: flex;
-  flex-wrap: wrap;
-}
-.formSearchPeers .inputSearchPeers .searchInput {
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-  height: 60px;
-  width: calc(50% - 8px);
-  padding: 0 16px;
-  margin-bottom: 16px;
-  background: #ffffff;
-  border-radius: 20px;
-}
-.formSearchPeers .inputSearchPeers .searchInput:nth-child(2n) {
-  margin-left: 16px;
-}
-.formSearchPeers .inputSearchPeers .searchInput .label {
-  width: 100px;
-  font-weight: 700;
-}
-.formSearchPeers .inputSearchPeers .searchInput .input {
-  width: calc(100% - 100px);
-  border: 0;
-}
-.formSearchPeers .inputSearchPeers .searchInput .input:focus-visible {
-  outline: 0;
-}
-.formSearchPeers .ctaSearchContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: 0;
-  box-sizing: border-box;
-  padding: 8px 16px;
-  height: 60px;
-  font-size: 14px;
-  text-decoration: none;
-  color: white;
-  border-radius: 20px;
-  background-color: #5786FF;
-  cursor: pointer;
-}
-.formSearchPeers .ctaSearchContainer .searchIcon {
-  height: 24px;
-  margin-right: 8px;
-  cursor: pointer;
-}
-.formSearchPeers .ctaSearchContainer .submitSearchPeers {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
 }
 .researchContainer {
   position: relative;

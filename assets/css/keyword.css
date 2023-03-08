@@ -157,6 +157,9 @@ body {
   margin-left: 8px;
   border: none;
 }
+.headerSite .searchContainer .searchInput.keyword {
+  width: 136px;
+}
 .headerSite .avatar {
   display: flex;
   align-items: center;
