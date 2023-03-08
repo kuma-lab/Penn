@@ -21,8 +21,13 @@
 
     .resulatContainer {
         display: flex;
-        border-radius: 20px;
         margin: 8px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #8e8c99;
+
+        &:last-of-type {
+            border: 0;
+        }
 
         .personInfo {
             display: flex;
@@ -62,6 +67,10 @@
             .mainField {
                 font-size: 14px;
                 color: #8e8c99;
+
+                @media screen and (min-width: 1024px) {
+                    font-size: 16px;
+                }
             }
 
             .titleField {
@@ -74,6 +83,10 @@
                 margin-top: 4px;
                 font-size: 14px;
                 color: #8e8c99;
+
+                @media screen and (min-width: 1024px) {
+                    font-size: 16px;
+                }
             }
         }
     }
@@ -91,8 +104,16 @@
                 padding: 16px 0 0 24px;
 
                 .listKeywords {
-                    list-style: none;
                     columns: 2 200px;
+                }
+
+                .keyword {
+                    font-size: 14px;
+                    color: #8e8c99;
+
+                    @media screen and (min-width: 1024px) {
+                        font-size: 16px;
+                    }
                 }
             }
         }

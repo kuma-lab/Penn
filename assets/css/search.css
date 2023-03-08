@@ -367,7 +367,7 @@ body {
 }
 .formSearchPeers {
   position: relative;
-  height: 240px;
+  height: 212px;
   margin-top: 12px;
 }
 .formSearchPeers .inputSearchPeers {
@@ -449,8 +449,12 @@ body {
 }
 .researchContainer .resulatContainer {
   display: flex;
-  border-radius: 20px;
   margin: 8px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #8e8c99;
+}
+.researchContainer .resulatContainer:last-of-type {
+  border: 0;
 }
 .researchContainer .resulatContainer .personInfo {
   display: flex;
@@ -490,6 +494,11 @@ body {
   font-size: 14px;
   color: #8e8c99;
 }
+@media screen and (min-width: 1024px) {
+  .researchContainer .resulatContainer .personInfo .mainField {
+    font-size: 16px;
+  }
+}
 .researchContainer .resulatContainer .personInfo .titleField {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -501,6 +510,11 @@ body {
   font-size: 14px;
   color: #8e8c99;
 }
+@media screen and (min-width: 1024px) {
+  .researchContainer .resulatContainer .personInfo .titleField {
+    font-size: 16px;
+  }
+}
 .researchContainer .personKeyword .sideAuthor .keywordsTitle {
   font-weight: 700;
 }
@@ -511,6 +525,14 @@ body {
   padding: 16px 0 0 24px;
 }
 .researchContainer .personKeyword .sideAuthor .keywords .listKeywords {
-  list-style: none;
   columns: 2 200px;
+}
+.researchContainer .personKeyword .sideAuthor .keywords .keyword {
+  font-size: 14px;
+  color: #8e8c99;
+}
+@media screen and (min-width: 1024px) {
+  .researchContainer .personKeyword .sideAuthor .keywords .keyword {
+    font-size: 16px;
+  }
 }
