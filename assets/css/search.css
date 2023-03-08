@@ -25,7 +25,16 @@ body {
   background-size: cover;
 }
 .mainWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 16px;
+}
+@media screen and (min-width: 1024px) {
+  .mainWrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
 .mainWrapper .main {
   width: 100%;
@@ -36,7 +45,7 @@ body {
   }
 }
 .mainWrapper .main .pageTitle {
-  padding: 8px 0;
+  padding: 16px 0 8px;
   font-size: 24px;
 }
 .mainWrapper .main .secondContent {
@@ -359,6 +368,7 @@ body {
 .formSearchPeers {
   position: relative;
   height: 240px;
+  margin-top: 12px;
 }
 .formSearchPeers .inputSearchPeers {
   display: flex;
@@ -418,67 +428,7 @@ body {
   font-weight: 700;
   cursor: pointer;
 }
-.mainWrapper {
-  /*.searchContainer {
-        columns: 2 200px;
-        column-fill: auto;
-        margin-bottom: 60px;
-        height: 220px;
-
-        .inputContainer {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            padding: 10px;
-            padding-right: 8px;
-            margin: 9px 0;
-            background: #ffffff;
-            border-radius: 20px;
-            box-sizing: border-box;
-
-            &.keywords {
-                height: 100px;
-            }
-
-            label {
-                font-weight: bold;
-                width: auto;
-            }
-
-            input {
-                border: none;
-                margin-left: 9px;
-                width: 100%;
-                max-width: calc(100% - 100px);
-            }
-        }
-
-        .ctaSearchContainer {
-            display: flex;
-            padding: 8px;
-            margin-left: calc(100% - 86px);
-            width: 70px;
-            height: 18px;
-            font-size: 14px;
-            text-decoration: none;
-            color: white;
-            border-radius: 12px;
-            background-color: #5786FF;
-
-            img {
-                margin-right: 8px;
-            }
-
-            .submitSearchPeers {
-                background: none;
-                border: none;
-                color: white;
-                font-size: 16px;
-            }
-        }
-    } */
-}
-.mainWrapper .researchContainer {
+.researchContainer {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -490,36 +440,39 @@ body {
   border-radius: 20px;
   box-sizing: border-box;
 }
-.mainWrapper .researchContainer > h3 {
+.researchContainer .numberResults {
   position: absolute;
-  top: -20px;
+  top: -24px;
 }
-.mainWrapper .researchContainer .resulatContainer {
+.researchContainer .numberResults .number {
+  color: #5786ff;
+}
+.researchContainer .resulatContainer {
   display: flex;
   border-radius: 20px;
-  margin: 9px;
+  margin: 8px;
 }
-.mainWrapper .researchContainer .resulatContainer .personInfo {
+.researchContainer .resulatContainer .personInfo {
   display: flex;
   align-items: flex-start;
   position: relative;
   margin: 8px 0 16px;
 }
-.mainWrapper .researchContainer .resulatContainer .personInfo .avatarContainer .avatar {
+.researchContainer .resulatContainer .personInfo .avatarContainer .avatar {
   height: 40px;
   border-radius: 16px;
   cursor: pointer;
 }
 @media screen and (min-width: 1024px) {
-  .mainWrapper .researchContainer .resulatContainer .personInfo .avatarContainer .avatar {
+  .researchContainer .resulatContainer .personInfo .avatarContainer .avatar {
     height: 60px;
   }
 }
-.mainWrapper .researchContainer .resulatContainer .personInfo .txtInfos {
+.researchContainer .resulatContainer .personInfo .txtInfos {
   margin: 0 8px;
   width: calc(100% - 100px);
 }
-.mainWrapper .researchContainer .resulatContainer .personInfo .name {
+.researchContainer .resulatContainer .personInfo .name {
   margin-bottom: 4px;
   font-weight: bold;
   font-size: 15px;
@@ -529,15 +482,15 @@ body {
   cursor: pointer;
 }
 @media screen and (min-width: 1024px) {
-  .mainWrapper .researchContainer .resulatContainer .personInfo .name {
+  .researchContainer .resulatContainer .personInfo .name {
     font-size: 16px;
   }
 }
-.mainWrapper .researchContainer .resulatContainer .personInfo .mainField {
+.researchContainer .resulatContainer .personInfo .mainField {
   font-size: 14px;
   color: #8e8c99;
 }
-.mainWrapper .researchContainer .resulatContainer .personInfo .titleField {
+.researchContainer .resulatContainer .personInfo .titleField {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -548,16 +501,16 @@ body {
   font-size: 14px;
   color: #8e8c99;
 }
-.mainWrapper .researchContainer .personKeyword .sideAuthor .keywordsTitle {
+.researchContainer .personKeyword .sideAuthor .keywordsTitle {
   font-weight: 700;
 }
-.mainWrapper .researchContainer .personKeyword .sideAuthor .keywords {
+.researchContainer .personKeyword .sideAuthor .keywords {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   padding: 16px 0 0 24px;
 }
-.mainWrapper .researchContainer .personKeyword .sideAuthor .keywords .listKeywords {
+.researchContainer .personKeyword .sideAuthor .keywords .listKeywords {
   list-style: none;
   columns: 2 200px;
 }

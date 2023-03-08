@@ -1,0 +1,100 @@
+.researchContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 16px;
+    padding-right: 8px;
+    margin: 34px 0 16px 0;
+    background: #ffffff;
+    border-radius: 20px;
+    box-sizing: border-box;
+
+    .numberResults {
+        position: absolute;
+        top: -24px;
+
+        .number {
+            color: #5786ff;
+        }
+    }
+
+    .resulatContainer {
+        display: flex;
+        border-radius: 20px;
+        margin: 8px;
+
+        .personInfo {
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            margin: 8px 0 16px;
+
+            .avatarContainer .avatar {
+                height: 40px;
+                border-radius: 16px;
+                cursor: pointer;
+
+                @media screen and (min-width: 1024px) {
+                    height: 60px;
+                }
+            }
+
+            .txtInfos {
+                margin: 0 8px;
+                width: calc(100% - 100px);
+            }
+
+            .name {
+                margin-bottom: 4px;
+                font-weight: bold;
+                font-size: 15px;
+                line-height: 18px;
+                color: #070721;
+                text-transform: capitalize;
+                cursor: pointer;
+
+                @media screen and (min-width: 1024px) {
+                    font-size: 16px;
+                }
+            }
+
+            .mainField {
+                font-size: 14px;
+                color: #8e8c99;
+            }
+
+            .titleField {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                line-height: 16px;
+                margin-top: 4px;
+                font-size: 14px;
+                color: #8e8c99;
+            }
+        }
+    }
+
+    .personKeyword {
+        .sideAuthor {
+            .keywordsTitle {
+                font-weight: 700;
+            }
+
+            .keywords {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                padding: 16px 0 0 24px;
+
+                .listKeywords {
+                    list-style: none;
+                    columns: 2 200px;
+                }
+            }
+        }
+    }
+}
