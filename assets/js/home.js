@@ -1,3 +1,34 @@
+/***********************************
+/* initialize user for localStorage
+************************************/
+// @todo : replace by user's id and emailUser send by server
+const idUser = 1234
+const emailUser = 'dcentola@asc.upenn.edu'
+// Set user Object with defaults values
+const userOptions = {
+  "email": emailUser,
+  "feed": "press",
+  "slideAll": 0,
+  "slidePress": 0,
+  "slidePub": 0,
+  "slideTalk": 0
+}
+
+// If users exists on this browser
+if (localStorage.getItem('usersOptions')) {
+  // Get users options on local storage
+  let usersOptionsStorage = JSON.parse(localStorage.getItem('usersOptions'))
+  // Verify if idUser exist
+  if(!usersOptionsStorage.hasOwnProperty(idUser)) {
+    // idUser doesn't exit so we add it
+    usersOptionsStorage[idUser] = userOptions
+    localStorage.setItem('usersOptions', JSON.stringify(usersOptionsStorage))
+  }
+} else {
+  // Else we initialized it with first user
+  localStorage.setItem('usersOptions', JSON.stringify({[idUser]: userOptions}))
+}
+
 /**************************
 /* Activate News Feed
 ***************************/
@@ -105,7 +136,9 @@ function initSlick(category) {
   });
 
   // If currentSlide of category saved, go to the right slide
-  if (getUserOption(idUser, 'slide' + capitalizeFirstLetter(category))) $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', getUserOption(idUser, 'slide' + capitalizeFirstLetter(category)))
+  if (getUserOption(idUser, 'slide' + capitalizeFirstLetter(category))) {
+    $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', getUserOption(idUser, 'slide' + capitalizeFirstLetter(category)))
+  }
 
   /**************************
   /* Create Select Button
