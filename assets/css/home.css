@@ -558,6 +558,7 @@ body {
 }
 .newsfeed .slider .backgroundIframe {
   position: relative;
+  z-index: 1;
   margin-bottom: -16px;
   height: 300px;
   padding: 8px;
@@ -607,9 +608,13 @@ body {
 }
 .authorCard {
   height: 414px;
-  padding: 8px 16px 32px;
+  padding: 8px 16px 28px;
   background-color: #ffff;
   border-radius: 0 0 16px 16px;
+}
+.slick-active.active .authorCard {
+  border: solid 2px #93b1fb;
+  background: #cadfff;
 }
 .authorCard .avatarContainer {
   display: flex;
