@@ -316,7 +316,7 @@ for (let newsElt of newsList) {
       newsElt.classList.remove('active')
     }
     newsElt.classList.add('active')
-    newsId = newsElt.getAttribute('data-content-id');
+    newsId = newsElt.getAttribute('data-content-id')
 
     // 1 - click on allfeed CTA
     activateNewsFeed('all')
@@ -325,7 +325,7 @@ for (let newsElt of newsList) {
     }
 
     // 2 - Save All feed on localStorage
-    setUserOption(idUser, 'feed', 'all');
+    setUserOption(idUser, 'feed', 'all')
 
     // 2 - find data-content-id on newsfeed all element and calculate index position of this slide
     let indexRightSlide = document.querySelector('.newsfeed.all .slickContainer .cardContainer[data-content-id="' + newsId + '"]').closest(".slick-slide").getAttribute('data-slick-index')
@@ -333,27 +333,18 @@ for (let newsElt of newsList) {
     // 3 - go to this slide
     $('.newsfeed.all .slickContainer').slick('slickGoTo', indexRightSlide)
 
-    // 4 - scroll to the newsfeed all
+    // 4 - add halo and remove their after 5 secondes
+    let activeSlide = document.querySelector('.newsfeed.all .slickContainer .cardContainer[data-content-id="' + newsId + '"]').closest(".slick-slide")
+    activeSlide.classList.add('active')
+    setTimeout(function () {
+      activeSlide.classList.remove('active')
+      newsElt.classList.remove('active')
+    }, 5000)
+
+    // 5 - scroll to the newsfeed all
     allFeedCta.scrollIntoView({ behavior: 'smooth' });
-
-    // 5 - remove class active when click in body 
-    overlayBody.addEventListener('click', function (e) {
-      for (let choice of choices) {
-        choice.classList.remove('active')
-      }
-    })
-
-    // 6 - Remove active class when user clic outside
-    const removeClickEventNews = function (e) {
-      const classNamesTime = ['newsList', 'newsWrapper', 'avatarContainer', 'avatar', 'txtInfos', 'name', 'iframeContainer', 'newsFeedThumb', 'newsMessage ']
-      if (!classNamesTime.some(classNameTime => e.target.classList.contains(classNameTime))) {
-        // Hide all select Button Open
-        newsElt.classList.remove('active')
-        overlayBody.removeEventListener('click', removeClickEventNews)
-      }
-    }
-    overlayBody.addEventListener('click', removeClickEventNews);
   })
+
 }
 
 // Ranking
