@@ -1,5 +1,4 @@
 /* Reset */
-
 * {
   margin: 0;
   padding: 0;
@@ -31,39 +30,9 @@ h1{
 }
 
 h2 {
-  padding: 9px 0;
   width: 100%;
-  font-weight: bold;
-  font-size: 18px;
   line-height: 28px;
-  color: #070721;
   text-transform: capitalize;
-
-}
-
-h3 {
-  padding-top: 9px;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 21px;
-  text-decoration-line: underline;
-  color: #070721;
-  text-transform: capitalize;
-}
-
-h4 {
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 18px;
-  color: #070721;
-  text-transform: capitalize;
-  margin-bottom: 5px;
-}
-
-main{
-  display: flex;
-  flex-direction: column;    
-  align-items: center;
 }
 
 section {
@@ -104,13 +73,7 @@ section {
   width: calc(100% - 149px);
 }
 
-
 @media screen and (min-width: 1024px) {
-  main{
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
   .main{
     width: calc(100% - 336px);
   }
@@ -118,7 +81,6 @@ section {
   .left article h2 {
     text-align: center;
   }
-
 
   .listArticlesByYears .connectionWrapper .avatarContainer .avatar{
     height: 60px;
