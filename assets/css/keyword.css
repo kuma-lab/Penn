@@ -387,6 +387,11 @@ body {
   border-radius: 16px;
   cursor: pointer;
 }
+@media screen and (min-width: 1024px) {
+  .listArticlesByYears .connectionWrapper .avatarContainer .avatar {
+    height: 60px;
+  }
+}
 .listArticlesByYears .connectionWrapper .txtInfos .mainField {
   margin-top: 0;
 }

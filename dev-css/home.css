@@ -1,40 +1,4 @@
-/* Tag */
-p, span {
-  font-size: 12px;
-  margin-top: 3px;
-}
-
-select {
-  border: none;
-}
-h2 {
-  padding: 18px 0;
-  font-weight: bold;
-  font-size: 22px;
-  line-height: 28px;
-  color: #070721;
-  text-transform: capitalize;
-}
-
-h4 {
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 18px;
-  color: #070721;
-  text-transform: capitalize;
-  margin-bottom: 5px;
-}
-
-.hide{
-  display: none;
-}
-
 /* News Feed */
-
-.talk .newsFeedThumb{
-  background-position: center center;
-}
-
 .cta{
   display: block;
   padding: 3px 0;
@@ -50,55 +14,4 @@ h4 {
 .Cta:hover,
 .openModal:hover {
   cursor: pointer;
-}
-
-.avatarContainer .avatar{
-  height: 60px;
-  border-radius: 9px;
-}
-
-.lastConnection{
-  width: 70px;
-  font-size: 12px;  
-  position: absolute;
-  right: 0;
-  color: #8E8C99;
-}
-.lastConnection::before{
-  position: absolute;
-  content: "";
-  border-radius: 50px;
-  background-color: #44CD45;
-  height: 6px;
-  width: 6px;
-  left: -10px;
-  top: 2px;
-}
-
-@media screen and (min-width: 1024px) {
-
-  /* ne pas supprimer leger ecart dù au slider */
-  body .headerSite .linkToHome .logo{ 
-    left: 24px;
-  }
-
-  p, span {
-    font-size: 16px;
-  }
-
-  .main{
-    width: 70%;
-  }
-
-  .side{
-    width: 25%;
-  }
-
-  header {
-    justify-content: flex-end;
-  }
-
-  .main article{
-    display: flex;
-  }
 }

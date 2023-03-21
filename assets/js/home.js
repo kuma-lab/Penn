@@ -1,3 +1,34 @@
+/***********************************
+/* initialize user for localStorage
+************************************/
+// @todo : replace by user's id and emailUser send by server
+const idUser = 1234
+const emailUser = 'dcentola@asc.upenn.edu'
+// Set user Object with defaults values
+const userOptions = {
+  "email": emailUser,
+  "feed": "press",
+  "slideAll": 0,
+  "slidePress": 0,
+  "slidePub": 0,
+  "slideTalk": 0
+}
+
+// If users exists on this browser
+if (localStorage.getItem('usersOptions')) {
+  // Get users options on local storage
+  let usersOptionsStorage = JSON.parse(localStorage.getItem('usersOptions'))
+  // Verify if idUser exist
+  if(!usersOptionsStorage.hasOwnProperty(idUser)) {
+    // idUser doesn't exit so we add it
+    usersOptionsStorage[idUser] = userOptions
+    localStorage.setItem('usersOptions', JSON.stringify(usersOptionsStorage))
+  }
+} else {
+  // Else we initialized it with first user
+  localStorage.setItem('usersOptions', JSON.stringify({[idUser]: userOptions}))
+}
+
 /**************************
 /* Activate News Feed
 ***************************/
@@ -105,7 +136,9 @@ function initSlick(category) {
   });
 
   // If currentSlide of category saved, go to the right slide
-  if (getUserOption(idUser, 'slide' + capitalizeFirstLetter(category))) $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', getUserOption(idUser, 'slide' + capitalizeFirstLetter(category)))
+  if (getUserOption(idUser, 'slide' + capitalizeFirstLetter(category))) {
+    $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', getUserOption(idUser, 'slide' + capitalizeFirstLetter(category)))
+  }
 
   /**************************
   /* Create Select Button
@@ -283,7 +316,7 @@ for (let newsElt of newsList) {
       newsElt.classList.remove('active')
     }
     newsElt.classList.add('active')
-    newsId = newsElt.getAttribute('data-content-id');
+    newsId = newsElt.getAttribute('data-content-id')
 
     // 1 - click on allfeed CTA
     activateNewsFeed('all')
@@ -292,7 +325,7 @@ for (let newsElt of newsList) {
     }
 
     // 2 - Save All feed on localStorage
-    setUserOption(idUser, 'feed', 'all');
+    setUserOption(idUser, 'feed', 'all')
 
     // 2 - find data-content-id on newsfeed all element and calculate index position of this slide
     let indexRightSlide = document.querySelector('.newsfeed.all .slickContainer .cardContainer[data-content-id="' + newsId + '"]').closest(".slick-slide").getAttribute('data-slick-index')
@@ -300,27 +333,18 @@ for (let newsElt of newsList) {
     // 3 - go to this slide
     $('.newsfeed.all .slickContainer').slick('slickGoTo', indexRightSlide)
 
-    // 4 - scroll to the newsfeed all
+    // 4 - add halo and remove their after 5 secondes
+    let activeSlide = document.querySelector('.newsfeed.all .slickContainer .cardContainer[data-content-id="' + newsId + '"]').closest(".slick-slide")
+    activeSlide.classList.add('active')
+    setTimeout(function () {
+      activeSlide.classList.remove('active')
+      newsElt.classList.remove('active')
+    }, 5000)
+
+    // 5 - scroll to the newsfeed all
     allFeedCta.scrollIntoView({ behavior: 'smooth' });
-
-    // 5 - remove class active when click in body 
-    overlayBody.addEventListener('click', function (e) {
-      for (let choice of choices) {
-        choice.classList.remove('active')
-      }
-    })
-
-    // 6 - Remove active class when user clic outside
-    const removeClickEventNews = function (e) {
-      const classNamesTime = ['newsList', 'newsWrapper', 'avatarContainer', 'avatar', 'txtInfos', 'name', 'iframeContainer', 'newsFeedThumb', 'newsMessage ']
-      if (!classNamesTime.some(classNameTime => e.target.classList.contains(classNameTime))) {
-        // Hide all select Button Open
-        newsElt.classList.remove('active')
-        overlayBody.removeEventListener('click', removeClickEventNews)
-      }
-    }
-    overlayBody.addEventListener('click', removeClickEventNews);
   })
+
 }
 
 // Ranking
