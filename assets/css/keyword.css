@@ -365,6 +365,11 @@ body {
 .potentialConnectionsBlock .potentialConnectionsList .followIcon {
   width: 20px;
 }
+h2 {
+  width: 100%;
+  line-height: 28px;
+  text-transform: capitalize;
+}
 .mainWrapper .main .pageTitle {
   padding-top: 16px;
 }
@@ -447,6 +452,9 @@ body {
   flex-direction: row;
   align-items: flex-start;
   padding: 4px 0;
+  margin-top: 3px;
+  line-height: 16px;
+  list-style: none;
   font-size: 16px;
   text-transform: capitalize;
   cursor: pointer;
