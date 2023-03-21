@@ -806,10 +806,13 @@ body {
 .newsBlock .newsList .message {
   position: absolute;
   right: 16px;
-  top: 20px;
+  top: 26px;
 }
 .newsBlock .newsList .message::before {
   content: "";
+  position: absolute;
+  top: 4px;
+  left: -16px;
   display: inline-block;
   margin-right: 8px;
   width: 8px;
