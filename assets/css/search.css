@@ -365,133 +365,174 @@ body {
 .potentialConnectionsBlock .potentialConnectionsList .followIcon {
   width: 20px;
 }
-.mainWrapper {
+.formSearchPeers {
+  position: relative;
+  height: 212px;
+  margin-top: 12px;
+}
+.formSearchPeers .inputSearchPeers {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
 }
-.mainWrapper .connectionsBlock {
-  margin: 0;
-}
-.mainWrapper .connectionsBlock .titleBlock {
-  position: initial;
-  top: initial;
-}
-.mainWrapper .connectionsBlock .messagesList .messageContainer {
-  border-radius: 20px;
+.formSearchPeers .inputSearchPeers .searchInput {
+  display: flex;
+  align-items: center;
   box-sizing: border-box;
-  padding: 8px;
+  height: 60px;
+  width: calc(50% - 8px);
+  padding: 0 16px;
+  margin-bottom: 16px;
+  background: #ffffff;
+  border-radius: 20px;
 }
-.mainWrapper .connectionsBlock .messagesList .messageContainer.unread {
-  background-color: #D2ECFF;
+.formSearchPeers .inputSearchPeers .searchInput:nth-child(2n) {
+  margin-left: 16px;
 }
-.mainWrapper .connectionsBlock .messagesList .messageContainer.active {
-  background-color: #f5e8ff;
+.formSearchPeers .inputSearchPeers .searchInput .label {
+  width: 100px;
+  font-weight: 700;
 }
-.mainWrapper .connectionsBlock .messagesList .iconMsg {
-  display: none;
+.formSearchPeers .inputSearchPeers .searchInput .input {
+  width: calc(100% - 100px);
+  border: 0;
 }
-.mainWrapper .peopleChat {
-  margin-right: 16px;
-  width: 400px;
+.formSearchPeers .inputSearchPeers .searchInput .input:focus-visible {
+  outline: 0;
+}
+.formSearchPeers .ctaSearchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  height: 60px;
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+  border-radius: 20px;
+  background-color: #5786FF;
+  cursor: pointer;
+}
+.formSearchPeers .ctaSearchContainer .searchIcon {
+  height: 24px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+.formSearchPeers .ctaSearchContainer .submitSearchPeers {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.researchContainer {
   position: relative;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  padding: 16px;
+  padding-right: 8px;
+  margin: 34px 0 16px 0;
   background: #ffffff;
   border-radius: 20px;
   box-sizing: border-box;
 }
-.mainWrapper .commWrapper {
-  width: calc(100% - 400px);
+.researchContainer .numberResults {
+  position: absolute;
+  top: -24px;
 }
-.mainWrapper .commWrapper .personContainer {
+.researchContainer .numberResults .number {
+  color: #5786ff;
+}
+.researchContainer .resulatContainer {
+  display: flex;
+  margin: 8px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #8e8c99;
+}
+.researchContainer .resulatContainer:last-of-type {
+  border: 0;
+}
+.researchContainer .resulatContainer .personInfo {
   display: flex;
   align-items: flex-start;
-  justify-content: center;
   position: relative;
   margin: 8px 0 16px;
 }
-.mainWrapper .commWrapper .personContainer .avatarContainer {
-  margin-right: 8px;
-}
-.mainWrapper .commWrapper .personContainer .avatarContainer .avatar {
-  height: 60px;
+.researchContainer .resulatContainer .personInfo .avatarContainer .avatar {
+  height: 40px;
   border-radius: 16px;
   cursor: pointer;
 }
-.mainWrapper .commWrapper .personContainer .name {
-  margin-bottom: 8px;
+@media screen and (min-width: 1024px) {
+  .researchContainer .resulatContainer .personInfo .avatarContainer .avatar {
+    height: 60px;
+  }
 }
-.mainWrapper .commWrapper .personContainer .titleField {
+.researchContainer .resulatContainer .personInfo .txtInfos {
+  margin: 0 8px;
+  width: calc(100% - 100px);
+}
+.researchContainer .resulatContainer .personInfo .name {
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  color: #070721;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  .researchContainer .resulatContainer .personInfo .name {
+    font-size: 16px;
+  }
+}
+.researchContainer .resulatContainer .personInfo .mainField {
   font-size: 14px;
   color: #8e8c99;
-  margin-bottom: 4px;
 }
-.mainWrapper .commWrapper .messageContainer {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 776px;
-  padding: 16px;
-  padding-right: 8px;
-  background: #ffffff;
-  border-radius: 20px;
-  box-sizing: border-box;
+@media screen and (min-width: 1024px) {
+  .researchContainer .resulatContainer .personInfo .mainField {
+    font-size: 16px;
+  }
 }
-.mainWrapper .commWrapper .messageContainer .messagesLayout {
-  margin-top: 32px;
-  display: flex;
-  flex-direction: column;
-  padding-right: 8px;
-  overflow: auto;
-}
-.mainWrapper .commWrapper .messageContainer .messagesLayout .message {
-  max-width: 45%;
-  width: fit-content;
-  margin-bottom: 8px;
-  border-radius: 20px;
-  box-sizing: border-box;
+.researchContainer .resulatContainer .personInfo .titleField {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 16px;
+  margin-top: 4px;
   font-size: 14px;
-  font-weight: bold;
-  padding: 8px;
+  color: #8e8c99;
 }
-.mainWrapper .commWrapper .messageContainer .messagesLayout .message.send {
-  background: #D2ECFF;
+@media screen and (min-width: 1024px) {
+  .researchContainer .resulatContainer .personInfo .titleField {
+    font-size: 16px;
+  }
 }
-.mainWrapper .commWrapper .messageContainer .messagesLayout .message.receive {
-  background: #F5E8FF;
-  align-self: flex-end;
+.researchContainer .personKeyword .sideAuthor .keywordsTitle {
+  font-weight: 700;
 }
-.mainWrapper .commWrapper .messageContainer .messagesLayout .iframeContainer {
-  height: 170px;
-  cursor: pointer;
-  width: 100%;
-}
-.mainWrapper .commWrapper .messageContainer .messagesLayout .iframeContainer .iframe {
-  height: 150px;
-  background-size: cover;
-  border-radius: 20px;
-}
-.mainWrapper .commWrapper .keyboardContainer {
-  position: relative;
+.researchContainer .personKeyword .sideAuthor .keywords {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 16px;
-  flex-direction: row;
-  background: #ffffff;
-  border-radius: 20px;
-  box-sizing: border-box;
-  padding: 16px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 16px 0 0 24px;
 }
-.mainWrapper .commWrapper .keyboardContainer .keyboard {
-  width: calc(100% - 131px);
-  padding: 0 8px;
-  font-size: 20px;
-  border: none;
-  outline: none;
+.researchContainer .personKeyword .sideAuthor .keywords .listKeywords {
+  columns: 2 200px;
 }
-.mainWrapper .commWrapper .keyboardContainer .clip {
-  margin-right: 16px;
-  height: 30px;
+.researchContainer .personKeyword .sideAuthor .keywords .keyword {
+  font-size: 14px;
+  color: #8e8c99;
+}
+@media screen and (min-width: 1024px) {
+  .researchContainer .personKeyword .sideAuthor .keywords .keyword {
+    font-size: 16px;
+  }
 }

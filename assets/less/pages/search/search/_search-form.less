@@ -1,0 +1,72 @@
+.formSearchPeers {
+    position: relative;
+    height: 212px;
+    margin-top: 12px;
+
+    .inputSearchPeers {
+        display: flex;
+        flex-wrap: wrap;
+
+        .searchInput {
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            height: 60px;
+            width: calc(50% - 8px);
+            padding: 0 16px;
+            margin-bottom: 16px;
+            background: #ffffff;
+            border-radius: 20px;
+
+            &:nth-child(2n) {
+                margin-left: 16px;
+            }
+
+            .label {
+                width: 100px;
+                font-weight: 700;
+            }
+
+            .input {
+                width: calc(100% - 100px);
+                border: 0;
+
+                &:focus-visible {
+                    outline: 0;
+                }
+            }
+        }
+    }
+
+    .ctaSearchContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        box-sizing: border-box;
+        padding: 8px 16px;
+        height: 60px;
+        font-size: 14px;
+        text-decoration: none;
+        color: white;
+        border-radius: 20px;
+        background-color: #5786FF;
+        cursor: pointer;
+
+        .searchIcon {
+            height: 24px;
+            margin-right: 8px;
+            cursor: pointer;
+        }
+
+        .submitSearchPeers {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+    }
+}
