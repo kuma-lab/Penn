@@ -416,6 +416,7 @@ h2 {
 .listArticlesByYears .listArticles {
   box-sizing: border-box;
   width: 100%;
+  margin: 8px;
   padding: 16px;
   background: white;
   border-radius: 20px;
@@ -423,7 +424,6 @@ h2 {
 @media screen and (min-width: 1024px) {
   .listArticlesByYears .listArticles {
     width: calc(50% - 16px);
-    margin: 8px;
   }
 }
 .listArticlesByYears .listArticles .name {

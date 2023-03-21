@@ -22,9 +22,14 @@
     }
 
     .mediaContainer {
+        margin-bottom: 16px;
         width: 100%;
         background: white;
         border-radius: 20px;
+
+        @media(min-width: 1024px) {
+            margin-bottom: 0;
+        }
 
         div {
             display: flex;

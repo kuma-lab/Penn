@@ -651,9 +651,15 @@ body {
   }
 }
 .containerListsArticles .mediaContainer {
+  margin-bottom: 16px;
   width: 100%;
   background: white;
   border-radius: 20px;
+}
+@media (min-width: 1024px) {
+  .containerListsArticles .mediaContainer {
+    margin-bottom: 0;
+  }
 }
 .containerListsArticles .mediaContainer div {
   display: flex;
