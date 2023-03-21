@@ -1,19 +1,8 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  line-height: 1;
-}
-
 /* Tag */
 li {
   font-size: 12px;
   margin-top: 3px;
   line-height: 16px;
-}
-
-li{
   list-style: none;
 }
 
@@ -68,11 +57,6 @@ section {
   text-transform: capitalize  ;
 }
 
-.potentialConnection h4{
-  margin-left: 9px;
-  width: calc(100% - 149px);
-}
-
 @media screen and (min-width: 1024px) {
   .main{
     width: calc(100% - 336px);
@@ -80,9 +64,5 @@ section {
   
   .left article h2 {
     text-align: center;
-  }
-
-  .listArticlesByYears .connectionWrapper .avatarContainer .avatar{
-    height: 60px;
   }
 }
