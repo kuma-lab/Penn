@@ -341,6 +341,14 @@ for (let newsElt of newsList) {
       newsElt.classList.remove('active')
     }, 5000)
 
+    const removeHalo = function () {
+      activeSlide.classList.remove('active')
+      newsElt.classList.remove('active')
+      document.querySelector('body').removeEventListener('mousedown', removeHalo)
+    }
+
+    document.querySelector('body').addEventListener('mousedown', removeHalo)
+
     // 5 - scroll to the newsfeed all
     allFeedCta.scrollIntoView({ behavior: 'smooth' });
   })
