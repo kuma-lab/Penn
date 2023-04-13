@@ -155,6 +155,11 @@ body {
     margin-top: 0;
   }
 }
+.headerSite .searchContainer .keywordSearchForm,
+.headerSite .searchContainer .peopleSearchForm {
+  display: flex;
+  align-items: center;
+}
 .headerSite .searchContainer .searchIcon {
   height: 24px;
   width: 24px;
