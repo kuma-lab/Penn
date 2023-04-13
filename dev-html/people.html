@@ -14,14 +14,22 @@
       <a href="home.html" class="linkToHome">
         <img class="logo" src="../assets/img/logo.png" alt="">
       </a>
-      <div class="searchContainer">
-          <img src="../assets/img/Search.png" alt="search" class="searchIcon">
-          <label class="labelSearch" for="gsearch"></label>
-          <input type="search" class="searchInput" id="gsearch" placeholder="search people" name="gsearch">
+      <div class="searchWrapper">
+        <div class="searchContainer">
+          <form name="keywordSearchForm" class="keywordSearchForm" action="/exchange/keyword/search" method="GET">
+            <img src="../assets/img/Search.png" alt="search" class="searchIcon">
+            <label class="labelSearch" for="ksearch"></label>
+            <input type="search" class="searchInput" id="ksearch" placeholder="keyword search" name="ksearch">
+          </form>
+        </div>
+        <div class="searchContainer">
+          <form name="peopleSearchForm" class="peopleSearchForm" action="/exchange/people/search" method="GET">
+            <img src="../assets/img/Search.png" alt="search" class="searchIcon">
+            <label class="labelSearch" for="psearch"></label>
+            <input type="search" class="searchInput" id="psearch" placeholder="People search" name="psearch">
+          </form>
+        </div>
       </div>
-      <!-- <div class="imgContainer notification">
-        <img src="../assets/img/Notification 1.png" alt="notification" class="notificationIcon">
-      </div> -->
       <div class="imgContainer avatar">
         <img src="../assets/img/avatar2.png" alt="avatar" class="avatarImage">
       </div>

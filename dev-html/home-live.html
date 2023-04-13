@@ -9,21 +9,32 @@
 	<title>Penn Exchange : Home</title>
 </head>
 <body>
-    <header>
-      <img class="logo" src="../img/logo.png" alt="">
+    <!-- Header site -->
+    <header class="headerSite">
+      <a href="home.html" class="linkToHome">
+        <img class="logo" src="../assets/img/logo.png" alt="">
+      </a>
+      <div class="searchWrapper">
         <div class="searchContainer">
-            <img src="../img/Search.png" alt="search">
-            <label class="hide" for="gsearch"></label>
-            <input type="search" id="gsearch" placeholder="search" name="gsearch">
+          <form name="keywordSearchForm" class="keywordSearchForm" action="/exchange/keyword/search" method="GET">
+            <img src="../assets/img/Search.png" alt="search" class="searchIcon">
+            <label class="labelSearch" for="ksearch"></label>
+            <input type="search" class="searchInput" id="ksearch" placeholder="keyword search" name="ksearch">
+          </form>
         </div>
-        <div class="imgContainer notification">
-          <img src="../img/Notification%201.png" alt="notification">
+        <div class="searchContainer">
+          <form name="peopleSearchForm" class="peopleSearchForm" action="/exchange/people/search" method="GET">
+            <img src="../assets/img/Search.png" alt="search" class="searchIcon">
+            <label class="labelSearch" for="psearch"></label>
+            <input type="search" class="searchInput" id="psearch" placeholder="People search" name="psearch">
+          </form>
         </div>
-        <div class="imgContainer avatar">
-          <img src="https://sil.asc.upenn.edu/exchange/avatar/yphtach-lelkes.jpg" alt="Yphtach Lelkes">
-        </div>
-
+      </div>
+      <div class="imgContainer avatar">
+        <img src="../assets/img/avatar2.png" alt="avatar" class="avatarImage">
+      </div>
     </header>
+    
     <main>
         <article class="main">
 			<div class="headerNewsFeed">

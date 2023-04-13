@@ -130,14 +130,35 @@ body {
     height: 64px;
   }
 }
+.headerSite .searchWrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  .headerSite .searchWrapper {
+    flex-direction: row;
+  }
+}
 .headerSite .searchContainer {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 8px;
+  padding: 2px 4px;
+  margin-top: 4px;
   margin-right: 8px;
   background-color: #fff;
   border-radius: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .headerSite .searchContainer {
+    padding: 8px;
+    margin-top: 0;
+  }
+}
+.headerSite .searchContainer .keywordSearchForm,
+.headerSite .searchContainer .peopleSearchForm {
+  display: flex;
+  align-items: center;
 }
 .headerSite .searchContainer .searchIcon {
   height: 24px;
@@ -152,10 +173,16 @@ body {
   cursor: pointer;
 }
 .headerSite .searchContainer .searchInput {
-  width: 124px;
+  width: 138px;
   padding: 4px;
   margin-left: 8px;
+  font-size: 14px;
   border: none;
+}
+@media screen and (min-width: 1024px) {
+  .headerSite .searchContainer .searchInput {
+    font-size: 16px;
+  }
 }
 .headerSite .avatar {
   display: flex;

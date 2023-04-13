@@ -25,14 +25,35 @@
         }
     }
 
+    .searchWrapper {
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: 1024px) {
+            flex-direction: row;
+        }
+    }
+
     .searchContainer {
         position: relative;
         display: flex;
         align-items: center;
-        padding: 8px;
+        padding: 2px 4px;
+        margin-top: 4px;
         margin-right: 8px;
         background-color: #fff;
         border-radius: 20px;
+
+        @media screen and (min-width: 1024px) {
+            padding: 8px;
+            margin-top: 0;
+        }
+
+        .keywordSearchForm, 
+        .peopleSearchForm {
+            display: flex;
+            align-items: center;
+        }
 
         .searchIcon {
             height: 24px;
@@ -49,10 +70,15 @@
         }
 
         .searchInput {
-            width: 124px;
+            width: 138px;
             padding: 4px;
             margin-left: 8px;
+            font-size: 14px;
             border: none;
+
+            @media screen and (min-width: 1024px) {
+                font-size: 16px;
+            }
         }
     }
 
