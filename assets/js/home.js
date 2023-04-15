@@ -11,7 +11,11 @@ const userOptions = {
   "slideAll": 0,
   "slidePress": 0,
   "slidePub": 0,
-  "slideTalk": 0
+  "slideTalk": 0,
+  "yearAll": 2023,
+  "yearPress": 2023,
+  "yearPub": 2023,
+  "yearTalk": 2023
 }
 
 // If users exists on this browser
@@ -57,6 +61,17 @@ function activateNewsCta(category) {
     choice.classList.remove('active')
   }
   document.querySelector('.bubbleContainer.' + category).classList.add('active')
+}
+
+/**************************
+/* Activate News Year
+***************************/
+function activateNewsYear(category) {
+  // init right date with current slide's date
+  let currentSlideDom = document.querySelectorAll('.newsfeed.' + category + ' .slickContainer .slick-slide')[$('.newsfeed.' + category + ' .slickContainer').slick('slickCurrentSlide')]
+  const year = currentSlideDom.firstChild.firstChild.getAttribute('data-content-year')
+  document.querySelector('.headerNewsFeed .bubbleContainer.active .selectedDate').innerText = year
+  console.log("here init", category, currentSlideDom, year)
 }
 
 /**************************
@@ -121,7 +136,6 @@ function initSlick(category) {
     document.querySelector('.headerNewsFeed .bubbleContainer.active .selectedDate').innerText = year
   });
 
-
   /****************************************************
   /*  Save slide active after each slider event
   *****************************************************/
@@ -175,18 +189,22 @@ $(document).ready(function () {
         for (let choice of choices) {
           choice.classList.add('active')
         }
+        activateNewsYear('all')
         break;
       case 'talk':
         activateNewsFeed('talk')
         activateNewsCta('talk')
+        activateNewsYear('talk')
         break;
       case 'press':
         activateNewsFeed('press')
         activateNewsCta('press')
+        activateNewsYear('press')
         break;
       default:
         activateNewsFeed('pub')
         activateNewsCta('pub')
+        activateNewsYear('pub')
     }
   }
 });
@@ -230,6 +248,7 @@ allFeed.addEventListener('click', function () {
 
   activateNewsFeed('all')
   simulateClick(selectsDateAll)
+  activateNewsYear('all')
 });
 
 for (let choice of choices) {
@@ -248,6 +267,7 @@ for (let choice of choices) {
     choice.classList.add('active')
     let category = choice.getAttribute('data-category')
     activateNewsFeed(category)
+    activateNewsYear(category)
     // Save category feed on localStorage
     setUserOption(idUser, 'feed', category)
   })
@@ -320,6 +340,7 @@ for (let newsElt of newsList) {
 
     // 1 - click on allfeed CTA
     activateNewsFeed('all')
+    activateNewsYear('all')
     for (let choice of choices) {
       choice.classList.add('active')
     }
