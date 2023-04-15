@@ -71,7 +71,6 @@ function activateNewsYear(category) {
   let currentSlideDom = document.querySelectorAll('.newsfeed.' + category + ' .slickContainer .slick-slide')[$('.newsfeed.' + category + ' .slickContainer').slick('slickCurrentSlide')]
   const year = currentSlideDom.firstChild.firstChild.getAttribute('data-content-year')
   document.querySelector('.headerNewsFeed .bubbleContainer.active .selectedDate').innerText = year
-  console.log("here init", category, currentSlideDom, year)
 }
 
 /**************************
@@ -79,7 +78,7 @@ function activateNewsYear(category) {
 ***************************/
 function initSlick(category) {
 
-  // Sliders feed
+  // Sliders feed [@todo : verif is unused and remove it]
   const buttonsOpanModal = document.querySelectorAll('.openModal');
 
   // Show slider when slider is init
@@ -114,7 +113,7 @@ function initSlick(category) {
     ]
   });
 
-  // Disabled Click on modal when user swipe
+  // Disabled Click on modal when user swipe [@todo : verif is unused and remove it]
   $('.newsfeed.' + category + ' .slickContainer').on('swipe', function (event, slick, direction) {
     for (let buttonOpanModal of buttonsOpanModal) {
       buttonOpanModal.classList.add('disabledModal')
@@ -133,7 +132,7 @@ function initSlick(category) {
   $('.newsfeed.' + category + ' .slickContainer').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
     let currentSlideDom = document.querySelectorAll('.newsfeed.' + category + ' .slickContainer .slick-slide')[nextSlide]
     const year = currentSlideDom.firstChild.firstChild.getAttribute('data-content-year')
-    document.querySelector('.headerNewsFeed .bubbleContainer.active .selectedDate').innerText = year
+    document.querySelector('.headerNewsFeed .bubbleContainer.' + category + ' .selectedDate').innerText = year
   });
 
   /****************************************************
@@ -146,9 +145,9 @@ function initSlick(category) {
   // Save currentSlide for each category
   $('.newsfeed.' + category + ' .slickContainer').on('afterChange', function (event, slick, currentSlide) {
     // Save category feed on localStorage
-    setUserOption(idUser, 'slide' + capitalizeFirstLetter(category), currentSlide)
+    setUserOption(idUser, 'slide' + capitalizeFirstLetter(category), currentSlide);
   });
-
+  
   // If currentSlide of category saved, go to the right slide
   if (getUserOption(idUser, 'slide' + capitalizeFirstLetter(category))) {
     $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', getUserOption(idUser, 'slide' + capitalizeFirstLetter(category)))
