@@ -11,11 +11,7 @@ const userOptions = {
   "slideAll": 0,
   "slidePress": 0,
   "slidePub": 0,
-  "slideTalk": 0,
-  "yearAll": 2023,
-  "yearPress": 2023,
-  "yearPub": 2023,
-  "yearTalk": 2023
+  "slideTalk": 0
 }
 
 // If users exists on this browser
@@ -32,6 +28,19 @@ if (localStorage.getItem('usersOptions')) {
   // Else we initialized it with first user
   localStorage.setItem('usersOptions', JSON.stringify({[idUser]: userOptions}))
 }
+
+/*****************************************************************
+/*                  Reminder features Sliders
+/* 
+/* 1 - Default "pub" slider initialization
+/* 2 - If the last viewed slider is different from the pub slider 
+/*     then initialization of the slider in the localStorage
+/* 3 - Initialization of the other two sliders only if the user 
+/*     hover over the top buttons to change slider (on mouseover 
+/*     and not on click because the idea is to preload the slider 
+/*     before the click to avoid its loading in unsightly step 
+/*     for visitors).
+*****************************************************************/
 
 /**************************
 /* Activate News Feed
@@ -139,14 +148,14 @@ function initSlick(category) {
   /*  Save slide active after each slider event
   *****************************************************/
   function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+    return string.charAt(0).toUpperCase() + string.slice(1)
   }
 
   // Save currentSlide for each category
   $('.newsfeed.' + category + ' .slickContainer').on('afterChange', function (event, slick, currentSlide) {
     // Save category feed on localStorage
-    setUserOption(idUser, 'slide' + capitalizeFirstLetter(category), currentSlide);
-  });
+    setUserOption(idUser, 'slide' + capitalizeFirstLetter(category), currentSlide)
+  })
   
   // If currentSlide of category saved, go to the right slide
   if (getUserOption(idUser, 'slide' + capitalizeFirstLetter(category))) {
@@ -157,7 +166,7 @@ function initSlick(category) {
   /* Create Select Button
   ***************************/
   // Create one date by article and all dates by slider
-  let timeLineDates = [];
+  let timeLineDates = []
   let slidesDates = document.querySelectorAll('.newsfeed.' + category + ' .cardContainer[data-content-year]')
   for (let date of slidesDates) {
     timeLineDates.push(date.getAttribute('data-content-year'))
@@ -165,7 +174,7 @@ function initSlick(category) {
   // Keep unique dates
   let timeLineUniqueDates = [...new Set(timeLineDates)]
   // Sort desc value
-  timeLineUniqueDates.sort((a, b) => b - a);
+  timeLineUniqueDates.sort((a, b) => b - a)
 
   // Insert dates on select Date
   const listDates = document.querySelector('.bubbleContainer.' + category + ' .time .listDates')
@@ -178,7 +187,7 @@ function initSlick(category) {
 }
 
 $(document).ready(function () {
-  initSlick('pub');
+  initSlick('pub')
 
   // Active right feed with localStorage
   if (getUserOption(idUser, 'feed')) {
@@ -213,7 +222,7 @@ const videoPlayers = document.querySelectorAll('.newsFeedVideo')
 
 for (let player of videoPlayers) {
   player.addEventListener('click', function () {
-    let source = this.getAttribute('data-content-source');
+    let source = this.getAttribute('data-content-source')
     this.innerHTML = '<iframe width="100%" height="285px" src="' + source + '?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
   })
 }
