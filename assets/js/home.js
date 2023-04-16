@@ -95,6 +95,7 @@ function initSlick(category) {
   $('.newsfeed.' + category + ' .slickContainer').slick({
     dots: false,
     infinite: false,
+    lazyLoad: 'ondemand',
     slidesToShow: 3,
     slidesToScroll: 3,
     prevArrow: '.newsfeed.' + category + ' .slider .arrow.left',
