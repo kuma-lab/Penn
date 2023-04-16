@@ -29,6 +29,19 @@ if (localStorage.getItem('usersOptions')) {
   localStorage.setItem('usersOptions', JSON.stringify({[idUser]: userOptions}))
 }
 
+/*****************************************************************
+/*                  Reminder features Sliders
+/* 
+/* 1 - Default "pub" slider initialization
+/* 2 - If the last viewed slider is different from the pub slider 
+/*     then initialization of the slider in the localStorage
+/* 3 - Initialization of the other two sliders only if the user 
+/*     hover over the top buttons to change slider (on mouseover 
+/*     and not on click because the idea is to preload the slider 
+/*     before the click to avoid its loading in unsightly step 
+/*     for visitors).
+*****************************************************************/
+
 /**************************
 /* Activate News Feed
 ***************************/
@@ -60,11 +73,21 @@ function activateNewsCta(category) {
 }
 
 /**************************
+/* Activate News Year
+***************************/
+function activateNewsYear(category) {
+  // init right date with current slide's date
+  let currentSlideDom = document.querySelectorAll('.newsfeed.' + category + ' .slickContainer .slick-slide')[$('.newsfeed.' + category + ' .slickContainer').slick('slickCurrentSlide')]
+  const year = currentSlideDom.firstChild.firstChild.getAttribute('data-content-year')
+  document.querySelector('.headerNewsFeed .bubbleContainer.active .selectedDate').innerText = year
+}
+
+/**************************
 /* Create Sliders NewsFeed
 ***************************/
 function initSlick(category) {
 
-  // Sliders feed
+  // Sliders feed [@todo : verif is unused and remove it]
   const buttonsOpanModal = document.querySelectorAll('.openModal');
 
   // Show slider when slider is init
@@ -99,7 +122,7 @@ function initSlick(category) {
     ]
   });
 
-  // Disabled Click on modal when user swipe
+  // Disabled Click on modal when user swipe [@todo : verif is unused and remove it]
   $('.newsfeed.' + category + ' .slickContainer').on('swipe', function (event, slick, direction) {
     for (let buttonOpanModal of buttonsOpanModal) {
       buttonOpanModal.classList.add('disabledModal')
@@ -118,23 +141,22 @@ function initSlick(category) {
   $('.newsfeed.' + category + ' .slickContainer').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
     let currentSlideDom = document.querySelectorAll('.newsfeed.' + category + ' .slickContainer .slick-slide')[nextSlide]
     const year = currentSlideDom.firstChild.firstChild.getAttribute('data-content-year')
-    document.querySelector('.headerNewsFeed .bubbleContainer.active .selectedDate').innerText = year
+    document.querySelector('.headerNewsFeed .bubbleContainer.' + category + ' .selectedDate').innerText = year
   });
-
 
   /****************************************************
   /*  Save slide active after each slider event
   *****************************************************/
   function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+    return string.charAt(0).toUpperCase() + string.slice(1)
   }
 
   // Save currentSlide for each category
   $('.newsfeed.' + category + ' .slickContainer').on('afterChange', function (event, slick, currentSlide) {
     // Save category feed on localStorage
     setUserOption(idUser, 'slide' + capitalizeFirstLetter(category), currentSlide)
-  });
-
+  })
+  
   // If currentSlide of category saved, go to the right slide
   if (getUserOption(idUser, 'slide' + capitalizeFirstLetter(category))) {
     $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', getUserOption(idUser, 'slide' + capitalizeFirstLetter(category)))
@@ -144,7 +166,7 @@ function initSlick(category) {
   /* Create Select Button
   ***************************/
   // Create one date by article and all dates by slider
-  let timeLineDates = [];
+  let timeLineDates = []
   let slidesDates = document.querySelectorAll('.newsfeed.' + category + ' .cardContainer[data-content-year]')
   for (let date of slidesDates) {
     timeLineDates.push(date.getAttribute('data-content-year'))
@@ -152,7 +174,7 @@ function initSlick(category) {
   // Keep unique dates
   let timeLineUniqueDates = [...new Set(timeLineDates)]
   // Sort desc value
-  timeLineUniqueDates.sort((a, b) => b - a);
+  timeLineUniqueDates.sort((a, b) => b - a)
 
   // Insert dates on select Date
   const listDates = document.querySelector('.bubbleContainer.' + category + ' .time .listDates')
@@ -165,7 +187,7 @@ function initSlick(category) {
 }
 
 $(document).ready(function () {
-  initSlick('pub');
+  initSlick('pub')
 
   // Active right feed with localStorage
   if (getUserOption(idUser, 'feed')) {
@@ -175,18 +197,22 @@ $(document).ready(function () {
         for (let choice of choices) {
           choice.classList.add('active')
         }
+        activateNewsYear('all')
         break;
       case 'talk':
         activateNewsFeed('talk')
         activateNewsCta('talk')
+        activateNewsYear('talk')
         break;
       case 'press':
         activateNewsFeed('press')
         activateNewsCta('press')
+        activateNewsYear('press')
         break;
       default:
         activateNewsFeed('pub')
         activateNewsCta('pub')
+        activateNewsYear('pub')
     }
   }
 });
@@ -196,7 +222,7 @@ const videoPlayers = document.querySelectorAll('.newsFeedVideo')
 
 for (let player of videoPlayers) {
   player.addEventListener('click', function () {
-    let source = this.getAttribute('data-content-source');
+    let source = this.getAttribute('data-content-source')
     this.innerHTML = '<iframe width="100%" height="285px" src="' + source + '?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
   })
 }
@@ -230,6 +256,7 @@ allFeed.addEventListener('click', function () {
 
   activateNewsFeed('all')
   simulateClick(selectsDateAll)
+  activateNewsYear('all')
 });
 
 for (let choice of choices) {
@@ -248,6 +275,7 @@ for (let choice of choices) {
     choice.classList.add('active')
     let category = choice.getAttribute('data-category')
     activateNewsFeed(category)
+    activateNewsYear(category)
     // Save category feed on localStorage
     setUserOption(idUser, 'feed', category)
   })
@@ -320,6 +348,7 @@ for (let newsElt of newsList) {
 
     // 1 - click on allfeed CTA
     activateNewsFeed('all')
+    activateNewsYear('all')
     for (let choice of choices) {
       choice.classList.add('active')
     }
