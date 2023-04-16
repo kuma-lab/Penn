@@ -146,6 +146,16 @@ function initSlick(category) {
     $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', getUserOption(idUser, 'slide' + capitalizeFirstLetter(category)))
   }
 
+  /****************************************************
+  /*  Transform lazyload image to background image
+  *****************************************************/
+  $(".slider").on("lazyLoaded", function(e, slick, image, imageSource) {
+    parentSlide = $(image).parent(".newsFeedThumb")
+    imageSource.src = image.attr("src")
+    parentSlide.css("background-image", 'url("' + imageSource + '")').addClass("loaded")
+    image.remove()
+  });
+
   /**************************
   /* Create Select Button
   ***************************/
