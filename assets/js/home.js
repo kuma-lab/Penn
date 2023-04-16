@@ -86,10 +86,6 @@ function activateNewsYear(category) {
 /* Create Sliders NewsFeed
 ***************************/
 function initSlick(category) {
-
-  // Sliders feed [@todo : verif is unused and remove it]
-  const buttonsOpanModal = document.querySelectorAll('.openModal');
-
   // Show slider when slider is init
   $('.newsfeed.' + category + ' .slickContainer').on('init', function (slick) {
     const slider = document.querySelector('.newsfeed.' + category)
@@ -120,19 +116,6 @@ function initSlick(category) {
         }
       }
     ]
-  });
-
-  // Disabled Click on modal when user swipe [@todo : verif is unused and remove it]
-  $('.newsfeed.' + category + ' .slickContainer').on('swipe', function (event, slick, direction) {
-    for (let buttonOpanModal of buttonsOpanModal) {
-      buttonOpanModal.classList.add('disabledModal')
-    }
-
-    setTimeout(function () {
-      for (let buttonOpanModal of buttonsOpanModal) {
-        buttonOpanModal.classList.remove('disabledModal')
-      }
-    }, 0.5)
   });
 
   /****************************************************
