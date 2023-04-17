@@ -345,13 +345,9 @@ for (let newsElt of newsList) {
     // 3 - go to this slide
     $('.newsfeed.all .slickContainer').slick('slickGoTo', indexRightSlide)
 
-    // 4 - add halo and remove their after 5 secondes
+    // 4 - add halo and remove their when user clic outside
     let activeSlide = document.querySelector('.newsfeed.all .slickContainer .cardContainer[data-content-id="' + newsId + '"]').closest(".slick-slide")
     activeSlide.classList.add('active')
-    setTimeout(function () {
-      activeSlide.classList.remove('active')
-      newsElt.classList.remove('active')
-    }, 5000)
 
     const removeHalo = function () {
       activeSlide.classList.remove('active')
