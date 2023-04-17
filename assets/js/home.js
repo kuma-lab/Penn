@@ -1,13 +1,13 @@
 /***********************************
 /* initialize user for localStorage
 ************************************/
-// @todo : replace by user's id and emailUser send by server
+// @todo by back : replace by user's id and emailUser send by server
 const idUser = 1234
 const emailUser = 'dcentola@asc.upenn.edu'
 // Set user Object with defaults values
 const userOptions = {
   "email": emailUser,
-  "feed": "press",
+  "feed": "pub",
   "slideAll": 0,
   "slidePress": 0,
   "slidePub": 0,
