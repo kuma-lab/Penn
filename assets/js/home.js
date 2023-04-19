@@ -95,6 +95,7 @@ function initSlick(category) {
   $('.newsfeed.' + category + ' .slickContainer').slick({
     dots: false,
     infinite: false,
+    lazyLoad: 'ondemand',
     slidesToShow: 3,
     slidesToScroll: 3,
     prevArrow: '.newsfeed.' + category + ' .slider .arrow.left',
@@ -144,6 +145,16 @@ function initSlick(category) {
   if (getUserOption(idUser, 'slide' + capitalizeFirstLetter(category))) {
     $('.newsfeed.' + category + ' .slickContainer').slick('slickGoTo', getUserOption(idUser, 'slide' + capitalizeFirstLetter(category)))
   }
+
+  /****************************************************
+  /*  Transform lazyload image to background image
+  *****************************************************/
+  $(".slider").on("lazyLoaded", function(e, slick, image, imageSource) {
+    parentSlide = $(image).parent(".newsFeedThumb")
+    imageSource.src = image.attr("src")
+    parentSlide.css("background", 'url("' + imageSource + '") top center/cover no-repeat').addClass("loaded")
+    image.remove()
+  });
 
   /**************************
   /* Create Select Button
