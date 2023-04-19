@@ -152,7 +152,7 @@ function initSlick(category) {
   $(".slider").on("lazyLoaded", function(e, slick, image, imageSource) {
     parentSlide = $(image).parent(".newsFeedThumb")
     imageSource.src = image.attr("src")
-    parentSlide.css("background-image", 'url("' + imageSource + '")').addClass("loaded")
+    parentSlide.css("background", 'url("' + imageSource + '") top center/cover no-repeat').addClass("loaded")
     image.remove()
   });
 
