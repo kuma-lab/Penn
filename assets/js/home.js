@@ -170,7 +170,7 @@ function initSlick(category) {
 }
 
 $(document).ready(function () {
-  initSlick('pub')
+  //initSlick('pub')
 
   // Active right feed with localStorage
   if (getUserOption(idUser, 'feed')) {
