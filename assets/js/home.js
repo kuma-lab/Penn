@@ -1,13 +1,13 @@
 /***********************************
 /* initialize user for localStorage
 ************************************/
-// @todo : replace by user's id and emailUser send by server
+// @todo by back : replace by user's id and emailUser send by server
 const idUser = 1234
 const emailUser = 'dcentola@asc.upenn.edu'
 // Set user Object with defaults values
 const userOptions = {
   "email": emailUser,
-  "feed": "press",
+  "feed": "pub",
   "slideAll": 0,
   "slidePress": 0,
   "slidePub": 0,
@@ -181,8 +181,6 @@ function initSlick(category) {
 }
 
 $(document).ready(function () {
-  initSlick('pub')
-
   // Active right feed with localStorage
   if (getUserOption(idUser, 'feed')) {
     switch (getUserOption(idUser, 'feed')) {
@@ -208,6 +206,8 @@ $(document).ready(function () {
         activateNewsCta('pub')
         activateNewsYear('pub')
     }
+  } else {
+    initSlick('pub')
   }
 });
 
@@ -356,13 +356,9 @@ for (let newsElt of newsList) {
     // 3 - go to this slide
     $('.newsfeed.all .slickContainer').slick('slickGoTo', indexRightSlide)
 
-    // 4 - add halo and remove their after 5 secondes
+    // 4 - add halo and remove their when user clic outside
     let activeSlide = document.querySelector('.newsfeed.all .slickContainer .cardContainer[data-content-id="' + newsId + '"]').closest(".slick-slide")
     activeSlide.classList.add('active')
-    setTimeout(function () {
-      activeSlide.classList.remove('active')
-      newsElt.classList.remove('active')
-    }, 5000)
 
     const removeHalo = function () {
       activeSlide.classList.remove('active')
