@@ -170,8 +170,6 @@ function initSlick(category) {
 }
 
 $(document).ready(function () {
-  //initSlick('pub')
-
   // Active right feed with localStorage
   if (getUserOption(idUser, 'feed')) {
     switch (getUserOption(idUser, 'feed')) {
@@ -197,6 +195,8 @@ $(document).ready(function () {
         activateNewsCta('pub')
         activateNewsYear('pub')
     }
+  } else {
+    initSlick('pub')
   }
 });
 
